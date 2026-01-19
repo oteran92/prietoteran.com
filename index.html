@@ -476,16 +476,18 @@
            HERO SECTION — IMPACTFUL & CLEAN
            ============================================ */
         .hero {
-            min-height: 100vh;
+            min-height: auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding: calc(var(--space-2xl) + 60px) 0 var(--space-xl);
+            justify-content: flex-start;
+            padding: calc(80px + var(--space-lg)) 0 var(--space-xl);
             position: relative;
         }
 
         @media (min-width: 768px) {
             .hero {
+                min-height: 100vh;
+                justify-content: center;
                 padding: var(--space-3xl) 0 var(--space-2xl);
             }
         }
@@ -494,7 +496,7 @@
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: var(--space-lg);
+            gap: var(--space-md);
             align-items: center;
         }
 
@@ -528,12 +530,12 @@
             position: relative;
             display: block;
             order: -1; /* Image first on mobile */
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-lg);
         }
 
         @media (min-width: 768px) {
             .hero-image-wrapper {
-                margin-bottom: var(--space-lg);
+                margin-bottom: var(--space-xl);
             }
         }
 
@@ -547,13 +549,13 @@
         .hero-image-container {
             position: relative;
             width: 100%;
-            max-width: 280px;
+            max-width: 240px;
             margin: 0 auto;
         }
 
         @media (min-width: 480px) {
             .hero-image-container {
-                max-width: 320px;
+                max-width: 300px;
             }
         }
 
@@ -774,15 +776,15 @@
 
         .hero-label {
             font-family: var(--font-mono);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 400;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--accent);
-            margin-bottom: var(--space-md);
+            margin-bottom: var(--space-sm);
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--space-xs);
         }
 
         @media (min-width: 768px) {
@@ -796,7 +798,7 @@
 
         .hero-label::before {
             content: '';
-            width: 30px;
+            width: 24px;
             height: 1px;
             background: var(--accent);
         }
@@ -808,12 +810,12 @@
         }
 
         .hero-title {
-            font-size: clamp(1.9rem, 5vw, 3.8rem);
+            font-size: clamp(1.75rem, 6vw, 3.8rem);
             font-weight: 600;
-            line-height: 1.15;
-            letter-spacing: -0.02em;
-            max-width: 18ch;
-            margin-bottom: var(--space-md);
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            max-width: 100%;
+            margin-bottom: var(--space-sm);
         }
 
         @media (min-width: 768px) {
@@ -838,25 +840,26 @@
         }
 
         .hero-subtitle {
-            font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+            font-size: clamp(1rem, 2.5vw, 1.45rem);
             font-weight: 300;
             color: var(--text-secondary);
-            max-width: 48ch;
-            line-height: 1.6;
-            margin-bottom: var(--space-lg);
+            max-width: 100%;
+            line-height: 1.55;
+            margin-bottom: var(--space-md);
         }
 
         @media (min-width: 768px) {
             .hero-subtitle {
                 font-size: clamp(1.15rem, 2.2vw, 1.45rem);
                 line-height: 1.7;
+                max-width: 48ch;
                 margin-bottom: var(--space-xl);
             }
         }
 
         .hero-cta {
             display: flex;
-            gap: var(--space-sm);
+            gap: 0.625rem;
             flex-wrap: wrap;
         }
 
@@ -868,11 +871,11 @@
 
         .btn {
             font-family: var(--font-mono);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 500;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            padding: 0.875rem var(--space-md);
+            padding: 0.875rem 1.25rem;
             border: 1px solid var(--border);
             background: transparent;
             color: var(--text-secondary);
@@ -884,11 +887,13 @@
             display: inline-block;
             text-align: center;
             min-height: 44px;
+            white-space: nowrap;
         }
 
         @media (min-width: 768px) {
             .btn {
                 font-size: 0.875rem;
+                letter-spacing: 0.08em;
                 padding: var(--space-md) var(--space-lg);
             }
         }
@@ -925,10 +930,16 @@
             bottom: var(--space-xl);
             left: 50%;
             transform: translateX(-50%);
-            display: flex;
+            display: none;
             flex-direction: column;
             align-items: center;
             gap: var(--space-sm);
+        }
+
+        @media (min-width: 768px) {
+            .hero-scroll {
+                display: flex;
+            }
         }
 
         .hero-scroll span {
@@ -1396,19 +1407,29 @@
 
         .trust-item {
             font-family: var(--font-mono);
-            font-size: 0.75rem;
-            letter-spacing: 0.08em;
+            font-size: 0.7rem;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
             color: var(--text-muted);
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
+            gap: var(--space-xs);
+            text-align: center;
+            flex: 1 1 100%;
+            justify-content: center;
+        }
+
+        @media (min-width: 480px) {
+            .trust-item {
+                flex: 1 1 auto;
+            }
         }
 
         @media (min-width: 768px) {
             .trust-item {
                 font-size: 0.85rem;
                 letter-spacing: 0.1em;
+                gap: var(--space-sm);
             }
         }
 

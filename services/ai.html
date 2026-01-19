@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical AI for Business — Osmel Prieto Teran</title>
+    <meta name="description" content="AI where it makes sense. No hype. No experiments without purpose. Measurable impact.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #FAFAFA;
+            --bg-secondary: #F0F0F0;
+            --bg-elevated: #FFFFFF;
+            
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-muted: #7A7A7A;
+            --text-subtle: #B0B0B0;
+            
+            --accent: #B8860B;
+            --accent-dark: #8B6508;
+            --accent-muted: rgba(184, 134, 11, 0.12);
+            
+            --grid-line: rgba(0, 0, 0, 0.04);
+            --border: rgba(0, 0, 0, 0.08);
+            
+            --font-display: 'Outfit', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+            
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+            --space-2xl: 6rem;
+            
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        [data-theme="dark"] {
+            --bg-primary: #0D0D0D;
+            --bg-secondary: #141414;
+            --bg-elevated: #1A1A1A;
+            
+            --text-primary: #F5F5F0;
+            --text-secondary: #A8A8A0;
+            --text-muted: #5C5C58;
+            --text-subtle: #3A3A38;
+            
+            --accent: #C9A227;
+            --accent-muted: rgba(201, 162, 39, 0.15);
+            
+            --grid-line: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.06);
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { font-size: 16px; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: var(--font-display);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        ::selection { background: var(--accent); color: #FFFFFF; }
+
+        .grid-bg {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        .grid-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+            position: relative;
+            z-index: 1;
+        }
+
+        section { padding: var(--space-2xl) 0; }
+
+        /* Nav */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: var(--space-lg) 0;
+            transition: all 0.4s var(--ease-out);
+        }
+
+        .nav.scrolled {
+            background: rgba(250, 250, 250, 0.92);
+            backdrop-filter: blur(20px);
+            padding: var(--space-md) 0;
+        }
+        
+        [data-theme="dark"] .nav.scrolled { background: rgba(13, 13, 13, 0.9); }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .nav-logo {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .nav-logo span { color: var(--accent); }
+
+        .nav-right { display: flex; align-items: center; gap: var(--space-lg); }
+
+        .nav-back {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-back:hover { color: var(--accent); }
+
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: all 0.3s;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+        .theme-toggle .icon-sun, .theme-toggle .icon-moon { position: absolute; transition: all 0.3s; }
+        .theme-toggle .icon-moon { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+        [data-theme="dark"] .theme-toggle .icon-sun { opacity: 0; transform: rotate(90deg) scale(0.5); }
+        [data-theme="dark"] .theme-toggle .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+
+        /* Hero */
+        .hero { padding: calc(var(--space-2xl) + 80px) 0 var(--space-xl); }
+
+        .hero-label {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            line-height: 1.15;
+            margin-bottom: var(--space-lg);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: var(--space-xl);
+        }
+
+        /* Button */
+        .btn {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            padding: var(--space-md) var(--space-lg);
+            border: 1px solid var(--accent);
+            background: transparent;
+            color: var(--text-primary);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.4s var(--ease-out);
+            display: inline-block;
+        }
+
+        .btn:hover { background: var(--accent); color: #FFFFFF; }
+
+        /* Blocks */
+        .block {
+            border-top: 1px solid var(--border);
+            padding: var(--space-xl) 0;
+        }
+
+        .block-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: var(--space-md);
+        }
+
+        .block-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--space-lg);
+            line-height: 1.3;
+        }
+
+        .block-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Lists */
+        .list { list-style: none; margin: var(--space-lg) 0; }
+
+        .list li {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-lg);
+            position: relative;
+        }
+
+        .list li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--text-subtle);
+        }
+
+        .list-check li::before { content: '✓'; color: var(--accent); }
+        .list-x li::before { content: '✕'; color: var(--text-muted); }
+
+        /* Contrast Grid */
+        .contrast-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--border);
+            margin: var(--space-lg) 0;
+        }
+
+        @media (max-width: 600px) { .contrast-grid { grid-template-columns: 1fr; } }
+
+        .contrast-col {
+            background: var(--bg-primary);
+            padding: var(--space-lg);
+        }
+
+        .contrast-col h4 {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: var(--space-md);
+        }
+
+        .contrast-col.negative h4 { color: var(--text-muted); }
+        .contrast-col.positive h4 { color: var(--accent); }
+
+        .contrast-col ul { list-style: none; }
+
+        .contrast-col ul li {
+            font-size: 0.95rem;
+            padding: var(--space-sm) 0;
+            color: var(--text-secondary);
+        }
+
+        .contrast-col.negative ul li { text-decoration: line-through; color: var(--text-muted); }
+
+        /* Process */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--border);
+            margin: var(--space-lg) 0;
+        }
+
+        @media (max-width: 600px) { .process-grid { grid-template-columns: 1fr; } }
+
+        .process-step {
+            background: var(--bg-primary);
+            padding: var(--space-lg);
+        }
+
+        .process-num {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .process-name { font-size: 1.1rem; font-weight: 500; }
+
+        /* Highlight */
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-left: 2px solid var(--accent);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+        }
+
+        .highlight-box p { font-size: 1.1rem; color: var(--text-primary); margin: 0; }
+
+        /* Use Cases */
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        @media (max-width: 500px) { .use-cases { grid-template-columns: 1fr; } }
+
+        .use-case {
+            background: var(--bg-secondary);
+            padding: var(--space-md) var(--space-lg);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Form */
+        .form-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: var(--space-2xl) 0;
+        }
+
+        .form-header { margin-bottom: var(--space-xl); }
+        .form-title { font-size: 1.5rem; font-weight: 500; margin-bottom: var(--space-sm); }
+        .form-subtitle { color: var(--text-muted); }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); }
+        @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+
+        .form-group { margin-bottom: var(--space-lg); }
+
+        .form-label {
+            display: block;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .form-input, .form-textarea {
+            width: 100%;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--text-primary);
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: var(--space-md);
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--accent); }
+        .form-input::placeholder, .form-textarea::placeholder { color: var(--text-subtle); }
+        .form-textarea { min-height: 100px; resize: vertical; }
+
+        .form-submit {
+            width: 100%;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            padding: var(--space-md);
+            background: var(--accent);
+            border: none;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-submit:hover { background: var(--accent-dark); }
+
+        .form-trust {
+            text-align: center;
+            margin-top: var(--space-lg);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: var(--space-lg) 0;
+            text-align: center;
+        }
+
+        .footer-text { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
+
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s var(--ease-out); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo"><span>O</span>PT<span>.</span></a>
+            <div class="nav-right">
+                <a href="../index.html" class="nav-back">← Home</a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="icon-sun">☀</span>
+                    <span class="icon-moon">☾</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <p class="hero-label reveal">Service</p>
+            <h1 class="hero-title reveal">Practical AI<br>for Business</h1>
+            <p class="hero-subtitle reveal">AI where it makes sense. No hype. No experiments without purpose.</p>
+            <a href="#contact" class="btn reveal">→ Discuss your use case</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Problem -->
+        <div class="block reveal">
+            <p class="block-label">The Problem</p>
+            <h2 class="block-title">AI hype is everywhere. Results are not.</h2>
+            <ul class="list">
+                <li>Vendors selling solutions looking for problems</li>
+                <li>Pilots that never reach production</li>
+                <li>Tools that don't fit your workflow</li>
+                <li>No clear ROI, just buzzwords</li>
+            </ul>
+        </div>
+
+        <!-- Contrast -->
+        <div class="block reveal">
+            <p class="block-label">My Approach</p>
+            <h2 class="block-title">Practical, not theoretical</h2>
+            <div class="contrast-grid">
+                <div class="contrast-col negative">
+                    <h4>Not this</h4>
+                    <ul>
+                        <li>AI for AI's sake</li>
+                        <li>Experiments without goals</li>
+                        <li>Black-box solutions</li>
+                        <li>Hype-driven decisions</li>
+                    </ul>
+                </div>
+                <div class="contrast-col positive">
+                    <h4>This</h4>
+                    <ul>
+                        <li>AI for specific problems</li>
+                        <li>Clear, measurable outcomes</li>
+                        <li>Transparent implementation</li>
+                        <li>Business-driven decisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="block reveal">
+            <p class="block-label">Use Cases</p>
+            <h2 class="block-title">Where AI actually helps</h2>
+            <div class="use-cases">
+                <div class="use-case">Document processing</div>
+                <div class="use-case">Data extraction</div>
+                <div class="use-case">Email classification</div>
+                <div class="use-case">Content generation</div>
+                <div class="use-case">Search & retrieval</div>
+                <div class="use-case">Decision support</div>
+            </div>
+            <p class="block-text">If your use case isn't here, we'll evaluate it honestly.</p>
+        </div>
+
+        <!-- Process -->
+        <div class="block reveal">
+            <p class="block-label">Process</p>
+            <h2 class="block-title">How we work</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <span class="process-num">01</span>
+                    <h3 class="process-name">Evaluate</h3>
+                </div>
+                <div class="process-step">
+                    <span class="process-num">02</span>
+                    <h3 class="process-name">Prototype</h3>
+                </div>
+                <div class="process-step">
+                    <span class="process-num">03</span>
+                    <h3 class="process-name">Integrate</h3>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p>If AI isn't the right solution, I'll tell you.</p>
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div class="block reveal">
+            <p class="block-label">Result</p>
+            <h2 class="block-title">What you get</h2>
+            <ul class="list list-check">
+                <li>Working solution, not a demo</li>
+                <li>Integrated into your systems</li>
+                <li>Measurable business impact</li>
+                <li>Clear documentation</li>
+            </ul>
+        </div>
+
+        <!-- Fit -->
+        <div class="block reveal">
+            <p class="block-label">Good Fit</p>
+            <h2 class="block-title">This is for you if:</h2>
+            <ul class="list list-check">
+                <li>You have a specific problem to solve</li>
+                <li>You want results, not experiments</li>
+                <li>You're skeptical of AI hype (good)</li>
+            </ul>
+        </div>
+
+        <!-- CTA -->
+        <div class="block reveal" style="text-align: center; padding: var(--space-2xl) 0;">
+            <p class="block-text" style="margin-bottom: var(--space-lg);">Have a use case in mind? Let's see if AI makes sense.</p>
+            <a href="#contact" class="btn">→ Start a conversation</a>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <section class="form-section" id="contact">
+        <div class="container">
+            <div class="form-header reveal">
+                <h2 class="form-title">Let's talk</h2>
+                <p class="form-subtitle">No pressure. No sales pitch.</p>
+            </div>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="company">Company</label>
+                        <input type="text" id="company" name="company" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="role">Role</label>
+                        <input type="text" id="role" name="role" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="usecase">What problem are you trying to solve with AI?</label>
+                    <textarea id="usecase" name="usecase" class="form-textarea" required></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">→ Start the conversation</button>
+                
+                <p class="form-trust">Your information stays private. No spam.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2026 Osmel Prieto Teran</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        if (localStorage.getItem('theme') === 'dark') html.setAttribute('data-theme', 'dark');
+        themeToggle.addEventListener('click', () => {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            html.setAttribute('data-theme', isDark ? '' : 'dark');
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+        
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.pageYOffset > 100));
+
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            reveals.forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('active');
+            });
+        };
+        revealOnScroll();
+        window.addEventListener('scroll', revealOnScroll);
+
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

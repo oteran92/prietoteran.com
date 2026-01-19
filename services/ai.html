@@ -141,6 +141,74 @@
         .nav-logo span { color: var(--accent); }
 
         .nav-right { display: flex; align-items: center; gap: var(--space-lg); }
+        
+        /* Language Selector - Elegant Dropdown */
+        .lang-selector { position: relative; }
+        .lang-current {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+        }
+        .lang-current:hover { border-color: var(--accent); color: var(--accent); }
+        .lang-current .lang-icon { font-size: 1rem; line-height: 1; }
+        .lang-current .lang-arrow { font-size: 0.6rem; transition: transform 0.3s var(--ease-out); opacity: 0.6; }
+        .lang-selector.open .lang-arrow { transform: rotate(180deg); }
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px;
+            min-width: 120px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            z-index: 200;
+        }
+        [data-theme="dark"] .lang-dropdown { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+        .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s var(--ease-out);
+            text-align: left;
+        }
+        .lang-option:hover { background: var(--bg-secondary); color: var(--text-primary); }
+        .lang-option.active { background: var(--accent-muted); color: var(--accent); }
+        .lang-option .lang-flag { font-size: 1.1rem; line-height: 1; }
+        .lang-option .lang-name { flex: 1; }
+        .lang-option .lang-check { opacity: 0; color: var(--accent); font-size: 0.9rem; }
+        .lang-option.active .lang-check { opacity: 1; }
+        @media (max-width: 768px) { .lang-selector { display: none; } }
 
         .nav-back {
             font-family: var(--font-mono);
@@ -452,7 +520,31 @@
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo"><span>O</span>PT<span>.</span></a>
             <div class="nav-right">
-                <a href="../index.html" class="nav-back">← Home</a>
+                <a href="../index.html" class="nav-back" data-i18n="nav.home">← Home</a>
+                <div class="lang-selector" id="langSelector">
+                    <button class="lang-current" id="langToggle">
+                        <span class="lang-icon" id="currentLangFlag">🌐</span>
+                        <span class="lang-code" id="currentLangCode">EN</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-name">Deutsch</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="es">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-name">Español</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                    </div>
+                </div>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀</span>
                     <span class="icon-moon">☾</span>
@@ -464,47 +556,47 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <p class="hero-label reveal">Service</p>
-            <h1 class="hero-title reveal">Practical AI<br>for Business</h1>
-            <p class="hero-subtitle reveal">AI where it makes sense. No hype. No experiments without purpose.</p>
-            <a href="#contact" class="btn reveal">→ Discuss your use case</a>
+            <p class="hero-label reveal" data-i18n="ai.label">Service</p>
+            <h1 class="hero-title reveal" data-i18n="ai.title">Practical AI<br>for Business</h1>
+            <p class="hero-subtitle reveal" data-i18n="ai.subtitle">AI where it makes sense. No hype. No experiments without purpose.</p>
+            <a href="#contact" class="btn reveal" data-i18n="ai.cta">→ Discuss your use case</a>
         </div>
     </section>
 
     <div class="container">
         <!-- Problem -->
         <div class="block reveal">
-            <p class="block-label">The Problem</p>
-            <h2 class="block-title">AI hype is everywhere. Results are not.</h2>
+            <p class="block-label" data-i18n="ai.problem.label">The Problem</p>
+            <h2 class="block-title" data-i18n="ai.problem.title">AI hype is everywhere. Results are not.</h2>
             <ul class="list">
-                <li>Vendors selling solutions looking for problems</li>
-                <li>Pilots that never reach production</li>
-                <li>Tools that don't fit your workflow</li>
-                <li>No clear ROI, just buzzwords</li>
+                <li data-i18n="ai.problem1">Vendors selling solutions looking for problems</li>
+                <li data-i18n="ai.problem2">Pilots that never reach production</li>
+                <li data-i18n="ai.problem3">Tools that don't fit your workflow</li>
+                <li data-i18n="ai.problem4">No clear ROI, just buzzwords</li>
             </ul>
         </div>
 
         <!-- Contrast -->
         <div class="block reveal">
-            <p class="block-label">My Approach</p>
-            <h2 class="block-title">Practical, not theoretical</h2>
+            <p class="block-label" data-i18n="ai.approach.label">My Approach</p>
+            <h2 class="block-title" data-i18n="ai.approach.title">Practical, not theoretical</h2>
             <div class="contrast-grid">
                 <div class="contrast-col negative">
-                    <h4>Not this</h4>
+                    <h4 data-i18n="ai.approach.not">Not this</h4>
                     <ul>
-                        <li>AI for AI's sake</li>
-                        <li>Experiments without goals</li>
-                        <li>Black-box solutions</li>
-                        <li>Hype-driven decisions</li>
+                        <li data-i18n="ai.approach.not1">AI for AI's sake</li>
+                        <li data-i18n="ai.approach.not2">Experiments without goals</li>
+                        <li data-i18n="ai.approach.not3">Black-box solutions</li>
+                        <li data-i18n="ai.approach.not4">Hype-driven decisions</li>
                     </ul>
                 </div>
                 <div class="contrast-col positive">
-                    <h4>This</h4>
+                    <h4 data-i18n="ai.approach.yes">This</h4>
                     <ul>
-                        <li>AI for specific problems</li>
-                        <li>Clear, measurable outcomes</li>
-                        <li>Transparent implementation</li>
-                        <li>Business-driven decisions</li>
+                        <li data-i18n="ai.approach.yes1">AI for specific problems</li>
+                        <li data-i18n="ai.approach.yes2">Clear, measurable outcomes</li>
+                        <li data-i18n="ai.approach.yes3">Transparent implementation</li>
+                        <li data-i18n="ai.approach.yes4">Business-driven decisions</li>
                     </ul>
                 </div>
             </div>
@@ -512,69 +604,69 @@
 
         <!-- Use Cases -->
         <div class="block reveal">
-            <p class="block-label">Use Cases</p>
-            <h2 class="block-title">Where AI actually helps</h2>
+            <p class="block-label" data-i18n="ai.usecases.label">Use Cases</p>
+            <h2 class="block-title" data-i18n="ai.usecases.title">Where AI actually helps</h2>
             <div class="use-cases">
-                <div class="use-case">Document processing</div>
-                <div class="use-case">Data extraction</div>
-                <div class="use-case">Email classification</div>
-                <div class="use-case">Content generation</div>
-                <div class="use-case">Search & retrieval</div>
-                <div class="use-case">Decision support</div>
+                <div class="use-case" data-i18n="ai.usecase1">Document processing</div>
+                <div class="use-case" data-i18n="ai.usecase2">Data extraction</div>
+                <div class="use-case" data-i18n="ai.usecase3">Email classification</div>
+                <div class="use-case" data-i18n="ai.usecase4">Content generation</div>
+                <div class="use-case" data-i18n="ai.usecase5">Search & retrieval</div>
+                <div class="use-case" data-i18n="ai.usecase6">Decision support</div>
             </div>
-            <p class="block-text">If your use case isn't here, we'll evaluate it honestly.</p>
+            <p class="block-text" data-i18n="ai.usecases.text">If your use case isn't here, we'll evaluate it honestly.</p>
         </div>
 
         <!-- Process -->
         <div class="block reveal">
-            <p class="block-label">Process</p>
-            <h2 class="block-title">How we work</h2>
+            <p class="block-label" data-i18n="ai.process.label">Process</p>
+            <h2 class="block-title" data-i18n="ai.process.title">How we work</h2>
             <div class="process-grid">
                 <div class="process-step">
                     <span class="process-num">01</span>
-                    <h3 class="process-name">Evaluate</h3>
+                    <h3 class="process-name" data-i18n="ai.process1">Evaluate</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">02</span>
-                    <h3 class="process-name">Prototype</h3>
+                    <h3 class="process-name" data-i18n="ai.process2">Prototype</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">03</span>
-                    <h3 class="process-name">Integrate</h3>
+                    <h3 class="process-name" data-i18n="ai.process3">Integrate</h3>
                 </div>
             </div>
             <div class="highlight-box">
-                <p>If AI isn't the right solution, I'll tell you.</p>
+                <p data-i18n="ai.process.highlight">If AI isn't the right solution, I'll tell you.</p>
             </div>
         </div>
 
         <!-- Result -->
         <div class="block reveal">
-            <p class="block-label">Result</p>
-            <h2 class="block-title">What you get</h2>
+            <p class="block-label" data-i18n="ai.result.label">Result</p>
+            <h2 class="block-title" data-i18n="ai.result.title">What you get</h2>
             <ul class="list list-check">
-                <li>Working solution, not a demo</li>
-                <li>Integrated into your systems</li>
-                <li>Measurable business impact</li>
-                <li>Clear documentation</li>
+                <li data-i18n="ai.result1">Working solution, not a demo</li>
+                <li data-i18n="ai.result2">Integrated into your systems</li>
+                <li data-i18n="ai.result3">Measurable business impact</li>
+                <li data-i18n="ai.result4">Clear documentation</li>
             </ul>
         </div>
 
         <!-- Fit -->
         <div class="block reveal">
-            <p class="block-label">Good Fit</p>
-            <h2 class="block-title">This is for you if:</h2>
+            <p class="block-label" data-i18n="ai.fit.label">Good Fit</p>
+            <h2 class="block-title" data-i18n="ai.fit.title">This is for you if:</h2>
             <ul class="list list-check">
-                <li>You have a specific problem to solve</li>
-                <li>You want results, not experiments</li>
-                <li>You're skeptical of AI hype (good)</li>
+                <li data-i18n="ai.fit1">You have a specific problem to solve</li>
+                <li data-i18n="ai.fit2">You want results, not experiments</li>
+                <li data-i18n="ai.fit3">You're skeptical of AI hype (good)</li>
             </ul>
         </div>
 
         <!-- CTA -->
         <div class="block reveal" style="text-align: center; padding: var(--space-2xl) 0;">
-            <p class="block-text" style="margin-bottom: var(--space-lg);">Have a use case in mind? Let's see if AI makes sense.</p>
-            <a href="#contact" class="btn">→ Start a conversation</a>
+            <p class="block-text" style="margin-bottom: var(--space-lg);" data-i18n="ai.cta2.text">Have a use case in mind? Let's see if AI makes sense.</p>
+            <a href="#contact" class="btn" data-i18n="ai.cta2.button">→ Start a conversation</a>
         </div>
     </div>
 
@@ -582,41 +674,41 @@
     <section class="form-section" id="contact">
         <div class="container">
             <div class="form-header reveal">
-                <h2 class="form-title">Let's talk</h2>
-                <p class="form-subtitle">No pressure. No sales pitch.</p>
+                <h2 class="form-title" data-i18n="form.title">Let's talk</h2>
+                <p class="form-subtitle" data-i18n="form.subtitle">No pressure. No sales pitch.</p>
             </div>
             
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="name">Name</label>
+                        <label class="form-label" for="name" data-i18n="form.name">Name</label>
                         <input type="text" id="name" name="name" class="form-input" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="company">Company</label>
+                        <label class="form-label" for="company" data-i18n="form.company">Company</label>
                         <input type="text" id="company" name="company" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="role">Role</label>
+                        <label class="form-label" for="role" data-i18n="form.role">Role</label>
                         <input type="text" id="role" name="role" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
+                        <label class="form-label" for="email" data-i18n="form.email">Email</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="usecase">What problem are you trying to solve with AI?</label>
+                    <label class="form-label" for="usecase" data-i18n="form.usecase">What problem are you trying to solve with AI?</label>
                     <textarea id="usecase" name="usecase" class="form-textarea" required></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">→ Start the conversation</button>
+                <button type="submit" class="form-submit" data-i18n="form.submit">→ Start the conversation</button>
                 
-                <p class="form-trust">Your information stays private. No spam.</p>
+                <p class="form-trust" data-i18n="form.trust">Your information stays private. No spam.</p>
             </form>
         </div>
     </section>
@@ -624,10 +716,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text">© 2026 Osmel Prieto Teran</p>
+            <p class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</p>
         </div>
     </footer>
 
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js"></script>
+    
     <script>
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
@@ -656,6 +751,31 @@
                 document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Language Selector Handler - Dropdown
+        const langSelector = document.getElementById('langSelector');
+        const langToggle = document.getElementById('langToggle');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const langData = { en: { flag: '🇬🇧', code: 'EN' }, de: { flag: '🇩🇪', code: 'DE' }, es: { flag: '🇪🇸', code: 'ES' } };
+        
+        function updateLangDisplay(lang) {
+            const data = langData[lang];
+            document.getElementById('currentLangFlag').textContent = data.flag;
+            document.getElementById('currentLangCode').textContent = data.code;
+            langOptions.forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-lang') === lang));
+        }
+        
+        updateLangDisplay(i18n.getLanguage());
+        langToggle.addEventListener('click', (e) => { e.stopPropagation(); langSelector.classList.toggle('open'); });
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                i18n.setLanguage(opt.getAttribute('data-lang'));
+                updateLangDisplay(opt.getAttribute('data-lang'));
+                langSelector.classList.remove('open');
+            });
+        });
+        document.addEventListener('click', (e) => { if (!langSelector.contains(e.target)) langSelector.classList.remove('open'); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') langSelector.classList.remove('open'); });
     </script>
 </body>
 </html>

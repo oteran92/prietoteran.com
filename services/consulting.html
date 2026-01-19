@@ -139,6 +139,74 @@
 
         .nav-logo span { color: var(--accent); }
         .nav-right { display: flex; align-items: center; gap: var(--space-lg); }
+        
+        /* Language Selector - Elegant Dropdown */
+        .lang-selector { position: relative; }
+        .lang-current {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+        }
+        .lang-current:hover { border-color: var(--accent); color: var(--accent); }
+        .lang-current .lang-icon { font-size: 1rem; line-height: 1; }
+        .lang-current .lang-arrow { font-size: 0.6rem; transition: transform 0.3s var(--ease-out); opacity: 0.6; }
+        .lang-selector.open .lang-arrow { transform: rotate(180deg); }
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px;
+            min-width: 120px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            z-index: 200;
+        }
+        [data-theme="dark"] .lang-dropdown { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+        .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s var(--ease-out);
+            text-align: left;
+        }
+        .lang-option:hover { background: var(--bg-secondary); color: var(--text-primary); }
+        .lang-option.active { background: var(--accent-muted); color: var(--accent); }
+        .lang-option .lang-flag { font-size: 1.1rem; line-height: 1; }
+        .lang-option .lang-name { flex: 1; }
+        .lang-option .lang-check { opacity: 0; color: var(--accent); font-size: 0.9rem; }
+        .lang-option.active .lang-check { opacity: 1; }
+        @media (max-width: 768px) { .lang-selector { display: none; } }
 
         .nav-back {
             font-family: var(--font-mono);
@@ -444,7 +512,31 @@
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo"><span>O</span>PT<span>.</span></a>
             <div class="nav-right">
-                <a href="../index.html" class="nav-back">← Home</a>
+                <a href="../index.html" class="nav-back" data-i18n="nav.home">← Home</a>
+                <div class="lang-selector" id="langSelector">
+                    <button class="lang-current" id="langToggle">
+                        <span class="lang-icon" id="currentLangFlag">🌐</span>
+                        <span class="lang-code" id="currentLangCode">EN</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-name">Deutsch</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="es">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-name">Español</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                    </div>
+                </div>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀</span>
                     <span class="icon-moon">☾</span>
@@ -456,115 +548,115 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <p class="hero-label reveal">Service</p>
-            <h1 class="hero-title reveal">Technical Leadership<br>& Consulting</h1>
-            <p class="hero-subtitle reveal">I act as a technical partner, not just a developer. Clear decisions. Solid foundations.</p>
-            <a href="#contact" class="btn reveal">→ Let's talk</a>
+            <p class="hero-label reveal" data-i18n="consult.label">Service</p>
+            <h1 class="hero-title reveal" data-i18n="consult.title">Technical Leadership<br>& Consulting</h1>
+            <p class="hero-subtitle reveal" data-i18n="consult.subtitle">I act as a technical partner, not just a developer. Clear decisions. Solid foundations.</p>
+            <a href="#contact" class="btn reveal" data-i18n="consult.cta">→ Let's talk</a>
         </div>
     </section>
 
     <div class="container">
         <!-- Problem -->
         <div class="block reveal">
-            <p class="block-label">The Problem</p>
-            <h2 class="block-title">Technical decisions are hard</h2>
+            <p class="block-label" data-i18n="consult.problem.label">The Problem</p>
+            <h2 class="block-title" data-i18n="consult.problem.title">Technical decisions are hard</h2>
             <ul class="list">
-                <li>No internal CTO or senior engineer</li>
-                <li>Conflicting advice from vendors</li>
-                <li>Unclear roadmap</li>
-                <li>Projects stuck or going in circles</li>
-                <li>Need a second opinion you can trust</li>
+                <li data-i18n="consult.problem1">No internal CTO or senior engineer</li>
+                <li data-i18n="consult.problem2">Conflicting advice from vendors</li>
+                <li data-i18n="consult.problem3">Unclear roadmap</li>
+                <li data-i18n="consult.problem4">Projects stuck or going in circles</li>
+                <li data-i18n="consult.problem5">Need a second opinion you can trust</li>
             </ul>
         </div>
 
         <!-- What I Do -->
         <div class="block reveal">
-            <p class="block-label">What I Do</p>
-            <h2 class="block-title">Technical partner on demand</h2>
+            <p class="block-label" data-i18n="consult.solution.label">What I Do</p>
+            <h2 class="block-title" data-i18n="consult.solution.title">Technical partner on demand</h2>
             <div class="services-list">
-                <div class="service-item">Architecture review</div>
-                <div class="service-item">Technology selection</div>
-                <div class="service-item">Roadmap planning</div>
-                <div class="service-item">Vendor evaluation</div>
-                <div class="service-item">Team mentoring</div>
-                <div class="service-item">Project rescue</div>
+                <div class="service-item" data-i18n="consult.service1">Architecture review</div>
+                <div class="service-item" data-i18n="consult.service2">Technology selection</div>
+                <div class="service-item" data-i18n="consult.service3">Roadmap planning</div>
+                <div class="service-item" data-i18n="consult.service4">Vendor evaluation</div>
+                <div class="service-item" data-i18n="consult.service5">Team mentoring</div>
+                <div class="service-item" data-i18n="consult.service6">Project rescue</div>
             </div>
         </div>
 
         <!-- Roles -->
         <div class="block reveal">
-            <p class="block-label">Roles I Play</p>
-            <h2 class="block-title">Flexible engagement</h2>
+            <p class="block-label" data-i18n="consult.roles.label">Roles I Play</p>
+            <h2 class="block-title" data-i18n="consult.roles.title">Flexible engagement</h2>
             <div class="roles-grid">
                 <div class="role">
-                    <h4 class="role-title">Fractional CTO</h4>
-                    <p class="role-desc">Strategic technical leadership, part-time</p>
+                    <h4 class="role-title" data-i18n="consult.role1.title">Fractional CTO</h4>
+                    <p class="role-desc" data-i18n="consult.role1.desc">Strategic technical leadership, part-time</p>
                 </div>
                 <div class="role">
-                    <h4 class="role-title">Technical Advisor</h4>
-                    <p class="role-desc">Second opinion on critical decisions</p>
+                    <h4 class="role-title" data-i18n="consult.role2.title">Technical Advisor</h4>
+                    <p class="role-desc" data-i18n="consult.role2.desc">Second opinion on critical decisions</p>
                 </div>
                 <div class="role">
-                    <h4 class="role-title">Project Lead</h4>
-                    <p class="role-desc">Drive a specific initiative forward</p>
+                    <h4 class="role-title" data-i18n="consult.role3.title">Project Lead</h4>
+                    <p class="role-desc" data-i18n="consult.role3.desc">Drive a specific initiative forward</p>
                 </div>
                 <div class="role">
-                    <h4 class="role-title">Team Coach</h4>
-                    <p class="role-desc">Level up your development team</p>
+                    <h4 class="role-title" data-i18n="consult.role4.title">Team Coach</h4>
+                    <p class="role-desc" data-i18n="consult.role4.desc">Level up your development team</p>
                 </div>
             </div>
         </div>
 
         <!-- Engagement -->
         <div class="block reveal">
-            <p class="block-label">How We Work</p>
-            <h2 class="block-title">Engagement models</h2>
+            <p class="block-label" data-i18n="consult.engagement.label">How We Work</p>
+            <h2 class="block-title" data-i18n="consult.engagement.title">Engagement models</h2>
             <div class="engagement-grid">
                 <div class="engagement">
-                    <h4 class="engagement-title">One-time</h4>
-                    <p class="engagement-desc">Single review or assessment</p>
+                    <h4 class="engagement-title" data-i18n="consult.engagement1.title">One-time</h4>
+                    <p class="engagement-desc" data-i18n="consult.engagement1.desc">Single review or assessment</p>
                 </div>
                 <div class="engagement">
-                    <h4 class="engagement-title">Monthly</h4>
-                    <p class="engagement-desc">Ongoing advisory hours</p>
+                    <h4 class="engagement-title" data-i18n="consult.engagement2.title">Monthly</h4>
+                    <p class="engagement-desc" data-i18n="consult.engagement2.desc">Ongoing advisory hours</p>
                 </div>
                 <div class="engagement">
-                    <h4 class="engagement-title">Project</h4>
-                    <p class="engagement-desc">Defined scope and timeline</p>
+                    <h4 class="engagement-title" data-i18n="consult.engagement3.title">Project</h4>
+                    <p class="engagement-desc" data-i18n="consult.engagement3.desc">Defined scope and timeline</p>
                 </div>
             </div>
         </div>
 
         <!-- Result -->
         <div class="block reveal">
-            <p class="block-label">Result</p>
-            <h2 class="block-title">What you get</h2>
+            <p class="block-label" data-i18n="consult.result.label">Result</p>
+            <h2 class="block-title" data-i18n="consult.result.title">What you get</h2>
             <ul class="list list-check">
-                <li>Clear technical direction</li>
-                <li>Confident decisions</li>
-                <li>Unblocked projects</li>
-                <li>Reduced risk</li>
+                <li data-i18n="consult.result1">Clear technical direction</li>
+                <li data-i18n="consult.result2">Confident decisions</li>
+                <li data-i18n="consult.result3">Unblocked projects</li>
+                <li data-i18n="consult.result4">Reduced risk</li>
             </ul>
             <div class="highlight-box">
-                <p>You get experience without the full-time commitment.</p>
+                <p data-i18n="consult.result.highlight">You get experience without the full-time commitment.</p>
             </div>
         </div>
 
         <!-- Fit -->
         <div class="block reveal">
-            <p class="block-label">Good Fit</p>
-            <h2 class="block-title">This is for you if:</h2>
+            <p class="block-label" data-i18n="consult.fit.label">Good Fit</p>
+            <h2 class="block-title" data-i18n="consult.fit.title">This is for you if:</h2>
             <ul class="list list-check">
-                <li>You need senior technical guidance</li>
-                <li>You want honest, vendor-neutral advice</li>
-                <li>You value long-term thinking over quick fixes</li>
+                <li data-i18n="consult.fit1">You need senior technical guidance</li>
+                <li data-i18n="consult.fit2">You want honest, vendor-neutral advice</li>
+                <li data-i18n="consult.fit3">You value long-term thinking over quick fixes</li>
             </ul>
         </div>
 
         <!-- CTA -->
         <div class="block reveal" style="text-align: center; padding: var(--space-2xl) 0;">
-            <p class="block-text" style="margin-bottom: var(--space-lg);">Need a technical partner? Let's talk.</p>
-            <a href="#contact" class="btn">→ Start a conversation</a>
+            <p class="block-text" style="margin-bottom: var(--space-lg);" data-i18n="consult.cta2.text">Need a technical partner? Let's talk.</p>
+            <a href="#contact" class="btn" data-i18n="consult.cta2.button">→ Start a conversation</a>
         </div>
     </div>
 
@@ -572,41 +664,41 @@
     <section class="form-section" id="contact">
         <div class="container">
             <div class="form-header reveal">
-                <h2 class="form-title">Let's talk</h2>
-                <p class="form-subtitle">No pressure. No sales pitch.</p>
+                <h2 class="form-title" data-i18n="form.title">Let's talk</h2>
+                <p class="form-subtitle" data-i18n="form.subtitle">No pressure. No sales pitch.</p>
             </div>
             
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="name">Name</label>
+                        <label class="form-label" for="name" data-i18n="form.name">Name</label>
                         <input type="text" id="name" name="name" class="form-input" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="company">Company</label>
+                        <label class="form-label" for="company" data-i18n="form.company">Company</label>
                         <input type="text" id="company" name="company" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="role">Role</label>
+                        <label class="form-label" for="role" data-i18n="form.role">Role</label>
                         <input type="text" id="role" name="role" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
+                        <label class="form-label" for="email" data-i18n="form.email">Email</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="situation">What's your current situation?</label>
+                    <label class="form-label" for="situation" data-i18n="form.situation">What's your current situation?</label>
                     <textarea id="situation" name="situation" class="form-textarea" required></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">→ Start the conversation</button>
+                <button type="submit" class="form-submit" data-i18n="form.submit">→ Start the conversation</button>
                 
-                <p class="form-trust">Your information stays private. No spam.</p>
+                <p class="form-trust" data-i18n="form.trust">Your information stays private. No spam.</p>
             </form>
         </div>
     </section>
@@ -614,10 +706,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text">© 2026 Osmel Prieto Teran</p>
+            <p class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</p>
         </div>
     </footer>
 
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js"></script>
+    
     <script>
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
@@ -646,6 +741,31 @@
                 document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Language Selector Handler - Dropdown
+        const langSelector = document.getElementById('langSelector');
+        const langToggle = document.getElementById('langToggle');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const langData = { en: { flag: '🇬🇧', code: 'EN' }, de: { flag: '🇩🇪', code: 'DE' }, es: { flag: '🇪🇸', code: 'ES' } };
+        
+        function updateLangDisplay(lang) {
+            const data = langData[lang];
+            document.getElementById('currentLangFlag').textContent = data.flag;
+            document.getElementById('currentLangCode').textContent = data.code;
+            langOptions.forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-lang') === lang));
+        }
+        
+        updateLangDisplay(i18n.getLanguage());
+        langToggle.addEventListener('click', (e) => { e.stopPropagation(); langSelector.classList.toggle('open'); });
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                i18n.setLanguage(opt.getAttribute('data-lang'));
+                updateLangDisplay(opt.getAttribute('data-lang'));
+                langSelector.classList.remove('open');
+            });
+        });
+        document.addEventListener('click', (e) => { if (!langSelector.contains(e.target)) langSelector.classList.remove('open'); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') langSelector.classList.remove('open'); });
     </script>
 </body>
 </html>

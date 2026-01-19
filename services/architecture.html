@@ -178,6 +178,74 @@
             align-items: center;
             gap: var(--space-lg);
         }
+        
+        /* Language Selector - Elegant Dropdown */
+        .lang-selector { position: relative; }
+        .lang-current {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+        }
+        .lang-current:hover { border-color: var(--accent); color: var(--accent); }
+        .lang-current .lang-icon { font-size: 1rem; line-height: 1; }
+        .lang-current .lang-arrow { font-size: 0.6rem; transition: transform 0.3s var(--ease-out); opacity: 0.6; }
+        .lang-selector.open .lang-arrow { transform: rotate(180deg); }
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px;
+            min-width: 120px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            z-index: 200;
+        }
+        [data-theme="dark"] .lang-dropdown { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+        .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s var(--ease-out);
+            text-align: left;
+        }
+        .lang-option:hover { background: var(--bg-secondary); color: var(--text-primary); }
+        .lang-option.active { background: var(--accent-muted); color: var(--accent); }
+        .lang-option .lang-flag { font-size: 1.1rem; line-height: 1; }
+        .lang-option .lang-name { flex: 1; }
+        .lang-option .lang-check { opacity: 0; color: var(--accent); font-size: 0.9rem; }
+        .lang-option.active .lang-check { opacity: 1; }
+        @media (max-width: 768px) { .lang-selector { display: none; } }
 
         .nav-back {
             font-family: var(--font-mono);
@@ -518,7 +586,31 @@
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo"><span>O</span>PT<span>.</span></a>
             <div class="nav-right">
-                <a href="../index.html" class="nav-back">← Home</a>
+                <a href="../index.html" class="nav-back" data-i18n="nav.home">← Home</a>
+                <div class="lang-selector" id="langSelector">
+                    <button class="lang-current" id="langToggle">
+                        <span class="lang-icon" id="currentLangFlag">🌐</span>
+                        <span class="lang-code" id="currentLangCode">EN</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-name">Deutsch</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="es">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-name">Español</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                    </div>
+                </div>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀</span>
                     <span class="icon-moon">☾</span>
@@ -530,101 +622,101 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <p class="hero-label reveal">Service</p>
-            <h1 class="hero-title reveal">System Architecture<br>& Integration</h1>
-            <p class="hero-subtitle reveal">I fix fragmented systems and build architectures that scale.</p>
-            <a href="#contact" class="btn reveal">→ Discuss your system</a>
+            <p class="hero-label reveal" data-i18n="arch.label">Service</p>
+            <h1 class="hero-title reveal" data-i18n="arch.title">System Architecture<br>& Integration</h1>
+            <p class="hero-subtitle reveal" data-i18n="arch.subtitle">I fix fragmented systems and build architectures that scale.</p>
+            <a href="#contact" class="btn reveal" data-i18n="arch.cta">→ Discuss your system</a>
         </div>
     </section>
 
     <!-- Problem -->
     <div class="container">
         <div class="block reveal">
-            <p class="block-label">The Problem</p>
-            <h2 class="block-title">Sound familiar?</h2>
+            <p class="block-label" data-i18n="arch.problem.label">The Problem</p>
+            <h2 class="block-title" data-i18n="arch.problem.title">Sound familiar?</h2>
             <ul class="list">
-                <li>Systems don't talk to each other</li>
-                <li>Data is duplicated or inconsistent</li>
-                <li>Too many manual workarounds</li>
-                <li>Changes feel risky</li>
-                <li>Technical debt keeps growing</li>
+                <li data-i18n="arch.problem1">Systems don't talk to each other</li>
+                <li data-i18n="arch.problem2">Data is duplicated or inconsistent</li>
+                <li data-i18n="arch.problem3">Too many manual workarounds</li>
+                <li data-i18n="arch.problem4">Changes feel risky</li>
+                <li data-i18n="arch.problem5">Technical debt keeps growing</li>
             </ul>
         </div>
 
         <!-- Reframe -->
         <div class="block reveal">
-            <p class="block-label">The Real Issue</p>
-            <h2 class="block-title">It's not the tools. It's the architecture.</h2>
-            <p class="block-text">Without a clear foundation, integrations break, scaling gets expensive, and security suffers.</p>
+            <p class="block-label" data-i18n="arch.issue.label">The Real Issue</p>
+            <h2 class="block-title" data-i18n="arch.issue.title">It's not the tools. It's the architecture.</h2>
+            <p class="block-text" data-i18n="arch.issue.text">Without a clear foundation, integrations break, scaling gets expensive, and security suffers.</p>
         </div>
 
         <!-- Solution -->
         <div class="block reveal">
-            <p class="block-label">What I Do</p>
-            <h2 class="block-title">Systems that work as one</h2>
+            <p class="block-label" data-i18n="arch.solution.label">What I Do</p>
+            <h2 class="block-title" data-i18n="arch.solution.title">Systems that work as one</h2>
             <ul class="list">
-                <li>ERP ↔ CRM integrations</li>
-                <li>API & middleware architecture</li>
-                <li>Ecommerce integrations</li>
-                <li>Data flows & sync</li>
-                <li>Security & access control</li>
+                <li data-i18n="arch.solution1">ERP ↔ CRM integrations</li>
+                <li data-i18n="arch.solution2">API & middleware architecture</li>
+                <li data-i18n="arch.solution3">Ecommerce integrations</li>
+                <li data-i18n="arch.solution4">Data flows & sync</li>
+                <li data-i18n="arch.solution5">Security & access control</li>
             </ul>
         </div>
 
         <!-- Process -->
         <div class="block reveal">
-            <p class="block-label">Process</p>
-            <h2 class="block-title">How we work</h2>
+            <p class="block-label" data-i18n="arch.process.label">Process</p>
+            <h2 class="block-title" data-i18n="arch.process.title">How we work</h2>
             <div class="process-grid">
                 <div class="process-step">
                     <span class="process-num">01</span>
-                    <h3 class="process-name">Analyze</h3>
+                    <h3 class="process-name" data-i18n="arch.process1">Analyze</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">02</span>
-                    <h3 class="process-name">Design</h3>
+                    <h3 class="process-name" data-i18n="arch.process2">Design</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">03</span>
-                    <h3 class="process-name">Build</h3>
+                    <h3 class="process-name" data-i18n="arch.process3">Build</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">04</span>
-                    <h3 class="process-name">Handover</h3>
+                    <h3 class="process-name" data-i18n="arch.process4">Handover</h3>
                 </div>
             </div>
         </div>
 
         <!-- Ownership -->
         <div class="block reveal">
-            <p class="block-label">Ownership</p>
-            <h2 class="block-title">You own everything</h2>
+            <p class="block-label" data-i18n="arch.ownership.label">Ownership</p>
+            <h2 class="block-title" data-i18n="arch.ownership.title">You own everything</h2>
             <ul class="list list-check">
-                <li>The code is yours</li>
-                <li>No vendor lock-in</li>
-                <li>Clean documentation</li>
-                <li>Security-first</li>
+                <li data-i18n="arch.ownership1">The code is yours</li>
+                <li data-i18n="arch.ownership2">No vendor lock-in</li>
+                <li data-i18n="arch.ownership3">Clean documentation</li>
+                <li data-i18n="arch.ownership4">Security-first</li>
             </ul>
             <div class="highlight-box">
-                <p>You're not buying a dependency. You're building an asset.</p>
+                <p data-i18n="arch.ownership.highlight">You're not buying a dependency. You're building an asset.</p>
             </div>
         </div>
 
         <!-- Fit -->
         <div class="block reveal">
-            <p class="block-label">Good Fit</p>
-            <h2 class="block-title">This is for you if:</h2>
+            <p class="block-label" data-i18n="arch.fit.label">Good Fit</p>
+            <h2 class="block-title" data-i18n="arch.fit.title">This is for you if:</h2>
             <ul class="list list-check">
-                <li>You run a B2B company with multiple systems</li>
-                <li>You need stability, not experiments</li>
-                <li>You want ownership and transparency</li>
+                <li data-i18n="arch.fit1">You run a B2B company with multiple systems</li>
+                <li data-i18n="arch.fit2">You need stability, not experiments</li>
+                <li data-i18n="arch.fit3">You want ownership and transparency</li>
             </ul>
         </div>
 
         <!-- CTA -->
         <div class="block reveal" style="text-align: center; padding: var(--space-2xl) 0;">
-            <p class="block-text" style="margin-bottom: var(--space-lg);">Systems feeling fragile? Let's fix that.</p>
-            <a href="#contact" class="btn">→ Start a conversation</a>
+            <p class="block-text" style="margin-bottom: var(--space-lg);" data-i18n="arch.cta2.text">Systems feeling fragile? Let's fix that.</p>
+            <a href="#contact" class="btn" data-i18n="arch.cta2.button">→ Start a conversation</a>
         </div>
     </div>
 
@@ -632,41 +724,41 @@
     <section class="form-section" id="contact">
         <div class="container">
             <div class="form-header reveal">
-                <h2 class="form-title">Let's talk</h2>
-                <p class="form-subtitle">No pressure. No sales pitch.</p>
+                <h2 class="form-title" data-i18n="form.title">Let's talk</h2>
+                <p class="form-subtitle" data-i18n="form.subtitle">No pressure. No sales pitch.</p>
             </div>
             
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="name">Name</label>
+                        <label class="form-label" for="name" data-i18n="form.name">Name</label>
                         <input type="text" id="name" name="name" class="form-input" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="company">Company</label>
+                        <label class="form-label" for="company" data-i18n="form.company">Company</label>
                         <input type="text" id="company" name="company" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="role">Role</label>
+                        <label class="form-label" for="role" data-i18n="form.role">Role</label>
                         <input type="text" id="role" name="role" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
+                        <label class="form-label" for="email" data-i18n="form.email">Email</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="problem">What's the main problem?</label>
+                    <label class="form-label" for="problem" data-i18n="form.problem">What's the main problem?</label>
                     <textarea id="problem" name="problem" class="form-textarea" required></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">→ Start the conversation</button>
+                <button type="submit" class="form-submit" data-i18n="form.submit">→ Start the conversation</button>
                 
-                <p class="form-trust">Your information stays private. No spam.</p>
+                <p class="form-trust" data-i18n="form.trust">Your information stays private. No spam.</p>
             </form>
         </div>
     </section>
@@ -674,10 +766,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text">© 2026 Osmel Prieto Teran</p>
+            <p class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</p>
         </div>
     </footer>
 
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js"></script>
+    
     <script>
         // Theme
         const themeToggle = document.getElementById('themeToggle');
@@ -714,6 +809,31 @@
                 document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Language Selector Handler - Dropdown
+        const langSelector = document.getElementById('langSelector');
+        const langToggle = document.getElementById('langToggle');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const langData = { en: { flag: '🇬🇧', code: 'EN' }, de: { flag: '🇩🇪', code: 'DE' }, es: { flag: '🇪🇸', code: 'ES' } };
+        
+        function updateLangDisplay(lang) {
+            const data = langData[lang];
+            document.getElementById('currentLangFlag').textContent = data.flag;
+            document.getElementById('currentLangCode').textContent = data.code;
+            langOptions.forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-lang') === lang));
+        }
+        
+        updateLangDisplay(i18n.getLanguage());
+        langToggle.addEventListener('click', (e) => { e.stopPropagation(); langSelector.classList.toggle('open'); });
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                i18n.setLanguage(opt.getAttribute('data-lang'));
+                updateLangDisplay(opt.getAttribute('data-lang'));
+                langSelector.classList.remove('open');
+            });
+        });
+        document.addEventListener('click', (e) => { if (!langSelector.contains(e.target)) langSelector.classList.remove('open'); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') langSelector.classList.remove('open'); });
     </script>
 </body>
 </html>

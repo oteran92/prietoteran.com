@@ -14,8 +14,14 @@ const { Resend } = require('resend');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Initialize Resend for email sending
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Initialize Resend lazily (only when API key is available)
+let resend = null;
+const getResend = () => {
+    if (!resend && process.env.RESEND_API_KEY) {
+        resend = new Resend(process.env.RESEND_API_KEY);
+    }
+    return resend;
+};
 
 // Security middleware
 app.use(helmet({
@@ -76,8 +82,18 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             });
         }
 
+        // Check if Resend is configured
+        const resendClient = getResend();
+        if (!resendClient) {
+            console.error('RESEND_API_KEY is not configured');
+            return res.status(500).json({
+                success: false,
+                message: 'Email service not configured. Please contact directly.',
+            });
+        }
+
         // Send email via Resend
-        const { data, error } = await resend.emails.send({
+        const { data, error } = await resendClient.emails.send({
             from: process.env.EMAIL_FROM || 'Contact Form <onboarding@resend.dev>',
             to: [process.env.EMAIL_TO || 'osmel@prietoteran.com'],
             replyTo: email,
@@ -140,4 +156,5 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`Resend API: ${process.env.RESEND_API_KEY ? 'configured' : 'NOT configured'}`);
 });

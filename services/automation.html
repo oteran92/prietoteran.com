@@ -178,6 +178,74 @@
             align-items: center;
             gap: var(--space-lg);
         }
+        
+        /* Language Selector - Elegant Dropdown */
+        .lang-selector { position: relative; }
+        .lang-current {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+        }
+        .lang-current:hover { border-color: var(--accent); color: var(--accent); }
+        .lang-current .lang-icon { font-size: 1rem; line-height: 1; }
+        .lang-current .lang-arrow { font-size: 0.6rem; transition: transform 0.3s var(--ease-out); opacity: 0.6; }
+        .lang-selector.open .lang-arrow { transform: rotate(180deg); }
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px;
+            min-width: 120px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s var(--ease-out);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            z-index: 200;
+        }
+        [data-theme="dark"] .lang-dropdown { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+        .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s var(--ease-out);
+            text-align: left;
+        }
+        .lang-option:hover { background: var(--bg-secondary); color: var(--text-primary); }
+        .lang-option.active { background: var(--accent-muted); color: var(--accent); }
+        .lang-option .lang-flag { font-size: 1.1rem; line-height: 1; }
+        .lang-option .lang-name { flex: 1; }
+        .lang-option .lang-check { opacity: 0; color: var(--accent); font-size: 0.9rem; }
+        .lang-option.active .lang-check { opacity: 1; }
+        @media (max-width: 768px) { .lang-selector { display: none; } }
 
         .nav-back {
             font-family: var(--font-mono);
@@ -554,7 +622,31 @@
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo"><span>O</span>PT<span>.</span></a>
             <div class="nav-right">
-                <a href="../index.html" class="nav-back">← Home</a>
+                <a href="../index.html" class="nav-back" data-i18n="nav.home">← Home</a>
+                <div class="lang-selector" id="langSelector">
+                    <button class="lang-current" id="langToggle">
+                        <span class="lang-icon" id="currentLangFlag">🌐</span>
+                        <span class="lang-code" id="currentLangCode">EN</span>
+                        <span class="lang-arrow">▼</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name">English</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="de">
+                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-name">Deutsch</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                        <button class="lang-option" data-lang="es">
+                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-name">Español</span>
+                            <span class="lang-check">✓</span>
+                        </button>
+                    </div>
+                </div>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀</span>
                     <span class="icon-moon">☾</span>
@@ -566,116 +658,116 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <p class="hero-label reveal">Service</p>
-            <h1 class="hero-title reveal">Process Automation<br>& Operational Efficiency</h1>
-            <p class="hero-subtitle reveal">I automate what shouldn't be manual anymore. Less error, more control.</p>
-            <a href="#contact" class="btn reveal">→ Discuss your processes</a>
+            <p class="hero-label reveal" data-i18n="auto.label">Service</p>
+            <h1 class="hero-title reveal" data-i18n="auto.title">Process Automation<br>& Operational Efficiency</h1>
+            <p class="hero-subtitle reveal" data-i18n="auto.subtitle">I automate what shouldn't be manual anymore. Less error, more control.</p>
+            <a href="#contact" class="btn reveal" data-i18n="auto.cta">→ Discuss your processes</a>
         </div>
     </section>
 
     <!-- Problem -->
     <div class="container">
         <div class="block reveal">
-            <p class="block-label">The Problem</p>
-            <h2 class="block-title">Manual work is eating your time</h2>
+            <p class="block-label" data-i18n="auto.problem.label">The Problem</p>
+            <h2 class="block-title" data-i18n="auto.problem.title">Manual work is eating your time</h2>
             <ul class="list">
-                <li>Repetitive tasks done by hand</li>
-                <li>Copy-paste between systems</li>
-                <li>Spreadsheets as "databases"</li>
-                <li>Human errors in critical processes</li>
-                <li>No visibility into operations</li>
+                <li data-i18n="auto.problem1">Repetitive tasks done by hand</li>
+                <li data-i18n="auto.problem2">Copy-paste between systems</li>
+                <li data-i18n="auto.problem3">Spreadsheets as "databases"</li>
+                <li data-i18n="auto.problem4">Human errors in critical processes</li>
+                <li data-i18n="auto.problem5">No visibility into operations</li>
             </ul>
         </div>
 
         <!-- Cost -->
         <div class="block reveal">
-            <p class="block-label">The Cost</p>
-            <h2 class="block-title">What manual work really costs</h2>
+            <p class="block-label" data-i18n="auto.cost.label">The Cost</p>
+            <h2 class="block-title" data-i18n="auto.cost.title">What manual work really costs</h2>
             <div class="stats-grid">
                 <div class="stat">
-                    <div class="stat-value">Hours</div>
-                    <div class="stat-label">Lost weekly</div>
+                    <div class="stat-value" data-i18n="auto.cost.stat1.value">Hours</div>
+                    <div class="stat-label" data-i18n="auto.cost.stat1.label">Lost weekly</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">Errors</div>
-                    <div class="stat-label">In every cycle</div>
+                    <div class="stat-value" data-i18n="auto.cost.stat2.value">Errors</div>
+                    <div class="stat-label" data-i18n="auto.cost.stat2.label">In every cycle</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value">Stress</div>
-                    <div class="stat-label">On your team</div>
+                    <div class="stat-value" data-i18n="auto.cost.stat3.value">Stress</div>
+                    <div class="stat-label" data-i18n="auto.cost.stat3.label">On your team</div>
                 </div>
             </div>
-            <p class="block-text">Every manual process is a liability waiting to break.</p>
+            <p class="block-text" data-i18n="auto.cost.text">Every manual process is a liability waiting to break.</p>
         </div>
 
         <!-- Solution -->
         <div class="block reveal">
-            <p class="block-label">What I Do</p>
-            <h2 class="block-title">Automate. Simplify. Control.</h2>
+            <p class="block-label" data-i18n="auto.solution.label">What I Do</p>
+            <h2 class="block-title" data-i18n="auto.solution.title">Automate. Simplify. Control.</h2>
             <ul class="list list-arrow">
-                <li>Workflow automation</li>
-                <li>Data entry & processing</li>
-                <li>Report generation</li>
-                <li>System notifications & alerts</li>
-                <li>Approval flows</li>
-                <li>Scheduled tasks & batch jobs</li>
+                <li data-i18n="auto.solution1">Workflow automation</li>
+                <li data-i18n="auto.solution2">Data entry & processing</li>
+                <li data-i18n="auto.solution3">Report generation</li>
+                <li data-i18n="auto.solution4">System notifications & alerts</li>
+                <li data-i18n="auto.solution5">Approval flows</li>
+                <li data-i18n="auto.solution6">Scheduled tasks & batch jobs</li>
             </ul>
         </div>
 
         <!-- Process -->
         <div class="block reveal">
-            <p class="block-label">Process</p>
-            <h2 class="block-title">How we work</h2>
+            <p class="block-label" data-i18n="auto.process.label">Process</p>
+            <h2 class="block-title" data-i18n="auto.process.title">How we work</h2>
             <div class="process-grid">
                 <div class="process-step">
                     <span class="process-num">01</span>
-                    <h3 class="process-name">Map</h3>
+                    <h3 class="process-name" data-i18n="auto.process1">Map</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">02</span>
-                    <h3 class="process-name">Prioritize</h3>
+                    <h3 class="process-name" data-i18n="auto.process2">Prioritize</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">03</span>
-                    <h3 class="process-name">Automate</h3>
+                    <h3 class="process-name" data-i18n="auto.process3">Automate</h3>
                 </div>
                 <div class="process-step">
                     <span class="process-num">04</span>
-                    <h3 class="process-name">Monitor</h3>
+                    <h3 class="process-name" data-i18n="auto.process4">Monitor</h3>
                 </div>
             </div>
         </div>
 
         <!-- Result -->
         <div class="block reveal">
-            <p class="block-label">Result</p>
-            <h2 class="block-title">What you get</h2>
+            <p class="block-label" data-i18n="auto.result.label">Result</p>
+            <h2 class="block-title" data-i18n="auto.result.title">What you get</h2>
             <ul class="list list-check">
-                <li>Hours back every week</li>
-                <li>Zero human error in automated tasks</li>
-                <li>Real-time visibility</li>
-                <li>Scalable operations</li>
+                <li data-i18n="auto.result1">Hours back every week</li>
+                <li data-i18n="auto.result2">Zero human error in automated tasks</li>
+                <li data-i18n="auto.result3">Real-time visibility</li>
+                <li data-i18n="auto.result4">Scalable operations</li>
             </ul>
             <div class="highlight-box">
-                <p>Your team focuses on decisions, not data entry.</p>
+                <p data-i18n="auto.result.highlight">Your team focuses on decisions, not data entry.</p>
             </div>
         </div>
 
         <!-- Fit -->
         <div class="block reveal">
-            <p class="block-label">Good Fit</p>
-            <h2 class="block-title">This is for you if:</h2>
+            <p class="block-label" data-i18n="auto.fit.label">Good Fit</p>
+            <h2 class="block-title" data-i18n="auto.fit.title">This is for you if:</h2>
             <ul class="list list-check">
-                <li>Your team spends hours on repetitive tasks</li>
-                <li>Errors are becoming a pattern</li>
-                <li>You need to scale without hiring</li>
+                <li data-i18n="auto.fit1">Your team spends hours on repetitive tasks</li>
+                <li data-i18n="auto.fit2">Errors are becoming a pattern</li>
+                <li data-i18n="auto.fit3">You need to scale without hiring</li>
             </ul>
         </div>
 
         <!-- CTA -->
         <div class="block reveal" style="text-align: center; padding: var(--space-2xl) 0;">
-            <p class="block-text" style="margin-bottom: var(--space-lg);">Ready to stop doing things the hard way?</p>
-            <a href="#contact" class="btn">→ Start a conversation</a>
+            <p class="block-text" style="margin-bottom: var(--space-lg);" data-i18n="auto.cta2.text">Ready to stop doing things the hard way?</p>
+            <a href="#contact" class="btn" data-i18n="auto.cta2.button">→ Start a conversation</a>
         </div>
     </div>
 
@@ -683,41 +775,41 @@
     <section class="form-section" id="contact">
         <div class="container">
             <div class="form-header reveal">
-                <h2 class="form-title">Let's talk</h2>
-                <p class="form-subtitle">No pressure. No sales pitch.</p>
+                <h2 class="form-title" data-i18n="form.title">Let's talk</h2>
+                <p class="form-subtitle" data-i18n="form.subtitle">No pressure. No sales pitch.</p>
             </div>
             
             <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="name">Name</label>
+                        <label class="form-label" for="name" data-i18n="form.name">Name</label>
                         <input type="text" id="name" name="name" class="form-input" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="company">Company</label>
+                        <label class="form-label" for="company" data-i18n="form.company">Company</label>
                         <input type="text" id="company" name="company" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label" for="role">Role</label>
+                        <label class="form-label" for="role" data-i18n="form.role">Role</label>
                         <input type="text" id="role" name="role" class="form-input">
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="email">Email</label>
+                        <label class="form-label" for="email" data-i18n="form.email">Email</label>
                         <input type="email" id="email" name="email" class="form-input" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
-                    <label class="form-label" for="problem">What process is causing the most pain?</label>
+                    <label class="form-label" for="problem" data-i18n="form.process">What process is causing the most pain?</label>
                     <textarea id="problem" name="problem" class="form-textarea" required></textarea>
                 </div>
                 
-                <button type="submit" class="form-submit">→ Start the conversation</button>
+                <button type="submit" class="form-submit" data-i18n="form.submit">→ Start the conversation</button>
                 
-                <p class="form-trust">Your information stays private. No spam.</p>
+                <p class="form-trust" data-i18n="form.trust">Your information stays private. No spam.</p>
             </form>
         </div>
     </section>
@@ -725,10 +817,13 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text">© 2026 Osmel Prieto Teran</p>
+            <p class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</p>
         </div>
     </footer>
 
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js"></script>
+    
     <script>
         // Theme
         const themeToggle = document.getElementById('themeToggle');
@@ -765,6 +860,31 @@
                 document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        // Language Selector Handler - Dropdown
+        const langSelector = document.getElementById('langSelector');
+        const langToggle = document.getElementById('langToggle');
+        const langOptions = document.querySelectorAll('.lang-option');
+        const langData = { en: { flag: '🇬🇧', code: 'EN' }, de: { flag: '🇩🇪', code: 'DE' }, es: { flag: '🇪🇸', code: 'ES' } };
+        
+        function updateLangDisplay(lang) {
+            const data = langData[lang];
+            document.getElementById('currentLangFlag').textContent = data.flag;
+            document.getElementById('currentLangCode').textContent = data.code;
+            langOptions.forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-lang') === lang));
+        }
+        
+        updateLangDisplay(i18n.getLanguage());
+        langToggle.addEventListener('click', (e) => { e.stopPropagation(); langSelector.classList.toggle('open'); });
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                i18n.setLanguage(opt.getAttribute('data-lang'));
+                updateLangDisplay(opt.getAttribute('data-lang'));
+                langSelector.classList.remove('open');
+            });
+        });
+        document.addEventListener('click', (e) => { if (!langSelector.contains(e.target)) langSelector.classList.remove('open'); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') langSelector.classList.remove('open'); });
     </script>
 </body>
 </html>

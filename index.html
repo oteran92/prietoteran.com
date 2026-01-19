@@ -1238,6 +1238,160 @@
         [data-theme="dark"] .noise {
             opacity: 0.03;
         }
+
+        /* ============================================
+           CONTACT FORM
+           ============================================ */
+        .contact {
+            padding: var(--space-3xl) 0;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-2xl);
+        }
+
+        @media (min-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr 1.2fr;
+            }
+        }
+
+        .contact-text {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+        }
+
+        .contact-subtext {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: var(--space-xl);
+        }
+
+        .contact-alt {
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-alt-label {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .contact-email {
+            font-family: var(--font-mono);
+            font-size: 1rem;
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.3s var(--ease-out);
+        }
+
+        .contact-email:hover {
+            opacity: 0.8;
+        }
+
+        .contact-form {
+            background: var(--bg-elevated);
+            padding: var(--space-xl);
+            border: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .form-group label {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            display: block;
+            margin-bottom: var(--space-sm);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--space-md);
+            font-family: var(--font-display);
+            font-size: 1rem;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            transition: all 0.3s var(--ease-out);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-muted);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--text-subtle);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            position: relative;
+        }
+
+        .btn-submit .btn-loading {
+            display: none;
+        }
+
+        .btn-submit.loading .btn-text {
+            display: none;
+        }
+
+        .btn-submit.loading .btn-loading {
+            display: inline;
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .form-status {
+            margin-top: var(--space-md);
+            padding: var(--space-md);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            text-align: center;
+            display: none;
+        }
+
+        .form-status.success {
+            display: block;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .form-status.error {
+            display: block;
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -1465,18 +1619,57 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta" id="contact">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <div class="cta-content reveal">
-                <p class="cta-text">
-                    If you're dealing with a complex software problem and need clarity, structure and execution — let's talk.
-                </p>
+            <header class="section-header reveal">
+                <span class="section-number">003 — CONTACT</span>
+                <h2 class="section-title">Let's Talk</h2>
+            </header>
+            
+            <div class="contact-grid">
+                <div class="contact-intro reveal">
+                    <p class="contact-text">
+                        If you're dealing with a complex software problem and need clarity, structure and execution — I'd love to hear from you.
+                    </p>
+                    <p class="contact-subtext">
+                        Fill out the form and I'll get back to you within 24-48 hours.
+                    </p>
+                    
+                    <div class="contact-alt">
+                        <span class="contact-alt-label">Or reach me directly:</span>
+                        <a href="mailto:osmel@prietoteran.com" class="contact-email">osmel@prietoteran.com</a>
+                    </div>
+                </div>
                 
-                <a href="mailto:osmel@prietoteran.com" class="cta-link">
-                    Start a conversation
-                    <span>→</span>
-                </a>
+                <form class="contact-form reveal reveal-delay-1" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Your company (optional)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project or challenge..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading">Sending...</span>
+                    </button>
+                    
+                    <div class="form-status" id="formStatus"></div>
+                </form>
             </div>
         </div>
     </section>
@@ -1570,6 +1763,58 @@
                     });
                 }
             });
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = contactForm.querySelector('.btn-submit');
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Reset status
+            formStatus.className = 'form-status';
+            formStatus.textContent = '';
+            
+            // Show loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+
+            // Gather form data
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                company: document.getElementById('company').value.trim(),
+                message: document.getElementById('message').value.trim()
+            };
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    formStatus.className = 'form-status success';
+                    formStatus.textContent = result.message;
+                    contactForm.reset();
+                } else {
+                    formStatus.className = 'form-status error';
+                    formStatus.textContent = result.message || 'Something went wrong. Please try again.';
+                }
+            } catch (error) {
+                formStatus.className = 'form-status error';
+                formStatus.textContent = 'Network error. Please check your connection and try again.';
+            } finally {
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
+            }
         });
     </script>
 </body>

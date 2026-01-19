@@ -1,0 +1,23 @@
+{
+  "name": "prietoteran-website",
+  "version": "1.0.0",
+  "description": "Personal portfolio website with contact form",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "resend": "^2.1.0",
+    "dotenv": "^16.3.1",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5"
+  },
+  "keywords": ["portfolio", "contact-form"],
+  "author": "Osmel Prieto Teran",
+  "license": "MIT"
+}

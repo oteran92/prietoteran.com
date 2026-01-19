@@ -179,72 +179,38 @@
             gap: var(--space-lg);
         }
         
-        /* Language Selector - Elegant Dropdown */
+        /* Language Selector - Minimal Dropdown */
         .lang-selector { position: relative; }
         .lang-current {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: none;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-            padding: 8px 12px;
-            cursor: pointer;
-            transition: all 0.3s var(--ease-out);
+            display: flex; align-items: center; gap: 6px; background: none; border: none;
+            font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500;
+            letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
+            padding: 8px 4px; cursor: pointer; transition: all 0.3s var(--ease-out);
         }
-        .lang-current:hover { border-color: var(--accent); color: var(--accent); }
-        .lang-current .lang-icon { font-size: 1rem; line-height: 1; }
-        .lang-current .lang-arrow { font-size: 0.6rem; transition: transform 0.3s var(--ease-out); opacity: 0.6; }
+        .lang-current:hover { color: var(--text-primary); }
+        .lang-current .lang-code { min-width: 20px; }
+        .lang-current .lang-arrow { display: flex; align-items: center; transition: transform 0.3s var(--ease-out); opacity: 0.5; }
+        .lang-current .lang-arrow svg { width: 10px; height: 6px; }
         .lang-selector.open .lang-arrow { transform: rotate(180deg); }
         .lang-dropdown {
-            position: absolute;
-            top: calc(100% + 8px);
-            right: 0;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 6px;
-            min-width: 120px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s var(--ease-out);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            z-index: 200;
+            position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-elevated);
+            border: 1px solid var(--border); border-radius: 4px; padding: 4px; min-width: 140px;
+            opacity: 0; visibility: hidden; transform: translateY(-8px);
+            transition: all 0.2s var(--ease-out); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); z-index: 200;
         }
-        [data-theme="dark"] .lang-dropdown { box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4); }
+        [data-theme="dark"] .lang-dropdown { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
         .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
         .lang-option {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            background: none;
-            border: none;
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            font-weight: 500;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: var(--text-secondary);
-            padding: 10px 12px;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.2s var(--ease-out);
-            text-align: left;
+            display: flex; align-items: center; gap: 12px; width: 100%; background: none; border: none;
+            font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em;
+            color: var(--text-secondary); padding: 10px 12px; cursor: pointer; border-radius: 3px;
+            transition: all 0.15s var(--ease-out); text-align: left;
         }
         .lang-option:hover { background: var(--bg-secondary); color: var(--text-primary); }
-        .lang-option.active { background: var(--accent-muted); color: var(--accent); }
-        .lang-option .lang-flag { font-size: 1.1rem; line-height: 1; }
-        .lang-option .lang-name { flex: 1; }
-        .lang-option .lang-check { opacity: 0; color: var(--accent); font-size: 0.9rem; }
-        .lang-option.active .lang-check { opacity: 1; }
+        .lang-option.active { color: var(--accent); }
+        .lang-option .lang-code { text-transform: uppercase; font-weight: 600; min-width: 24px; }
+        .lang-option .lang-name { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
+        .lang-option.active .lang-name { color: var(--accent); opacity: 0.8; }
         @media (max-width: 768px) { .lang-selector { display: none; } }
 
         .nav-back {
@@ -625,25 +591,25 @@
                 <a href="../index.html" class="nav-back" data-i18n="nav.home">← Home</a>
                 <div class="lang-selector" id="langSelector">
                     <button class="lang-current" id="langToggle">
-                        <span class="lang-icon" id="currentLangFlag">🌐</span>
                         <span class="lang-code" id="currentLangCode">EN</span>
-                        <span class="lang-arrow">▼</span>
+                        <span class="lang-arrow">
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
                     </button>
                     <div class="lang-dropdown">
                         <button class="lang-option" data-lang="en">
-                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-code">EN</span>
                             <span class="lang-name">English</span>
-                            <span class="lang-check">✓</span>
                         </button>
                         <button class="lang-option" data-lang="de">
-                            <span class="lang-flag">🇩🇪</span>
+                            <span class="lang-code">DE</span>
                             <span class="lang-name">Deutsch</span>
-                            <span class="lang-check">✓</span>
                         </button>
                         <button class="lang-option" data-lang="es">
-                            <span class="lang-flag">🇪🇸</span>
+                            <span class="lang-code">ES</span>
                             <span class="lang-name">Español</span>
-                            <span class="lang-check">✓</span>
                         </button>
                     </div>
                 </div>
@@ -865,12 +831,9 @@
         const langSelector = document.getElementById('langSelector');
         const langToggle = document.getElementById('langToggle');
         const langOptions = document.querySelectorAll('.lang-option');
-        const langData = { en: { flag: '🇬🇧', code: 'EN' }, de: { flag: '🇩🇪', code: 'DE' }, es: { flag: '🇪🇸', code: 'ES' } };
         
         function updateLangDisplay(lang) {
-            const data = langData[lang];
-            document.getElementById('currentLangFlag').textContent = data.flag;
-            document.getElementById('currentLangCode').textContent = data.code;
+            document.getElementById('currentLangCode').textContent = lang.toUpperCase();
             langOptions.forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-lang') === lang));
         }
         

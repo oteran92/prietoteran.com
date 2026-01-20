@@ -278,9 +278,80 @@
             width: 100%;
         }
 
+        /* Mobile Menu Button */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            cursor: pointer;
+            gap: 5px;
+            padding: 8px;
+        }
+        
+        .nav-hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-secondary);
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .nav-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .nav-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
         @media (max-width: 768px) {
+            .nav-hamburger {
+                display: flex;
+            }
+            
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: var(--space-lg);
+                gap: var(--space-md);
+            }
+            
+            .nav.scrolled .nav-links {
+                background: var(--bg-elevated);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                text-align: center;
+            }
+            
+            .nav-links a {
+                font-size: 1rem;
+                padding: var(--space-sm) 0;
+                display: block;
+            }
+            
+            .nav-right {
+                gap: var(--space-md);
             }
         }
         
@@ -469,6 +540,46 @@
         @media (max-width: 768px) {
             .lang-selector {
                 display: none;
+            }
+            
+            .lang-selector.mobile-visible {
+                display: block;
+                position: absolute;
+                top: calc(100% + 180px);
+                left: 0;
+                right: 0;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--border);
+                padding: var(--space-md) var(--space-lg);
+            }
+            
+            .lang-selector.mobile-visible .lang-dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: var(--space-md);
+            }
+            
+            .lang-selector.mobile-visible .lang-current {
+                display: none;
+            }
+            
+            .lang-selector.mobile-visible .lang-option {
+                padding: var(--space-sm) var(--space-md);
+                border: 1px solid var(--border);
+                border-radius: 4px;
+            }
+            
+            .lang-selector.mobile-visible .lang-option.active {
+                border-color: var(--accent);
+                background: var(--accent-muted);
             }
         }
 
@@ -858,6 +969,19 @@
             display: flex;
             gap: var(--space-sm);
             flex-wrap: wrap;
+        }
+        
+        @media (max-width: 480px) {
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .hero-cta .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
         }
 
         @media (min-width: 768px) {
@@ -1802,7 +1926,12 @@
                     <span>O</span>PT<span>.</span>
                 </div>
                 <div class="nav-right">
-                    <ul class="nav-links">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
                         <li><a href="#services" data-i18n="nav.services">Services</a></li>
                         <li><a href="#about" data-i18n="nav.about">About</a></li>
                         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -2110,6 +2239,31 @@
     
     <!-- JavaScript for Animations & Interactions -->
     <script>
+        // Mobile Navigation
+        const navHamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        navHamburger.addEventListener('click', () => {
+            navHamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            // Show/hide language selector on mobile
+            const langSel = document.getElementById('langSelector');
+            if (navLinks.classList.contains('active')) {
+                langSel.classList.add('mobile-visible');
+            } else {
+                langSel.classList.remove('mobile-visible');
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navHamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.getElementById('langSelector').classList.remove('mobile-visible');
+            });
+        });
+
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B2B System Architecture & Integration — Osmel Prieto Teran</title>
-    <meta name="description" content="I help companies fix fragmented systems and build stable, secure and scalable architectures.">
+    <title>Salesforce & ERP Integration — Osmel Prieto Teran</title>
+    <meta name="description" content="I help B2B companies align Salesforce, ERP and surrounding systems into a single, reliable architecture.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -178,40 +178,6 @@
             align-items: center;
             gap: var(--space-lg);
         }
-        
-        /* Language Selector - Minimal Dropdown */
-        .lang-selector { position: relative; }
-        .lang-current {
-            display: flex; align-items: center; gap: 6px; background: none; border: none;
-            font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500;
-            letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
-            padding: 8px 4px; cursor: pointer; transition: all 0.3s var(--ease-out);
-        }
-        .lang-current:hover { color: var(--text-primary); }
-        .lang-current .lang-code { min-width: 20px; }
-        .lang-current .lang-arrow { display: flex; align-items: center; transition: transform 0.3s var(--ease-out); opacity: 0.5; }
-        .lang-current .lang-arrow svg { width: 10px; height: 6px; }
-        .lang-selector.open .lang-arrow { transform: rotate(180deg); }
-        .lang-dropdown {
-            position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-elevated);
-            border: 1px solid var(--border); border-radius: 4px; padding: 4px; min-width: 140px;
-            opacity: 0; visibility: hidden; transform: translateY(-8px);
-            transition: all 0.2s var(--ease-out); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); z-index: 200;
-        }
-        [data-theme="dark"] .lang-dropdown { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
-        .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
-        .lang-option {
-            display: flex; align-items: center; gap: 12px; width: 100%; background: none; border: none;
-            font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.05em;
-            color: var(--text-secondary); padding: 10px 12px; cursor: pointer; border-radius: 3px;
-            transition: all 0.15s var(--ease-out); text-align: left;
-        }
-        .lang-option:hover { background: var(--bg-secondary); color: var(--text-primary); }
-        .lang-option.active { color: var(--accent); }
-        .lang-option .lang-code { text-transform: uppercase; font-weight: 600; min-width: 24px; }
-        .lang-option .lang-name { color: var(--text-muted); font-weight: 400; text-transform: none; letter-spacing: 0; }
-        .lang-option.active .lang-name { color: var(--accent); opacity: 0.8; }
-        @media (max-width: 768px) { .lang-selector { display: none; } }
 
         .nav-back {
             font-family: var(--font-mono);
@@ -278,9 +244,31 @@
         .hero-subtitle {
             font-size: 1.2rem;
             color: var(--text-secondary);
-            max-width: 500px;
-            line-height: 1.6;
+            max-width: 560px;
+            line-height: 1.7;
             margin-bottom: var(--space-xl);
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            align-items: flex-start;
+        }
+
+        .hero-secondary {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .hero-secondary a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .hero-secondary a:hover {
+            text-decoration: underline;
         }
 
         /* ============================================
@@ -304,6 +292,15 @@
         .btn:hover {
             background: var(--accent);
             color: #FFFFFF;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
         }
 
         /* ============================================
@@ -334,6 +331,7 @@
             font-size: 1.1rem;
             color: var(--text-secondary);
             line-height: 1.7;
+            margin-bottom: var(--space-md);
         }
 
         /* Lists */
@@ -362,36 +360,6 @@
             color: var(--accent);
         }
 
-        /* Process Grid */
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1px;
-            background: var(--border);
-            margin: var(--space-lg) 0;
-        }
-
-        @media (max-width: 600px) {
-            .process-grid { grid-template-columns: 1fr; }
-        }
-
-        .process-step {
-            background: var(--bg-primary);
-            padding: var(--space-lg);
-        }
-
-        .process-num {
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-bottom: var(--space-sm);
-        }
-
-        .process-name {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
         /* Highlight box */
         .highlight-box {
             background: var(--bg-secondary);
@@ -404,103 +372,116 @@
             font-size: 1.1rem;
             color: var(--text-primary);
             margin: 0;
+            font-style: italic;
         }
 
-        /* ============================================
-           FORM
-           ============================================ */
-        .form-section {
-            background: var(--bg-secondary);
-            border-top: 1px solid var(--border);
-            padding: var(--space-2xl) 0;
-        }
-
-        .form-header {
+        /* Step blocks */
+        .step-block {
             margin-bottom: var(--space-xl);
         }
 
-        .form-title {
-            font-size: 1.5rem;
-            font-weight: 500;
+        .step-number {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent);
             margin-bottom: var(--space-sm);
         }
 
-        .form-subtitle {
-            color: var(--text-muted);
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: var(--space-md);
         }
 
-        .form-row {
+        .step-list {
+            list-style: none;
+        }
+
+        .step-list li {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            padding: var(--space-sm) 0;
+            padding-left: var(--space-lg);
+            position: relative;
+        }
+
+        .step-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        /* Phase blocks */
+        .phase-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-md);
+            gap: var(--space-lg);
+            margin: var(--space-lg) 0;
         }
 
-        @media (max-width: 500px) {
-            .form-row { grid-template-columns: 1fr; }
+        @media (max-width: 600px) {
+            .phase-grid { grid-template-columns: 1fr; }
         }
 
-        .form-group {
+        .phase {
+            background: var(--bg-secondary);
+            padding: var(--space-lg);
+        }
+
+        .phase-label {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: var(--space-sm);
+        }
+
+        .phase-title {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: var(--space-md);
+        }
+
+        .phase-list {
+            list-style: none;
+        }
+
+        .phase-list li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            padding: 4px 0;
+        }
+
+        /* Trust block */
+        .trust-block {
+            background: var(--bg-secondary);
+            padding: var(--space-xl);
+            margin: var(--space-xl) 0;
+            border-left: 2px solid var(--accent);
+        }
+
+        .trust-block p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: var(--space-2xl) 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .final-cta .block-title {
             margin-bottom: var(--space-lg);
         }
 
-        .form-label {
-            display: block;
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            margin-bottom: var(--space-sm);
-        }
-
-        .form-input, .form-textarea {
-            width: 100%;
-            font-family: var(--font-display);
-            font-size: 1rem;
-            color: var(--text-primary);
-            background: var(--bg-elevated);
-            border: 1px solid var(--border);
-            padding: var(--space-md);
-            transition: border-color 0.3s;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .form-input::placeholder, .form-textarea::placeholder {
-            color: var(--text-subtle);
-        }
-
-        .form-textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-
-        .form-submit {
-            width: 100%;
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            padding: var(--space-md);
-            background: var(--accent);
-            border: none;
-            color: #FFFFFF;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .form-submit:hover {
-            background: var(--accent-dark);
-        }
-
-        .form-trust {
-            text-align: center;
-            margin-top: var(--space-lg);
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--text-muted);
+        .final-cta .hero-secondary {
+            margin-top: var(--space-md);
         }
 
         /* ============================================
@@ -552,31 +533,7 @@
         <div class="nav-inner">
             <a href="../index.html" class="nav-logo"><span>O</span>PT<span>.</span></a>
             <div class="nav-right">
-                <a href="../index.html" class="nav-back" data-i18n="nav.home">← Home</a>
-                <div class="lang-selector" id="langSelector">
-                    <button class="lang-current" id="langToggle">
-                        <span class="lang-code" id="currentLangCode">EN</span>
-                        <span class="lang-arrow">
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </button>
-                    <div class="lang-dropdown">
-                        <button class="lang-option" data-lang="en">
-                            <span class="lang-code">EN</span>
-                            <span class="lang-name">English</span>
-                        </button>
-                        <button class="lang-option" data-lang="de">
-                            <span class="lang-code">DE</span>
-                            <span class="lang-name">Deutsch</span>
-                        </button>
-                        <button class="lang-option" data-lang="es">
-                            <span class="lang-code">ES</span>
-                            <span class="lang-name">Español</span>
-                        </button>
-                    </div>
-                </div>
+                <a href="../index.html" class="nav-back">← Home</a>
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                     <span class="icon-sun">☀</span>
                     <span class="icon-moon">☾</span>
@@ -588,159 +545,136 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <p class="hero-label reveal" data-i18n="arch.label">Service</p>
-            <h1 class="hero-title reveal" data-i18n="arch.title">System Architecture<br>& Integration</h1>
-            <p class="hero-subtitle reveal" data-i18n="arch.subtitle">I fix fragmented systems and build architectures that scale.</p>
-            <a href="#contact" class="btn reveal" data-i18n="arch.cta">→ Discuss your system</a>
+            <p class="hero-label reveal">Salesforce ↔ ERP Integration</p>
+            <h1 class="hero-title reveal">Salesforce & ERP Integration<br>Built for Reliability, Not Workarounds</h1>
+            <p class="hero-subtitle reveal">I help B2B companies align Salesforce, ERP and surrounding systems into a single, reliable architecture — so teams trust the data and processes actually scale.</p>
+            <div class="hero-cta reveal">
+                <a href="https://outlook.office.com/bookwithme/user/e4d9c2db688b433fa2abeb6af4120b49@prietoteran.com/meetingtype/Bre95rdevkyBKLGW6qPbcg2?anonymous&ep=mlink" target="_blank" rel="noopener noreferrer" class="btn btn-primary">→ Book a 20-min Integration Call</a>
+                <p class="hero-secondary">Or <a href="mailto:osmel@prietoteran.com">email me directly</a></p>
+            </div>
         </div>
     </section>
 
-    <!-- Problem -->
+    <!-- Content -->
     <div class="container">
+        <!-- When This Makes Sense -->
         <div class="block reveal">
-            <p class="block-label" data-i18n="arch.problem.label">The Problem</p>
-            <h2 class="block-title" data-i18n="arch.problem.title">Sound familiar?</h2>
+            <p class="block-label">Pain Recognition</p>
+            <h2 class="block-title">You probably need this if…</h2>
             <ul class="list">
-                <li data-i18n="arch.problem1">Systems don't talk to each other</li>
-                <li data-i18n="arch.problem2">Data is duplicated or inconsistent</li>
-                <li data-i18n="arch.problem3">Too many manual workarounds</li>
-                <li data-i18n="arch.problem4">Changes feel risky</li>
-                <li data-i18n="arch.problem5">Technical debt keeps growing</li>
-            </ul>
-        </div>
-
-        <!-- Reframe -->
-        <div class="block reveal">
-            <p class="block-label" data-i18n="arch.issue.label">The Real Issue</p>
-            <h2 class="block-title" data-i18n="arch.issue.title">It's not the tools. It's the architecture.</h2>
-            <p class="block-text" data-i18n="arch.issue.text">Without a clear foundation, integrations break, scaling gets expensive, and security suffers.</p>
-        </div>
-
-        <!-- Solution -->
-        <div class="block reveal">
-            <p class="block-label" data-i18n="arch.solution.label">What I Do</p>
-            <h2 class="block-title" data-i18n="arch.solution.title">Systems that work as one</h2>
-            <ul class="list">
-                <li data-i18n="arch.solution1">ERP ↔ CRM integrations</li>
-                <li data-i18n="arch.solution2">API & middleware architecture</li>
-                <li data-i18n="arch.solution3">Ecommerce integrations</li>
-                <li data-i18n="arch.solution4">Data flows & sync</li>
-                <li data-i18n="arch.solution5">Security & access control</li>
-            </ul>
-        </div>
-
-        <!-- Process -->
-        <div class="block reveal">
-            <p class="block-label" data-i18n="arch.process.label">Process</p>
-            <h2 class="block-title" data-i18n="arch.process.title">How we work</h2>
-            <div class="process-grid">
-                <div class="process-step">
-                    <span class="process-num">01</span>
-                    <h3 class="process-name" data-i18n="arch.process1">Analyze</h3>
-                </div>
-                <div class="process-step">
-                    <span class="process-num">02</span>
-                    <h3 class="process-name" data-i18n="arch.process2">Design</h3>
-                </div>
-                <div class="process-step">
-                    <span class="process-num">03</span>
-                    <h3 class="process-name" data-i18n="arch.process3">Build</h3>
-                </div>
-                <div class="process-step">
-                    <span class="process-num">04</span>
-                    <h3 class="process-name" data-i18n="arch.process4">Handover</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- Ownership -->
-        <div class="block reveal">
-            <p class="block-label" data-i18n="arch.ownership.label">Ownership</p>
-            <h2 class="block-title" data-i18n="arch.ownership.title">You own everything</h2>
-            <ul class="list list-check">
-                <li data-i18n="arch.ownership1">The code is yours</li>
-                <li data-i18n="arch.ownership2">No vendor lock-in</li>
-                <li data-i18n="arch.ownership3">Clean documentation</li>
-                <li data-i18n="arch.ownership4">Security-first</li>
+                <li>Salesforce data doesn't fully match ERP data</li>
+                <li>Quotes, prices or availability require manual checks</li>
+                <li>Integrations break silently or depend on "tribal knowledge"</li>
+                <li>Different teams trust different numbers</li>
+                <li>Changes feel risky because no one sees the full picture</li>
             </ul>
             <div class="highlight-box">
-                <p data-i18n="arch.ownership.highlight">You're not buying a dependency. You're building an asset.</p>
+                <p>These are not technical problems.<br>They are architecture problems.</p>
             </div>
         </div>
 
-        <!-- Fit -->
+        <!-- What I Actually Do -->
         <div class="block reveal">
-            <p class="block-label" data-i18n="arch.fit.label">Good Fit</p>
-            <h2 class="block-title" data-i18n="arch.fit.title">This is for you if:</h2>
-            <ul class="list list-check">
-                <li data-i18n="arch.fit1">You run a B2B company with multiple systems</li>
-                <li data-i18n="arch.fit2">You need stability, not experiments</li>
-                <li data-i18n="arch.fit3">You want ownership and transparency</li>
-            </ul>
-        </div>
-
-        <!-- CTA -->
-        <div class="block reveal" style="text-align: center; padding: var(--space-2xl) 0;">
-            <p class="block-text" style="margin-bottom: var(--space-lg);" data-i18n="arch.cta2.text">Systems feeling fragile? Let's fix that.</p>
-            <a href="#contact" class="btn" data-i18n="arch.cta2.button">→ Start a conversation</a>
-        </div>
-    </div>
-
-    <!-- Form -->
-    <section class="form-section" id="contact">
-        <div class="container">
-            <div class="form-header reveal">
-                <h2 class="form-title" data-i18n="form.title">Let's talk</h2>
-                <p class="form-subtitle" data-i18n="form.subtitle">No pressure. No sales pitch.</p>
+            <p class="block-label">What I Do</p>
+            <h2 class="block-title">What I do — step by step</h2>
+            
+            <div class="step-block">
+                <p class="step-number">01</p>
+                <h3 class="step-title">Diagnose the system, not just the symptom</h3>
+                <ul class="step-list">
+                    <li>Map Salesforce, ERP, middleware, APIs and manual steps</li>
+                    <li>Identify data ownership, sync directions and failure points</li>
+                </ul>
             </div>
             
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="reveal">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label" for="name" data-i18n="form.name">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="company" data-i18n="form.company">Company</label>
-                        <input type="text" id="company" name="company" class="form-input" required>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label class="form-label" for="role" data-i18n="form.role">Role</label>
-                        <input type="text" id="role" name="role" class="form-input">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="email" data-i18n="form.email">Email</label>
-                        <input type="email" id="email" name="email" class="form-input" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="form-label" for="problem" data-i18n="form.problem">What's the main problem?</label>
-                    <textarea id="problem" name="problem" class="form-textarea" required></textarea>
-                </div>
-                
-                <button type="submit" class="form-submit" data-i18n="form.submit">→ Start the conversation</button>
-                
-                <p class="form-trust" data-i18n="form.trust">Your information stays private. No spam.</p>
-            </form>
+            <div class="step-block">
+                <p class="step-number">02</p>
+                <h3 class="step-title">Design a clear integration architecture</h3>
+                <ul class="step-list">
+                    <li>Define a single source of truth</li>
+                    <li>Decide what syncs, when, and why</li>
+                    <li>Reduce coupling and hidden dependencies</li>
+                </ul>
+            </div>
+            
+            <div class="step-block">
+                <p class="step-number">03</p>
+                <h3 class="step-title">Implement with long-term ownership in mind</h3>
+                <ul class="step-list">
+                    <li>Clean, documented integrations</li>
+                    <li>No black boxes</li>
+                    <li>No vendor lock-in</li>
+                </ul>
+            </div>
         </div>
-    </section>
+
+        <!-- Deliverables -->
+        <div class="block reveal">
+            <p class="block-label">Deliverables</p>
+            <h2 class="block-title">Deliverables you can rely on</h2>
+            <ul class="list list-check">
+                <li>Architecture overview (systems, flows, responsibilities)</li>
+                <li>Documented integration logic</li>
+                <li>Clean data models and sync rules</li>
+                <li>Error handling & monitoring strategy</li>
+                <li>Handover documentation for internal teams</li>
+            </ul>
+            <div class="highlight-box">
+                <p>You own the code.<br>You understand the system.<br>You are not dependent on me.</p>
+            </div>
+        </div>
+
+        <!-- How We Work -->
+        <div class="block reveal">
+            <p class="block-label">Process</p>
+            <h2 class="block-title">A low-risk way to start</h2>
+            
+            <div class="phase-grid">
+                <div class="phase">
+                    <p class="phase-label">Phase 1</p>
+                    <h3 class="phase-title">Fixed-Scope Discovery (1–2 weeks)</h3>
+                    <ul class="phase-list">
+                        <li>→ System analysis</li>
+                        <li>→ Architecture proposal</li>
+                        <li>→ Clear implementation roadmap</li>
+                    </ul>
+                </div>
+                <div class="phase">
+                    <p class="phase-label">Phase 2</p>
+                    <h3 class="phase-title">Implementation</h3>
+                    <ul class="phase-list">
+                        <li>→ Defined scope</li>
+                        <li>→ Transparent progress</li>
+                        <li>→ No surprises</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p class="block-text" style="margin-top: var(--space-lg); font-style: italic;">Start with a short discovery instead of a blind project.</p>
+        </div>
+
+        <!-- Trust Block -->
+        <div class="trust-block reveal">
+            <p>I work with Swiss B2B teams where reliability, security and accountability matter more than speed alone.<br><br>My focus is not "shipping fast", but building systems you can trust under pressure.</p>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="final-cta reveal">
+            <h2 class="block-title">Let's make your systems boring — in the best way.</h2>
+            <a href="https://outlook.office.com/bookwithme/user/e4d9c2db688b433fa2abeb6af4120b49@prietoteran.com/meetingtype/Bre95rdevkyBKLGW6qPbcg2?anonymous&ep=mlink" target="_blank" rel="noopener noreferrer" class="btn btn-primary">→ Book a 20-min Integration Call</a>
+            <p class="hero-secondary">Or <a href="mailto:osmel@prietoteran.com">describe your situation by email</a></p>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</p>
+            <p class="footer-text">© 2026 Osmel Prieto Teran</p>
         </div>
     </footer>
 
-    <!-- i18n Internationalization -->
-    <script src="../i18n.js"></script>
-    
     <script>
-        // Theme
+        // Theme toggle
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
         if (localStorage.getItem('theme') === 'dark') html.setAttribute('data-theme', 'dark');
@@ -750,13 +684,13 @@
             localStorage.setItem('theme', isDark ? 'light' : 'dark');
         });
         
-        // Nav scroll
+        // Nav scroll effect
         const nav = document.getElementById('nav');
         window.addEventListener('scroll', () => {
             nav.classList.toggle('scrolled', window.pageYOffset > 100);
         });
 
-        // Reveal
+        // Reveal on scroll animation
         const reveals = document.querySelectorAll('.reveal');
         const revealOnScroll = () => {
             reveals.forEach(el => {
@@ -767,36 +701,6 @@
         };
         revealOnScroll();
         window.addEventListener('scroll', revealOnScroll);
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // Language Selector Handler - Dropdown
-        const langSelector = document.getElementById('langSelector');
-        const langToggle = document.getElementById('langToggle');
-        const langOptions = document.querySelectorAll('.lang-option');
-        
-        function updateLangDisplay(lang) {
-            document.getElementById('currentLangCode').textContent = lang.toUpperCase();
-            langOptions.forEach(opt => opt.classList.toggle('active', opt.getAttribute('data-lang') === lang));
-        }
-        
-        updateLangDisplay(i18n.getLanguage());
-        langToggle.addEventListener('click', (e) => { e.stopPropagation(); langSelector.classList.toggle('open'); });
-        langOptions.forEach(opt => {
-            opt.addEventListener('click', () => {
-                i18n.setLanguage(opt.getAttribute('data-lang'));
-                updateLangDisplay(opt.getAttribute('data-lang'));
-                langSelector.classList.remove('open');
-            });
-        });
-        document.addEventListener('click', (e) => { if (!langSelector.contains(e.target)) langSelector.classList.remove('open'); });
-        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') langSelector.classList.remove('open'); });
     </script>
 </body>
 </html>

@@ -3,12 +3,12 @@
     "version": "1.0",
     "last_updated": "2026-02-04",
     "updated_by": "sales-agent-skill",
-    "total_leads": 1,
+    "total_leads": 7,
     "stats": {
       "by_status": {
         "new": 0,
-        "researched": 1,
-        "contacted": 0,
+        "researched": 3,
+        "contacted": 4,
         "follow_up": 0,
         "replied": 0,
         "meeting_scheduled": 0,
@@ -17,60 +17,401 @@
         "nurture": 0
       },
       "by_priority": {
-        "high": 1,
-        "medium": 0,
-        "low": 0
+        "high": 4,
+        "medium": 2,
+        "low": 1
       }
     },
-    "notes": "Strict criteria applied: 1) Confirmed/likely Salesforce usage, 2) Evidence of integration needs, 3) Validated contact information from company website"
+    "notes": "Leads from Apollo.io export - verified emails, Swiss companies in target industries"
   },
   "leads": [
     {
-      "id": "lead-001-healthcare-holding",
+      "id": "lead-001-icotec",
+      "company": {
+        "name": "icotec",
+        "website": "https://icotec-medical.com",
+        "industry": "Medical Devices - Spinal Implants",
+        "size": "250 employees",
+        "location": "Altstaetten, St. Gallen, Switzerland",
+        "description": "Leading manufacturer of carbon fiber-reinforced PEEK spinal implants. Non-metallic, radiolucent implants for tumor treatment.",
+        "tech_stack": {
+          "crm": "Salesforce (CONFIRMED)",
+          "erp": "SuccessFactors (SAP)",
+          "other": ["React", "Redux", "Microsoft Office 365", "Gem"]
+        },
+        "pain_points": [
+          "Salesforce + SAP integration complexity",
+          "Medical device regulatory compliance data flow",
+          "Supply chain visibility across systems"
+        ]
+      },
+      "contact": {
+        "name": "Nelson Labbate",
+        "title": "Head of IT",
+        "email": "nelson.labbate@icotec.ch",
+        "email_status": "Verified",
+        "phone": "+41 71 757 00 00",
+        "linkedin": "http://www.linkedin.com/in/nelson-labbate-622a1787",
+        "notes": "Direct decision maker for IT systems"
+      },
+      "qualification": {
+        "score": 95,
+        "priority": "high",
+        "scoring_breakdown": {
+          "company_fit": 40,
+          "contact_fit": 30,
+          "timing_signals": 25
+        },
+        "fit_notes": "PERFECT FIT - Uses both Salesforce AND SAP. Medical devices industry. 250 employees = needs external help. $30M funding."
+      },
+      "status": "contacted",
+      "outreach": {
+        "sequence": "technology_trigger",
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-11",
+        "last_contact": "2026-02-04",
+        "template": "salesforce_sap_integration",
+        "email_history": [
+          {
+            "date": "2026-02-04",
+            "type": "intro",
+            "subject": "Salesforce + SAP bei icotec – nahtlose Integration für MedTech",
+            "status": "sent"
+          }
+        ]
+      },
+      "notes": "TOP PRIORITY: Confirmed Salesforce + SAP user. Exactly our ICP. Medical device compliance requires tight integration. CONTACTED 2026-02-04.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-002-mgc-moser-glaser",
+      "company": {
+        "name": "MGC Moser-Glaser AG",
+        "website": "https://mgc.ch",
+        "industry": "Electrical/Electronic Manufacturing - Transformer Equipment",
+        "size": "86 employees",
+        "location": "Kaiseraugst, Aargau, Switzerland",
+        "description": "Manufacturer of transformer bushings, wall bushings, and busbars for electrical industry.",
+        "tech_stack": {
+          "crm": "Salesforce (CONFIRMED)",
+          "erp": "Unknown - likely SAP or similar",
+          "other": ["Microsoft Office 365", "TYPO3", "SendInBlue"]
+        },
+        "pain_points": [
+          "Manufacturing data visibility in CRM",
+          "Quote-to-order process automation",
+          "Customer data sync with production"
+        ]
+      },
+      "contact": {
+        "name": "Marco Osterwalder",
+        "title": "Head of IT",
+        "email": "marco.osterwalder@mgc.ch",
+        "email_status": "Verified",
+        "phone": null,
+        "linkedin": "http://www.linkedin.com/in/marco-osterwalder-069980262",
+        "notes": "Direct decision maker for IT"
+      },
+      "qualification": {
+        "score": 88,
+        "priority": "high",
+        "scoring_breakdown": {
+          "company_fit": 35,
+          "contact_fit": 28,
+          "timing_signals": 25
+        },
+        "fit_notes": "Confirmed Salesforce user. Manufacturing SME (86 employees) = perfect size. B2B industrial products."
+      },
+      "status": "contacted",
+      "outreach": {
+        "sequence": "technology_trigger",
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-11",
+        "last_contact": "2026-02-04",
+        "template": "manufacturing_integration",
+        "email_history": [
+          {
+            "date": "2026-02-04",
+            "type": "intro",
+            "subject": "Salesforce-Integration für die Fertigung – MGC Moser-Glaser",
+            "status": "sent"
+          }
+        ]
+      },
+      "notes": "Strong lead - Salesforce confirmed. Manufacturing company with likely ERP = integration opportunity. CONTACTED 2026-02-04.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-003-haag-streit",
+      "company": {
+        "name": "Haag-Streit",
+        "website": "https://haag-streit.com",
+        "industry": "Medical Devices - Ophthalmology Equipment",
+        "size": "270 employees",
+        "location": "Koeniz, Canton of Bern, Switzerland",
+        "description": "Leading manufacturer of diagnostic and surgical instruments for ophthalmology and optometry.",
+        "tech_stack": {
+          "crm": "Salesforce CRM Analytics (CONFIRMED)",
+          "erp": "Microsoft Dynamics 365",
+          "other": ["VueJS", "Slack", "Hubspot", "Woo Commerce", "Wider Planet"]
+        },
+        "pain_points": [
+          "Multi-CRM environment (Salesforce + Dynamics)",
+          "Analytics across different platforms",
+          "Global distribution data consolidation"
+        ]
+      },
+      "contact": {
+        "name": "Urs Dietsch",
+        "title": "Digital Transformation Manager",
+        "email": "urs.dietsch@haag-streit.com",
+        "email_status": "Verified",
+        "phone": "+41 31 978 01 11",
+        "linkedin": "http://www.linkedin.com/in/urs-dietsch-5b5ab31bb",
+        "notes": "Digital Transformation role = actively looking to improve systems"
+      },
+      "qualification": {
+        "score": 90,
+        "priority": "high",
+        "scoring_breakdown": {
+          "company_fit": 38,
+          "contact_fit": 30,
+          "timing_signals": 22
+        },
+        "fit_notes": "Uses Salesforce CRM Analytics + Dynamics 365 = complex multi-system environment. $186M revenue. Digital Transformation Manager title = active buyer."
+      },
+      "status": "contacted",
+      "outreach": {
+        "sequence": "technology_trigger",
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-11",
+        "last_contact": "2026-02-04",
+        "template": "multi_system_integration",
+        "email_history": [
+          {
+            "date": "2026-02-04",
+            "type": "intro",
+            "subject": "Multi-System-Umgebung optimieren – Salesforce Analytics + Dynamics",
+            "status": "sent"
+          }
+        ]
+      },
+      "notes": "High priority - Multi-CRM environment creates integration challenges. DT Manager actively seeking improvements. CONTACTED 2026-02-04.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-004-distalmotion",
+      "company": {
+        "name": "Distalmotion",
+        "website": "https://distalmotion.com",
+        "industry": "Medical Devices - Surgical Robotics",
+        "size": "240 employees",
+        "location": "Lausanne, Vaud, Switzerland",
+        "description": "Developer of hybrid surgical robots for minimally invasive procedures. Dexter robotic system.",
+        "tech_stack": {
+          "crm": "Salesforce (CONFIRMED)",
+          "marketing": "Pardot",
+          "other": ["Microsoft Azure", "Slack", "Circle", "AI tools"]
+        },
+        "pain_points": [
+          "Fast growth (Series G, $150M raised) = scaling CRM",
+          "Sales-Marketing alignment with Pardot",
+          "Global expansion data management"
+        ]
+      },
+      "contact": {
+        "name": "Mauro Cadorin",
+        "title": "Head of IT",
+        "email": "mauro.cadorin@distalmotion.com",
+        "email_status": "Verified",
+        "phone": "+41 21 510 58 90",
+        "linkedin": "http://www.linkedin.com/in/mauro-c",
+        "notes": "Head of IT at fast-growing startup"
+      },
+      "qualification": {
+        "score": 85,
+        "priority": "high",
+        "scoring_breakdown": {
+          "company_fit": 35,
+          "contact_fit": 28,
+          "timing_signals": 22
+        },
+        "fit_notes": "Salesforce + Pardot confirmed. $390M total funding, recent Series G = rapid growth. Swiss medtech unicorn potential."
+      },
+      "status": "contacted",
+      "outreach": {
+        "sequence": "technology_trigger",
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-11",
+        "last_contact": "2026-02-04",
+        "template": "scaling_salesforce",
+        "email_history": [
+          {
+            "date": "2026-02-04",
+            "type": "intro",
+            "subject": "Salesforce + Pardot bei Distalmotion – skalieren ohne Reibungsverluste",
+            "status": "sent"
+          }
+        ]
+      },
+      "notes": "High-growth company with confirmed Salesforce. May need help scaling their CRM infrastructure. CONTACTED 2026-02-04.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-005-spineart",
+      "company": {
+        "name": "Spineart",
+        "website": "https://spineart.com",
+        "industry": "Medical Devices - Spinal Implants",
+        "size": "320 employees",
+        "location": "Plan-les-Ouates, Geneva, Switzerland",
+        "description": "Innovative spinal implant company. 3D printed spinal cages, robotic navigation platform.",
+        "tech_stack": {
+          "crm": "Active Campaign",
+          "erp": "SAP CLM, Microsoft Dynamics",
+          "other": ["Cornerstone OnDemand", "BambooHR", "Kelio", "Wider Planet"]
+        },
+        "pain_points": [
+          "Multiple systems: Active Campaign + SAP + Dynamics",
+          "Complex regulatory data flow",
+          "Global distribution coordination"
+        ]
+      },
+      "contact": {
+        "name": "Ben Idiri",
+        "title": "Digital Transformation Manager",
+        "email": "bidiri@spineart.com",
+        "email_status": "Verified",
+        "phone": "+41 22 570 12 00",
+        "linkedin": "http://www.linkedin.com/in/ben-idiri-b436b547",
+        "notes": "Digital Transformation Manager = actively improving systems"
+      },
+      "qualification": {
+        "score": 78,
+        "priority": "medium",
+        "scoring_breakdown": {
+          "company_fit": 32,
+          "contact_fit": 28,
+          "timing_signals": 18
+        },
+        "fit_notes": "Not using Salesforce YET but has SAP + Dynamics. DT Manager might be evaluating CRM options. $120M funding."
+      },
+      "status": "researched",
+      "outreach": {
+        "sequence": "value_add",
+        "next_action": "send_intro_email",
+        "last_contact": null,
+        "template": "crm_evaluation"
+      },
+      "notes": "Uses Active Campaign (basic) + complex ERP. May be ready to upgrade to Salesforce. DT Manager is decision maker.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-006-wuerth",
+      "company": {
+        "name": "Würth Schweiz",
+        "website": "https://wuerth-ag.ch",
+        "industry": "Wholesale - Industrial Supplies",
+        "size": "470 employees",
+        "location": "Arlesheim, Basel-Landschaft, Switzerland",
+        "description": "Distributor of fastening and assembly materials. Part of global Würth Group ($1.4B revenue Switzerland).",
+        "tech_stack": {
+          "crm": "Unknown",
+          "ecommerce": "Intershop",
+          "other": ["Umantis", "Hotjar", "iAdvize", "Facebook Ads", "Bing Ads"]
+        },
+        "pain_points": [
+          "Complex e-commerce + distribution operations",
+          "Supply chain digitalization",
+          "B2B customer portal integration"
+        ]
+      },
+      "contact": {
+        "name": "Angelo Decataldo",
+        "title": "Head of IT & Digital Transformation",
+        "email": "angelo.decataldo@wuerth-ag.ch",
+        "email_status": "Verified",
+        "phone": "+41 61 705 91 00",
+        "linkedin": "http://www.linkedin.com/in/angelo-decataldo-93412a66",
+        "notes": "IT + Digital Transformation combined role = key decision maker"
+      },
+      "qualification": {
+        "score": 72,
+        "priority": "medium",
+        "scoring_breakdown": {
+          "company_fit": 30,
+          "contact_fit": 25,
+          "timing_signals": 17
+        },
+        "fit_notes": "Large wholesale B2B company. Subsidiary of Würth Group. May have CRM needs for customer management. DT role indicates active projects."
+      },
+      "status": "researched",
+      "outreach": {
+        "sequence": "standard",
+        "next_action": "send_intro_email",
+        "last_contact": null,
+        "template": "wholesale_distribution"
+      },
+      "notes": "Large B2B distributor. Complex operations likely need CRM-ERP integration. Parent company may influence tech choices.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-007-healthcare-holding",
       "company": {
         "name": "Healthcare Holding Schweiz AG",
         "website": "https://healthcare-holding.ch",
         "industry": "MedTech Distribution Holding",
         "size": "Holding with 17+ portfolio companies",
         "location": "Baar, Switzerland",
-        "description": "Swiss holding company for medical technology distributors. They continuously acquire medtech companies and integrate them into their portfolio.",
+        "description": "Swiss holding company for medical technology distributors. Continuous acquisitions.",
         "tech_stack": {
-          "crm": "Likely Salesforce (published article about Salesforce implementation in SMEs)",
-          "erp": "Multiple systems across portfolio companies"
+          "crm": "Likely Salesforce (published article about Salesforce implementation)",
+          "erp": "Multiple systems across portfolio"
         },
         "pain_points": [
-          "Multiple acquisitions require system integration",
-          "Consolidating data across 17+ portfolio companies",
-          "Standardizing CRM/ERP processes post-acquisition",
-          "Digital transformation across diverse medtech businesses"
-        ],
-        "evidence_of_need": "Published article on 'Salesforce Implementation in SMEs: Pitfalls and...' - indicates active engagement with Salesforce topics and awareness of implementation challenges"
+          "Post-acquisition system integration",
+          "Consolidating data across 17+ companies",
+          "Standardizing CRM/ERP processes"
+        ]
       },
       "contact": {
         "type": "generic",
         "email": "info@healthcare-holding.ch",
         "address": "Neuhofstrasse 12, 6340 Baar, Switzerland",
         "linkedin": "https://www.linkedin.com/company/healthcare-holding-schweiz/",
-        "notes": "Generic contact - recommend researching team page for specific decision-maker (CTO, COO, or Integration Manager)"
+        "notes": "Generic contact - need to identify specific decision maker"
       },
       "qualification": {
-        "score": 78,
-        "priority": "high",
+        "score": 65,
+        "priority": "low",
         "scoring_breakdown": {
           "company_fit": 35,
-          "contact_fit": 18,
-          "timing_signals": 25
+          "contact_fit": 10,
+          "timing_signals": 20
         },
-        "fit_notes": "Excellent ICP fit - Swiss B2B holding company with ongoing acquisitions, clear integration challenges, and demonstrated interest in Salesforce. Portfolio approach means multiple potential projects."
+        "fit_notes": "Strong company fit but generic contact reduces priority. Need to find specific IT/Operations leader."
       },
       "status": "researched",
       "outreach": {
         "sequence": "standard",
-        "next_action": "find_specific_contact_then_send_intro",
-        "last_contact": null,
-        "notes": "High-value target due to holding structure. One relationship could lead to 17+ company integrations."
+        "next_action": "find_specific_contact",
+        "last_contact": null
       },
-      "notes": "Strong lead: Holding company actively acquiring medtech distributors. Integration is core to their 'Buy, Build & Technologize' strategy. Article about Salesforce implementation pitfalls suggests they understand the challenges. Recommend personalized outreach focusing on post-acquisition integration challenges.",
+      "notes": "High-value target but needs specific contact. One relationship could lead to 17+ integrations.",
       "created_at": "2026-02-04",
       "updated_at": "2026-02-04"
     }

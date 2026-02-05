@@ -21,3 +21,4 @@ npm-debug.log*
 # Google Cloud Service Account Key
 prietoteran-*.json
 *.credentials.json
+apollo-contacts-export.csv

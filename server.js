@@ -1,6 +1,7 @@
 /**
  * Express server for prietoteran.com
  * Handles static file serving and contact form submissions
+ * Uses Microsoft Graph API for sending emails
  */
 
 require('dotenv').config();
@@ -9,19 +10,47 @@ const express = require('express');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
-const { Resend } = require('resend');
+const { ConfidentialClientApplication } = require('@azure/msal-node');
+const { Client } = require('@microsoft/microsoft-graph-client');
+require('isomorphic-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Initialize Resend lazily (only when API key is available)
-let resend = null;
-const getResend = () => {
-    if (!resend && process.env.RESEND_API_KEY) {
-        resend = new Resend(process.env.RESEND_API_KEY);
-    }
-    return resend;
+// Microsoft Graph API configuration
+const msalConfig = {
+    auth: {
+        clientId: process.env.M365_CLIENT_ID,
+        clientSecret: process.env.M365_CLIENT_SECRET,
+        authority: `https://login.microsoftonline.com/${process.env.M365_TENANT_ID}`,
+    },
 };
+
+let msalClient = null;
+const getMsalClient = () => {
+    if (!msalClient && process.env.M365_CLIENT_ID && process.env.M365_CLIENT_SECRET) {
+        msalClient = new ConfidentialClientApplication(msalConfig);
+    }
+    return msalClient;
+};
+
+/**
+ * Get Microsoft Graph client with app-only authentication
+ */
+async function getGraphClient() {
+    const client = getMsalClient();
+    if (!client) return null;
+
+    const tokenResponse = await client.acquireTokenByClientCredential({
+        scopes: ['https://graph.microsoft.com/.default'],
+    });
+
+    return Client.init({
+        authProvider: (done) => {
+            done(null, tokenResponse.accessToken);
+        },
+    });
+}
 
 // Security middleware
 app.use(helmet({
@@ -60,6 +89,7 @@ app.use(express.static(path.join(__dirname), {
 /**
  * Contact form endpoint
  * POST /api/contact
+ * Uses Microsoft Graph API to send emails via osmel@prietoteran.com
  */
 app.post('/api/contact', contactLimiter, async (req, res) => {
     try {
@@ -82,46 +112,62 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             });
         }
 
-        // Check if Resend is configured
-        const resendClient = getResend();
-        if (!resendClient) {
-            console.error('RESEND_API_KEY is not configured');
+        // Get Microsoft Graph client
+        const graphClient = await getGraphClient();
+        if (!graphClient) {
+            console.error('Microsoft Graph API is not configured');
             return res.status(500).json({
                 success: false,
                 message: 'Email service not configured. Please contact directly.',
             });
         }
 
-        // Send email via Resend
-        const { data, error } = await resendClient.emails.send({
-            from: process.env.EMAIL_FROM || 'Contact Form <onboarding@resend.dev>',
-            to: [process.env.EMAIL_TO || 'osmel@prietoteran.com'],
-            replyTo: email,
-            subject: `New Contact: ${name}${company ? ` from ${company}` : ''}`,
-            html: `
-                <h2>New Contact Form Submission</h2>
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
-                <hr>
-                <p><strong>Message:</strong></p>
-                <p>${message.replace(/\n/g, '<br>')}</p>
-                <hr>
-                <p style="color: #888; font-size: 12px;">
-                    Sent from prietoteran.com contact form
-                </p>
-            `,
-        });
+        // Prepare email message for Microsoft Graph API
+        const sendMailBody = {
+            message: {
+                subject: `New Contact: ${name}${company ? ` from ${company}` : ''}`,
+                body: {
+                    contentType: 'HTML',
+                    content: `
+                        <h2>New Contact Form Submission</h2>
+                        <p><strong>Name:</strong> ${name}</p>
+                        <p><strong>Email:</strong> ${email}</p>
+                        ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
+                        <hr>
+                        <p><strong>Message:</strong></p>
+                        <p>${message.replace(/\n/g, '<br>')}</p>
+                        <hr>
+                        <p style="color: #888; font-size: 12px;">
+                            Sent from prietoteran.com contact form
+                        </p>
+                    `,
+                },
+                toRecipients: [
+                    {
+                        emailAddress: {
+                            address: process.env.EMAIL_TO || 'osmel@prietoteran.com',
+                        },
+                    },
+                ],
+                replyTo: [
+                    {
+                        emailAddress: {
+                            address: email,
+                            name: name,
+                        },
+                    },
+                ],
+            },
+            saveToSentItems: true,
+        };
 
-        if (error) {
-            console.error('Resend error:', error);
-            return res.status(500).json({
-                success: false,
-                message: 'Failed to send message. Please try again.',
-            });
-        }
+        // Send email via Microsoft Graph API (as osmel@prietoteran.com)
+        const senderEmail = process.env.M365_SENDER_EMAIL || 'osmel@prietoteran.com';
+        await graphClient
+            .api(`/users/${senderEmail}/sendMail`)
+            .post(sendMailBody);
 
-        console.log('Email sent successfully:', data.id);
+        console.log('Email sent successfully via Microsoft Graph API');
         
         res.json({
             success: true,
@@ -156,5 +202,6 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`Resend API: ${process.env.RESEND_API_KEY ? 'configured' : 'NOT configured'}`);
+    console.log(`Microsoft Graph API: ${process.env.M365_CLIENT_ID && process.env.M365_CLIENT_SECRET ? 'configured' : 'NOT configured'}`);
+    console.log(`Email sender: ${process.env.M365_SENDER_EMAIL || 'osmel@prietoteran.com'}`);
 });

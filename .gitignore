@@ -17,3 +17,7 @@ npm-debug.log*
 .idea/
 .vscode/
 *.swp
+
+# Google Cloud Service Account Key
+prietoteran-*.json
+*.credentials.json

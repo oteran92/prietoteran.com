@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Blog — Integration & Automation Insights | Osmel Prieto Teran</title>
+    <meta name="description" content="Practical advice on Salesforce-ERP integrations, business automation, and building reliable B2B systems. Real-world insights from Swiss B2B projects.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Salesforce integration blog, ERP integration Switzerland, B2B automation, integration architecture">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/blog/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prietoteran.com/blog/">
+    <meta property="og:title" content="Blog — Integration & Automation Insights">
+    <meta property="og:description" content="Practical advice on Salesforce-ERP integrations, business automation, and building reliable B2B systems.">
+    <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Integration & Automation Insights">
+    <meta name="twitter:description" content="Practical advice on Salesforce-ERP integrations, business automation, and building reliable B2B systems.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../styles.css?v=11">
+
+    <style>
+        :root {
+            --bg-secondary: #F0F0F0;
+            --bg-tertiary: #E8E8E8;
+            --bg-elevated: #FFFFFF;
+            
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-muted: #7A7A7A;
+            --text-subtle: #B0B0B0;
+            
+            --accent: #B8860B;
+            --accent-dark: #8B6508;
+            --accent-muted: rgba(184, 134, 11, 0.12);
+            --accent-glow: rgba(184, 134, 11, 0.06);
+            
+            --grid-line: rgba(0, 0, 0, 0.04);
+            --border: rgba(0, 0, 0, 0.08);
+            --border-strong: rgba(0, 0, 0, 0.12);
+            
+            /* Typography */
+            --font-display: 'Outfit', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+            
+            /* Spacing Scale */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+            --space-2xl: 8rem;
+            --space-3xl: 12rem;
+            
+            /* Timing */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        
+                /* Dark Mode */
+        [data-theme="dark"] {
+            --bg-primary: #0D0D0D;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1A1A1A;
+            --bg-elevated: #222222;
+            
+            --text-primary: #F5F5F0;
+            --text-secondary: #A8A8A0;
+            --text-muted: #5C5C58;
+            --text-subtle: #3A3A38;
+            
+            --accent: #C9A227;
+            --accent-dark: #C9A227;
+            --accent-muted: rgba(201, 162, 39, 0.15);
+            
+            --border: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(255, 255, 255, 0.1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-display);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding-top: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+        }
+        
+        /* ============================================
+           NAVIGATION — MINIMAL & PRECISE
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+            transition: all 0.4s var(--ease-out);
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                padding: var(--space-lg) 0;
+            }
+        }
+
+        .nav.scrolled {
+            background: rgba(250, 250, 250, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: var(--space-sm) 0;
+        }
+
+        @media (min-width: 768px) {
+            .nav.scrolled {
+                padding: var(--space-md) 0;
+            }
+        }
+        
+        [data-theme="dark"] .nav.scrolled {
+            background: rgba(13, 13, 13, 0.9);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 768px) {
+            .nav-logo {
+                font-size: 0.9rem;
+            }
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-xl);
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s var(--ease-out);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s var(--ease-out);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Button */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            gap: 5px;
+            padding: 8px;
+        }
+        
+        .nav-hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-secondary);
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .nav-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .nav-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: var(--space-lg);
+                gap: var(--space-md);
+            }
+            
+            .nav.scrolled .nav-links {
+                background: var(--bg-elevated);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                text-align: center;
+            }
+            
+            .nav-links a {
+                font-size: 1rem;
+                padding: var(--space-sm) 0;
+                display: block;
+            }
+            
+            .nav-right {
+                gap: var(--space-md);
+            }
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.3s var(--ease-out);
+            font-size: 0.95rem;
+            padding: 0;
+        }
+
+        @media (min-width: 768px) {
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+        
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .theme-toggle .icon-sun,
+        .theme-toggle .icon-moon {
+            position: absolute;
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: rotate(-90deg) scale(0.5);
+        }
+        
+        [data-theme="dark"] .theme-toggle .icon-sun {
+            opacity: 0;
+            transform: rotate(90deg) scale(0.5);
+        }
+        
+        [data-theme="dark"] .theme-toggle .icon-moon {
+            opacity: 1;
+            transform: rotate(0) scale(1);
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        @media (min-width: 768px) {
+            .nav-right {
+                gap: var(--space-lg);
+            }
+        }
+        
+        /* Language Selector - Minimal Dropdown */
+        .lang-selector {
+            position: relative;
+        }
+        
+        .lang-current {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            padding: 8px 4px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .lang-current:hover {
+            color: var(--text-primary);
+        }
+        
+        .lang-current .lang-code {
+            min-width: 20px;
+        }
+        
+        .lang-current .lang-arrow {
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s var(--ease-out);
+            opacity: 0.5;
+        }
+        
+        .lang-current .lang-arrow svg {
+            width: 10px;
+            height: 6px;
+        }
+        
+        .lang-selector.open .lang-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 4px;
+            min-width: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s var(--ease-out);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            z-index: 200;
+        }
+        
+        [data-theme="dark"] .lang-dropdown {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .lang-selector.open .lang-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: all 0.15s var(--ease-out);
+            text-align: left;
+        }
+        
+        .lang-option:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        
+        .lang-option.active {
+            color: var(--accent);
+        }
+        
+        .lang-option .lang-code {
+            text-transform: uppercase;
+            font-weight: 600;
+            min-width: 24px;
+        }
+        
+        .lang-option .lang-name {
+            color: var(--text-muted);
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        
+        .lang-option.active .lang-name {
+            color: var(--accent);
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .lang-selector {
+                display: none;
+            }
+            
+            .lang-selector.mobile-visible {
+                display: block;
+                position: absolute;
+                top: calc(100% + 180px);
+                left: 0;
+                right: 0;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--border);
+                padding: var(--space-md) var(--space-lg);
+            }
+            
+            .lang-selector.mobile-visible .lang-dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: var(--space-md);
+            }
+            
+            .lang-selector.mobile-visible .lang-current {
+                display: none;
+            }
+            
+            .lang-selector.mobile-visible .lang-option {
+                padding: var(--space-sm) var(--space-md);
+                border: 1px solid var(--border);
+            }
+            
+            .lang-selector.mobile-visible .lang-option.active {
+                border-color: var(--accent);
+                background: var(--accent-muted);
+            }
+        }
+        
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: var(--space-lg) 0;
+        }
+
+        @media (min-width: 768px) {
+            footer {
+                padding: var(--space-xl) 0;
+            }
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .footer-inner {
+                gap: var(--space-lg);
+            }
+        }
+
+        .footer-text {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        @media (min-width: 768px) {
+            .footer-text {
+                font-size: 0.85rem;
+                letter-spacing: 0.08em;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .footer-links {
+                gap: var(--space-lg);
+            }
+        }
+
+        .footer-links a {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s var(--ease-out);
+            padding: var(--space-sm);
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-links a {
+                font-size: 0.85rem;
+                letter-spacing: 0.08em;
+                padding: 0;
+            }
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 var(--space-xl);
+            }
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(var(--space-xl) + 50px) 2rem 4rem;
+        }
+        
+        header.page-header {
+            margin-bottom: 4rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .blog-card.coming-soon {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .blog-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .blog-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        
+        .blog-excerpt {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+        
+        .blog-link {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.2s ease;
+        }
+        
+        .blog-link:hover {
+            gap: 0.75rem;
+        }
+        
+        .blog-link::after {
+            content: '→';
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-muted);
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            main { padding: 2rem 1.5rem; }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="../#blog" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="../#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">EN</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="de">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="lang-code">ES</span>
+                                <span class="lang-name">Español</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>Blog</h1>
+            <p class="page-subtitle">
+                Practical insights on integrations, automation, and building reliable B2B systems. 
+                Based on real projects with Swiss companies.
+            </p>
+        </header>
+        
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-meta">February 4, 2026 · 5 min read</div>
+                <h2>Why Salesforce-ERP Integrations Break (And How to Fix It)</h2>
+                <p class="blog-excerpt">
+                    Most integrations work for 2-4 weeks, then fail. Learn the 3 architecture principles 
+                    that prevent failures in Swiss B2B companies.
+                </p>
+                <a href="why-salesforce-erp-integrations-break.html" class="blog-link">Read article</a>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-meta">February 4, 2026 · 6 min read</div>
+                <h2>The Real Cost of Manual Data Entry Between Systems</h2>
+                <p class="blog-excerpt">
+                    Manual data entry between Salesforce and ERP costs Swiss B2B companies 15-25 hours weekly. 
+                    Learn to calculate the hidden costs and when automation pays for itself.
+                </p>
+                <a href="the-real-cost-of-manual-data-entry.html" class="blog-link">Read article</a>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-meta">February 4, 2026 · 7 min read</div>
+                <h2>From Quote to Order in 4 Hours Instead of 3 Days</h2>
+                <p class="blog-excerpt">
+                    How a Swiss manufacturer cut quote-to-order time by 85% — a case study in 
+                    Salesforce-ERP automation without custom development.
+                </p>
+                <a href="quote-to-order-in-4-hours.html" class="blog-link">Read article</a>
+            </article>
+            
+            <article class="blog-card coming-soon">
+                <div class="blog-meta"><span class="badge">Coming soon</span></div>
+                <h2>5 Signs Your Integration Will Fail Before You Start</h2>
+                <p class="blog-excerpt">
+                    Red flags to watch for when planning Salesforce-ERP integration projects.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js?v=2"></script>
+    
+    <!-- Global JavaScript -->
+    <script src="../app.js?v=2"></script>
+
+</body>
+</html>

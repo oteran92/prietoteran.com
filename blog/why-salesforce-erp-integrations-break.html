@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Why Salesforce-ERP Integrations Break (And How to Fix It) — Osmel Prieto Teran</title>
+    <meta name="description" content="Most Salesforce-ERP integrations break within months. Learn the 3 architecture principles that prevent failures in Swiss B2B companies.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Salesforce ERP integration, Salesforce integration failures, ERP CRM integration Switzerland, Salesforce consultant Bern">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html">
+    <meta property="og:title" content="Why Salesforce-ERP Integrations Break (And How to Fix It)">
+    <meta property="og:description" content="Most Salesforce-ERP integrations break within months. Learn the 3 architecture principles that prevent failures.">
+    <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Salesforce-ERP Integrations Break (And How to Fix It)">
+    <meta name="twitter:description" content="Most Salesforce-ERP integrations break within months. Learn the 3 architecture principles that prevent failures.">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why Salesforce-ERP Integrations Break (And How to Fix It)",
+      "description": "Most Salesforce-ERP integrations break within months. Learn the 3 architecture principles that prevent failures in Swiss B2B companies.",
+      "image": "https://www.prietoteran.com/og-image.png",
+      "author": {
+        "@type": "Person",
+        "name": "Osmel Prieto Teran",
+        "url": "https://www.prietoteran.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Osmel Prieto Teran",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.prietoteran.com/favicon.svg"
+        }
+      },
+      "datePublished": "2026-02-04",
+      "dateModified": "2026-02-04",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../styles.css?v=11">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="../#blog" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="../#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">EN</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="de">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="lang-code">ES</span>
+                                <span class="lang-name">Español</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <article class="article">
+        <div class="container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-category">Integration</span>
+                    <span class="article-divider">·</span>
+                    <time datetime="2026-02-04">February 4, 2026</time>
+                    <span class="article-divider">·</span>
+                    <span class="article-reading-time">5 min read</span>
+                </div>
+                <h1 class="article-title">Why Salesforce-ERP Integrations Break (And How to Fix It)</h1>
+                <p class="article-intro">Most Salesforce-ERP integrations work perfectly for 2-4 weeks. Then they fail silently, cascade errors, or break after vendor updates. Here's the architecture that actually works.</p>
+            </header>
+        </div>
+        
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="images/why-salesforce-erp-integrations-break.png" alt="Abstract diagram showing fragmented connections between two business systems with one highlighted stable integration path">
+        </div>
+        
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <p class="article-lead">It's Monday morning. Your sales team just submitted 15 quotes through Salesforce over the weekend. By Thursday afternoon, only 3 made it to your ERP for fulfillment. The other 12? Stuck somewhere in the integration process. Your team is manually checking each one. Your customers are waiting. And you're wondering why the "complete Salesforce-ERP integration" you paid €65,000 for isn't actually integrating anything.</p>
+                
+                <p>This scenario isn't unusual. In the last six months, I've reviewed 14 Salesforce-ERP integrations for Swiss B2B companies. Eleven had the same fundamental problems. None of them were related to the technology itself.</p>
+                
+                <h2>The Problem Everyone Faces</h2>
+                
+                <p>Most Salesforce-ERP integrations work perfectly for 2-4 weeks. Then one of three things happens:</p>
+                
+                <ul>
+                    <li><strong>Silent failures</strong>: Data stops syncing, but nobody notices until a customer calls about a missing order</li>
+                    <li><strong>Cascading errors</strong>: One failed transaction blocks everything behind it, creating a backlog of 100+ failed syncs</li>
+                    <li><strong>The vendor update</strong>: Your ERP provider pushes an update that changes a field name, and suddenly nothing works</li>
+                </ul>
+                
+                <p>The typical response? Call the integration vendor. Wait 48 hours. Pay for emergency support. Get a temporary patch. Repeat the cycle three months later.</p>
+                
+                <p>Your operations team adapts by building "backup processes" — spreadsheets, manual checks, weekly reconciliation meetings. The integration becomes the problem it was supposed to solve.</p>
+                
+                <h2>Why This Happens (It's Not the Tools)</h2>
+                
+                <p>The issue isn't Salesforce. It's not your ERP. The middleware platform you chose is probably fine.</p>
+                
+                <p>The problem is architecture — specifically, three assumptions that look reasonable during the sales process but break under real-world conditions:</p>
+                
+                <h3>Assumption 1: "Real-time sync is always better"</h3>
+                
+                <p>Real-time synchronization sounds ideal. Quote created in Salesforce? Instantly appears in ERP. Perfect, right?</p>
+                
+                <p>Until your ERP is down for 15 minutes during a planned maintenance window. Or a network hiccup causes a timeout. Or someone saves an incomplete record. Real-time sync means real-time failures.</p>
+                
+                <blockquote>
+                    A Swiss manufacturer I worked with had real-time sync configured. When their ERP was briefly unavailable, 47 sales orders failed to sync. Because there was no queue, no retry mechanism, those orders simply... disappeared from the sync process. They discovered the problem four days later when customers started calling.
+                </blockquote>
+                
+                <h3>Assumption 2: "The integration handles everything automatically"</h3>
+                
+                <p>Most integrations are built for the happy path. Customer exists in both systems? Great. Standard product? No problem. Price list matches? Perfect.</p>
+                
+                <p>But what happens when:</p>
+                <ul>
+                    <li>A new customer exists in Salesforce but not yet in ERP?</li>
+                    <li>A special pricing agreement applies to this quote?</li>
+                    <li>The product is available but needs a custom configuration?</li>
+                </ul>
+                
+                <p>Without explicit error handling for edge cases, the integration silently fails or, worse, creates bad data. You discover the problem when accounting reconciles the month and finds discrepancies.</p>
+                
+                <h3>Assumption 3: "Once it works, it keeps working"</h3>
+                
+                <p>Integration projects have a testing phase. Everything passes. You go live. Success.</p>
+                
+                <p>Then your ERP vendor updates to version 12.3. A field name changes. A data type shifts from string to integer. An API endpoint gets deprecated.</p>
+                
+                <p>The integration breaks. And because nobody documented which fields, endpoints, or transformations the integration actually uses, fixing it takes days of investigation.</p>
+                
+                <hr class="article-divider-line">
+                
+                <h2>The Architecture That Actually Works</h2>
+                
+                <p>After seeing this pattern repeatedly, here's what prevents these failures:</p>
+                
+                <h3>Principle 1: Design for Failure</h3>
+                
+                <p>Assume failures will happen. Build for them explicitly:</p>
+                
+                <ul>
+                    <li><strong>Use queues, not direct sync</strong>: When a record needs to sync, put it in a queue. Process the queue with retry logic. If something fails, it doesn't block everything else.</li>
+                    <li><strong>Implement exponential backoff</strong>: First retry after 1 minute. Then 5 minutes. Then 15. This handles temporary issues without manual intervention.</li>
+                    <li><strong>Alert on patterns, not individual failures</strong>: One failed sync? Normal. Ten failures in an hour? Alert someone.</li>
+                </ul>
+                
+                <p>A Swiss wholesale company implemented this approach. They still get occasional sync failures (customer not found, inventory temporarily locked, etc.), but these resolve automatically through retries. Manual intervention dropped from daily to once per month.</p>
+                
+                <h3>Principle 2: Make Failures Visible</h3>
+                
+                <p>The worst failures are silent. Design for visibility:</p>
+                
+                <ul>
+                    <li><strong>Error dashboards</strong>: Show what failed, why, and what needs attention</li>
+                    <li><strong>Weekly summary reports</strong>: "95% of syncs succeeded, 5% needed retry, 0.2% need manual review"</li>
+                    <li><strong>Clear ownership</strong>: Someone needs to own integration health (usually operations, not IT)</li>
+                </ul>
+                
+                <p>You can't fix problems you don't know exist. Visibility is not optional.</p>
+                
+                <h3>Principle 3: Document Dependencies</h3>
+                
+                <p>When your integration breaks (and it will), you need to know:</p>
+                
+                <ul>
+                    <li>Which API endpoints it uses</li>
+                    <li>Which fields are mandatory vs optional</li>
+                    <li>What data transformations happen</li>
+                    <li>Which system is the source of truth for each data type</li>
+                </ul>
+                
+                <p>This documentation isn't for your current self. It's for your team six months from now when something breaks at 4 PM on Friday and you need to understand what changed.</p>
+                
+                <div class="article-highlight">
+                    <p><strong>Reality check:</strong> Good architecture won't prevent all failures. It makes failures manageable, visible, and fixable without emergency vendor support calls.</p>
+                </div>
+                
+                <h2>What This Looks Like in Practice</h2>
+                
+                <p>A Swiss B2B company with 120 employees came to me after their third "complete integration failure" in 18 months. Each time, they paid €5,000-€8,000 for emergency fixes.</p>
+                
+                <p>We rebuilt their Salesforce-ERP integration with these principles:</p>
+                
+                <ul>
+                    <li>Queue-based processing (not real-time)</li>
+                    <li>Comprehensive error logging</li>
+                    <li>Daily automated health reports</li>
+                    <li>Clear documentation of every integration point</li>
+                </ul>
+                
+                <p>First month: 6 alerts that required attention (down from 15-20 manual interventions previously). Second month: 2 alerts. By month three: the integration just... worked.</p>
+                
+                <p>Their ERP vendor pushed an update. The integration caught the affected records, logged clear errors, and the team fixed it in 2 hours instead of 2 days. No emergency support calls. No lost orders.</p>
+                
+                <h2>Questions to Ask Your Integration Vendor</h2>
+                
+                <p>Before your next integration project (or when evaluating your current one), ask:</p>
+                
+                <ol>
+                    <li><strong>What happens when the ERP is temporarily unavailable?</strong> If the answer is "the sync will fail," ask about retry mechanisms.</li>
+                    <li><strong>How do we know when something breaks?</strong> If the answer is "you'll see errors," ask for monitoring and alerting details.</li>
+                    <li><strong>Who owns the documentation?</strong> If the answer is unclear or "we provide documentation," make sure you actually get usable documentation, not just API specs.</li>
+                    <li><strong>What's the disaster recovery process?</strong> If something breaks at 6 PM on Friday, what happens? Is there a queue we can replay? Or do we lose data?</li>
+                    <li><strong>Can our team modify this ourselves?</strong> Vendor lock-in isn't about the software. It's about knowledge lock-in.</li>
+                </ol>
+            </div>
+            
+            <!-- Simple CTA -->
+            <div class="article-cta-simple">
+                <a href="../#contact" class="article-cta-button" data-i18n="blog.cta.button">Get in touch</a>
+            </div>
+            
+            <!-- Related Content -->
+            <div class="article-related">
+                <h4 data-i18n="blog.continueReading">Continue Reading</h4>
+                <div class="article-related-links">
+                    <a href="../services/integration.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.service">Service</span>
+                        <span class="article-related-title" data-i18n="service1.title">Salesforce & ERP Integration</span>
+                    </a>
+                    <a href="../services/automation.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.service">Service</span>
+                        <span class="article-related-title" data-i18n="service2.title">Process Automation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js?v=2"></script>
+    
+    <!-- Global JavaScript -->
+    <script src="../app.js?v=2"></script>
+    
+    <!-- Page-specific JavaScript (smooth scroll for CTA) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctaLink = document.querySelector('.cta a[href="../#contact"]');
+            if (ctaLink) {
+                ctaLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = '../#contact';
+                    // Add a small delay to allow page load, then scroll with offset
+                    setTimeout(function() {
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                            const offsetTop = contactSection.offsetTop - 100; // 100px offset from top
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 100);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

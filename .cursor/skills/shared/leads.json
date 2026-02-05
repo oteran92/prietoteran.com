@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-02-04",
+    "updated_by": "sales-agent-skill",
+    "total_leads": 1,
+    "stats": {
+      "by_status": {
+        "new": 0,
+        "researched": 1,
+        "contacted": 0,
+        "follow_up": 0,
+        "replied": 0,
+        "meeting_scheduled": 0,
+        "qualified": 0,
+        "disqualified": 0,
+        "nurture": 0
+      },
+      "by_priority": {
+        "high": 1,
+        "medium": 0,
+        "low": 0
+      }
+    },
+    "notes": "Strict criteria applied: 1) Confirmed/likely Salesforce usage, 2) Evidence of integration needs, 3) Validated contact information from company website"
+  },
+  "leads": [
+    {
+      "id": "lead-001-healthcare-holding",
+      "company": {
+        "name": "Healthcare Holding Schweiz AG",
+        "website": "https://healthcare-holding.ch",
+        "industry": "MedTech Distribution Holding",
+        "size": "Holding with 17+ portfolio companies",
+        "location": "Baar, Switzerland",
+        "description": "Swiss holding company for medical technology distributors. They continuously acquire medtech companies and integrate them into their portfolio.",
+        "tech_stack": {
+          "crm": "Likely Salesforce (published article about Salesforce implementation in SMEs)",
+          "erp": "Multiple systems across portfolio companies"
+        },
+        "pain_points": [
+          "Multiple acquisitions require system integration",
+          "Consolidating data across 17+ portfolio companies",
+          "Standardizing CRM/ERP processes post-acquisition",
+          "Digital transformation across diverse medtech businesses"
+        ],
+        "evidence_of_need": "Published article on 'Salesforce Implementation in SMEs: Pitfalls and...' - indicates active engagement with Salesforce topics and awareness of implementation challenges"
+      },
+      "contact": {
+        "type": "generic",
+        "email": "info@healthcare-holding.ch",
+        "address": "Neuhofstrasse 12, 6340 Baar, Switzerland",
+        "linkedin": "https://www.linkedin.com/company/healthcare-holding-schweiz/",
+        "notes": "Generic contact - recommend researching team page for specific decision-maker (CTO, COO, or Integration Manager)"
+      },
+      "qualification": {
+        "score": 78,
+        "priority": "high",
+        "scoring_breakdown": {
+          "company_fit": 35,
+          "contact_fit": 18,
+          "timing_signals": 25
+        },
+        "fit_notes": "Excellent ICP fit - Swiss B2B holding company with ongoing acquisitions, clear integration challenges, and demonstrated interest in Salesforce. Portfolio approach means multiple potential projects."
+      },
+      "status": "researched",
+      "outreach": {
+        "sequence": "standard",
+        "next_action": "find_specific_contact_then_send_intro",
+        "last_contact": null,
+        "notes": "High-value target due to holding structure. One relationship could lead to 17+ company integrations."
+      },
+      "notes": "Strong lead: Holding company actively acquiring medtech distributors. Integration is core to their 'Buy, Build & Technologize' strategy. Article about Salesforce implementation pitfalls suggests they understand the challenges. Recommend personalized outreach focusing on post-acquisition integration challenges.",
+      "created_at": "2026-02-04",
+      "updated_at": "2026-02-04"
+    }
+  ]
+}

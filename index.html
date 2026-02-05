@@ -38,6 +38,73 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Osmel Prieto Teran",
+      "description": "Salesforce & ERP Integration Engineer for B2B companies in Switzerland",
+      "url": "https://www.prietoteran.com",
+      "logo": "https://www.prietoteran.com/favicon.svg",
+      "image": "https://www.prietoteran.com/og-image.png",
+      "serviceType": ["Salesforce ERP Integration", "Business Process Automation", "Technical Leadership"],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Switzerland"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bern",
+        "addressRegion": "BE",
+        "addressCountry": "CH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "46.9480",
+        "longitude": "7.4474"
+      },
+      "telephone": "+41791048885",
+      "email": "contact@prietoteran.com",
+      "priceRange": "$$",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "sameAs": [
+        "https://www.linkedin.com/in/osmel-p-teran-884480111/",
+        "https://github.com/oteran92"
+      ]
+    }
+    </script>
+    
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Osmel Prieto Teran - Salesforce Integration Engineer",
+      "image": "https://www.prietoteran.com/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bern",
+        "addressCountry": "CH"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "46.9480",
+        "longitude": "7.4474"
+      },
+      "url": "https://www.prietoteran.com",
+      "telephone": "+41791048885",
+      "email": "contact@prietoteran.com",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+    
     <!-- Fonts: Satoshi for headlines, JetBrains Mono for technical elements -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -317,7 +384,6 @@
             height: 40px;
             background: none;
             border: 1px solid var(--border);
-            border-radius: 4px;
             cursor: pointer;
             gap: 5px;
             padding: 8px;
@@ -390,8 +456,8 @@
             border: 1px solid var(--border);
             width: 40px;
             height: 40px;
-            border-radius: 50%;
             cursor: pointer;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -499,7 +565,6 @@
             right: 0;
             background: var(--bg-elevated);
             border: 1px solid var(--border);
-            border-radius: 4px;
             padding: 4px;
             min-width: 140px;
             opacity: 0;
@@ -534,7 +599,6 @@
             color: var(--text-secondary);
             padding: 10px 12px;
             cursor: pointer;
-            border-radius: 3px;
             transition: all 0.15s var(--ease-out);
             text-align: left;
         }
@@ -603,7 +667,6 @@
             .lang-selector.mobile-visible .lang-option {
                 padding: var(--space-sm) var(--space-md);
                 border: 1px solid var(--border);
-                border-radius: 4px;
             }
             
             .lang-selector.mobile-visible .lang-option.active {
@@ -915,7 +978,6 @@
             width: 6px;
             height: 6px;
             background: var(--accent);
-            border-radius: 50%;
         }
 
         @media (max-width: 1023px) {
@@ -1064,6 +1126,7 @@
             }
             
             .hero-cta .btn {
+            border-radius: 0;
                 width: 100%;
                 text-align: center;
                 display: block;
@@ -1092,7 +1155,6 @@
             width: 8px;
             height: 8px;
             background: #22c55e;
-            border-radius: 50%;
             animation: pulse-dot 2s ease-in-out infinite;
             box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
         }
@@ -1121,6 +1183,7 @@
         }
 
         .btn {
+            border-radius: 0;
             font-family: var(--font-mono);
             font-size: 0.75rem;
             font-weight: 500;
@@ -1142,6 +1205,7 @@
 
         @media (min-width: 400px) {
             .btn {
+            border-radius: 0;
                 font-size: 0.8rem;
                 padding: 0.875rem var(--space-md);
                 letter-spacing: 0.08em;
@@ -1150,6 +1214,7 @@
 
         @media (min-width: 768px) {
             .btn {
+            border-radius: 0;
                 font-size: 0.875rem;
                 padding: var(--space-md) var(--space-lg);
             }
@@ -1332,7 +1397,6 @@
             align-items: center;
             justify-content: center;
             border: 1px solid var(--border);
-            border-radius: 50%;
             color: var(--text-muted);
             transition: all 0.3s var(--ease-out);
         }
@@ -1996,7 +2060,6 @@
             align-items: center;
             justify-content: center;
             border: 1px solid var(--border);
-            border-radius: 50%;
             color: var(--text-muted);
             transition: all 0.3s var(--ease-out);
         }
@@ -2207,6 +2270,111 @@
             color: #ef4444;
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
+
+        /* ============================================
+           BLOG SECTION STYLES
+           ============================================ */
+        .blog {
+            padding: var(--space-3xl) 0;
+            background: var(--bg-primary);
+            position: relative;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        @media (min-width: 768px) {
+            .blog-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+        }
+
+        .blog-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: var(--space-lg);
+            transition: all 0.3s var(--ease-out);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .blog-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .blog-excerpt {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+
+        .blog-link {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.2s var(--ease-out);
+        }
+
+        .blog-link:hover {
+            gap: 0.75rem;
+        }
+
+        .blog-link::after {
+            content: '→';
+        }
+
+        .blog-cta {
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .blog-cta a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-muted);
+            color: var(--accent-dark);
+            border: 1px solid var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s var(--ease-out);
+        }
+
+        .blog-cta a:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+        }
     </style>
     
     <!-- Structured Data (JSON-LD) for SEO -->
@@ -2334,6 +2502,7 @@
                     </button>
                     <ul class="nav-links" id="navLinks">
                         <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
                         <li><a href="#about" data-i18n="nav.about">About</a></li>
                         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
@@ -2498,50 +2667,76 @@
             <div class="services-grid">
                 <article class="service-card reveal reveal-delay-1">
                     <span class="service-number">01</span>
-                    <h3 class="service-title" data-i18n="service1.title">Salesforce ↔ ERP Integration & Data Reliability</h3>
+                    <h3 class="service-title" data-i18n="service1.title">Salesforce ↔ ERP Integration</h3>
                     <p class="service-description" data-i18n="service1.description">
-                        I connect Salesforce with ERP and surrounding systems (ecommerce, PIM, middleware, custom APIs). The goal is simple: a single source of truth, stable flows, and a clear architecture your team can maintain.
+                        Connect Salesforce with ERP and surrounding systems. Single source of truth, stable data flows, clear architecture your team can maintain. Includes fractional CTO services.
                     </p>
                     <p class="service-outcome">
                         <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service1.outcome">Trusted data. Faster quoting. Fewer incidents.</span>
                     </p>
-                    <a href="services/architecture.html" class="service-link" data-i18n="service1.link">View integration service</a>
+                    <a href="services/integration.html" class="service-link" data-i18n="service1.link">View integration service →</a>
                 </article>
                 
                 <article class="service-card reveal reveal-delay-2">
                     <span class="service-number">02</span>
-                    <h3 class="service-title" data-i18n="service2.title">Process Automation for B2B Operations</h3>
+                    <h3 class="service-title" data-i18n="service2.title">Process Automation</h3>
                     <p class="service-description" data-i18n="service2.description">
-                        I automate workflows that should never be manual: approvals, quoting steps, order handoffs, notifications, data validation, and cross-system updates. Less copy-paste. More control and traceability.
+                        Automate workflows that shouldn't be manual: approvals, quoting, order handoffs, cross-system updates. Includes practical AI where it makes sense.
                     </p>
                     <p class="service-outcome">
-                        <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service2.outcome">Less manual work. Clear accountability.</span>
+                        <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service2.outcome">Less manual work. Measurable time savings.</span>
                     </p>
-                    <a href="services/automation.html" class="service-link" data-i18n="service2.link">View automation service</a>
+                    <a href="services/automation.html" class="service-link" data-i18n="service2.link">View automation service →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <header class="section-header reveal">
+                <span class="section-number" data-i18n="blog.number">002 — BLOG</span>
+                <h2 class="section-title" data-i18n="blog.title">Latest Insights</h2>
+                <p class="section-subtitle" data-i18n="blog.subtitle">
+                    Practical advice on integrations, automation, and building reliable systems.
+                </p>
+            </header>
+            
+            <div class="blog-grid">
+                <article class="blog-card reveal reveal-delay-1">
+                    <div class="blog-meta">Feb 4, 2026 · 5 min read</div>
+                    <h3 data-i18n="blog.post1.title">Why Salesforce-ERP Integrations Break (And How to Fix It)</h3>
+                    <p class="blog-excerpt" data-i18n="blog.post1.excerpt">
+                        Most integrations work for 2-4 weeks, then fail. Learn the 3 architecture principles that prevent failures in Swiss B2B companies.
+                    </p>
+                    <a href="blog/why-salesforce-erp-integrations-break.html" class="blog-link" data-i18n="blog.readMore">Read article</a>
                 </article>
                 
-                <article class="service-card reveal reveal-delay-3">
-                    <span class="service-number">03</span>
-                    <h3 class="service-title" data-i18n="service3.title">AI for Operational Workflows (No Hype)</h3>
-                    <p class="service-description" data-i18n="service3.description">
-                        I apply AI where it reduces cost and friction — e.g., data classification, email/request triage, content enrichment, and automation copilots integrated into real workflows.
+                <article class="blog-card reveal reveal-delay-2">
+                    <div class="blog-meta">Feb 4, 2026 · 6 min read</div>
+                    <h3 data-i18n="blog.post2.title">The Real Cost of Manual Data Entry Between Systems</h3>
+                    <p class="blog-excerpt" data-i18n="blog.post2.excerpt">
+                        Manual data entry costs Swiss B2B companies 15-25 hours weekly. Learn when automation pays for itself.
                     </p>
-                    <p class="service-outcome">
-                        <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service3.outcome">Measurable impact in weeks.</span>
-                    </p>
-                    <a href="services/ai.html" class="service-link" data-i18n="service3.link">View AI service</a>
+                    <a href="blog/the-real-cost-of-manual-data-entry.html" class="blog-link" data-i18n="blog.readMore">Read article</a>
                 </article>
                 
-                <article class="service-card reveal reveal-delay-4">
-                    <span class="service-number">04</span>
-                    <h3 class="service-title" data-i18n="service4.title">Fractional Technical Leadership (Interim / Advisory)</h3>
-                    <p class="service-description" data-i18n="service4.description">
-                        I act as a senior counterpart for IT and business stakeholders: architecture decisions, roadmap clarity, vendor alignment, and delivery leadership — without adding management overhead.
+                <article class="blog-card reveal reveal-delay-3">
+                    <div class="blog-meta">Feb 4, 2026 · 7 min read</div>
+                    <h3 data-i18n="blog.post3.title">From Quote to Order in 4 Hours Instead of 3 Days</h3>
+                    <p class="blog-excerpt" data-i18n="blog.post3.excerpt">
+                        How a Swiss manufacturer cut quote-to-order time by 85% without custom development.
                     </p>
-                    <p class="service-outcome">
-                        <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service4.outcome">Clear decisions. Less risk.</span>
+                    <a href="blog/quote-to-order-in-4-hours.html" class="blog-link" data-i18n="blog.readMore">Read article</a>
+                </article>
+                
+                <article class="blog-card reveal reveal-delay-4" style="opacity: 0.6; pointer-events: none;">
+                    <div class="blog-meta" data-i18n="blog.comingSoon">Coming soon</div>
+                    <h3 data-i18n="blog.post4.title">5 Signs Your Integration Will Fail Before You Start</h3>
+                    <p class="blog-excerpt" data-i18n="blog.post4.excerpt">
+                        Red flags to watch for when planning Salesforce-ERP integration projects.
                     </p>
-                    <a href="services/consulting.html" class="service-link" data-i18n="service4.link">View advisory service</a>
                 </article>
             </div>
         </div>
@@ -2551,7 +2746,7 @@
     <section class="why-me" id="about">
         <div class="container">
             <header class="section-header reveal">
-                <span class="section-number" data-i18n="about.number">002 — ABOUT</span>
+                <span class="section-number" data-i18n="about.number">003 — ABOUT</span>
                 <h2 class="section-title" data-i18n="about.title">Why Work With Me</h2>
             </header>
             
@@ -2630,7 +2825,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <header class="section-header reveal">
-                <span class="section-number">003 — <span data-i18n="nav.contact">CONTACT</span></span>
+                <span class="section-number">004 — <span data-i18n="nav.contact">CONTACT</span></span>
                 <h2 class="section-title" data-i18n="form.title">Let's Talk</h2>
             </header>
             

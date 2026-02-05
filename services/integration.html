@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Salesforce & ERP Integration Services | Switzerland — Osmel Prieto Teran</title>
+    <meta name="description" content="Connect Salesforce with ERP and surrounding systems. Single source of truth, stable data flows, clear architecture. Swiss B2B integration specialist.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Salesforce ERP Integration Switzerland, Salesforce consultant Bern, ERP CRM integration, Fractional CTO Switzerland, B2B systems integration">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/services/integration.html">
+    
+    <!-- Hreflang for multi-language support -->
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/integration.html">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/integration.html">
+    <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/integration.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/services/integration.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prietoteran.com/services/integration.html">
+    <meta property="og:title" content="Salesforce & ERP Integration Services | Switzerland">
+    <meta property="og:description" content="Connect Salesforce with ERP and surrounding systems. Single source of truth, stable data flows, clear architecture.">
+    <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salesforce & ERP Integration Services | Switzerland">
+    <meta name="twitter:description" content="Connect Salesforce with ERP and surrounding systems. Single source of truth, stable data flows, clear architecture.">
+    <meta name="twitter:image" content="https://www.prietoteran.com/og-image.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Salesforce ERP Integration",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Osmel Prieto Teran",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bern",
+          "addressCountry": "CH"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Switzerland"
+        }
+      },
+      "description": "Connect Salesforce with ERP and surrounding systems for B2B companies in Switzerland",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.prietoteran.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.prietoteran.com/#services"
+      },{
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Integration",
+        "item": "https://www.prietoteran.com/services/integration.html"
+      }]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           CSS VARIABLES
+           ============================================ */
+                :root {
+            /* Color System — Light Mode (Swiss Clean) */
+            --bg-primary: #FAFAFA;
+            --bg-secondary: #F0F0F0;
+            --bg-tertiary: #E8E8E8;
+            --bg-elevated: #FFFFFF;
+            
+            --text-primary: #1A1A1A;
+            --text-secondary: #4A4A4A;
+            --text-muted: #7A7A7A;
+            --text-subtle: #B0B0B0;
+            
+            --accent: #B8860B;
+            --accent-dark: #8B6508;
+            --accent-muted: rgba(184, 134, 11, 0.12);
+            --accent-glow: rgba(184, 134, 11, 0.06);
+            
+            --grid-line: rgba(0, 0, 0, 0.04);
+            --border: rgba(0, 0, 0, 0.08);
+            --border-strong: rgba(0, 0, 0, 0.12);
+            
+            /* Typography */
+            --font-display: 'Outfit', -apple-system, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+            
+            /* Spacing Scale */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+            --space-2xl: 8rem;
+            --space-3xl: 12rem;
+            
+            /* Timing */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        
+        /* Dark Mode */
+                /* Dark Mode */
+        [data-theme="dark"] {
+            --bg-primary: #0D0D0D;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1A1A1A;
+            --bg-elevated: #222222;
+            
+            --text-primary: #F5F5F0;
+            --text-secondary: #A8A8A0;
+            --text-muted: #5C5C58;
+            --text-subtle: #3A3A38;
+            
+            --accent: #C9A227;
+            --accent-dark: #C9A227;
+            --accent-muted: rgba(201, 162, 39, 0.15);
+            
+            --border: rgba(255, 255, 255, 0.06);
+            --border-strong: rgba(255, 255, 255, 0.1);
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-display);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+        }
+
+        ::selection {
+            background: var(--accent);
+            color: #FFFFFF;
+        }
+
+        /* ============================================
+           LAYOUT CONTAINER
+           ============================================ */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 var(--space-xl);
+            }
+        }
+
+        /* ============================================
+           NAVIGATION — MINIMAL & PRECISE
+           ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-md) 0;
+            transition: all 0.4s var(--ease-out);
+        }
+
+        @media (min-width: 768px) {
+            .nav {
+                padding: var(--space-lg) 0;
+            }
+        }
+
+        .nav.scrolled {
+            background: rgba(250, 250, 250, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: var(--space-sm) 0;
+        }
+
+        @media (min-width: 768px) {
+            .nav.scrolled {
+                padding: var(--space-md) 0;
+            }
+        }
+        
+        [data-theme="dark"] .nav.scrolled {
+            background: rgba(13, 13, 13, 0.9);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        @media (min-width: 768px) {
+            .nav-logo {
+                font-size: 0.9rem;
+            }
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-xl);
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s var(--ease-out);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s var(--ease-out);
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Button */
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            gap: 5px;
+            padding: 8px;
+        }
+        
+        .nav-hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-secondary);
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .nav-hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .nav-hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .nav-hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-hamburger {
+                display: flex;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-primary);
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                padding: var(--space-lg);
+                gap: var(--space-md);
+            }
+            
+            .nav.scrolled .nav-links {
+                background: var(--bg-elevated);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                text-align: center;
+            }
+            
+            .nav-links a {
+                font-size: 1rem;
+                padding: var(--space-sm) 0;
+                display: block;
+            }
+            
+            .nav-right {
+                gap: var(--space-md);
+            }
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--border);
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.3s var(--ease-out);
+            font-size: 0.95rem;
+            padding: 0;
+        }
+
+        @media (min-width: 768px) {
+            .theme-toggle {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+        }
+        
+        .theme-toggle:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .theme-toggle .icon-sun,
+        .theme-toggle .icon-moon {
+            position: absolute;
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .theme-toggle .icon-moon {
+            opacity: 0;
+            transform: rotate(-90deg) scale(0.5);
+        }
+        
+        [data-theme="dark"] .theme-toggle .icon-sun {
+            opacity: 0;
+            transform: rotate(90deg) scale(0.5);
+        }
+        
+        [data-theme="dark"] .theme-toggle .icon-moon {
+            opacity: 1;
+            transform: rotate(0) scale(1);
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        @media (min-width: 768px) {
+            .nav-right {
+                gap: var(--space-lg);
+            }
+        }
+        
+        /* Language Selector - Minimal Dropdown */
+        .lang-selector {
+            position: relative;
+        }
+        
+        .lang-current {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+            color: var(--text-muted);
+            padding: 8px 4px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out);
+        }
+        
+        .lang-current:hover {
+            color: var(--text-primary);
+        }
+        
+        .lang-current .lang-code {
+            min-width: 20px;
+        }
+        
+        .lang-current .lang-arrow {
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s var(--ease-out);
+            opacity: 0.5;
+        }
+        
+        .lang-current .lang-arrow svg {
+            width: 10px;
+            height: 6px;
+        }
+        
+        .lang-selector.open .lang-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 4px;
+            min-width: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s var(--ease-out);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            z-index: 200;
+        }
+        
+        [data-theme="dark"] .lang-dropdown {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .lang-selector.open .lang-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            width: 100%;
+            background: none;
+            border: none;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            padding: 10px 12px;
+            cursor: pointer;
+            transition: all 0.15s var(--ease-out);
+            text-align: left;
+        }
+        
+        .lang-option:hover {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+        
+        .lang-option.active {
+            color: var(--accent);
+        }
+        
+        .lang-option .lang-code {
+            text-transform: uppercase;
+        }
+            font-weight: 600;
+            min-width: 24px;
+        }
+        
+        .lang-option .lang-name {
+            color: var(--text-muted);
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        
+        .lang-option.active .lang-name {
+            color: var(--accent);
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .lang-selector {
+                display: none;
+            }
+            
+            .lang-selector.mobile-visible {
+                display: block;
+                position: absolute;
+                top: calc(100% + 180px);
+                left: 0;
+                right: 0;
+                background: var(--bg-secondary);
+                border-bottom: 1px solid var(--border);
+                padding: var(--space-md) var(--space-lg);
+            }
+            
+            .lang-selector.mobile-visible .lang-dropdown {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                gap: var(--space-md);
+            }
+            
+            .lang-selector.mobile-visible .lang-current {
+                display: none;
+            }
+            
+            .lang-selector.mobile-visible .lang-option {
+                padding: var(--space-sm) var(--space-md);
+                border: 1px solid var(--border);
+            }
+            
+            .lang-selector.mobile-visible .lang-option.active {
+                border-color: var(--accent);
+                background: var(--accent-muted);
+            }
+        }
+
+        /* ============================================
+           BREADCRUMBS
+           ============================================ */
+        .breadcrumbs {
+            padding: calc(var(--space-xl) + 50px) 2rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .breadcrumbs ul {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .breadcrumbs a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--accent);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            padding: 2rem 2rem 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero .cta {
+            border-radius: 0;
+            display: inline-block;
+            background: var(--accent);
+            color: #FFFFFF;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .hero .cta:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           SECTIONS
+           ============================================ */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section .section-intro {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 2rem;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .card ul li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5rem;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            background: var(--bg-secondary);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-section .cta {
+            border-radius: 0;
+            display: inline-block;
+            background: var(--accent);
+            color: #FFFFFF;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .cta-section .cta:hover {
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           RELATED SERVICES
+           ============================================ */
+        .related-services {
+            background: var(--bg-elevated);
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .related-services .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .related-services h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-services .service-link {
+            display: block;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.2s;
+        }
+
+        .related-services .service-link:hover {
+            transform: translateX(4px);
+        }
+
+        .related-services .service-link h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .related-services .service-link p {
+            color: var(--text-secondary);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: var(--space-lg) 0;
+        }
+
+        @media (min-width: 768px) {
+            footer {
+                padding: var(--space-xl) 0;
+            }
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .footer-inner {
+                gap: var(--space-lg);
+            }
+        }
+
+        .footer-text {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        @media (min-width: 768px) {
+            .footer-text {
+                font-size: 0.85rem;
+                letter-spacing: 0.08em;
+            }
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        @media (min-width: 768px) {
+            .footer-links {
+                gap: var(--space-lg);
+            }
+        }
+
+        .footer-links a {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s var(--ease-out);
+            padding: var(--space-sm);
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer-links a {
+                font-size: 0.85rem;
+                letter-spacing: 0.08em;
+                padding: 0;
+            }
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section h2 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <div class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </div>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="../#blog" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="../#about" data-i18n="nav.about">About</a></li>
+                        <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">EN</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="de">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="lang-code">ES</span>
+                                <span class="lang-name">Español</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="../">Home</a></li>
+            <li>→</li>
+            <li><a href="../#services">Services</a></li>
+            <li>→</li>
+            <li>Integration</li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Salesforce & ERP Integration</h1>
+        <p class="subtitle">Connect your systems. One source of truth. Stable data flows. Architecture your team can maintain.</p>
+        <a href="mailto:contact@prietoteran.com" class="cta">Book a 20-min call →</a>
+    </div>
+
+    <!-- The Problem -->
+    <section>
+        <h2>The Problem</h2>
+        <p class="section-intro">Your systems don't talk to each other. Data is duplicated or inconsistent. Changes feel risky.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Data Mismatch</h3>
+                <p>Salesforce quotes don't match ERP prices. Customer data is different across systems. Manual reconciliation takes hours.</p>
+            </div>
+            <div class="card">
+                <h3>Fragile Integrations</h3>
+                <p>Point-to-point connections that break when anything changes. No one knows how it all fits together.</p>
+            </div>
+            <div class="card">
+                <h3>Slow Operations</h3>
+                <p>Order processing takes days instead of hours. Approvals get stuck. Sales can't access inventory data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution -->
+    <section>
+        <h2>How I Help</h2>
+        <p class="section-intro">I build integrations that work. Clean architecture, stable flows, full ownership for your team.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Salesforce ↔ ERP Integration</h3>
+                <ul>
+                    <li>Real-time data synchronization</li>
+                    <li>Quote-to-order automation</li>
+                    <li>Customer master data management</li>
+                    <li>Inventory and pricing sync</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>System Architecture</h3>
+                <ul>
+                    <li>API design and middleware setup</li>
+                    <li>Clear data flow documentation</li>
+                    <li>Security and access control</li>
+                    <li>Error handling and monitoring</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Technical Leadership</h3>
+                <ul>
+                    <li>Fractional CTO services</li>
+                    <li>Architecture review and planning</li>
+                    <li>Vendor evaluation and alignment</li>
+                    <li>Team mentoring and handover</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section>
+        <h2>The Process</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Analyze</h3>
+                <p>I map your current systems, data flows, and pain points. No assumptions — just facts.</p>
+            </div>
+            <div class="card">
+                <h3>2. Design</h3>
+                <p>I create a clear architecture that solves your problems and scales with your business.</p>
+            </div>
+            <div class="card">
+                <h3>3. Build</h3>
+                <p>I implement the integration with security, testing, and documentation at every step.</p>
+            </div>
+            <div class="card">
+                <h3>4. Handover</h3>
+                <p>Your team owns the code, documentation, and knows exactly how everything works.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section>
+        <h2>What You Get</h2>
+        <div class="card" style="max-width: 700px; margin: 0 auto;">
+            <h3>Outcome:</h3>
+            <ul>
+                <li>Single source of truth across systems</li>
+                <li>Faster quote-to-order cycles</li>
+                <li>Fewer data-related incidents</li>
+                <li>Clear architecture your team can maintain</li>
+                <li>Full code ownership and documentation</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Ready to fix fragile systems?</h2>
+        <p>Let's talk about your Salesforce and ERP integration. I'll give you 2-3 concrete next steps.</p>
+        <a href="mailto:contact@prietoteran.com" class="cta">Start a conversation →</a>
+    </div>
+
+    <!-- Related Services -->
+    <div class="related-services">
+        <div class="container">
+            <h3>You might also need:</h3>
+            <a href="./automation.html" class="service-link">
+                <h4>Process Automation →</h4>
+                <p>Automate workflows that shouldn't be manual. Less copy-paste, more control.</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js"></script>
+    
+    <!-- JavaScript for Animations & Interactions -->
+    <script>
+        // Mobile Navigation
+        const navHamburger = document.getElementById('navHamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        navHamburger.addEventListener('click', () => {
+            navHamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            // Show/hide language selector on mobile
+            const langSel = document.getElementById('langSelector');
+            if (navLinks.classList.contains('active')) {
+                langSel.classList.add('mobile-visible');
+            } else {
+                langSel.classList.remove('mobile-visible');
+            }
+        });
+        
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navHamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.getElementById('langSelector').classList.remove('mobile-visible');
+            });
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            html.setAttribute('data-theme', 'dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            if (newTheme === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+            } else {
+                html.removeAttribute('data-theme');
+            }
+            
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Navigation scroll effect
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Language Selector Handler - Dropdown
+        const langSelector = document.getElementById('langSelector');
+        const langToggle = document.getElementById('langToggle');
+        const langOptions = document.querySelectorAll('.lang-option');
+        
+        // Update current language display
+        function updateLangDisplay(lang) {
+            document.getElementById('currentLangCode').textContent = lang.toUpperCase();
+            langOptions.forEach(opt => {
+                opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+            });
+        }
+        
+        // Initialize with current language
+        if (typeof i18n !== 'undefined') {
+            updateLangDisplay(i18n.getLanguage());
+        } else {
+            updateLangDisplay('en');
+        }
+        
+        // Toggle dropdown
+        langToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langSelector.classList.toggle('open');
+        });
+        
+        // Handle language selection
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', () => {
+                const lang = opt.getAttribute('data-lang');
+                if (typeof i18n !== 'undefined') {
+                    i18n.setLanguage(lang);
+                }
+                updateLangDisplay(lang);
+                langSelector.classList.remove('open');
+                
+                // Navigate to language-specific page
+                const langMap = {
+                    'en': '../services/integration.html',
+                    'de': '../de/services/integration.html',
+                    'es': '../es/services/integration.html'
+                };
+                if (langMap[lang]) {
+                    window.location.href = langMap[lang];
+                }
+            });
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langSelector.contains(e.target)) {
+                langSelector.classList.remove('open');
+            }
+        });
+        
+        // Close dropdown on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                langSelector.classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

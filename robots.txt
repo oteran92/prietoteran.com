@@ -4,5 +4,13 @@
 User-agent: *
 Allow: /
 
+# Disallow access to directories that shouldn't be indexed
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /.git/
+
 # Sitemap location
 Sitemap: https://www.prietoteran.com/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Blog — Integration & Automatisierung Einblicke | Osmel Prieto Teran</title>
+    <meta name="description" content="Praktische Ratschläge zu Salesforce-ERP-Integrationen, Geschäftsautomatisierung und dem Aufbau zuverlässiger B2B-Systeme. Praxisnahe Einblicke aus Schweizer B2B-Projekten.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Salesforce Integration Blog, ERP Integration Schweiz, B2B Automatisierung, Integrationsarchitektur">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/de/blog/">
+    
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/">
+    <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prietoteran.com/de/blog/">
+    <meta property="og:title" content="Blog — Integration & Automatisierung Einblicke">
+    <meta property="og:description" content="Praktische Ratschläge zu Salesforce-ERP-Integrationen, Geschäftsautomatisierung und dem Aufbau zuverlässiger B2B-Systeme.">
+    <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
+    <meta property="og:locale" content="de_CH">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — Integration & Automatisierung Einblicke">
+    <meta name="twitter:description" content="Praktische Ratschläge zu Salesforce-ERP-Integrationen, Geschäftsautomatisierung und dem Aufbau zuverlässiger B2B-Systeme.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../../styles.css?v=11">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-display);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding-top: 80px;
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 70px; }
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: calc(var(--space-xl) + 50px) 2rem 4rem;
+        }
+        
+        header.page-header { margin-bottom: 4rem; }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .blog-card.coming-soon {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        
+        .blog-meta {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .blog-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: var(--text-primary);
+            margin: 0;
+        }
+        
+        .blog-excerpt {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            flex: 1;
+        }
+        
+        .blog-link {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.2s ease;
+        }
+        
+        .blog-link:hover { gap: 0.75rem; }
+        .blog-link::after { content: '→'; }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--accent-muted);
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            main { padding: 2rem 1.5rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Menü umschalten">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#services">Leistungen</a></li>
+                        <li><a href="../#blog">Blog</a></li>
+                        <li><a href="../#about">Über mich</a></li>
+                        <li><a href="../#contact">Kontakt</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">DE</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <a href="../../blog/" class="lang-option">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </a>
+                            <a href="index.html" class="lang-option active">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </a>
+                            <a href="../../es/blog/" class="lang-option">
+                                <span class="lang-code">ES</span>
+                                <span class="lang-name">Español</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Theme umschalten">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>Blog</h1>
+            <p class="page-subtitle">
+                Praktische Einblicke in Integrationen, Automatisierung und den Aufbau zuverlässiger B2B-Systeme. 
+                Basierend auf realen Projekten mit Schweizer Unternehmen.
+            </p>
+        </header>
+        
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-meta">4. Februar 2026 · 5 Min. Lesezeit</div>
+                <h2>Warum Salesforce-ERP-Integrationen scheitern (und wie man es behebt)</h2>
+                <p class="blog-excerpt">
+                    Die meisten Integrationen funktionieren 2-4 Wochen und scheitern dann. Lernen Sie die 3 Architekturprinzipien, 
+                    die Ausfälle in Schweizer B2B-Unternehmen verhindern.
+                </p>
+                <a href="warum-salesforce-erp-integrationen-scheitern.html" class="blog-link">Artikel lesen</a>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-meta">4. Februar 2026 · 6 Min. Lesezeit</div>
+                <h2>Die wahren Kosten manueller Dateneingabe zwischen Systemen</h2>
+                <p class="blog-excerpt">
+                    Manuelle Dateneingabe zwischen Salesforce und ERP kostet Schweizer B2B-Unternehmen 15-25 Stunden wöchentlich. 
+                    Erfahren Sie, wie Sie die versteckten Kosten berechnen und wann sich Automatisierung auszahlt.
+                </p>
+                <a href="die-wahren-kosten-manueller-dateneingabe.html" class="blog-link">Artikel lesen</a>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-meta">4. Februar 2026 · 7 Min. Lesezeit</div>
+                <h2>Von Angebot zu Auftrag in 4 Stunden statt 3 Tagen</h2>
+                <p class="blog-excerpt">
+                    Wie ein Schweizer Hersteller die Angebots-zu-Auftragszeit um 85% reduzierte — eine Fallstudie über 
+                    Salesforce-ERP-Automatisierung ohne kundenspezifische Entwicklung.
+                </p>
+                <a href="von-angebot-zu-auftrag-in-4-stunden.html" class="blog-link">Artikel lesen</a>
+            </article>
+            
+            <article class="blog-card coming-soon">
+                <div class="blog-meta"><span class="badge">Demnächst</span></div>
+                <h2>5 Anzeichen, dass Ihre Integration scheitern wird, bevor Sie beginnen</h2>
+                <p class="blog-excerpt">
+                    Warnsignale, auf die Sie bei der Planung von Salesforce-ERP-Integrationsprojekten achten sollten.
+                </p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../../app.js?v=2"></script>
+</body>
+</html>

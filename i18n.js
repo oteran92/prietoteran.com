@@ -58,8 +58,34 @@ const translations = {
         "service4.outcome": "Clear decisions. Less risk.",
         "service4.link": "View advisory service",
         
+        // Blog Section
+        "nav.blog": "Blog",
+        "blog.number": "002 — BLOG",
+        "blog.title": "Latest Insights",
+        "blog.subtitle": "Practical advice on integrations, automation, and building reliable systems.",
+        "blog.readMore": "Read article",
+        "blog.comingSoon": "Coming soon",
+        
+        "blog.post1.title": "Why Salesforce-ERP Integrations Break (And How to Fix It)",
+        "blog.post1.excerpt": "Most integrations work for 2-4 weeks, then fail. Learn the 3 architecture principles that prevent failures in Swiss B2B companies.",
+        
+        "blog.post2.title": "The Real Cost of Manual Data Entry Between Systems",
+        "blog.post2.excerpt": "Manual data entry costs Swiss B2B companies 15-25 hours weekly. Learn when automation pays for itself.",
+        
+        "blog.post3.title": "From Quote to Order in 4 Hours Instead of 3 Days",
+        "blog.post3.excerpt": "How a Swiss manufacturer cut quote-to-order time by 85% without custom development.",
+        
+        "blog.post4.title": "5 Signs Your Integration Will Fail Before You Start",
+        "blog.post4.excerpt": "Red flags to watch for when planning Salesforce-ERP integration projects.",
+        
+        // Blog Article Elements
+        "blog.cta.button": "Get in touch",
+        "blog.continueReading": "Continue Reading",
+        "blog.article": "Article",
+        "blog.service": "Service",
+        
         // About Section
-        "about.number": "002 — ABOUT",
+        "about.number": "003 — ABOUT",
         "about.title": "Why Work With Me",
         "about.marker": "At Work",
         "about.lead": "I'm a senior engineer who builds <strong>reliable systems under real-world constraints</strong>.",
@@ -387,8 +413,34 @@ const translations = {
         "service4.outcome": "Klare Entscheidungen. Weniger Risiko.",
         "service4.link": "Beratungsservice ansehen",
         
+        // Blog Section
+        "nav.blog": "Blog",
+        "blog.number": "002 — BLOG",
+        "blog.title": "Aktuelle Einblicke",
+        "blog.subtitle": "Praktische Ratschläge zu Integrationen, Automatisierung und dem Aufbau zuverlässiger Systeme.",
+        "blog.readMore": "Artikel lesen",
+        "blog.comingSoon": "Demnächst",
+        
+        "blog.post1.title": "Warum Salesforce-ERP-Integrationen scheitern (und wie man es behebt)",
+        "blog.post1.excerpt": "Die meisten Integrationen funktionieren 2-4 Wochen und scheitern dann. Lernen Sie die 3 Architekturprinzipien, die Ausfälle in Schweizer B2B-Unternehmen verhindern.",
+        
+        "blog.post2.title": "Die wahren Kosten manueller Dateneingabe zwischen Systemen",
+        "blog.post2.excerpt": "Manuelle Dateneingabe kostet Schweizer B2B-Unternehmen 15-25 Stunden wöchentlich. Erfahren Sie, wann sich Automatisierung auszahlt.",
+        
+        "blog.post3.title": "Von Angebot zu Auftrag in 4 Stunden statt 3 Tagen",
+        "blog.post3.excerpt": "Wie ein Schweizer Hersteller die Angebots-zu-Auftragszeit um 85% reduzierte — ohne kundenspezifische Entwicklung.",
+        
+        "blog.post4.title": "5 Anzeichen, dass Ihre Integration scheitern wird, bevor Sie beginnen",
+        "blog.post4.excerpt": "Warnsignale, auf die Sie bei der Planung von Salesforce-ERP-Integrationsprojekten achten sollten.",
+        
+        // Blog Article Elements
+        "blog.cta.button": "Kontakt aufnehmen",
+        "blog.continueReading": "Weiterlesen",
+        "blog.article": "Artikel",
+        "blog.service": "Service",
+        
         // About Section
-        "about.number": "002 — ÜBER MICH",
+        "about.number": "003 — ÜBER MICH",
         "about.title": "Warum mit mir arbeiten",
         "about.marker": "Bei der Arbeit",
         "about.lead": "Ich bin ein Senior-Ingenieur, der <strong>zuverlässige Systeme unter realen Einschränkungen</strong> baut.",
@@ -715,8 +767,34 @@ const translations = {
         "service4.outcome": "Decisiones claras. Menos riesgo.",
         "service4.link": "Ver servicio de asesoría",
         
+        // Blog Section
+        "nav.blog": "Blog",
+        "blog.number": "002 — BLOG",
+        "blog.title": "Últimas Perspectivas",
+        "blog.subtitle": "Consejos prácticos sobre integraciones, automatización y construcción de sistemas confiables.",
+        "blog.readMore": "Leer artículo",
+        "blog.comingSoon": "Próximamente",
+        
+        "blog.post1.title": "Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)",
+        "blog.post1.excerpt": "La mayoría de las integraciones funcionan 2-4 semanas y luego fallan. Aprende los 3 principios de arquitectura que previenen fallos en empresas B2B suizas.",
+        
+        "blog.post2.title": "El costo real de la entrada manual de datos entre sistemas",
+        "blog.post2.excerpt": "La entrada manual de datos cuesta a las empresas B2B suizas 15-25 horas semanales. Aprende cuándo la automatización se paga sola.",
+        
+        "blog.post3.title": "De presupuesto a orden en 4 horas en lugar de 3 días",
+        "blog.post3.excerpt": "Cómo un fabricante suizo redujo el tiempo de cotización-a-orden en un 85% — sin desarrollo personalizado.",
+        
+        "blog.post4.title": "5 señales de que tu integración fallará antes de empezar",
+        "blog.post4.excerpt": "Señales de alerta a observar al planificar proyectos de integración Salesforce-ERP.",
+        
+        // Blog Article Elements
+        "blog.cta.button": "Contactar",
+        "blog.continueReading": "Seguir Leyendo",
+        "blog.article": "Artículo",
+        "blog.service": "Servicio",
+        
         // About Section
-        "about.number": "002 — SOBRE MÍ",
+        "about.number": "003 — SOBRE MÍ",
         "about.title": "Por qué trabajar conmigo",
         "about.marker": "Trabajando",
         "about.lead": "Soy un ingeniero senior que construye <strong>sistemas confiables bajo restricciones del mundo real</strong>.",

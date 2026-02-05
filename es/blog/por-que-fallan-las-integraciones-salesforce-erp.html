@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo) — Osmel Prieto Teran</title>
+    <meta name="description" content="La mayoría de las integraciones Salesforce-ERP fallan en meses. Aprende los 3 principios de arquitectura que previenen fallos en empresas B2B suizas.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Integración Salesforce ERP, fallos integración Salesforce, integración ERP CRM Suiza, consultor Salesforce Berna">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/es/blog/por-que-fallan-las-integraciones-salesforce-erp.html">
+    
+    <!-- Alternate Language Links -->
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-salesforce-erp-integrationen-scheitern.html">
+    <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/por-que-fallan-las-integraciones-salesforce-erp.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.prietoteran.com/es/blog/por-que-fallan-las-integraciones-salesforce-erp.html">
+    <meta property="og:title" content="Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)">
+    <meta property="og:description" content="La mayoría de las integraciones Salesforce-ERP fallan en meses. Aprende los 3 principios de arquitectura que previenen fallos.">
+    <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)">
+    <meta name="twitter:description" content="La mayoría de las integraciones Salesforce-ERP fallan en meses. Aprende los 3 principios de arquitectura que previenen fallos.">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)",
+      "description": "La mayoría de las integraciones Salesforce-ERP fallan en meses. Aprende los 3 principios de arquitectura que previenen fallos en empresas B2B suizas.",
+      "image": "https://www.prietoteran.com/og-image.png",
+      "inLanguage": "es",
+      "author": {
+        "@type": "Person",
+        "name": "Osmel Prieto Teran",
+        "url": "https://www.prietoteran.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Osmel Prieto Teran",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.prietoteran.com/favicon.svg"
+        }
+      },
+      "datePublished": "2026-02-04",
+      "dateModified": "2026-02-04",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.prietoteran.com/es/blog/por-que-fallan-las-integraciones-salesforce-erp.html"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../../styles.css?v=11">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Alternar menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#services">Servicios</a></li>
+                        <li><a href="../#blog">Blog</a></li>
+                        <li><a href="../#about">Sobre mí</a></li>
+                        <li><a href="../#contact">Contacto</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">ES</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <a href="../../blog/why-salesforce-erp-integrations-break.html" class="lang-option">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </a>
+                            <a href="../../de/blog/warum-salesforce-erp-integrationen-scheitern.html" class="lang-option">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </a>
+                            <a href="por-que-fallan-las-integraciones-salesforce-erp.html" class="lang-option active">
+                                <span class="lang-code">ES</span>
+                                <span class="lang-name">Español</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <article class="article">
+        <div class="container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-category">Integración</span>
+                    <span class="article-divider">·</span>
+                    <time datetime="2026-02-04">4 de febrero de 2026</time>
+                    <span class="article-divider">·</span>
+                    <span class="article-reading-time">5 min de lectura</span>
+                </div>
+                <h1 class="article-title">Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)</h1>
+                <p class="article-intro">La mayoría de las integraciones Salesforce-ERP funcionan perfectamente durante 2-4 semanas. Luego fallan silenciosamente, generan errores en cascada o se rompen después de actualizaciones del proveedor. Esta es la arquitectura que realmente funciona.</p>
+            </header>
+        </div>
+        
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="../../blog/images/why-salesforce-erp-integrations-break.png" alt="Diagrama abstracto mostrando conexiones fragmentadas entre dos sistemas empresariales con una ruta de integración estable resaltada">
+        </div>
+        
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <p class="article-lead">Es lunes por la mañana. Tu equipo de ventas envió 15 cotizaciones a través de Salesforce durante el fin de semana. Para el jueves por la tarde, solo 3 llegaron a tu ERP para su cumplimiento. ¿Las otras 12? Atascadas en algún lugar del proceso de integración. Tu equipo está revisando cada una manualmente. Tus clientes están esperando. Y te preguntas por qué la "integración completa Salesforce-ERP" por la que pagaste 65.000€ en realidad no está integrando nada.</p>
+                
+                <p>Este escenario no es inusual. En los últimos seis meses, he revisado 14 integraciones Salesforce-ERP para empresas B2B suizas. Once tenían los mismos problemas fundamentales. Ninguno estaba relacionado con la tecnología en sí.</p>
+                
+                <h2>El problema que todos enfrentan</h2>
+                
+                <p>La mayoría de las integraciones Salesforce-ERP funcionan perfectamente durante 2-4 semanas. Luego sucede una de tres cosas:</p>
+                
+                <ul>
+                    <li><strong>Fallos silenciosos</strong>: Los datos dejan de sincronizarse, pero nadie lo nota hasta que un cliente llama por un pedido faltante</li>
+                    <li><strong>Errores en cascada</strong>: Una transacción fallida bloquea todo lo que está detrás, creando un retraso de más de 100 sincronizaciones fallidas</li>
+                    <li><strong>La actualización del proveedor</strong>: Tu proveedor de ERP lanza una actualización que cambia el nombre de un campo, y de repente nada funciona</li>
+                </ul>
+                
+                <p>¿La respuesta típica? Llamar al proveedor de integración. Esperar 48 horas. Pagar por soporte de emergencia. Obtener un parche temporal. Repetir el ciclo tres meses después.</p>
+                
+                <p>Tu equipo de operaciones se adapta construyendo "procesos de respaldo" — hojas de cálculo, verificaciones manuales, reuniones de conciliación semanales. La integración se convierte en el problema que se suponía debía resolver.</p>
+                
+                <h2>Por qué sucede esto (No son las herramientas)</h2>
+                
+                <p>El problema no es Salesforce. No es tu ERP. La plataforma de middleware que elegiste probablemente está bien.</p>
+                
+                <p>El problema es la arquitectura — específicamente, tres suposiciones que parecen razonables durante el proceso de venta pero fallan bajo condiciones del mundo real:</p>
+                
+                <h3>Suposición 1: "La sincronización en tiempo real siempre es mejor"</h3>
+                
+                <p>La sincronización en tiempo real suena ideal. ¿Cotización creada en Salesforce? Aparece instantáneamente en el ERP. Perfecto, ¿verdad?</p>
+                
+                <p>Hasta que tu ERP está caído durante 15 minutos durante una ventana de mantenimiento planificada. O un problema de red causa un timeout. O alguien guarda un registro incompleto. Sincronización en tiempo real significa fallos en tiempo real.</p>
+                
+                <blockquote>
+                    Un fabricante suizo con el que trabajé tenía configurada la sincronización en tiempo real. Cuando su ERP estuvo brevemente no disponible, 47 órdenes de venta fallaron en sincronizarse. Como no había cola, ni mecanismo de reintento, esas órdenes simplemente... desaparecieron del proceso de sincronización. Descubrieron el problema cuatro días después cuando los clientes empezaron a llamar.
+                </blockquote>
+                
+                <h3>Suposición 2: "La integración maneja todo automáticamente"</h3>
+                
+                <p>La mayoría de las integraciones están construidas para el camino feliz. ¿Cliente existe en ambos sistemas? Genial. ¿Producto estándar? Sin problema. ¿Lista de precios coincide? Perfecto.</p>
+                
+                <p>Pero ¿qué pasa cuando:</p>
+                <ul>
+                    <li>¿Un nuevo cliente existe en Salesforce pero aún no en el ERP?</li>
+                    <li>¿Un acuerdo de precios especiales aplica a esta cotización?</li>
+                    <li>¿El producto está disponible pero necesita una configuración personalizada?</li>
+                </ul>
+                
+                <p>Sin manejo explícito de errores para casos límite, la integración falla silenciosamente o, peor, crea datos incorrectos. Descubres el problema cuando contabilidad concilia el mes y encuentra discrepancias.</p>
+                
+                <h3>Suposición 3: "Una vez que funciona, sigue funcionando"</h3>
+                
+                <p>Los proyectos de integración tienen una fase de pruebas. Todo pasa. Sales a producción. Éxito.</p>
+                
+                <p>Luego tu proveedor de ERP actualiza a la versión 12.3. Un nombre de campo cambia. Un tipo de dato cambia de string a integer. Un endpoint de API queda obsoleto.</p>
+                
+                <p>La integración se rompe. Y como nadie documentó qué campos, endpoints o transformaciones usa realmente la integración, arreglarlo toma días de investigación.</p>
+                
+                <hr class="article-divider-line">
+                
+                <h2>La arquitectura que realmente funciona</h2>
+                
+                <p>Después de ver este patrón repetidamente, esto es lo que previene estos fallos:</p>
+                
+                <h3>Principio 1: Diseña para el fallo</h3>
+                
+                <p>Asume que los fallos sucederán. Construye explícitamente para ellos:</p>
+                
+                <ul>
+                    <li><strong>Usa colas, no sincronización directa</strong>: Cuando un registro necesita sincronizarse, ponlo en una cola. Procesa la cola con lógica de reintentos. Si algo falla, no bloquea todo lo demás.</li>
+                    <li><strong>Implementa backoff exponencial</strong>: Primer reintento después de 1 minuto. Luego 5 minutos. Luego 15. Esto maneja problemas temporales sin intervención manual.</li>
+                    <li><strong>Alerta sobre patrones, no fallos individuales</strong>: ¿Una sincronización fallida? Normal. ¿Diez fallos en una hora? Alertar a alguien.</li>
+                </ul>
+                
+                <p>Una empresa mayorista suiza implementó este enfoque. Todavía tienen fallos de sincronización ocasionales (cliente no encontrado, inventario temporalmente bloqueado, etc.), pero estos se resuelven automáticamente a través de reintentos. La intervención manual bajó de diaria a una vez por mes.</p>
+                
+                <h3>Principio 2: Haz visibles los fallos</h3>
+                
+                <p>Los peores fallos son los silenciosos. Diseña para la visibilidad:</p>
+                
+                <ul>
+                    <li><strong>Dashboards de errores</strong>: Muestra qué falló, por qué, y qué necesita atención</li>
+                    <li><strong>Informes resumen semanales</strong>: "95% de las sincronizaciones tuvieron éxito, 5% necesitaron reintento, 0.2% necesitan revisión manual"</li>
+                    <li><strong>Propiedad clara</strong>: Alguien necesita ser dueño de la salud de la integración (usualmente operaciones, no TI)</li>
+                </ul>
+                
+                <p>No puedes arreglar problemas que no sabes que existen. La visibilidad no es opcional.</p>
+                
+                <h3>Principio 3: Documenta las dependencias</h3>
+                
+                <p>Cuando tu integración se rompa (y lo hará), necesitas saber:</p>
+                
+                <ul>
+                    <li>Qué endpoints de API usa</li>
+                    <li>Qué campos son obligatorios vs opcionales</li>
+                    <li>Qué transformaciones de datos ocurren</li>
+                    <li>Qué sistema es la fuente de verdad para cada tipo de dato</li>
+                </ul>
+                
+                <p>Esta documentación no es para tu yo actual. Es para tu equipo en seis meses cuando algo se rompa a las 4 PM del viernes y necesites entender qué cambió.</p>
+                
+                <div class="article-highlight">
+                    <p><strong>Verificación de realidad:</strong> Una buena arquitectura no prevendrá todos los fallos. Hace que los fallos sean manejables, visibles y corregibles sin llamadas de soporte de emergencia al proveedor.</p>
+                </div>
+                
+                <h2>Cómo se ve esto en la práctica</h2>
+                
+                <p>Una empresa B2B suiza con 120 empleados vino a mí después de su tercer "fallo completo de integración" en 18 meses. Cada vez, pagaron 5.000-8.000€ por reparaciones de emergencia.</p>
+                
+                <p>Reconstruimos su integración Salesforce-ERP con estos principios:</p>
+                
+                <ul>
+                    <li>Procesamiento basado en colas (no en tiempo real)</li>
+                    <li>Registro de errores comprensivo</li>
+                    <li>Informes de salud automatizados diarios</li>
+                    <li>Documentación clara de cada punto de integración</li>
+                </ul>
+                
+                <p>Primer mes: 6 alertas que requirieron atención (antes 15-20 intervenciones manuales). Segundo mes: 2 alertas. Para el tercer mes: la integración simplemente... funcionaba.</p>
+                
+                <p>Su proveedor de ERP lanzó una actualización. La integración capturó los registros afectados, registró errores claros, y el equipo lo arregló en 2 horas en lugar de 2 días. Sin llamadas de soporte de emergencia. Sin pedidos perdidos.</p>
+                
+                <h2>Preguntas para hacerle a tu proveedor de integración</h2>
+                
+                <p>Antes de tu próximo proyecto de integración (o al evaluar el actual), pregunta:</p>
+                
+                <ol>
+                    <li><strong>¿Qué pasa cuando el ERP está temporalmente no disponible?</strong> Si la respuesta es "la sincronización fallará", pregunta sobre mecanismos de reintento.</li>
+                    <li><strong>¿Cómo sabemos cuando algo se rompe?</strong> Si la respuesta es "verás errores", pregunta por detalles de monitoreo y alertas.</li>
+                    <li><strong>¿Quién es dueño de la documentación?</strong> Si la respuesta es confusa o "proporcionamos documentación", asegúrate de que realmente obtengas documentación usable, no solo especificaciones de API.</li>
+                    <li><strong>¿Cuál es el proceso de recuperación ante desastres?</strong> Si algo se rompe a las 6 PM del viernes, ¿qué pasa? ¿Hay una cola que podamos reproducir? ¿O perdemos datos?</li>
+                    <li><strong>¿Puede nuestro equipo modificar esto nosotros mismos?</strong> El vendor lock-in no se trata del software. Se trata del lock-in de conocimiento.</li>
+                </ol>
+            </div>
+            
+            <!-- Simple CTA -->
+            <div class="article-cta-simple">
+                <a href="../#contact" class="article-cta-button">Contactar</a>
+            </div>
+            
+            <!-- Related Content -->
+            <div class="article-related">
+                <h4>Seguir Leyendo</h4>
+                <div class="article-related-links">
+                    <a href="../services/integration.html" class="article-related-link">
+                        <span class="article-related-label">Servicio</span>
+                        <span class="article-related-title">Salesforce ↔ ERP Integration & Confiabilidad de Datos</span>
+                    </a>
+                    <a href="../services/automation.html" class="article-related-link">
+                        <span class="article-related-label">Servicio</span>
+                        <span class="article-related-title">Automatización de Procesos para Operaciones B2B</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global JavaScript -->
+    <script src="../../app.js?v=2"></script>
+</body>
+</html>

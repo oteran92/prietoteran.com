@@ -147,9 +147,9 @@ app.use('/api/*', (req, res) => {
     res.status(404).json({ error: 'Not found' });
 });
 
-// Serve index.html for all other routes (SPA-like behavior)
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+// 404 handler for non-existent files (must be last)
+app.use((req, res) => {
+    res.status(404).sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start server

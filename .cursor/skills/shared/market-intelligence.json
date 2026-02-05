@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-02-04",
+    "updated_by": "marketing-specialist-skill",
+    "notes": "Initial setup - to be updated by Marketing Specialist skill after analysis"
+  },
+  "top_performing_content": [
+    {
+      "url": "/blog/why-salesforce-erp-integrations-break.html",
+      "title": "Why Salesforce-ERP Integrations Break (And How to Fix It)",
+      "type": "blog",
+      "topic": "integration",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "avg_position": 0,
+      "top_queries": [],
+      "notes": "Awaiting GSC data collection"
+    },
+    {
+      "url": "/blog/the-real-cost-of-manual-data-entry.html",
+      "title": "The Real Cost of Manual Data Entry Between Systems",
+      "type": "blog",
+      "topic": "automation",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "avg_position": 0,
+      "top_queries": [],
+      "notes": "Awaiting GSC data collection"
+    },
+    {
+      "url": "/blog/quote-to-order-in-4-hours.html",
+      "title": "From Quote to Order in 4 Hours Instead of 3 Days",
+      "type": "blog",
+      "topic": "case-study",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "avg_position": 0,
+      "top_queries": [],
+      "notes": "Awaiting GSC data collection"
+    }
+  ],
+  "trending_keywords": [
+    {
+      "query": "salesforce erp integration",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0,
+      "trend": "baseline",
+      "notes": "Primary target keyword"
+    },
+    {
+      "query": "salesforce sap integration",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0,
+      "trend": "baseline",
+      "notes": "Target keyword - Swiss market"
+    },
+    {
+      "query": "b2b process automation switzerland",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0,
+      "trend": "baseline",
+      "notes": "Target keyword - local market"
+    }
+  ],
+  "quick_win_opportunities": [],
+  "icp_industries": [
+    {
+      "industry": "Manufacturing",
+      "sub_industries": ["Precision Manufacturing", "Industrial Manufacturing", "MedTech"],
+      "priority": "high",
+      "typical_pain_points": ["Quote-to-order delays", "Inventory visibility", "Manual data entry"],
+      "typical_tech_stack": ["Salesforce", "SAP", "Abacus"],
+      "notes": "Core ICP - highest conversion potential"
+    },
+    {
+      "industry": "Wholesale",
+      "sub_industries": ["Distribution", "Import/Export", "B2B Trade"],
+      "priority": "high",
+      "typical_pain_points": ["Stock accuracy", "Credit checks", "Pricing management"],
+      "typical_tech_stack": ["Salesforce", "SAP", "Microsoft Dynamics"],
+      "notes": "Strong ICP - high volume data needs"
+    },
+    {
+      "industry": "B2B Services",
+      "sub_industries": ["Professional Services", "Consulting", "Technical Services"],
+      "priority": "medium",
+      "typical_pain_points": ["Project-invoice disconnect", "Resource visibility", "Time tracking"],
+      "typical_tech_stack": ["Salesforce", "Various ERPs"],
+      "notes": "Secondary ICP - smaller deal sizes"
+    }
+  ],
+  "pain_points_by_role": {
+    "CTO": {
+      "primary_pain_points": [
+        "Integration technical debt",
+        "Vendor lock-in concerns",
+        "Team productivity on maintenance",
+        "System reliability issues"
+      ],
+      "language_to_use": [
+        "architecture",
+        "maintainability",
+        "documentation",
+        "technical debt"
+      ],
+      "content_preferences": [
+        "Technical deep-dives",
+        "Architecture principles",
+        "Best practices"
+      ]
+    },
+    "COO": {
+      "primary_pain_points": [
+        "Operational inefficiency",
+        "Scaling challenges",
+        "Error rates",
+        "Process visibility"
+      ],
+      "language_to_use": [
+        "efficiency",
+        "scalability",
+        "visibility",
+        "error reduction"
+      ],
+      "content_preferences": [
+        "Case studies with metrics",
+        "ROI analysis",
+        "Process improvement"
+      ]
+    },
+    "Operations Manager": {
+      "primary_pain_points": [
+        "Manual data entry burden",
+        "Firefighting time",
+        "Team workload",
+        "Process inconsistency"
+      ],
+      "language_to_use": [
+        "time savings",
+        "automation",
+        "team productivity",
+        "error elimination"
+      ],
+      "content_preferences": [
+        "Practical how-to guides",
+        "Quick wins",
+        "Tool recommendations"
+      ]
+    },
+    "IT Manager": {
+      "primary_pain_points": [
+        "Support ticket volume",
+        "System maintenance",
+        "Documentation gaps",
+        "User complaints"
+      ],
+      "language_to_use": [
+        "reduced support",
+        "maintainability",
+        "user experience",
+        "reliability"
+      ],
+      "content_preferences": [
+        "Technical guides",
+        "Troubleshooting content",
+        "Implementation guides"
+      ]
+    }
+  },
+  "content_recommendations": {
+    "for_lead_outreach": [
+      {
+        "pain_point": "integration failures",
+        "recommended_content": "/blog/why-salesforce-erp-integrations-break.html",
+        "key_insight_to_share": "Most integrations work for 2-4 weeks, then fail silently. Design for visibility first."
+      },
+      {
+        "pain_point": "manual data entry",
+        "recommended_content": "/blog/the-real-cost-of-manual-data-entry.html",
+        "key_insight_to_share": "Most companies underestimate their manual data burden by 40-60%."
+      },
+      {
+        "pain_point": "quote-to-order delays",
+        "recommended_content": "/blog/quote-to-order-in-4-hours.html",
+        "key_insight_to_share": "A Swiss manufacturer reduced quote-to-order from 3 days to 4 hours without custom development."
+      }
+    ],
+    "next_content_to_create": [
+      "5 Signs Your Integration Will Fail Before You Start",
+      "Salesforce-SAP Integration: A Practical Guide for Swiss Companies",
+      "ROI Calculator: When Does Automation Pay for Itself?"
+    ]
+  },
+  "competitive_insights": {
+    "notes": "To be populated through market research",
+    "key_competitors": [],
+    "differentiators": [
+      "Swiss-based, local expertise",
+      "No vendor lock-in philosophy",
+      "Focus on maintainability over features",
+      "Documentation and knowledge transfer included"
+    ]
+  }
+}

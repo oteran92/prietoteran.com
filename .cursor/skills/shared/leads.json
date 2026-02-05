@@ -1,14 +1,14 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-02-04",
+    "last_updated": "2026-02-05",
     "updated_by": "sales-agent-skill",
-    "total_leads": 7,
+    "total_leads": 10,
     "stats": {
       "by_status": {
         "new": 0,
-        "researched": 3,
-        "contacted": 4,
+        "researched": 2,
+        "contacted": 8,
         "follow_up": 0,
         "replied": 0,
         "meeting_scheduled": 0,
@@ -17,8 +17,8 @@
         "nurture": 0
       },
       "by_priority": {
-        "high": 4,
-        "medium": 2,
+        "high": 5,
+        "medium": 4,
         "low": 1
       }
     },
@@ -308,16 +308,27 @@
         },
         "fit_notes": "Not using Salesforce YET but has SAP + Dynamics. DT Manager might be evaluating CRM options. $120M funding."
       },
-      "status": "researched",
+      "status": "contacted",
       "outreach": {
         "sequence": "value_add",
-        "next_action": "send_intro_email",
-        "last_contact": null,
-        "template": "crm_evaluation"
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-12",
+        "last_contact": "2026-02-05",
+        "template": "crm_evaluation",
+        "email_history": [
+          {
+            "date": "2026-02-05",
+            "type": "intro",
+            "subject": "SAP + Dynamics Integration bei Spineart – Komplexität reduzieren",
+            "status": "sent"
+          }
+        ]
       },
-      "notes": "Uses Active Campaign (basic) + complex ERP. May be ready to upgrade to Salesforce. DT Manager is decision maker.",
+      "notes": "Uses Active Campaign (basic) + complex ERP. May be ready to upgrade to Salesforce. DT Manager is decision maker. CONTACTED 2026-02-05.",
       "created_at": "2026-02-04",
-      "updated_at": "2026-02-04"
+      "updated_at": "2026-02-05"
     },
     {
       "id": "lead-006-wuerth",
@@ -358,16 +369,27 @@
         },
         "fit_notes": "Large wholesale B2B company. Subsidiary of Würth Group. May have CRM needs for customer management. DT role indicates active projects."
       },
-      "status": "researched",
+      "status": "contacted",
       "outreach": {
         "sequence": "standard",
-        "next_action": "send_intro_email",
-        "last_contact": null,
-        "template": "wholesale_distribution"
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-12",
+        "last_contact": "2026-02-05",
+        "template": "wholesale_distribution",
+        "email_history": [
+          {
+            "date": "2026-02-05",
+            "type": "intro",
+            "subject": "B2B E-Commerce + CRM Integration – Würth Schweiz",
+            "status": "sent"
+          }
+        ]
       },
-      "notes": "Large B2B distributor. Complex operations likely need CRM-ERP integration. Parent company may influence tech choices.",
+      "notes": "Large B2B distributor. Complex operations likely need CRM-ERP integration. Parent company may influence tech choices. CONTACTED 2026-02-05.",
       "created_at": "2026-02-04",
-      "updated_at": "2026-02-04"
+      "updated_at": "2026-02-05"
     },
     {
       "id": "lead-007-healthcare-holding",
@@ -414,6 +436,137 @@
       "notes": "High-value target but needs specific contact. One relationship could lead to 17+ integrations.",
       "created_at": "2026-02-04",
       "updated_at": "2026-02-04"
+    },
+    {
+      "id": "lead-008-medacta",
+      "company": {
+        "name": "Medacta International",
+        "website": "https://medacta.com",
+        "industry": "Medical Devices - Orthopedic Implants",
+        "size": "880 employees",
+        "location": "Castel San Pietro, Ticino, Switzerland",
+        "description": "Global orthopedic company specializing in joint replacement, spine surgery, and sports medicine.",
+        "tech_stack": {
+          "crm": "Salesforce (Likely)",
+          "other": ["Hubspot", "Slack", "Drupal", "Databricks", "Microsoft Excel"]
+        }
+      },
+      "contact": {
+        "name": "Filippo Cappelli",
+        "title": "Head of IT",
+        "email": "filippo.cappelli@medacta.ch",
+        "email_status": "BOUNCED - Invalid address",
+        "phone": "+41 91 696 60 60",
+        "linkedin": "http://www.linkedin.com/in/filippo-cappelli-41b9a71"
+      },
+      "qualification": {
+        "score": 82,
+        "priority": "high"
+      },
+      "status": "researched",
+      "outreach": {
+        "sequence": "technology_trigger",
+        "sequence_stage": 0,
+        "emails_sent": 0,
+        "next_action": "find_valid_email",
+        "next_action_date": "2026-02-05",
+        "last_contact": null,
+        "email_history": [
+          {
+            "date": "2026-02-05",
+            "type": "intro",
+            "subject": "Salesforce bei Medacta – skalieren mit dem Wachstum",
+            "status": "bounced"
+          }
+        ]
+      },
+      "notes": "EMAIL BOUNCED 2026-02-05 - filippo.cappelli@medacta.ch not found. Need to find valid contact.",
+      "created_at": "2026-02-05",
+      "updated_at": "2026-02-05"
+    },
+    {
+      "id": "lead-009-fkg-dentaire",
+      "company": {
+        "name": "FKG Dentaire",
+        "website": "https://fkg.ch",
+        "industry": "Medical Devices - Dental/Endodontics",
+        "size": "110 employees",
+        "location": "La Chaux-de-Fonds, Neuchatel, Switzerland",
+        "description": "Leading manufacturer of endodontic instruments and dental tools."
+      },
+      "contact": {
+        "name": "Claude-Alain Christen",
+        "title": "Head of IT",
+        "email": "ca.christen@fkg.ch",
+        "email_status": "Verified",
+        "phone": "+41 32 924 22 44",
+        "linkedin": "http://www.linkedin.com/in/claude-alain-christen-03530a10"
+      },
+      "qualification": {
+        "score": 75,
+        "priority": "medium"
+      },
+      "status": "contacted",
+      "outreach": {
+        "sequence": "standard",
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-12",
+        "last_contact": "2026-02-05",
+        "email_history": [
+          {
+            "date": "2026-02-05",
+            "type": "intro",
+            "subject": "CRM-Integration für die Dentalbranche – FKG Dentaire",
+            "status": "sent"
+          }
+        ]
+      },
+      "created_at": "2026-02-05",
+      "updated_at": "2026-02-05"
+    },
+    {
+      "id": "lead-010-mylife-diabetescare",
+      "company": {
+        "name": "mylife Diabetescare",
+        "website": "https://mylife-diabetescare.com",
+        "industry": "Medical Devices - Diabetes Care",
+        "size": "440 employees",
+        "location": "Burgdorf, Canton of Bern, Switzerland",
+        "description": "Provider of diabetes management devices and solutions."
+      },
+      "contact": {
+        "name": "Christian Reinmann",
+        "title": "Head of Information Technology",
+        "email": "christian.reinmann@mylife-diabetescare.com",
+        "email_status": "Verified",
+        "phone": "+61 2 8039 3554",
+        "linkedin": "http://www.linkedin.com/in/christian-r-3144992"
+      },
+      "qualification": {
+        "score": 78,
+        "priority": "medium"
+      },
+      "status": "contacted",
+      "outreach": {
+        "sequence": "standard",
+        "sequence_stage": 1,
+        "emails_sent": 1,
+        "next_action": "wait_for_reply",
+        "next_action_date": "2026-02-12",
+        "last_contact": "2026-02-05",
+        "email_history": [
+          {
+            "date": "2026-02-05",
+            "type": "intro",
+            "subject": "IT-Systemintegration bei mylife Diabetescare",
+            "status": "sent"
+          }
+        ]
+      },
+      "created_at": "2026-02-05",
+      "updated_at": "2026-02-05"
     }
   ]
 }

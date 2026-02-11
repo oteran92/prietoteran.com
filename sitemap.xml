@@ -2,139 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
-    <!-- Homepage - English -->
+    <!-- Homepage (main page serves EN/DE/ES via i18n.js) -->
     <url>
         <loc>https://www.prietoteran.com/</loc>
-        <lastmod>2026-02-04</lastmod>
+        <lastmod>2026-02-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/?lang=de" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/?lang=es" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/" />
     </url>
     
-    <!-- Homepage - German -->
-    <url>
-        <loc>https://www.prietoteran.com/de/</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/" />
-    </url>
-    
-    <!-- Homepage - Spanish -->
-    <url>
-        <loc>https://www.prietoteran.com/es/</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/" />
-    </url>
-    
-    <!-- Integration Service - English -->
+    <!-- Integration Service (serves EN/DE/ES via i18n.js) -->
     <url>
         <loc>https://www.prietoteran.com/services/integration.html</loc>
-        <lastmod>2026-02-04</lastmod>
+        <lastmod>2026-02-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/integration.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/integration.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/integration.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/services/integration.html?lang=de" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/services/integration.html?lang=es" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/services/integration.html" />
     </url>
     
-    <!-- Integration Service - German -->
-    <url>
-        <loc>https://www.prietoteran.com/de/services/integration.html</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/integration.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/integration.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/integration.html" />
-    </url>
-    
-    <!-- Integration Service - Spanish -->
-    <url>
-        <loc>https://www.prietoteran.com/es/services/integration.html</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/integration.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/integration.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/integration.html" />
-    </url>
-    
-    <!-- Automation Service - English -->
+    <!-- Automation Service (serves EN/DE/ES via i18n.js) -->
     <url>
         <loc>https://www.prietoteran.com/services/automation.html</loc>
-        <lastmod>2026-02-04</lastmod>
+        <lastmod>2026-02-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/automation.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/services/automation.html?lang=de" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/services/automation.html?lang=es" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/services/automation.html" />
     </url>
     
-    <!-- Automation Service - German -->
-    <url>
-        <loc>https://www.prietoteran.com/de/services/automation.html</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/automation.html" />
-    </url>
-    
-    <!-- Automation Service - Spanish -->
-    <url>
-        <loc>https://www.prietoteran.com/es/services/automation.html</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/services/automation.html" />
-    </url>
-    
-    <!-- Blog Index - English -->
+    <!-- Blog Index -->
     <url>
         <loc>https://www.prietoteran.com/blog/</loc>
-        <lastmod>2026-02-04</lastmod>
+        <lastmod>2026-02-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/" />
     </url>
     
-    <!-- Blog Index - German -->
-    <url>
-        <loc>https://www.prietoteran.com/de/blog/</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
-    </url>
-    
-    <!-- Blog Index - Spanish -->
-    <url>
-        <loc>https://www.prietoteran.com/es/blog/</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
-    </url>
-    
-    <!-- Blog Post 1: Why Integrations Break - English -->
+    <!-- Blog Post 1: Why Integrations Break -->
     <url>
         <loc>https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html</loc>
         <lastmod>2026-02-04</lastmod>
@@ -167,7 +81,7 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/por-que-fallan-las-integraciones-salesforce-erp.html" />
     </url>
     
-    <!-- Blog Post 2: Manual Data Entry Costs - English -->
+    <!-- Blog Post 2: Manual Data Entry Costs -->
     <url>
         <loc>https://www.prietoteran.com/blog/the-real-cost-of-manual-data-entry.html</loc>
         <lastmod>2026-02-04</lastmod>
@@ -200,7 +114,7 @@
         <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/el-costo-real-de-la-entrada-manual-de-datos.html" />
     </url>
     
-    <!-- Blog Post 3: Quote to Order - English -->
+    <!-- Blog Post 3: Quote to Order -->
     <url>
         <loc>https://www.prietoteran.com/blog/quote-to-order-in-4-hours.html</loc>
         <lastmod>2026-02-04</lastmod>
@@ -231,6 +145,39 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/quote-to-order-in-4-hours.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/von-angebot-zu-auftrag-in-4-stunden.html" />
         <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/de-cotizacion-a-pedido-en-4-horas.html" />
+    </url>
+    
+    <!-- Blog Post 4: Why Leaders Can't Trust Their Data -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html</loc>
+        <lastmod>2026-02-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/por-que-los-lideres-no-confian-en-sus-datos.html" />
+    </url>
+    
+    <!-- Blog Post 4: Why Leaders Can't Trust Their Data - German -->
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html</loc>
+        <lastmod>2026-02-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/por-que-los-lideres-no-confian-en-sus-datos.html" />
+    </url>
+    
+    <!-- Blog Post 4: Why Leaders Can't Trust Their Data - Spanish -->
+    <url>
+        <loc>https://www.prietoteran.com/es/blog/por-que-los-lideres-no-confian-en-sus-datos.html</loc>
+        <lastmod>2026-02-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/por-que-los-lideres-no-confian-en-sus-datos.html" />
     </url>
     
 </urlset>

@@ -12,13 +12,13 @@ const translations = {
         "nav.home": "← Home",
         
         // Hero Section
-        "hero.label": "Salesforce & ERP Integration",
-        "hero.title.line1": "Senior",
-        "hero.title.line2": "Integration Engineer for",
-        "hero.title.line3": "B2B",
-        "hero.title.companies": "Teams",
-        "hero.subtitle": "I help Swiss B2B companies connect Salesforce, ERP and operations — so quotes move faster, data stays clean, and workflows run without manual work.",
-        "hero.cta.explore": "See the 2 core services",
+        "hero.label": "B2B Systems & Integration Advisory",
+        "hero.title.line1": "Restoring",
+        "hero.title.line2": "clarity and control in",
+        "hero.title.line3": "complex B2B",
+        "hero.title.companies": "systems",
+        "hero.subtitle": "When your systems don't talk to each other, leaders lose visibility and teams lose time. I help B2B companies in Switzerland rebuild the trust in their data, operations and technology.",
+        "hero.cta.explore": "See how I help",
         "hero.cta.work": "Book a 20-min call",
         "hero.scroll": "Scroll",
         "hero.marker.portrait": "Portrait",
@@ -26,27 +26,27 @@ const translations = {
         "hero.availability": "Available for new projects",
         
         // Intro Section
-        "intro.title": "Companies usually come to me when growth hits the limits of their systems.",
-        "intro.pain1": "Data mismatch",
-        "intro.pain2": "Slow processes",
-        "intro.pain3": "Fragile integrations",
-        "intro.pain4": "Manual workarounds",
-        "intro.quote.line1": "No quick patches.",
-        "intro.quote.line2": "Just systems you can trust.",
+        "intro.title": "Leaders call me when they can no longer trust their own data.",
+        "intro.pain1": "Decisions based on unreliable data",
+        "intro.pain2": "Revenue delayed by broken workflows",
+        "intro.pain3": "Systems that fail when you need them most",
+        "intro.pain4": "Teams doing work that software should handle",
+        "intro.quote.line1": "Without reliable data, no AI will save you.",
+        "intro.quote.line2": "First: clarity. Then: leverage.",
         
         // Services Section
         "services.number": "001 — SERVICES",
-        "services.title": "Core Services",
+        "services.title": "How I Help",
         
-        "service1.title": "Salesforce ↔ ERP Integration & Data Reliability",
-        "service1.description": "I connect Salesforce with ERP and surrounding systems (ecommerce, PIM, middleware, custom APIs). The goal is simple: a single source of truth, stable flows, and a clear architecture your team can maintain.",
-        "service1.outcome": "Trusted data. Faster quoting. Fewer incidents.",
-        "service1.link": "View integration service",
+        "service1.title": "Data You Can Trust Across Every System",
+        "service1.description": "I connect Salesforce, ERP and the systems around them into one reliable source of truth. So leadership sees accurate numbers, teams stop re-entering data, and decisions are based on facts — not spreadsheets.",
+        "service1.outcome": "Reliable data. Confident decisions. Fewer fire drills.",
+        "service1.link": "Learn more about integration",
         
-        "service2.title": "Process Automation for B2B Operations",
-        "service2.description": "I automate workflows that should never be manual: approvals, quoting steps, order handoffs, notifications, data validation, and cross-system updates. Less copy-paste. More control and traceability.",
-        "service2.outcome": "Less manual work. Clear accountability.",
-        "service2.link": "View automation service",
+        "service2.title": "Operations That Run Without Manual Intervention",
+        "service2.description": "I automate the workflows that slow your teams down: approvals, quoting, order handoffs, cross-system updates. Once data is reliable, AI can amplify the results — but the foundation comes first.",
+        "service2.outcome": "Faster operations. Freed-up teams. Scalable growth.",
+        "service2.link": "Learn more about automation",
         
         "service3.title": "AI for Operational Workflows (No Hype)",
         "service3.description": "I apply AI where it reduces cost and friction — e.g., data classification, email/request triage, content enrichment, and automation copilots integrated into real workflows.",
@@ -62,7 +62,7 @@ const translations = {
         "nav.blog": "Blog",
         "blog.number": "002 — BLOG",
         "blog.title": "Latest Insights",
-        "blog.subtitle": "Practical advice on integrations, automation, and building reliable systems.",
+        "blog.subtitle": "Practical insights on data reliability, system integration, and operational clarity for B2B leaders.",
         "blog.readMore": "Read article",
         "blog.comingSoon": "Coming soon",
         
@@ -75,8 +75,8 @@ const translations = {
         "blog.post3.title": "From Quote to Order in 4 Hours Instead of 3 Days",
         "blog.post3.excerpt": "How a Swiss manufacturer cut quote-to-order time by 85% without custom development.",
         
-        "blog.post4.title": "5 Signs Your Integration Will Fail Before You Start",
-        "blog.post4.excerpt": "Red flags to watch for when planning Salesforce-ERP integration projects.",
+        "blog.post4.title": "Why Leaders Can't Trust Their Own Data",
+        "blog.post4.excerpt": "When every system shows different numbers, decisions slow down and confidence erodes. Here's how to restore data reliability.",
         
         // Blog Article Elements
         "blog.cta.button": "Get in touch",
@@ -88,23 +88,23 @@ const translations = {
         "about.number": "003 — ABOUT",
         "about.title": "Why Work With Me",
         "about.marker": "At Work",
-        "about.lead": "I'm a senior engineer who builds <strong>reliable systems under real-world constraints</strong>.",
-        "about.text": "I've worked in B2B environments where reliability, security, and long-term maintainability matter more than \"quick wins\". I keep things calm, documented, and production-ready.",
-        "about.approach": "Structured. Transparent. Built so your team can own it — and scale it.",
+        "about.lead": "I'm a senior advisor who understands <strong>both the technology and the business behind it</strong>.",
+        "about.text": "I've worked inside B2B companies where decisions had to be fast, data had to be right, and systems had to hold under pressure. I bring that same discipline to every engagement — calm, structured, and results-focused.",
+        "about.approach": "Clarity. Control. Confidence in your systems — so you can focus on growing the business.",
         
         // Trust Signals
-        "trust.item1": "Salesforce, ERP, APIs, middleware — built for reliability",
-        "trust.item2": "You own the code, documentation and architecture decisions",
+        "trust.item1": "Salesforce, ERP, APIs — architecture built for clarity and long-term reliability",
+        "trust.item2": "You own every decision, every document, every line of code",
         "trust.item3": "Access control, auditability, and safe data flows",
-        "trust.title1": "Integration Experience",
-        "trust.desc1": "Salesforce, ERP, APIs, middleware — built for reliability",
-        "trust.title2": "Code Ownership",
-        "trust.desc2": "You own the code, documentation and architecture decisions",
+        "trust.title1": "Deep Systems Experience",
+        "trust.desc1": "Salesforce, ERP, APIs — architecture built for clarity and long-term reliability",
+        "trust.title2": "Full Ownership",
+        "trust.desc2": "You own every decision, every document, every line of code",
         "trust.title3": "Secure by Design",
         "trust.desc3": "Access control, auditability, and safe data flows",
         
         // CTA Section
-        "cta.text": "If your Salesforce + ERP setup feels fragile, slow, or overly manual — send me a short note. I'll reply with 2–3 concrete next steps.",
+        "cta.text": "If decisions in your company depend on data that you're not sure you can trust — let's talk. I'll reply with 2–3 concrete steps to bring clarity back.",
         "cta.link": "Start a conversation",
         
         // Footer
@@ -367,13 +367,13 @@ const translations = {
         "nav.home": "← Startseite",
         
         // Hero Section
-        "hero.label": "Salesforce & ERP Integration",
-        "hero.title.line1": "Senior",
-        "hero.title.line2": "Integration Engineer für",
-        "hero.title.line3": "B2B",
-        "hero.title.companies": "Teams",
-        "hero.subtitle": "Ich helfe Schweizer B2B-Unternehmen, Salesforce, ERP und Betrieb zu verbinden — damit Angebote schneller laufen, Daten sauber bleiben und Workflows ohne manuelle Arbeit funktionieren.",
-        "hero.cta.explore": "Die 2 Kernservices ansehen",
+        "hero.label": "B2B-Systeme & Integrationsberatung",
+        "hero.title.line1": "Klarheit und",
+        "hero.title.line2": "Kontrolle in komplexen",
+        "hero.title.line3": "B2B-Systemen",
+        "hero.title.companies": "wiederherstellen",
+        "hero.subtitle": "Wenn Ihre Systeme nicht miteinander kommunizieren, verlieren Führungskräfte die Übersicht und Teams verlieren Zeit. Ich helfe B2B-Unternehmen in der Schweiz, das Vertrauen in ihre Daten, Abläufe und Technologie wiederherzustellen.",
+        "hero.cta.explore": "So helfe ich",
         "hero.cta.work": "20-Min Gespräch buchen",
         "hero.scroll": "Scrollen",
         "hero.marker.portrait": "Portrait",
@@ -381,27 +381,27 @@ const translations = {
         "hero.availability": "Verfügbar für neue Projekte",
         
         // Intro Section
-        "intro.title": "Unternehmen kommen zu mir, wenn das Wachstum an die Grenzen ihrer Systeme stösst.",
-        "intro.pain1": "Datenabweichung",
-        "intro.pain2": "Langsame Prozesse",
-        "intro.pain3": "Fragile Integrationen",
-        "intro.pain4": "Manuelle Umgehungen",
-        "intro.quote.line1": "Keine Schnellschüsse.",
-        "intro.quote.line2": "Nur Systeme, denen Sie vertrauen können.",
+        "intro.title": "Führungskräfte rufen mich, wenn sie ihren eigenen Daten nicht mehr vertrauen können.",
+        "intro.pain1": "Entscheidungen auf Basis unzuverlässiger Daten",
+        "intro.pain2": "Umsatz verzögert durch fehlerhafte Workflows",
+        "intro.pain3": "Systeme, die versagen, wenn man sie am meisten braucht",
+        "intro.pain4": "Teams erledigen Arbeit, die Software übernehmen sollte",
+        "intro.quote.line1": "Ohne verlässliche Daten rettet keine KI.",
+        "intro.quote.line2": "Zuerst: Klarheit. Dann: Hebel.",
         
         // Services Section
         "services.number": "001 — LEISTUNGEN",
-        "services.title": "Kernservices",
+        "services.title": "Wie ich helfe",
         
-        "service1.title": "Salesforce ↔ ERP Integration & Datenzuverlässigkeit",
-        "service1.description": "Ich verbinde Salesforce mit ERP und umliegenden Systemen (E-Commerce, PIM, Middleware, Custom APIs). Das Ziel ist einfach: eine einzige Wahrheitsquelle, stabile Flüsse und eine klare Architektur, die Ihr Team pflegen kann.",
-        "service1.outcome": "Vertrauenswürdige Daten. Schnellere Angebote. Weniger Vorfälle.",
-        "service1.link": "Integrationsservice ansehen",
+        "service1.title": "Daten, denen Sie über alle Systeme vertrauen können",
+        "service1.description": "Ich verbinde Salesforce, ERP und die umliegenden Systeme zu einer zuverlässigen Wahrheitsquelle. So sieht die Führung korrekte Zahlen, Teams hören auf, Daten mehrfach einzugeben, und Entscheidungen basieren auf Fakten — nicht auf Tabellenkalkulationen.",
+        "service1.outcome": "Verlässliche Daten. Sichere Entscheidungen. Weniger Feuerwehreinsätze.",
+        "service1.link": "Mehr über Integration erfahren",
         
-        "service2.title": "Prozessautomatisierung für B2B-Betrieb",
-        "service2.description": "Ich automatisiere Workflows, die niemals manuell sein sollten: Genehmigungen, Angebotsschritte, Auftragsübergaben, Benachrichtigungen, Datenvalidierung und systemübergreifende Updates. Weniger Copy-Paste. Mehr Kontrolle und Nachvollziehbarkeit.",
-        "service2.outcome": "Weniger manuelle Arbeit. Klare Verantwortlichkeit.",
-        "service2.link": "Automatisierungsservice ansehen",
+        "service2.title": "Abläufe, die ohne manuelle Eingriffe funktionieren",
+        "service2.description": "Ich automatisiere die Workflows, die Ihre Teams ausbremsen: Genehmigungen, Angebotserstellung, Auftragsübergaben, systemübergreifende Updates. Sobald die Daten verlässlich sind, kann KI die Ergebnisse verstärken — aber das Fundament kommt zuerst.",
+        "service2.outcome": "Schnellere Abläufe. Entlastete Teams. Skalierbares Wachstum.",
+        "service2.link": "Mehr über Automatisierung erfahren",
         
         "service3.title": "KI für operative Workflows (Kein Hype)",
         "service3.description": "Ich setze KI dort ein, wo sie Kosten und Reibung reduziert — z.B. Datenklassifizierung, E-Mail-/Anfragen-Triage, Content-Anreicherung und Automatisierungs-Copiloten, integriert in echte Workflows.",
@@ -417,7 +417,7 @@ const translations = {
         "nav.blog": "Blog",
         "blog.number": "002 — BLOG",
         "blog.title": "Aktuelle Einblicke",
-        "blog.subtitle": "Praktische Ratschläge zu Integrationen, Automatisierung und dem Aufbau zuverlässiger Systeme.",
+        "blog.subtitle": "Praktische Einblicke zu Datenzuverlässigkeit, Systemintegration und operativer Klarheit für B2B-Führungskräfte.",
         "blog.readMore": "Artikel lesen",
         "blog.comingSoon": "Demnächst",
         
@@ -430,8 +430,8 @@ const translations = {
         "blog.post3.title": "Von Angebot zu Auftrag in 4 Stunden statt 3 Tagen",
         "blog.post3.excerpt": "Wie ein Schweizer Hersteller die Angebots-zu-Auftragszeit um 85% reduzierte — ohne kundenspezifische Entwicklung.",
         
-        "blog.post4.title": "5 Anzeichen, dass Ihre Integration scheitern wird, bevor Sie beginnen",
-        "blog.post4.excerpt": "Warnsignale, auf die Sie bei der Planung von Salesforce-ERP-Integrationsprojekten achten sollten.",
+        "blog.post4.title": "Warum Führungskräfte ihren Daten nicht vertrauen",
+        "blog.post4.excerpt": "Wenn jedes System andere Zahlen zeigt, verlangsamen sich Entscheidungen und das Vertrauen schwindet. So stellen Sie die Datenzuverlässigkeit wieder her.",
         
         // Blog Article Elements
         "blog.cta.button": "Kontakt aufnehmen",
@@ -443,23 +443,23 @@ const translations = {
         "about.number": "003 — ÜBER MICH",
         "about.title": "Warum mit mir arbeiten",
         "about.marker": "Bei der Arbeit",
-        "about.lead": "Ich bin ein Senior-Ingenieur, der <strong>zuverlässige Systeme unter realen Einschränkungen</strong> baut.",
-        "about.text": "Ich habe in B2B-Umgebungen gearbeitet, wo Zuverlässigkeit, Sicherheit und langfristige Wartbarkeit wichtiger sind als \"schnelle Erfolge\". Ich halte die Dinge ruhig, dokumentiert und produktionsbereit.",
-        "about.approach": "Strukturiert. Transparent. Gebaut, damit Ihr Team es besitzen und skalieren kann.",
+        "about.lead": "Ich bin ein Senior-Berater, der <strong>sowohl die Technologie als auch das Geschäft dahinter versteht</strong>.",
+        "about.text": "Ich habe in B2B-Unternehmen gearbeitet, wo Entscheidungen schnell sein mussten, Daten stimmen mussten und Systeme unter Druck standhalten mussten. Diese Disziplin bringe ich in jedes Engagement ein — ruhig, strukturiert und ergebnisorientiert.",
+        "about.approach": "Klarheit. Kontrolle. Vertrauen in Ihre Systeme — damit Sie sich auf das Geschäftswachstum konzentrieren können.",
         
         // Trust Signals
-        "trust.item1": "Salesforce, ERP, APIs, Middleware — gebaut für Zuverlässigkeit",
-        "trust.item2": "Sie besitzen den Code, die Dokumentation und die Architekturentscheidungen",
+        "trust.item1": "Salesforce, ERP, APIs — Architektur für Klarheit und langfristige Zuverlässigkeit",
+        "trust.item2": "Jede Entscheidung, jedes Dokument, jede Zeile Code gehört Ihnen",
         "trust.item3": "Zugriffskontrolle, Auditierbarkeit und sichere Datenflüsse",
-        "trust.title1": "Integrationserfahrung",
-        "trust.desc1": "Salesforce, ERP, APIs, Middleware — gebaut für Zuverlässigkeit",
-        "trust.title2": "Code-Eigentum",
-        "trust.desc2": "Sie besitzen den Code, Dokumentation und Architekturentscheidungen",
+        "trust.title1": "Tiefe Systemerfahrung",
+        "trust.desc1": "Salesforce, ERP, APIs — Architektur für Klarheit und langfristige Zuverlässigkeit",
+        "trust.title2": "Volles Eigentum",
+        "trust.desc2": "Jede Entscheidung, jedes Dokument, jede Zeile Code gehört Ihnen",
         "trust.title3": "Sicherheit by Design",
         "trust.desc3": "Zugriffskontrolle, Auditierbarkeit und sichere Datenflüsse",
         
         // CTA Section
-        "cta.text": "Wenn Ihr Salesforce + ERP-Setup fragil, langsam oder übermässig manuell erscheint — schicken Sie mir eine kurze Nachricht. Ich antworte mit 2–3 konkreten nächsten Schritten.",
+        "cta.text": "Wenn Entscheidungen in Ihrem Unternehmen von Daten abhängen, denen Sie nicht sicher vertrauen können — lassen Sie uns sprechen. Ich antworte mit 2–3 konkreten Schritten für mehr Klarheit.",
         "cta.link": "Gespräch starten",
         
         // Footer
@@ -721,13 +721,13 @@ const translations = {
         "nav.home": "← Inicio",
         
         // Hero Section
-        "hero.label": "Salesforce & ERP Integration",
-        "hero.title.line1": "Senior",
-        "hero.title.line2": "Integration Engineer para",
-        "hero.title.line3": "B2B",
-        "hero.title.companies": "Teams",
-        "hero.subtitle": "Ayudo a empresas B2B suizas a conectar Salesforce, ERP y operaciones — para que los presupuestos fluyan más rápido, los datos se mantengan limpios y los workflows funcionen sin trabajo manual.",
-        "hero.cta.explore": "Ver los 2 servicios principales",
+        "hero.label": "Sistemas B2B y Asesoría en Integración",
+        "hero.title.line1": "Restaurando",
+        "hero.title.line2": "claridad y control en",
+        "hero.title.line3": "sistemas B2B",
+        "hero.title.companies": "complejos",
+        "hero.subtitle": "Cuando tus sistemas no se comunican entre sí, los líderes pierden visibilidad y los equipos pierden tiempo. Ayudo a empresas B2B en Suiza a reconstruir la confianza en sus datos, operaciones y tecnología.",
+        "hero.cta.explore": "Cómo ayudo",
         "hero.cta.work": "Reservar llamada de 20-min",
         "hero.scroll": "Desplazar",
         "hero.marker.portrait": "Retrato",
@@ -735,27 +735,27 @@ const translations = {
         "hero.availability": "Disponible para nuevos proyectos",
         
         // Intro Section
-        "intro.title": "Las empresas vienen a mí cuando el crecimiento alcanza los límites de sus sistemas.",
-        "intro.pain1": "Datos inconsistentes",
-        "intro.pain2": "Procesos lentos",
-        "intro.pain3": "Integraciones frágiles",
-        "intro.pain4": "Soluciones manuales",
-        "intro.quote.line1": "Sin parches rápidos.",
-        "intro.quote.line2": "Solo sistemas en los que puedes confiar.",
+        "intro.title": "Los líderes me llaman cuando ya no pueden confiar en sus propios datos.",
+        "intro.pain1": "Decisiones basadas en datos no confiables",
+        "intro.pain2": "Ingresos retrasados por workflows rotos",
+        "intro.pain3": "Sistemas que fallan cuando más los necesitas",
+        "intro.pain4": "Equipos haciendo trabajo que el software debería manejar",
+        "intro.quote.line1": "Sin datos confiables, ninguna IA te salvará.",
+        "intro.quote.line2": "Primero: claridad. Después: apalancamiento.",
         
         // Services Section
         "services.number": "001 — SERVICIOS",
-        "services.title": "Servicios Principales",
+        "services.title": "Cómo Ayudo",
         
-        "service1.title": "Salesforce ↔ ERP Integration & Confiabilidad de Datos",
-        "service1.description": "Conecto Salesforce con ERP y sistemas circundantes (ecommerce, PIM, middleware, APIs personalizadas). El objetivo es simple: una única fuente de verdad, flujos estables y una arquitectura clara que tu equipo pueda mantener.",
-        "service1.outcome": "Datos confiables. Cotizaciones más rápidas. Menos incidentes.",
-        "service1.link": "Ver servicio de integración",
+        "service1.title": "Datos en los que puedes confiar en cada sistema",
+        "service1.description": "Conecto Salesforce, ERP y los sistemas a su alrededor en una fuente de verdad confiable. Para que la dirección vea números precisos, los equipos dejen de reingresar datos, y las decisiones se basen en hechos — no en hojas de cálculo.",
+        "service1.outcome": "Datos confiables. Decisiones seguras. Menos emergencias.",
+        "service1.link": "Más sobre integración",
         
-        "service2.title": "Automatización de Procesos para Operaciones B2B",
-        "service2.description": "Automatizo workflows que nunca deberían ser manuales: aprobaciones, pasos de cotización, traspasos de pedidos, notificaciones, validación de datos y actualizaciones entre sistemas. Menos copy-paste. Más control y trazabilidad.",
-        "service2.outcome": "Menos trabajo manual. Responsabilidad clara.",
-        "service2.link": "Ver servicio de automatización",
+        "service2.title": "Operaciones que funcionan sin intervención manual",
+        "service2.description": "Automatizo los workflows que frenan a tus equipos: aprobaciones, cotizaciones, traspasos de pedidos, actualizaciones entre sistemas. Una vez que los datos son confiables, la IA puede amplificar los resultados — pero la base viene primero.",
+        "service2.outcome": "Operaciones más rápidas. Equipos liberados. Crecimiento escalable.",
+        "service2.link": "Más sobre automatización",
         
         "service3.title": "IA para Workflows Operativos (Sin Hype)",
         "service3.description": "Aplico IA donde reduce costos y fricción — ej. clasificación de datos, triaje de emails/solicitudes, enriquecimiento de contenido y copilotos de automatización integrados en workflows reales.",
@@ -771,7 +771,7 @@ const translations = {
         "nav.blog": "Blog",
         "blog.number": "002 — BLOG",
         "blog.title": "Últimas Perspectivas",
-        "blog.subtitle": "Consejos prácticos sobre integraciones, automatización y construcción de sistemas confiables.",
+        "blog.subtitle": "Perspectivas prácticas sobre confiabilidad de datos, integración de sistemas y claridad operativa para líderes B2B.",
         "blog.readMore": "Leer artículo",
         "blog.comingSoon": "Próximamente",
         
@@ -784,8 +784,8 @@ const translations = {
         "blog.post3.title": "De presupuesto a orden en 4 horas en lugar de 3 días",
         "blog.post3.excerpt": "Cómo un fabricante suizo redujo el tiempo de cotización-a-orden en un 85% — sin desarrollo personalizado.",
         
-        "blog.post4.title": "5 señales de que tu integración fallará antes de empezar",
-        "blog.post4.excerpt": "Señales de alerta a observar al planificar proyectos de integración Salesforce-ERP.",
+        "blog.post4.title": "Por qué los líderes no confían en sus datos",
+        "blog.post4.excerpt": "Cuando cada sistema muestra números diferentes, las decisiones se ralentizan. Así se restaura la fiabilidad de los datos.",
         
         // Blog Article Elements
         "blog.cta.button": "Contactar",
@@ -797,23 +797,23 @@ const translations = {
         "about.number": "003 — SOBRE MÍ",
         "about.title": "Por qué trabajar conmigo",
         "about.marker": "Trabajando",
-        "about.lead": "Soy un ingeniero senior que construye <strong>sistemas confiables bajo restricciones del mundo real</strong>.",
-        "about.text": "He trabajado en entornos B2B donde la confiabilidad, seguridad y mantenibilidad a largo plazo importan más que \"victorias rápidas\". Mantengo las cosas calmadas, documentadas y listas para producción.",
-        "about.approach": "Estructurado. Transparente. Construido para que tu equipo pueda apropiárselo y escalarlo.",
+        "about.lead": "Soy un asesor senior que entiende <strong>tanto la tecnología como el negocio detrás de ella</strong>.",
+        "about.text": "He trabajado dentro de empresas B2B donde las decisiones tenían que ser rápidas, los datos tenían que ser correctos y los sistemas tenían que resistir bajo presión. Traigo esa misma disciplina a cada proyecto — calma, estructura y enfoque en resultados.",
+        "about.approach": "Claridad. Control. Confianza en tus sistemas — para que puedas concentrarte en hacer crecer el negocio.",
         
         // Trust Signals
-        "trust.item1": "Salesforce, ERP, APIs, middleware — construido para confiabilidad",
-        "trust.item2": "Tú eres dueño del código, documentación y decisiones de arquitectura",
+        "trust.item1": "Salesforce, ERP, APIs — arquitectura diseñada para claridad y confiabilidad a largo plazo",
+        "trust.item2": "Cada decisión, cada documento, cada línea de código es tuya",
         "trust.item3": "Control de acceso, auditabilidad y flujos de datos seguros",
-        "trust.title1": "Experiencia en Integración",
-        "trust.desc1": "Salesforce, ERP, APIs, middleware — construido para confiabilidad",
-        "trust.title2": "Propiedad del Código",
-        "trust.desc2": "Tú eres dueño del código, documentación y decisiones de arquitectura",
+        "trust.title1": "Experiencia Profunda en Sistemas",
+        "trust.desc1": "Salesforce, ERP, APIs — arquitectura diseñada para claridad y confiabilidad a largo plazo",
+        "trust.title2": "Propiedad Total",
+        "trust.desc2": "Cada decisión, cada documento, cada línea de código es tuya",
         "trust.title3": "Seguridad por Diseño",
         "trust.desc3": "Control de acceso, auditabilidad y flujos de datos seguros",
         
         // CTA Section
-        "cta.text": "Si tu configuración de Salesforce + ERP se siente frágil, lenta o demasiado manual — envíame una nota corta. Responderé con 2–3 próximos pasos concretos.",
+        "cta.text": "Si las decisiones en tu empresa dependen de datos en los que no estás seguro de poder confiar — hablemos. Responderé con 2–3 pasos concretos para recuperar la claridad.",
         "cta.link": "Iniciar una conversación",
         
         // Footer

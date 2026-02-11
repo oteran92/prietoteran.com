@@ -1,11 +1,11 @@
 ---
 name: blog-post-writer
-description: Write compelling blog posts about Salesforce-ERP integration, process automation, and B2B operations for Swiss companies. Posts focus on real problems, practical solutions, and drive reader engagement to contact. Use when creating blog content, writing articles, or when the user asks to create posts about integration, automation, or B2B systems.
+description: Write compelling blog posts about data reliability, B2B systems clarity, and operational control for leaders at Swiss companies. Posts focus on real business problems, practical solutions, and drive reader engagement to contact. Use when creating blog content, writing articles, or when the user asks to create posts about data reliability, integration, automation, or B2B systems.
 ---
 
-# Blog Post Writer for B2B Integration & Automation
+# Blog Post Writer for B2B Systems Clarity & Operational Control
 
-Generate high-value blog posts that resonate with CTOs, operations managers, and technical decision-makers at Swiss B2B companies.
+Generate high-value blog posts that resonate with CEOs, COOs, CTOs, and operations leaders at Swiss B2B companies. Content speaks to business outcomes — clarity, control, confidence — not technical jargon.
 
 ## Core Principles
 
@@ -19,22 +19,23 @@ Every blog post must:
 
 ### Target Audience Profile
 
-**Primary**: CTOs, Technical Directors, Operations Managers at Swiss B2B companies (10-500 employees)
+**Primary**: CEOs, COOs, CTOs, and Operations Leaders at Swiss B2B companies (50-500 employees)
 
 **Pain points they experience:**
-- Salesforce and ERP don't sync properly
-- Manual data entry eating team time
-- Quote-to-order process takes days
-- Systems break when anything changes
-- No one understands how integrations work
-- Fear of vendor lock-in
+- Decisions based on data they can't fully trust
+- Revenue delayed by broken workflows and manual handoffs
+- Systems that fail when the business needs them most
+- Teams doing repetitive work that software should handle
+- No visibility into what's stuck or why
+- Fear that AI investment will fail without reliable data first
 
 **What they care about:**
-- Reliability over fancy features
+- Clarity and control over their operations
+- Data they can trust for confident decisions
 - Clear ROI and measurable outcomes
-- Ownership and control
-- Swiss quality and precision
-- Long-term maintainability
+- Ownership of every decision, document, and code
+- Swiss quality, precision, and long-term reliability
+- AI that delivers results — but only after data is solid
 
 ## Blog Post Structure
 
@@ -105,7 +106,7 @@ This could be:
 Make contact feel natural, not pushy. Link directly to the contact form.
 
 **Good approach:**
-> "If your Salesforce-ERP integration feels fragile, or if quote-to-order is taking too long, let's talk. I'll give you 2-3 concrete next steps specific to your setup. No sales pitch, just straight answers.
+> "If decisions in your company depend on data you're not sure you can trust — let's talk. I'll reply with 2-3 concrete steps to bring clarity back. No sales pitch, just straight answers.
 > 
 > [Contact me](#contact)"
 
@@ -155,22 +156,22 @@ Keep paragraphs 3-5 sentences max for web readability.
 ### Integration Challenges
 
 **Topics that resonate:**
-- "Why Your Salesforce-ERP Integration Breaks (And How to Fix It)"
-- "The Real Cost of Manual Data Entry Between Systems"
-- "What Nobody Tells You About Point-to-Point Integrations"
-- "5 Signs Your Integration Will Fail (And What to Do Instead)"
+- "Why Leaders Can't Trust Their Own Data (And What to Do About It)"
+- "The Real Cost of Unreliable Data in B2B Operations"
+- "What Nobody Tells You About System Integration Projects"
+- "5 Signs Your Data Foundation Will Fail You When It Matters Most"
 
-**Key message**: Architecture matters more than tools
+**Key message**: Without reliable data, no AI or tool will save you. Clarity comes first.
 
 ### Automation Benefits
 
 **Topics that resonate:**
-- "The 20-Hour Week: What We Automated First"
-- "From Quote to Order in 4 Hours Instead of 3 Days"
-- "Why Smart Companies Automate Boring Work"
-- "The Compound Effect of Small Automations"
+- "How We Freed 20 Hours/Week for Strategic Work"
+- "From Quote to Order in 4 Hours: What Changed"
+- "Why Your Teams Are Still Doing Work Software Should Handle"
+- "AI in B2B Operations: What Actually Works (And What Doesn't)"
 
-**Key message**: Start small, measure everything, scale what works
+**Key message**: Free your teams first. Then amplify with AI — but only when data is reliable.
 
 ### Case Studies (Anonymized)
 
@@ -198,10 +199,11 @@ Keep paragraphs 3-5 sentences max for web readability.
 ### Target Keywords (Natural Integration)
 
 **Primary Swiss market:**
+- B2B Datenqualität Schweiz
+- Systemintegration B2B Schweiz
+- Prozessautomatisierung B2B Bern
 - Salesforce ERP Integration Schweiz
-- Prozessautomatisierung B2B Schweiz
-- Salesforce Berater Schweiz
-- ERP CRM Integration Bern
+- Datenzuverlässigkeit B2B
 
 **Use naturally in:**
 - Title (if it fits naturally)

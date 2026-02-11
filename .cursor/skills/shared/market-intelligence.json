@@ -1,26 +1,38 @@
 {
   "metadata": {
-    "version": "1.0",
-    "last_updated": "2026-02-04",
+    "version": "2.0",
+    "last_updated": "2026-02-11",
     "updated_by": "marketing-specialist-skill",
-    "notes": "Initial setup - to be updated by Marketing Specialist skill after analysis"
+    "notes": "Updated with real GSC data and new strategic positioning (clarity, control, data reliability)"
   },
   "top_performing_content": [
+    {
+      "url": "/blog/the-real-cost-of-manual-data-entry.html",
+      "title": "The Real Cost of Manual Data Entry Between Systems",
+      "type": "blog",
+      "topic": "data-reliability",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "avg_position": 3.89,
+      "top_queries": ["manual data entry costs", "data entry between systems"],
+      "notes": "Highest impressions among blog posts. Position 3.89 is excellent — needs CTR improvement via better title/meta description"
+    },
     {
       "url": "/blog/why-salesforce-erp-integrations-break.html",
       "title": "Why Salesforce-ERP Integrations Break (And How to Fix It)",
       "type": "blog",
       "topic": "integration",
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "ctr": 0,
-      "avg_position": 0,
-      "top_queries": [],
-      "notes": "Awaiting GSC data collection"
+      "avg_position": 3.0,
+      "top_queries": ["salesforce erp integration"],
+      "notes": "Low impressions but strong position. Needs more backlinks and content to gain traction"
     },
     {
-      "url": "/blog/the-real-cost-of-manual-data-entry.html",
-      "title": "The Real Cost of Manual Data Entry Between Systems",
+      "url": "/blog/quote-to-order-in-4-hours.html",
+      "title": "From Quote to Order in 4 Hours Instead of 3 Days",
       "type": "blog",
       "topic": "automation",
       "clicks": 0,
@@ -28,39 +40,93 @@
       "ctr": 0,
       "avg_position": 0,
       "top_queries": [],
-      "notes": "Awaiting GSC data collection"
-    },
-    {
-      "url": "/blog/quote-to-order-in-4-hours.html",
-      "title": "From Quote to Order in 4 Hours Instead of 3 Days",
-      "type": "blog",
-      "topic": "case-study",
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "avg_position": 0,
-      "top_queries": [],
-      "notes": "Awaiting GSC data collection"
+      "notes": "Indexed 9 Feb 2026. Too recent — needs time to generate impressions"
     }
   ],
-  "trending_keywords": [
+  "page_performance": [
     {
-      "query": "salesforce erp integration",
-      "clicks": 0,
-      "impressions": 0,
-      "ctr": 0,
-      "position": 0,
-      "trend": "baseline",
-      "notes": "Primary target keyword"
+      "url": "/",
+      "clicks": 3,
+      "impressions": 10,
+      "ctr": 30,
+      "avg_position": 2.1,
+      "notes": "Combined HTTP+HTTPS. HTTP version getting clicks — 301 redirect needed"
     },
     {
-      "query": "salesforce sap integration",
+      "url": "/services/consulting.html",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "avg_position": 3.33,
+      "notes": "Service page appearing in search. Good sign for positioning"
+    }
+  ],
+  "geographic_performance": {
+    "primary_market": {
+      "country": "Switzerland",
+      "clicks": 3,
+      "impressions": 6,
+      "ctr": 50,
+      "avg_position": 1.33,
+      "notes": "Best performing market — aligned with ICP"
+    },
+    "secondary_markets": [
+      {
+        "country": "USA",
+        "clicks": 0,
+        "impressions": 8,
+        "notes": "High impressions, 0 clicks — opportunity to improve titles for this market"
+      },
+      {
+        "country": "UK",
+        "clicks": 0,
+        "impressions": 3,
+        "avg_position": 1.0,
+        "notes": "Position 1 but no clicks — likely brand queries"
+      }
+    ]
+  },
+  "device_distribution": {
+    "desktop": {
+      "clicks": 3,
+      "impressions": 15,
+      "ctr": 20,
+      "notes": "100% of clicks. Consistent with B2B audience"
+    },
+    "mobile": {
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "notes": "Lower volume, no clicks. B2B audience browses primarily from desktop"
+    }
+  },
+  "trending_keywords": [
+    {
+      "query": "b2b data reliability",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0,
+      "trend": "target",
+      "notes": "New primary target keyword aligned with repositioning"
+    },
+    {
+      "query": "salesforce erp integration switzerland",
       "clicks": 0,
       "impressions": 0,
       "ctr": 0,
       "position": 0,
       "trend": "baseline",
-      "notes": "Target keyword - Swiss market"
+      "notes": "Existing keyword — still relevant for search"
+    },
+    {
+      "query": "manual data entry costs b2b",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 3.89,
+      "trend": "rising",
+      "notes": "Blog post ranking well — strongest current keyword"
     },
     {
       "query": "b2b process automation switzerland",
@@ -69,81 +135,129 @@
       "ctr": 0,
       "position": 0,
       "trend": "baseline",
-      "notes": "Target keyword - local market"
+      "notes": "Target keyword — local market"
+    },
+    {
+      "query": "systems advisory b2b",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "position": 0,
+      "trend": "target",
+      "notes": "New target keyword aligned with advisory positioning"
     }
   ],
-  "quick_win_opportunities": [],
+  "quick_win_opportunities": [
+    {
+      "page": "/blog/the-real-cost-of-manual-data-entry.html",
+      "current_position": 3.89,
+      "impressions": 9,
+      "current_ctr": 0,
+      "potential_ctr": 5.0,
+      "recommended_action": "Improve title tag and meta description to increase click-through. Current title is too generic — reframe around data reliability and business impact"
+    }
+  ],
   "icp_industries": [
     {
       "industry": "Manufacturing",
       "sub_industries": ["Precision Manufacturing", "Industrial Manufacturing", "MedTech"],
       "priority": "high",
-      "typical_pain_points": ["Quote-to-order delays", "Inventory visibility", "Manual data entry"],
+      "typical_pain_points": ["Unreliable data across systems", "Quote-to-order delays", "Manual handoffs between teams"],
       "typical_tech_stack": ["Salesforce", "SAP", "Abacus"],
-      "notes": "Core ICP - highest conversion potential"
+      "notes": "Core ICP — highest conversion potential. Leaders struggle with visibility"
     },
     {
       "industry": "Wholesale",
       "sub_industries": ["Distribution", "Import/Export", "B2B Trade"],
       "priority": "high",
-      "typical_pain_points": ["Stock accuracy", "Credit checks", "Pricing management"],
+      "typical_pain_points": ["Stock accuracy across systems", "Data trust issues", "Pricing discrepancies"],
       "typical_tech_stack": ["Salesforce", "SAP", "Microsoft Dynamics"],
-      "notes": "Strong ICP - high volume data needs"
+      "notes": "Strong ICP — high volume data needs, broken workflows common"
     },
     {
       "industry": "B2B Services",
       "sub_industries": ["Professional Services", "Consulting", "Technical Services"],
       "priority": "medium",
-      "typical_pain_points": ["Project-invoice disconnect", "Resource visibility", "Time tracking"],
+      "typical_pain_points": ["Project-invoice disconnect", "Resource visibility", "Manual reporting"],
       "typical_tech_stack": ["Salesforce", "Various ERPs"],
-      "notes": "Secondary ICP - smaller deal sizes"
+      "notes": "Secondary ICP — growing need for operational clarity"
+    },
+    {
+      "industry": "Industrial Tech",
+      "sub_industries": ["Industrial IoT", "Industry 4.0", "Smart Manufacturing"],
+      "priority": "medium",
+      "typical_pain_points": ["Data silos from rapid digitization", "AI readiness concerns", "Integration complexity"],
+      "typical_tech_stack": ["Salesforce", "Custom ERPs", "Cloud platforms"],
+      "notes": "Emerging ICP — AI narrative resonates strongly here"
     }
   ],
   "pain_points_by_role": {
-    "CTO": {
+    "CEO": {
       "primary_pain_points": [
-        "Integration technical debt",
-        "Vendor lock-in concerns",
-        "Team productivity on maintenance",
-        "System reliability issues"
+        "Lack of visibility into operations",
+        "Unreliable reporting for decisions",
+        "Growth limited by system constraints",
+        "AI investments with unclear ROI"
       ],
       "language_to_use": [
-        "architecture",
-        "maintainability",
-        "documentation",
-        "technical debt"
+        "clarity",
+        "confidence",
+        "control",
+        "visibility",
+        "growth"
       ],
       "content_preferences": [
-        "Technical deep-dives",
-        "Architecture principles",
-        "Best practices"
+        "Strategic insights",
+        "Business outcome stories",
+        "Industry trend analysis"
       ]
     },
     "COO": {
       "primary_pain_points": [
-        "Operational inefficiency",
-        "Scaling challenges",
-        "Error rates",
-        "Process visibility"
+        "Operational bottlenecks",
+        "Manual processes that don't scale",
+        "Team time wasted on data re-entry",
+        "Broken handoffs between departments"
       ],
       "language_to_use": [
+        "operational control",
         "efficiency",
         "scalability",
-        "visibility",
-        "error reduction"
+        "team productivity",
+        "reliable workflows"
       ],
       "content_preferences": [
         "Case studies with metrics",
         "ROI analysis",
-        "Process improvement"
+        "Process improvement frameworks"
+      ]
+    },
+    "CTO": {
+      "primary_pain_points": [
+        "Data reliability across systems",
+        "Integration technical debt",
+        "AI readiness concerns",
+        "Vendor lock-in and maintainability"
+      ],
+      "language_to_use": [
+        "data reliability",
+        "architecture",
+        "maintainability",
+        "source of truth",
+        "AI foundation"
+      ],
+      "content_preferences": [
+        "Technical deep-dives",
+        "Architecture principles",
+        "Data reliability frameworks"
       ]
     },
     "Operations Manager": {
       "primary_pain_points": [
         "Manual data entry burden",
-        "Firefighting time",
-        "Team workload",
-        "Process inconsistency"
+        "Broken handoffs between systems",
+        "Process inconsistency",
+        "Firefighting instead of strategic work"
       ],
       "language_to_use": [
         "time savings",
@@ -154,61 +268,68 @@
       "content_preferences": [
         "Practical how-to guides",
         "Quick wins",
-        "Tool recommendations"
-      ]
-    },
-    "IT Manager": {
-      "primary_pain_points": [
-        "Support ticket volume",
-        "System maintenance",
-        "Documentation gaps",
-        "User complaints"
-      ],
-      "language_to_use": [
-        "reduced support",
-        "maintainability",
-        "user experience",
-        "reliability"
-      ],
-      "content_preferences": [
-        "Technical guides",
-        "Troubleshooting content",
-        "Implementation guides"
+        "Workflow optimization"
       ]
     }
   },
   "content_recommendations": {
     "for_lead_outreach": [
       {
-        "pain_point": "integration failures",
+        "pain_point": "unreliable data",
         "recommended_content": "/blog/why-salesforce-erp-integrations-break.html",
-        "key_insight_to_share": "Most integrations work for 2-4 weeks, then fail silently. Design for visibility first."
+        "key_insight_to_share": "Most integrations work for 2-4 weeks, then fail silently. The problem isn't the tools — it's the data foundation."
       },
       {
-        "pain_point": "manual data entry",
+        "pain_point": "manual operations",
         "recommended_content": "/blog/the-real-cost-of-manual-data-entry.html",
-        "key_insight_to_share": "Most companies underestimate their manual data burden by 40-60%."
+        "key_insight_to_share": "Most companies underestimate their manual data burden by 40-60%. Teams end up doing work software should handle."
       },
       {
-        "pain_point": "quote-to-order delays",
+        "pain_point": "slow quote-to-order",
         "recommended_content": "/blog/quote-to-order-in-4-hours.html",
-        "key_insight_to_share": "A Swiss manufacturer reduced quote-to-order from 3 days to 4 hours without custom development."
+        "key_insight_to_share": "A Swiss manufacturer reduced quote-to-order from 3 days to 4 hours — by fixing the data foundation first, then automating."
       }
     ],
     "next_content_to_create": [
-      "5 Signs Your Integration Will Fail Before You Start",
-      "Salesforce-SAP Integration: A Practical Guide for Swiss Companies",
-      "ROI Calculator: When Does Automation Pay for Itself?"
+      "Why Leaders Can't Trust Their Own Data (And What to Do About It)",
+      "AI in B2B Operations: What Actually Works (And What Doesn't)",
+      "The Data Reliability Checklist for B2B Leaders",
+      "5 Signs Your Data Foundation Will Fail You When It Matters Most",
+      "How We Freed 20 Hours/Week for Strategic Work"
     ]
   },
   "competitive_insights": {
     "notes": "To be populated through market research",
     "key_competitors": [],
     "differentiators": [
-      "Swiss-based, local expertise",
-      "No vendor lock-in philosophy",
-      "Focus on maintainability over features",
-      "Documentation and knowledge transfer included"
+      "Swiss-based senior advisor — understands both technology and business",
+      "No vendor lock-in: full ownership of every decision, document, and code",
+      "Data reliability first, AI second — a principled approach",
+      "Focus on clarity and control, not just technical implementation",
+      "Long-term reliability and maintainability built into every project"
     ]
+  },
+  "site_health": {
+    "indexation_status": {
+      "total_indexed": 4,
+      "pages_indexed": ["/", "/blog/the-real-cost-of-manual-data-entry.html", "/blog/why-salesforce-erp-integrations-break.html", "/blog/quote-to-order-in-4-hours.html"],
+      "last_crawl": "2026-02-09",
+      "notes": "All main pages indexed. Sitemap updated 2026-02-11 with correct canonical URLs and hreflang"
+    },
+    "known_issues": [
+      {
+        "issue": "HTTP to HTTPS redirect",
+        "severity": "high",
+        "status": "identified",
+        "notes": "Traffic arriving via HTTP should 301 redirect to HTTPS. This is a server/hosting configuration issue"
+      },
+      {
+        "issue": "Google Analytics API disabled",
+        "severity": "medium",
+        "status": "identified",
+        "notes": "Enable at https://console.developers.google.com/apis/api/analyticsdata.googleapis.com/overview?project=733171692720"
+      }
+    ],
+    "last_audit": "2026-02-11"
   }
 }

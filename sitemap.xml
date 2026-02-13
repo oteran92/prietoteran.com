@@ -38,14 +38,38 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/services/automation.html" />
     </url>
     
-    <!-- Blog Index -->
+    <!-- Blog Index - English -->
     <url>
         <loc>https://www.prietoteran.com/blog/</loc>
         <lastmod>2026-02-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/" />
+    </url>
+    
+    <!-- Blog Index - German -->
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/</loc>
+        <lastmod>2026-02-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
+    </url>
+    
+    <!-- Blog Index - Spanish -->
+    <url>
+        <loc>https://www.prietoteran.com/es/blog/</loc>
+        <lastmod>2026-02-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
     </url>
     
     <!-- Blog Post 1: Why Integrations Break -->

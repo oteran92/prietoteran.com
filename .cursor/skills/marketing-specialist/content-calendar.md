@@ -47,6 +47,17 @@ Alternate between these content pillars:
 
 ---
 
+## May 2026 — Week of May 26
+
+| Day | Channel | Content | Status | Image |
+|-----|---------|---------|--------|-------|
+| Tue May 26 | Blog | Published: AI in B2B Operations | ✅ Done | ai-in-b2b-operations-what-actually-works.png |
+| Tue May 26 | Blog | Published: Why Sales Reps Don't Log Data | ✅ Done | why-sales-reps-dont-log-data.png |
+| Wed May 27 | LinkedIn | Post: AI in B2B — "Most AI projects fail because the data was broken" → https://www.prietoteran.com/blog/ai-in-b2b-operations-what-actually-works.html | 📅 Scheduled 8:00 AM | ai-in-b2b-operations-what-actually-works.png |
+| Thu May 28 | LinkedIn | Post: CRM adoption — "Stop blaming your sales team for not updating Salesforce" → https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html | 📅 Scheduled 12:00 PM | why-sales-reps-dont-log-data.png |
+
+---
+
 ## February 2026 Calendar (Example)
 
 ### Week 1 (Feb 3-7)

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMG4SZNQ3L');
+    </script>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Why Sales Reps Don't Log Data (And Why That's Not Their Fault) — Osmel Prieto Teran</title>
+    <meta name="description" content="Your CRM is empty because it was built to serve management, not the sales rep. Here's how AI agents flip that relationship — and fix Salesforce adoption for good.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Salesforce adoption failure, CRM adoption Switzerland, AI agents sales, Salesforce AI automation, sales rep CRM tool adoption B2B">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-sales-reps-keine-daten-erfassen.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html">
+    <meta property="og:title" content="Why Sales Reps Don't Log Data (And Why That's Not Their Fault)">
+    <meta property="og:description" content="Your CRM is empty because it was built to serve management, not the sales rep. Here's how AI agents flip that relationship.">
+    <meta property="og:image" content="https://www.prietoteran.com/blog/images/why-sales-reps-dont-log-data.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why Sales Reps Don't Log Data (And Why That's Not Their Fault)">
+    <meta name="twitter:description" content="Your CRM is empty because it was built to serve management, not the sales rep. Here's how AI agents flip that relationship.">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Why Sales Reps Don't Log Data (And Why That's Not Their Fault)",
+      "description": "Your CRM is empty because it was built to serve management, not the sales rep. Here's how AI agents flip that relationship — and fix Salesforce adoption for good.",
+      "image": "https://www.prietoteran.com/blog/images/why-sales-reps-dont-log-data.png",
+      "author": {
+        "@type": "Person",
+        "name": "Osmel Prieto Teran",
+        "url": "https://www.prietoteran.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Osmel Prieto Teran",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.prietoteran.com/favicon.svg"
+        }
+      },
+      "datePublished": "2026-05-26",
+      "dateModified": "2026-05-26",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../styles.css?v=11">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#how" data-i18n="nav.how">Services</a></li>
+                        <li><a href="../#blog" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">EN</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="de">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <article class="article">
+        <div class="container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-category">Leadership</span>
+                    <span class="article-divider">·</span>
+                    <time datetime="2026-05-26">May 26, 2026</time>
+                    <span class="article-divider">·</span>
+                    <span class="article-reading-time">7 min read</span>
+                </div>
+                <h1 class="article-title">Why Sales Reps Don't Log Data (And Why That's Not Their Fault)</h1>
+                <p class="article-intro">Every company I talk to has the same Salesforce problem: the tool is there, the licences are paid, the training was done — and the CRM is still half empty. Here's the real reason why, and the fix that doesn't involve more training.</p>
+            </header>
+        </div>
+        
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="images/why-sales-reps-dont-log-data.png" alt="Sales professional at desk with CRM on screen and stack of unlogged notes — the adoption gap in B2B tools">
+        </div>
+        
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <p class="article-lead">Picture this. You've just come out of your quarterly review. The pipeline report shows 40 open opportunities. You ask your sales manager how solid those numbers are. She pauses. "Probably 60% of them are real. The rest — I'm not sure. The reps haven't updated them in a while."</p>
+
+                <p>You invested in Salesforce. You brought in a consultant to configure it. You ran three rounds of training. And still, the system that was supposed to give you full visibility into your business shows you a partial picture — at best.</p>
+
+                <p>If this sounds familiar, you're not alone. And the reason isn't what most people think.</p>
+
+                <h2>The Problem Isn't Discipline — It's the Deal Your Reps Were Offered</h2>
+
+                <p>When we blame adoption failures on "resistance to change" or "lack of discipline," we're looking at the symptom, not the cause. The real question is: what does a sales rep gain by logging a call in Salesforce?</p>
+
+                <p>Think about it from their perspective. They just spent 45 minutes on the phone with a client. Now they need to open Salesforce, find the right account, create an activity, write a summary, update the stage, log the next action, and set a reminder. That's another 10 minutes of administrative work — after a full day of calls, travel, and follow-up emails.</p>
+
+                <p>And what do they get in return? Their manager gets a nicer dashboard. Leadership gets a more accurate forecast. The system gets better data.</p>
+
+                <p>The rep gets nothing. In fact, they get less — less time, more friction, and occasionally a reminder in the next team meeting that "the CRM data isn't complete."</p>
+
+                <p>You didn't build Salesforce for your reps. You built it for everyone else. And your reps — rationally — are acting accordingly.</p>
+
+                <h2>The Usual Fix (And Why It Doesn't Work)</h2>
+
+                <p>Most companies respond to adoption problems the same way:</p>
+
+                <ul>
+                    <li>More training sessions</li>
+                    <li>Mandatory CRM updates before end-of-week</li>
+                    <li>Dashboards showing who has and hasn't logged activity</li>
+                    <li>Escalation to management when data is missing</li>
+                </ul>
+
+                <p>These approaches share a common flaw: they add more pressure on the people who already feel the tool doesn't help them. You're not solving the adoption problem — you're managing it with compliance. And compliance is fragile. It works while someone is watching, and collapses the moment attention shifts.</p>
+
+                <p>I've seen companies spend more time policing their CRM than actually using it to close deals. The tool that was supposed to free up time becomes the thing that consumes it.</p>
+
+                <h2>The Shift That Changes Everything: AI Agents That Work For the Rep</h2>
+
+                <p>What if the equation flipped? Instead of the rep serving the CRM, the CRM serves the rep — through an AI agent that does the administrative work automatically.</p>
+
+                <p>Here's what that looks like in practice.</p>
+
+                <h3>Before a meeting</h3>
+
+                <p>The AI agent pulls together everything relevant about the account: the last three interactions, open tasks, any emails exchanged in the past two weeks, the current deal stage, and notes from previous calls. It surfaces this as a one-paragraph briefing, ready before the rep dials in. The rep walks into the conversation informed — without having opened Salesforce at all.</p>
+
+                <h3>During and after a call</h3>
+
+                <p>The agent listens to the call (or reads the email thread). When the conversation ends, it drafts a summary: what was discussed, what was committed to, what the next step is. The rep reviews it in 30 seconds, makes any corrections, and confirms. The CRM is updated. The follow-up email is drafted. The reminder is set.</p>
+
+                <p>What used to take 10 minutes now takes 30 seconds — and it's the rep deciding what to approve, not starting from scratch.</p>
+
+                <h3>The pipeline view that actually reflects reality</h3>
+
+                <p>Because data is captured continuously and automatically, the pipeline stops being a snapshot of what reps remembered to log. It becomes a real-time picture of where every deal actually stands. Leadership gets the visibility they needed from the start — not because they enforced it, but because the system made it effortless.</p>
+
+                <div class="article-highlight">
+                    <p><strong>The core insight:</strong> Adoption fails when the tool asks people to do work that benefits others. It succeeds when the tool does the work for the person using it — and makes them better at their job as a result.</p>
+                </div>
+
+                <h2>A Real Example of What Changes</h2>
+
+                <p>A B2B sales team I worked with had a Salesforce instance that had been live for two years. Their average opportunity had 1.4 logged activities — across an entire sales cycle that typically spanned 3 to 4 months. Their pipeline was essentially a list of company names and deal values. No context, no history, no next steps.</p>
+
+                <p>We introduced an AI agent connected to their email and calendar. No new tool — just an agent that read what was already happening and wrote the CRM updates automatically.</p>
+
+                <p>Within six weeks:</p>
+
+                <ul>
+                    <li>Average logged activities per opportunity went from 1.4 to 11</li>
+                    <li>Reps stopped being asked about CRM compliance — the data was just there</li>
+                    <li>New reps onboarding could read the full history of an account on day one</li>
+                    <li>The sales manager could run the Friday pipeline review from Salesforce data alone — no verbal updates required</li>
+                </ul>
+
+                <p>None of the reps attended extra training. Nobody was told to "be more disciplined." The tool changed, not the people.</p>
+
+                <h2>Three Questions to Ask Before You Try This</h2>
+
+                <p>Not every company is ready to introduce AI agents in the sales process. Before you move in that direction, it's worth being honest about a few things.</p>
+
+                <ol>
+                    <li>
+                        <strong>Is your Salesforce data model actually set up for how your team sells?</strong> AI agents work well when the structure of Salesforce reflects the real stages and activities of your sales process. If your pipeline stages were set up during the implementation and never revisited, the agent will be capturing data into a structure that doesn't match how deals actually move. Fix the model first.
+                    </li>
+                    <li>
+                        <strong>Do your reps trust that what gets logged won't be used against them?</strong> This is a cultural question, not a technical one. If reps believe that more data in Salesforce means more scrutiny and more pressure, they'll resist — even if the agent does the work automatically. The conversation about why data matters has to happen before the technology.
+                    </li>
+                    <li>
+                        <strong>Who owns the follow-through?</strong> An AI agent can draft a follow-up email and set a reminder, but the rep still needs to send it and act on it. The goal isn't to automate the rep — it's to remove the administrative friction so they can focus on the part of sales that actually requires a human: building relationships, handling objections, and closing.
+                    </li>
+                </ol>
+
+                <h2>The Adoption Problem Was Always a Design Problem</h2>
+
+                <p>When a tool isn't used, the instinct is to blame the people. But in most cases, the people are behaving rationally. They're not using the tool because the tool wasn't designed to help them — it was designed to report on them.</p>
+
+                <p>AI agents don't fix Salesforce adoption by forcing people to use it differently. They fix it by making the tool genuinely useful to the person holding the phone — by doing the work that nobody wanted to do, so that the data that everyone needed is just there.</p>
+
+                <p>That's the shift. And it's not a technology shift. It's a design shift.</p>
+            </div>
+            
+            <!-- Simple CTA -->
+            <div class="article-cta-simple">
+                <a href="../#contact" class="article-cta-button" data-i18n="blog.cta.button">Get in touch</a>
+            </div>
+            
+            <!-- Related Content -->
+            <div class="article-related">
+                <h4 data-i18n="blog.continueReading">Continue Reading</h4>
+                <div class="article-related-links">
+                    <a href="ai-in-b2b-operations-what-actually-works.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.article">Article</span>
+                        <span class="article-related-title" data-i18n="blog.post5.title">AI in B2B Operations: What Actually Works</span>
+                    </a>
+                    <a href="why-leaders-cant-trust-their-data.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.article">Article</span>
+                        <span class="article-related-title" data-i18n="blog.post4.title">Why Leaders Can't Trust Their Own Data</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js?v=2"></script>
+    
+    <!-- Global JavaScript -->
+    <script src="../app.js?v=2"></script>
+</body>
+</html>

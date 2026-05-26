@@ -107,13 +107,13 @@
         ]
       },
       "contact": {
-        "name": "Marco Osterwalder",
-        "title": "Head of IT",
-        "email": "marco.osterwalder@mgc.ch",
+        "name": "Eric Wurtlin",
+        "title": "Unknown",
+        "email": "eric.wurtlin@mgc.ch",
         "email_status": "Verified",
-        "phone": null,
-        "linkedin": "http://www.linkedin.com/in/marco-osterwalder-069980262",
-        "notes": "Direct decision maker for IT"
+        "phone": "+41 61 467 61 08",
+        "linkedin": null,
+        "notes": "Replacement contact for Marco Osterwalder (no longer at company). Provided by MGC auto-reply 2026-05-26."
       },
       "qualification": {
         "score": 88,

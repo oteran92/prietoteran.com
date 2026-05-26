@@ -61,13 +61,38 @@ Step 5: Update market-intelligence.json
 When creating social media posts:
 
 **For LinkedIn:**
-- Professional, advisory tone targeting business leaders
-- 150-300 words optimal
-- Hook with a real business problem (not technical jargon)
-- Use line breaks for readability
-- End with a thought-provoking question or soft CTA
-- 3-5 relevant hashtags
-- Frame content around clarity, control, and data reliability
+- The post is NOT a summary of the blog. It is a standalone insight that creates curiosity.
+- The goal: make someone stop scrolling, feel something (discomfort, recognition, disagreement), and click.
+- 3-6 lines maximum. Every word earns its place.
+- No em dashes (—). No bullet points. No headers. No "I wrote a blog post about X".
+- Start with ONE uncomfortable truth, a surprising observation, or a specific moment that reframes something familiar.
+- The link and hashtags go at the very end, after the insight lands.
+- 3-5 hashtags maximum.
+
+**The formula that works:**
+1. One sentence that stops the scroll (a truth that stings or surprises)
+2. One or two lines that deepen it — but don't explain it fully
+3. Optional: one question that opens the debate
+4. Link
+5. Hashtags
+
+**Strong examples:**
+> The scariest part of a bad AI project isn't the money you wasted.
+> It's the decisions you made while trusting it.
+> [link] #AI #B2B
+
+> Every empty field in your CRM is a rep silently telling you something about your company culture.
+> Most leaders read it as a discipline problem.
+> It isn't.
+> [link] #Salesforce #CRM
+
+**What to avoid:**
+- "I recently published a post about..."
+- Summarizing the blog's key points
+- Bullet point lists of takeaways
+- Corporate or AI-sounding phrasing
+- Em dashes anywhere
+- Starting with "Most", "Many", "A lot of companies" — too generic
 
 **For X (Twitter):**
 - Concise, impactful (< 280 characters)

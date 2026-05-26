@@ -75,6 +75,12 @@ const translations = {
         "blog.post4.title": "Trusting Your Data",
         "blog.post4.excerpt": "Restore data reliability.",
         
+        "blog.post5.title": "AI in B2B Operations: What Actually Works",
+        "blog.post5.excerpt": "Most AI projects fail — not because of bad tech, but because the data foundation isn't ready.",
+        
+        "blog.post6.title": "Why Sales Reps Don't Log Data (And Why That's Not Their Fault)",
+        "blog.post6.excerpt": "Your CRM is empty because it was built for management, not for the rep. AI agents fix that by flipping the relationship.",
+        
         // Blog Article Elements
         "blog.cta.button": "Book consultation",
         "blog.continueReading": "Continue",
@@ -442,6 +448,12 @@ const translations = {
         
         "blog.post4.title": "Vertrauen in Daten",
         "blog.post4.excerpt": "Datenzuverlässigkeit wiederherstellen.",
+        
+        "blog.post5.title": "KI im B2B-Betrieb: Was wirklich funktioniert",
+        "blog.post5.excerpt": "Die meisten KI-Projekte scheitern — nicht wegen schlechter Technologie, sondern weil das Datenfundament fehlt.",
+        
+        "blog.post6.title": "Warum Sales Reps keine Daten erfassen (und warum das nicht ihre Schuld ist)",
+        "blog.post6.excerpt": "Ihr CRM ist leer, weil es für das Management gebaut wurde — nicht für den Rep. KI-Agenten kehren diese Dynamik um.",
         
         // Blog Article Elements
         "blog.cta.button": "Beratung buchen",

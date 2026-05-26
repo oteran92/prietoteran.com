@@ -82,6 +82,22 @@ const contactLimiter = rateLimit({
     legacyHeaders: false,
 });
 
+// SEO redirects — legacy URLs and retired service pages
+const redirect301 = (from, to) => {
+    app.get(from, (req, res) => res.redirect(301, to));
+};
+
+redirect301('/services/integration.html', '/#how');
+redirect301('/services/automation.html', '/');
+redirect301('/de/services/integration.html', '/?lang=de#how');
+redirect301('/de/services/automation.html', '/?lang=de');
+redirect301('/es/services/integration.html', '/');
+redirect301('/es/services/automation.html', '/');
+redirect301('/services/architecture.html', '/');
+redirect301('/services/consulting.html', '/');
+redirect301('/de/', '/?lang=de');
+redirect301('/es/', '/');
+
 // Serve static files from root directory
 app.use(express.static(path.join(__dirname), {
     extensions: ['html'],

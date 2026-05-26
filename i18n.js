@@ -6,106 +6,98 @@
 const translations = {
     en: {
         // Navigation
-        "nav.services": "Services",
-        "nav.about": "About",
+        "nav.how": "Process",
+        "nav.services": "Process",
+        "nav.about": "LinkedIn",
         "nav.contact": "Contact",
-        "nav.home": "← Home",
+        "nav.home": "Home",
         
         // Hero Section
-        "hero.label": "B2B Systems & Integration Advisory",
-        "hero.title.line1": "Restoring",
-        "hero.title.line2": "clarity and control in",
-        "hero.title.line3": "complex B2B",
-        "hero.title.companies": "systems",
-        "hero.subtitle": "When your systems don't talk to each other, leaders lose visibility and teams lose time. I help B2B companies in Switzerland rebuild the trust in their data, operations and technology.",
-        "hero.cta.explore": "See how I help",
-        "hero.cta.work": "Book a 20-min call",
+        "hero.label": "AI Automation",
+        "hero.title.line1": "Automate",
+        "hero.title.line2": "manual",
+        "hero.title.line3": "work",
+        "hero.title.companies": "",
+        "hero.badge": "Free consultation",
+        "hero.subtitle": "Save time with practical AI automation. Swiss B2B.",
+        "hero.cta.primary": "Book consultation",
+        "hero.cta.explore": "Process",
+        "hero.cta.work": "Book consultation",
         "hero.scroll": "Scroll",
         "hero.marker.portrait": "Portrait",
-        "hero.marker.location": "Bern, CH",
-        "hero.availability": "Available for new projects",
+        "hero.marker.location": "Bern",
+        "hero.availability": "Available",
         
-        // Intro Section
-        "intro.title": "Leaders call me when they can no longer trust their own data.",
-        "intro.pain1": "Decisions based on unreliable data",
-        "intro.pain2": "Revenue delayed by broken workflows",
-        "intro.pain3": "Systems that fail when you need them most",
-        "intro.pain4": "Teams doing work that software should handle",
-        "intro.quote.line1": "Without reliable data, no AI will save you.",
-        "intro.quote.line2": "First: clarity. Then: leverage.",
+        // Intro Section — operational pains
+        "intro.title": "Problems",
+        "intro.pain1": "Duplicate data entry",
+        "intro.pain2": "Slow approvals",
+        "intro.pain3": "Repetitive tasks",
+        "intro.pain4": "Disconnected tools",
         
-        // Services Section
-        "services.number": "001 — SERVICES",
-        "services.title": "How I Help",
+        // How it works (single service)
+        "how.number": "01 PROCESS",
+        "how.title": "How it works",
+        "how.step1.title": "1. Consultation",
+        "how.step1.description": "Map the bottleneck.",
+        "how.step2.title": "2. Proposal",
+        "how.step2.description": "Concrete automation plan.",
+        "how.step3.title": "3. Implementation",
+        "how.step3.description": "Build and handover.",
+        "how.examples.title": "Examples",
+        "how.examples.list": "Quote-to-order · Email routing · CRM-ERP sync",
         
-        "service1.title": "Data You Can Trust Across Every System",
-        "service1.description": "I connect Salesforce, ERP and the systems around them into one reliable source of truth. So leadership sees accurate numbers, teams stop re-entering data, and decisions are based on facts — not spreadsheets.",
-        "service1.outcome": "Reliable data. Confident decisions. Fewer fire drills.",
-        "service1.link": "Learn more about integration",
-        
-        "service2.title": "Operations That Run Without Manual Intervention",
-        "service2.description": "I automate the workflows that slow your teams down: approvals, quoting, order handoffs, cross-system updates. Once data is reliable, AI can amplify the results — but the foundation comes first.",
-        "service2.outcome": "Faster operations. Freed-up teams. Scalable growth.",
-        "service2.link": "Learn more about automation",
-        
-        "service3.title": "AI for Operational Workflows (No Hype)",
-        "service3.description": "I apply AI where it reduces cost and friction — e.g., data classification, email/request triage, content enrichment, and automation copilots integrated into real workflows.",
-        "service3.outcome": "Measurable impact in weeks.",
-        "service3.link": "View AI service",
-        
-        "service4.title": "Fractional Technical Leadership (Interim / Advisory)",
-        "service4.description": "I act as a senior counterpart for IT and business stakeholders: architecture decisions, roadmap clarity, vendor alignment, and delivery leadership — without adding management overhead.",
-        "service4.outcome": "Clear decisions. Less risk.",
-        "service4.link": "View advisory service",
+        // Irresistible offer banner
+        "offer.number": "02 OFFER",
+        "offer.title": "Free consultation",
+        "offer.bullet1": "Analyze problem",
+        "offer.bullet2": "Automation sketch",
+        "offer.bullet3": "No commitment",
+        "offer.cta": "Book now",
         
         // Blog Section
         "nav.blog": "Blog",
-        "blog.number": "002 — BLOG",
-        "blog.title": "Latest Insights",
-        "blog.subtitle": "Practical insights on data reliability, system integration, and operational clarity for B2B leaders.",
-        "blog.readMore": "Read article",
-        "blog.comingSoon": "Coming soon",
+        "blog.number": "03 BLOG",
+        "blog.title": "Insights",
+        "blog.subtitle": "Data and automation.",
+        "blog.readMore": "Read",
+        "blog.comingSoon": "Soon",
         
-        "blog.post1.title": "Why Salesforce-ERP Integrations Break (And How to Fix It)",
-        "blog.post1.excerpt": "Most integrations work for 2-4 weeks, then fail. Learn the 3 architecture principles that prevent failures in Swiss B2B companies.",
+        "blog.post1.title": "Why Integrations Break",
+        "blog.post1.excerpt": "3 architecture principles.",
         
-        "blog.post2.title": "The Real Cost of Manual Data Entry Between Systems",
-        "blog.post2.excerpt": "Manual data entry costs Swiss B2B companies 15-25 hours weekly. Learn when automation pays for itself.",
+        "blog.post2.title": "Cost of Manual Data Entry",
+        "blog.post2.excerpt": "When automation pays off.",
         
-        "blog.post3.title": "From Quote to Order in 4 Hours Instead of 3 Days",
-        "blog.post3.excerpt": "How a Swiss manufacturer cut quote-to-order time by 85% without custom development.",
+        "blog.post3.title": "Quote to Order in 4 Hours",
+        "blog.post3.excerpt": "Cut time by 85%.",
         
-        "blog.post4.title": "Why Leaders Can't Trust Their Own Data",
-        "blog.post4.excerpt": "When every system shows different numbers, decisions slow down and confidence erodes. Here's how to restore data reliability.",
+        "blog.post4.title": "Trusting Your Data",
+        "blog.post4.excerpt": "Restore data reliability.",
         
         // Blog Article Elements
-        "blog.cta.button": "Get in touch",
-        "blog.continueReading": "Continue Reading",
+        "blog.cta.button": "Book consultation",
+        "blog.continueReading": "Continue",
         "blog.article": "Article",
         "blog.service": "Service",
         
-        // About Section
-        "about.number": "003 — ABOUT",
-        "about.title": "Why Work With Me",
-        "about.marker": "At Work",
-        "about.lead": "I'm a senior advisor who understands <strong>both the technology and the business behind it</strong>.",
-        "about.text": "I've worked inside B2B companies where decisions had to be fast, data had to be right, and systems had to hold under pressure. I bring that same discipline to every engagement — calm, structured, and results-focused.",
-        "about.approach": "Clarity. Control. Confidence in your systems — so you can focus on growing the business.",
+        // LinkedIn Section (replaces About)
+        "linkedin.number": "04 CONNECT",
+        "linkedin.title": "LinkedIn",
+        "linkedin.text": "Background and projects.",
+        "linkedin.cta": "Visit profile",
         
         // Trust Signals
-        "trust.item1": "Salesforce, ERP, APIs — architecture built for clarity and long-term reliability",
-        "trust.item2": "You own every decision, every document, every line of code",
-        "trust.item3": "Access control, auditability, and safe data flows",
-        "trust.title1": "Deep Systems Experience",
-        "trust.desc1": "Salesforce, ERP, APIs — architecture built for clarity and long-term reliability",
-        "trust.title2": "Full Ownership",
-        "trust.desc2": "You own every decision, every document, every line of code",
-        "trust.title3": "Secure by Design",
-        "trust.desc3": "Access control, auditability, and safe data flows",
+        "trust.title1": "Practical",
+        "trust.desc1": "Workflows that run.",
+        "trust.title2": "Ownership",
+        "trust.desc2": "You own the code.",
+        "trust.title3": "Swiss B2B",
+        "trust.desc3": "Based in Bern.",
         
         // CTA Section
-        "cta.text": "If decisions in your company depend on data that you're not sure you can trust — let's talk. I'll reply with 2–3 concrete steps to bring clarity back.",
-        "cta.link": "Start a conversation",
+        "cta.text": "Book consultation.",
+        "cta.link": "Email",
         
         // Footer
         "footer.copyright": "© 2026 Osmel Prieto Teran",
@@ -163,11 +155,11 @@ const translations = {
         "arch.cta2.text": "Systems feeling fragile? Let's fix that.",
         "arch.cta2.button": "→ Start a conversation",
         
-        // Service Pages - Automation
-        "auto.label": "Service",
-        "auto.title": "Process Automation<br>& Operational Efficiency",
-        "auto.subtitle": "I automate what shouldn't be manual anymore. Less error, more control.",
-        "auto.cta": "→ Discuss your processes",
+        // Service Pages - Automation (single service landing)
+        "auto.label": "AI Automation & Consulting",
+        "auto.title": "Automations that<br>save your team time",
+        "auto.subtitle": "Free first consultation: we map your bottleneck and I'll propose a practical automation — often with AI. Then I build it. You own it.",
+        "auto.cta": "→ Book free consultation",
         
         "auto.problem.label": "The Problem",
         "auto.problem.title": "Manual work is eating your time",
@@ -217,8 +209,8 @@ const translations = {
         "auto.fit2": "Errors are becoming a pattern",
         "auto.fit3": "You need to scale without hiring",
         
-        "auto.cta2.text": "Ready to stop doing things the hard way?",
-        "auto.cta2.button": "→ Start a conversation",
+        "auto.cta2.text": "First consultation free — describe what's slow or manual.",
+        "auto.cta2.button": "→ Claim free consultation",
         
         // Service Pages - AI
         "ai.label": "Service",
@@ -340,59 +332,77 @@ const translations = {
         "consult.cta2.button": "→ Start a conversation",
         
         // Process steps
-        "process.step1": "20-min call",
-        "process.step2": "Confirm fit",
-        "process.step3": "Proposal",
+        "process.step1": "Free consultation",
+        "process.step2": "Problem mapped",
+        "process.step3": "Automation proposed",
         
         // Form
-        "form.title": "Let's talk",
+        "form.title": "Claim your free consultation",
         "form.name": "Name",
         "form.company": "Company",
         "form.role": "Role",
         "form.email": "Email",
-        "form.problem": "What's the current pain? (2–3 sentences)",
-        "form.problem.placeholder": "Example: \"Salesforce quotes don't match ERP prices and approvals are manual. We need a reliable integration + workflow.\"",
+        "form.problem": "What's wasting your team's time? (2–3 sentences)",
+        "form.problem.placeholder": "Example: \"Every order is copied manually from our CRM into the ERP. It takes 20 minutes each and we process 15 orders a day.\"",
         "form.process": "What process is causing the most pain?",
         "form.usecase": "What problem are you trying to solve with AI?",
         "form.situation": "What's your current situation?",
-        "form.submit": "→ Start the conversation",
-        "form.trust": "Your information stays private. No spam."
+        "form.submit": "→ Claim free consultation",
+        "form.trust": "First consultation free. No spam. No obligation."
     },
     
     de: {
         // Navigation
-        "nav.services": "Leistungen",
-        "nav.about": "Über mich",
+        "nav.how": "Ablauf",
+        "nav.services": "Ablauf",
+        "nav.about": "LinkedIn",
         "nav.contact": "Kontakt",
         "nav.home": "← Startseite",
         
         // Hero Section
-        "hero.label": "B2B-Systeme & Integrationsberatung",
-        "hero.title.line1": "Klarheit und",
-        "hero.title.line2": "Kontrolle in komplexen",
-        "hero.title.line3": "B2B-Systemen",
-        "hero.title.companies": "wiederherstellen",
-        "hero.subtitle": "Wenn Ihre Systeme nicht miteinander kommunizieren, verlieren Führungskräfte die Übersicht und Teams verlieren Zeit. Ich helfe B2B-Unternehmen in der Schweiz, das Vertrauen in ihre Daten, Abläufe und Technologie wiederherzustellen.",
-        "hero.cta.explore": "So helfe ich",
-        "hero.cta.work": "20-Min Gespräch buchen",
+        "hero.label": "KI-Automatisierung & Beratung · Schweiz",
+        "hero.title.line1": "Automatisieren Sie die Arbeit,",
+        "hero.title.line2": "die Ihrem Team",
+        "hero.title.line3": "Zeit kostet",
+        "hero.title.companies": "",
+        "hero.badge": "Erstberatung gratis · Unverbindlich",
+        "hero.subtitle": "Beschreiben Sie, was langsam, manuell oder fehleranfällig ist. In der kostenlosen Erstberatung analysieren wir das Problem — und ich skizziere eine konkrete Automatisierung (oft mit KI), die echte Stunden pro Woche spart.",
+        "hero.cta.primary": "Kostenlose Erstberatung buchen",
+        "hero.cta.explore": "So funktioniert's",
+        "hero.cta.work": "Kostenlose Erstberatung buchen",
         "hero.scroll": "Scrollen",
         "hero.marker.portrait": "Portrait",
         "hero.marker.location": "Bern, CH",
         "hero.availability": "Verfügbar für neue Projekte",
         
         // Intro Section
-        "intro.title": "Führungskräfte rufen mich, wenn sie ihren eigenen Daten nicht mehr vertrauen können.",
-        "intro.pain1": "Entscheidungen auf Basis unzuverlässiger Daten",
-        "intro.pain2": "Umsatz verzögert durch fehlerhafte Workflows",
-        "intro.pain3": "Systeme, die versagen, wenn man sie am meisten braucht",
-        "intro.pain4": "Teams erledigen Arbeit, die Software übernehmen sollte",
-        "intro.quote.line1": "Ohne verlässliche Daten rettet keine KI.",
-        "intro.quote.line2": "Zuerst: Klarheit. Dann: Hebel.",
+        "intro.title": "Kommt Ihnen das bekannt vor?",
+        "intro.pain1": "Doppelte Dateneingabe",
+        "intro.pain2": "Langsame Freigaben",
+        "intro.pain3": "Repetitive Aufgaben",
+        "intro.pain4": "Getrennte Tools",
         
-        // Services Section
-        "services.number": "001 — LEISTUNGEN",
-        "services.title": "Wie ich helfe",
+        // How it works
+        "how.number": "01 ABLAUF",
+        "how.title": "Ablauf",
+        "how.step1.title": "1. Beratung",
+        "how.step1.description": "Engpass analysieren.",
+        "how.step2.title": "2. Vorschlag",
+        "how.step2.description": "Konkreter Plan.",
+        "how.step3.title": "3. Umsetzung",
+        "how.step3.description": "Bauen und übergeben.",
+        "how.examples.title": "Beispiele",
+        "how.examples.list": "Angebot-zu-Auftrag · E-Mail-Triage · CRM-ERP Sync",
         
+        // Offer banner
+        "offer.number": "02 ANGEBOT",
+        "offer.title": "Gratis Erstberatung",
+        "offer.bullet1": "Problem analysieren",
+        "offer.bullet2": "Automatisierungsskizze",
+        "offer.bullet3": "Keine Verpflichtung",
+        "offer.cta": "Jetzt buchen",
+        
+        // Legacy service keys (automation landing pages)
         "service1.title": "Daten, denen Sie über alle Systeme vertrauen können",
         "service1.description": "Ich verbinde Salesforce, ERP und die umliegenden Systeme zu einer zuverlässigen Wahrheitsquelle. So sieht die Führung korrekte Zahlen, Teams hören auf, Daten mehrfach einzugeben, und Entscheidungen basieren auf Fakten — nicht auf Tabellenkalkulationen.",
         "service1.outcome": "Verlässliche Daten. Sichere Entscheidungen. Weniger Feuerwehreinsätze.",
@@ -415,52 +425,47 @@ const translations = {
         
         // Blog Section
         "nav.blog": "Blog",
-        "blog.number": "002 — BLOG",
-        "blog.title": "Aktuelle Einblicke",
-        "blog.subtitle": "Praktische Einblicke zu Datenzuverlässigkeit, Systemintegration und operativer Klarheit für B2B-Führungskräfte.",
-        "blog.readMore": "Artikel lesen",
+        "blog.number": "03 BLOG",
+        "blog.title": "Einblicke",
+        "blog.subtitle": "Daten und Automatisierung.",
+        "blog.readMore": "Lesen",
         "blog.comingSoon": "Demnächst",
         
-        "blog.post1.title": "Warum Salesforce-ERP-Integrationen scheitern (und wie man es behebt)",
-        "blog.post1.excerpt": "Die meisten Integrationen funktionieren 2-4 Wochen und scheitern dann. Lernen Sie die 3 Architekturprinzipien, die Ausfälle in Schweizer B2B-Unternehmen verhindern.",
+        "blog.post1.title": "Warum Integrationen scheitern",
+        "blog.post1.excerpt": "3 Architekturprinzipien.",
         
-        "blog.post2.title": "Die wahren Kosten manueller Dateneingabe zwischen Systemen",
-        "blog.post2.excerpt": "Manuelle Dateneingabe kostet Schweizer B2B-Unternehmen 15-25 Stunden wöchentlich. Erfahren Sie, wann sich Automatisierung auszahlt.",
+        "blog.post2.title": "Kosten manueller Dateneingabe",
+        "blog.post2.excerpt": "Wann sich Automatisierung lohnt.",
         
-        "blog.post3.title": "Von Angebot zu Auftrag in 4 Stunden statt 3 Tagen",
-        "blog.post3.excerpt": "Wie ein Schweizer Hersteller die Angebots-zu-Auftragszeit um 85% reduzierte — ohne kundenspezifische Entwicklung.",
+        "blog.post3.title": "Angebot zu Auftrag in 4 Stunden",
+        "blog.post3.excerpt": "Zeit um 85% reduzieren.",
         
-        "blog.post4.title": "Warum Führungskräfte ihren Daten nicht vertrauen",
-        "blog.post4.excerpt": "Wenn jedes System andere Zahlen zeigt, verlangsamen sich Entscheidungen und das Vertrauen schwindet. So stellen Sie die Datenzuverlässigkeit wieder her.",
+        "blog.post4.title": "Vertrauen in Daten",
+        "blog.post4.excerpt": "Datenzuverlässigkeit wiederherstellen.",
         
         // Blog Article Elements
-        "blog.cta.button": "Kontakt aufnehmen",
+        "blog.cta.button": "Beratung buchen",
         "blog.continueReading": "Weiterlesen",
         "blog.article": "Artikel",
         "blog.service": "Service",
         
-        // About Section
-        "about.number": "003 — ÜBER MICH",
-        "about.title": "Warum mit mir arbeiten",
-        "about.marker": "Bei der Arbeit",
-        "about.lead": "Ich bin ein Senior-Berater, der <strong>sowohl die Technologie als auch das Geschäft dahinter versteht</strong>.",
-        "about.text": "Ich habe in B2B-Unternehmen gearbeitet, wo Entscheidungen schnell sein mussten, Daten stimmen mussten und Systeme unter Druck standhalten mussten. Diese Disziplin bringe ich in jedes Engagement ein — ruhig, strukturiert und ergebnisorientiert.",
-        "about.approach": "Klarheit. Kontrolle. Vertrauen in Ihre Systeme — damit Sie sich auf das Geschäftswachstum konzentrieren können.",
+        // LinkedIn Section
+        "linkedin.number": "04 VERNETZEN",
+        "linkedin.title": "LinkedIn",
+        "linkedin.text": "Hintergrund und Projekte.",
+        "linkedin.cta": "Profil besuchen",
         
         // Trust Signals
-        "trust.item1": "Salesforce, ERP, APIs — Architektur für Klarheit und langfristige Zuverlässigkeit",
-        "trust.item2": "Jede Entscheidung, jedes Dokument, jede Zeile Code gehört Ihnen",
-        "trust.item3": "Zugriffskontrolle, Auditierbarkeit und sichere Datenflüsse",
-        "trust.title1": "Tiefe Systemerfahrung",
-        "trust.desc1": "Salesforce, ERP, APIs — Architektur für Klarheit und langfristige Zuverlässigkeit",
-        "trust.title2": "Volles Eigentum",
-        "trust.desc2": "Jede Entscheidung, jedes Dokument, jede Zeile Code gehört Ihnen",
-        "trust.title3": "Sicherheit by Design",
-        "trust.desc3": "Zugriffskontrolle, Auditierbarkeit und sichere Datenflüsse",
+        "trust.title1": "Praktisch",
+        "trust.desc1": "Workflows, die laufen.",
+        "trust.title2": "Eigentum",
+        "trust.desc2": "Der Code gehört Ihnen.",
+        "trust.title3": "Schweizer B2B",
+        "trust.desc3": "Standort Bern.",
         
         // CTA Section
-        "cta.text": "Wenn Entscheidungen in Ihrem Unternehmen von Daten abhängen, denen Sie nicht sicher vertrauen können — lassen Sie uns sprechen. Ich antworte mit 2–3 konkreten Schritten für mehr Klarheit.",
-        "cta.link": "Gespräch starten",
+        "cta.text": "Beratung buchen.",
+        "cta.link": "E-Mail",
         
         // Footer
         "footer.copyright": "© 2026 Osmel Prieto Teran",
@@ -519,10 +524,10 @@ const translations = {
         "arch.cta2.button": "→ Gespräch starten",
         
         // Service Pages - Automation
-        "auto.label": "Leistung",
-        "auto.title": "Prozessautomatisierung<br>& Operative Effizienz",
-        "auto.subtitle": "Ich automatisiere, was nicht mehr manuell sein sollte. Weniger Fehler, mehr Kontrolle.",
-        "auto.cta": "→ Ihre Prozesse besprechen",
+        "auto.label": "KI-Automatisierung & Beratung",
+        "auto.title": "Automatisierungen, die<br>Ihrem Team Zeit sparen",
+        "auto.subtitle": "Kostenlose Erstberatung: Wir analysieren den Engpass — ich skizziere eine konkrete Automatisierung (oft mit KI). Dann baue ich sie. Sie besitzen sie.",
+        "auto.cta": "→ Gratis Erstberatung buchen",
         
         "auto.problem.label": "Das Problem",
         "auto.problem.title": "Manuelle Arbeit frisst Ihre Zeit",
@@ -572,8 +577,8 @@ const translations = {
         "auto.fit2": "Fehler zu einem Muster werden",
         "auto.fit3": "Sie skalieren müssen, ohne einzustellen",
         
-        "auto.cta2.text": "Bereit, aufzuhören, Dinge auf die schwere Art zu tun?",
-        "auto.cta2.button": "→ Gespräch starten",
+        "auto.cta2.text": "Erstberatung gratis — beschreiben Sie, was Zeit kostet.",
+        "auto.cta2.button": "→ Gratis Erstberatung sichern",
         
         // Service Pages - AI
         "ai.label": "Leistung",
@@ -695,22 +700,23 @@ const translations = {
         "consult.cta2.button": "→ Gespräch starten",
         
         // Process steps
-        "process.step1": "20-Min Anruf",
-        "process.step2": "Fit prüfen",
-        "process.step3": "Vorschlag",
+        "process.step1": "Kostenlose Erstberatung",
+        "process.step2": "Problem analysiert",
+        "process.step3": "Automatisierung vorgeschlagen",
         
         // Form
-        "form.title": "Lassen Sie uns sprechen",
+        "form.title": "Gratis Erstberatung sichern",
         "form.name": "Name",
         "form.company": "Unternehmen",
         "form.role": "Position",
         "form.email": "E-Mail",
-        "form.problem": "Was ist das Hauptproblem?",
+        "form.problem": "Was kostet Ihrem Team Zeit? (2–3 Sätze)",
+        "form.problem.placeholder": "Beispiel: \"Jeder Auftrag wird manuell vom CRM ins ERP kopiert. Das dauert 20 Minuten — wir bearbeiten 15 Aufträge pro Tag.\"",
         "form.process": "Welcher Prozess verursacht die meisten Schmerzen?",
         "form.usecase": "Welches Problem versuchen Sie mit KI zu lösen?",
         "form.situation": "Wie ist Ihre aktuelle Situation?",
-        "form.submit": "→ Gespräch starten",
-        "form.trust": "Ihre Daten bleiben privat. Kein Spam."
+        "form.submit": "→ Gratis Erstberatung sichern",
+        "form.trust": "Erstberatung gratis. Kein Spam. Unverbindlich."
     },
     
     es: {

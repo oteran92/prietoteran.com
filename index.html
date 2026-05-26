@@ -14,8 +14,8 @@
     </script>
     
     <!-- Primary SEO Meta Tags -->
-    <title>Restoring Clarity & Control in Complex B2B Systems | Switzerland — Osmel Prieto Teran</title>
-    <meta name="description" content="When your systems don't talk to each other, leaders lose visibility and teams lose time. I restore clarity, control and trust in B2B operations. Based in Bern, Switzerland.">
+    <title>AI Workflow Automation Switzerland | Free Consultation — Osmel Prieto Teran</title>
+    <meta name="description" content="Slow, manual workflows costing your team hours? Free consultation in Bern: we map the problem and propose a practical automation — often with AI. Swiss B2B.">
     <meta name="author" content="Osmel Prieto Teran">
     <meta name="robots" content="index, follow">
     
@@ -24,15 +24,14 @@
     
     <!-- Hreflang for multi-language support -->
     <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/">
-    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/">
-    <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/?lang=de">
     <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.prietoteran.com/">
-    <meta property="og:title" content="Restoring Clarity & Control in Complex B2B Systems | Switzerland">
-    <meta property="og:description" content="When your systems don't talk to each other, leaders lose visibility and teams lose time. I restore clarity, control and trust in B2B operations.">
+    <meta property="og:title" content="AI Workflow Automation Switzerland | Free Consultation">
+    <meta property="og:description" content="Free consultation: map your bottleneck and get a practical automation proposal. AI when it saves real hours. Based in Bern, Switzerland.">
     <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Osmel Prieto Teran">
@@ -40,8 +39,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.prietoteran.com/">
-    <meta name="twitter:title" content="Restoring Clarity & Control in Complex B2B Systems | Switzerland">
-    <meta name="twitter:description" content="When your systems don't talk to each other, leaders lose visibility and teams lose time. I restore clarity, control and trust in B2B operations.">
+    <meta name="twitter:title" content="AI Workflow Automation Switzerland | Free Consultation">
+    <meta name="twitter:description" content="Free consultation: map your bottleneck and get a practical automation proposal. Based in Bern, Switzerland.">
     <meta name="twitter:image" content="https://www.prietoteran.com/og-image.png">
     
     <!-- Favicon -->
@@ -53,11 +52,22 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Osmel Prieto Teran",
-      "description": "Restoring clarity and control in complex B2B systems. Advisory and implementation for Salesforce, ERP integration, and process automation in Switzerland.",
+      "description": "AI workflow automation and consulting for Swiss B2B. Free first consultation: analyze your problem and propose a practical automation that saves time.",
       "url": "https://www.prietoteran.com",
       "logo": "https://www.prietoteran.com/favicon.svg",
       "image": "https://www.prietoteran.com/og-image.png",
-      "serviceType": ["B2B Systems Advisory", "Salesforce & ERP Integration", "Process Automation", "Data Reliability"],
+      "serviceType": ["AI Workflow Automation", "Business Process Automation", "AI Consulting"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Free consultation",
+        "itemListElement": [{
+          "@type": "Offer",
+          "name": "Free first consultation",
+          "price": "0",
+          "priceCurrency": "CHF",
+          "description": "30-minute consultation to analyze your problem and propose a possible automation."
+        }]
+      },
       "areaServed": {
         "@type": "Country",
         "name": "Switzerland"
@@ -89,7 +99,7 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Osmel Prieto Teran - B2B Systems & Integration Advisory",
+      "name": "Osmel Prieto Teran - AI Automation & Consulting",
       "image": "https://www.prietoteran.com/og-image.png",
       "address": {
         "@type": "PostalAddress",
@@ -217,55 +227,6 @@
         ::selection {
             background: var(--accent);
             color: #FFFFFF;
-        }
-
-        /* ============================================
-           GRID BACKGROUND — THE BLUEPRINT AESTHETIC
-           ============================================ */
-        .grid-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.3;
-        }
-
-        @media (min-width: 768px) {
-            .grid-bg {
-                opacity: 0.5;
-            }
-        }
-
-        .grid-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image:
-                linear-gradient(var(--grid-line) 1px, transparent 1px),
-                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-
-        @media (min-width: 768px) {
-            .grid-bg::before {
-                background-size: 60px 60px;
-            }
-        }
-
-        .grid-bg::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 60%);
         }
 
         /* ============================================
@@ -698,52 +659,6 @@
             overflow: hidden;
         }
 
-        /* Mobile: Background image effect */
-        .hero-bg-mobile {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 70%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero-bg-mobile img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            filter: grayscale(100%) contrast(1.1);
-            opacity: 0.25;
-            mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
-            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 80%);
-        }
-
-        [data-theme="dark"] .hero-bg-mobile img {
-            opacity: 0.2;
-        }
-
-        @media (min-width: 480px) {
-            .hero {
-                padding: calc(var(--space-2xl) + 60px) 0 var(--space-lg);
-            }
-        }
-
-        @media (min-width: 768px) {
-            .hero {
-                padding: var(--space-3xl) 0 var(--space-2xl);
-            }
-        }
-
-        /* Hide mobile background on larger screens */
-        @media (min-width: 1024px) {
-            .hero-bg-mobile {
-                display: none;
-            }
-        }
-
         /* Hero grid layout for image integration */
         .hero-grid {
             display: grid;
@@ -952,78 +867,6 @@
         }
 
         /* Decorative accent line - top right corner */
-        .hero-image-accent {
-            position: absolute;
-            top: -40px;
-            right: -40px;
-            width: 80px;
-            height: 80px;
-            border-right: 2px solid var(--accent);
-            border-top: 2px solid var(--accent);
-            opacity: 0.4;
-            z-index: 0;
-            display: none;
-        }
-
-        @media (min-width: 1024px) {
-            .hero-image-accent {
-                display: block;
-            }
-        }
-
-        /* Decorative dot pattern */
-        .hero-image-dots {
-            position: absolute;
-            bottom: -50px;
-            left: 20px;
-            display: grid;
-            grid-template-columns: repeat(5, 6px);
-            gap: 8px;
-            z-index: 0;
-            opacity: 0.4;
-        }
-
-        .hero-image-dots span {
-            width: 6px;
-            height: 6px;
-            background: var(--accent);
-        }
-
-        @media (max-width: 1023px) {
-            .hero-image-dots {
-                display: none;
-            }
-        }
-
-        /* Technical markers around image */
-        .hero-image-marker {
-            position: absolute;
-            font-family: var(--font-mono);
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            color: var(--text-subtle);
-            text-transform: uppercase;
-            z-index: 3;
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .hero-image-marker {
-                display: block;
-            }
-        }
-
-        .hero-image-marker.top-left {
-            top: -30px;
-            left: 0;
-        }
-
-        .hero-image-marker.bottom-right {
-            bottom: -30px;
-            right: 0;
-            color: var(--accent);
-        }
-
         .hero-label {
             font-family: var(--font-mono);
             font-size: 0.75rem;
@@ -1447,8 +1290,158 @@
             color: var(--accent);
         }
 
+        /* Hero offer badge */
+        .hero-badge {
+            display: inline-block;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.4rem 0.75rem;
+            margin-bottom: var(--space-md);
+        }
+
         /* ============================================
-           SERVICES SECTION — THE PILLARS
+           HOW IT WORKS
+           ============================================ */
+        .how-steps {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        @media (min-width: 768px) {
+            .how-steps {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-lg);
+            }
+        }
+
+        .how-step {
+            background: var(--bg-elevated);
+            padding: var(--space-xl);
+            border: 1px solid var(--border);
+            border-radius: 0;
+            transition: all 0.3s var(--ease-out);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .how-step:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            border-color: var(--text-primary);
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .how-step:hover .how-step-title,
+        .how-step:hover .how-step-description {
+            color: var(--bg-primary);
+        }
+
+        .how-step-number {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--bg-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--text-primary);
+            border-radius: 0;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .how-step:hover .how-step-number {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .how-step-title {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 500;
+            margin-bottom: var(--space-sm);
+        }
+
+        .how-step-description {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           FREE CONSULTATION OFFER
+           ============================================ */
+        .offer {
+            padding: var(--space-xl) 0;
+        }
+
+        .offer-banner {
+            background: #000000;
+            color: #FFFFFF;
+            border-radius: 0;
+            padding: var(--space-xl);
+            text-align: center;
+            position: relative;
+            box-shadow: none;
+        }
+
+        .offer-number {
+            display: block;
+            margin-bottom: var(--space-md);
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .offer-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            color: #FFFFFF;
+        }
+
+        .offer-bullets {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 var(--space-xl);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .offer-bullets li {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .offer-bullets li::before {
+            content: '✓ ';
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .offer-cta {
+            margin-top: var(--space-md);
+            background: var(--accent);
+            color: #FFFFFF;
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .offer-cta:hover {
+            background: #FFFFFF;
+            color: #000000;
+            border-color: #FFFFFF;
+        }
+
+        /* ============================================
+           SERVICES SECTION — legacy styles (landing pages)
            ============================================ */
         .services-grid {
             display: grid;
@@ -1568,8 +1561,38 @@
         }
 
         /* ============================================
-           WHY ME SECTION
+           LINKEDIN CTA
            ============================================ */
+        .linkedin-cta {
+            padding: var(--space-3xl) 0;
+            background: var(--bg-primary);
+        }
+
+        .linkedin-cta-inner {
+            text-align: center;
+            max-width: 560px;
+            margin: 0 auto;
+            padding: var(--space-xl);
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .linkedin-title {
+            margin-bottom: var(--space-md);
+        }
+
+        .linkedin-text {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            margin-bottom: var(--space-xl);
+        }
+
+        .linkedin-btn {
+            display: inline-flex;
+        }
+
+        /* Legacy about section styles (unused) */
         .why-me {
             background: var(--bg-primary);
         }
@@ -1959,53 +1982,6 @@
         .reveal-delay-4 { transition-delay: 0.4s; }
 
         /* ============================================
-           COORDINATE MARKERS — TECHNICAL AESTHETIC
-           ============================================ */
-        .coord {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            letter-spacing: 0.15em;
-            color: var(--text-subtle);
-            position: absolute;
-        }
-
-        .coord-left {
-            left: var(--space-lg);
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-        }
-
-        .coord-right {
-            right: var(--space-lg);
-            writing-mode: vertical-rl;
-        }
-
-        @media (max-width: 768px) {
-            .coord {
-                display: none;
-            }
-        }
-
-        /* ============================================
-           NOISE TEXTURE OVERLAY
-           ============================================ */
-        .noise {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1000;
-            opacity: 0.025;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-        }
-        
-        [data-theme="dark"] .noise {
-            opacity: 0.03;
-        }
-
-        /* ============================================
            CONTACT FORM
            ============================================ */
         .contact {
@@ -2280,6 +2256,13 @@
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
 
+        .form-trust-note {
+            margin-top: var(--space-md);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
         /* ============================================
            BLOG SECTION STYLES
            ============================================ */
@@ -2490,12 +2473,6 @@
     </script>
 </head>
 <body>
-    <!-- Noise Texture -->
-    <div class="noise"></div>
-    
-    <!-- Grid Background -->
-    <div class="grid-bg"></div>
-
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="container">
@@ -2510,9 +2487,8 @@
                         <span></span>
                     </button>
                     <ul class="nav-links" id="navLinks">
-                        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#how" data-i18n="nav.how">How it works</a></li>
                         <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
-                        <li><a href="#about" data-i18n="nav.about">About</a></li>
                         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                     <div class="lang-selector" id="langSelector">
@@ -2533,10 +2509,6 @@
                                 <span class="lang-code">DE</span>
                                 <span class="lang-name">Deutsch</span>
                             </button>
-                            <button class="lang-option" data-lang="es">
-                                <span class="lang-code">ES</span>
-                                <span class="lang-name">Español</span>
-                            </button>
                         </div>
                     </div>
                     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -2550,33 +2522,27 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Mobile background image (hidden on desktop) -->
-        <div class="hero-bg-mobile" aria-hidden="true">
-            <img src="osmel-1.png" alt="">
-        </div>
-        
         <div class="container">
-            <span class="coord coord-left">47.3769° N</span>
-            <span class="coord coord-right">8.5417° E</span>
-            
             <div class="hero-grid">
                 <!-- Left: Text Content -->
                 <div class="hero-content">
-                    <div class="hero-label reveal" data-i18n="hero.label">B2B Systems & Integration Advisory</div>
+                    <div class="hero-label reveal" data-i18n="hero.label">AI Automation & Consulting · Switzerland</div>
                     
                     <h1 class="hero-title reveal reveal-delay-1">
-                        <span data-i18n="hero.title.line1">Restoring</span><br>
-                        <span data-i18n="hero.title.line2">clarity and control in</span><br>
-                        <span class="highlight" data-i18n="hero.title.line3">complex B2B</span> <span data-i18n="hero.title.companies">systems</span>
+                        <span data-i18n="hero.title.line1">Automate the work</span><br>
+                        <span class="highlight" data-i18n="hero.title.line2">that wastes your</span><br>
+                        <span data-i18n="hero.title.line3">team's time</span>
                     </h1>
                     
+                    <p class="hero-badge reveal reveal-delay-2" data-i18n="hero.badge">First consultation free · No obligation</p>
+                    
                     <p class="hero-subtitle reveal reveal-delay-2" data-i18n="hero.subtitle">
-                        When your systems don't talk to each other, leaders lose visibility and teams lose time. I help B2B companies in Switzerland rebuild the trust in their data, operations and technology.
+                        Tell me what's slow, manual, or broken. In a free consultation we map the problem and I'll propose a practical automation — often with AI — that saves real hours every week.
                     </p>
                     
                     <div class="hero-cta reveal reveal-delay-3">
-                        <a href="#services" class="btn btn-primary" data-i18n="hero.cta.explore">See how I help</a>
-                        <a href="https://outlook.office.com/bookwithme/user/e4d9c2db688b433fa2abeb6af4120b49@prietoteran.com/meetingtype/Bre95rdevkyBKLGW6qPbcg2?anonymous&ep=mlink" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="hero.cta.work">Book a 20-min call</a>
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta.primary">Book your free consultation</a>
+                        <a href="#how" class="btn" data-i18n="hero.cta.explore">See how it works</a>
                     </div>
                     
                     <!-- Availability indicator -->
@@ -2589,29 +2555,15 @@
                 <!-- Right: Portrait Image -->
                 <div class="hero-image-wrapper reveal reveal-delay-2">
                     <div class="hero-image-container">
-                        <span class="hero-image-marker top-left" data-i18n="hero.marker.portrait">Portrait</span>
-                        <span class="hero-image-marker bottom-right" data-i18n="hero.marker.location">Bern, CH</span>
-                        <div class="hero-image-accent"></div>
-                        <div class="hero-image-dots">
-                            <span></span><span></span><span></span><span></span><span></span>
-                            <span></span><span></span><span></span><span></span><span></span>
-                            <span></span><span></span><span></span><span></span><span></span>
-                        </div>
                         <img 
                             src="osmel-1.png" 
-                            alt="Osmel Prieto Teran — B2B Systems Advisor" 
+                            alt="Osmel Prieto Teran — AI Automation Consultant, Bern Switzerland" 
                             class="hero-image"
                             loading="eager"
                         >
-                        <div class="hero-image-overlay"></div>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="hero-scroll">
-            <span data-i18n="hero.scroll">Scroll</span>
-            <div class="scroll-line"></div>
         </div>
     </section>
 
@@ -2619,7 +2571,7 @@
     <section class="intro" id="intro">
         <div class="container">
             <!-- Section title -->
-            <h2 class="intro-title reveal" data-i18n="intro.title">Leaders call me when they can no longer trust their own data.</h2>
+            <h2 class="intro-title reveal" data-i18n="intro.title">Sound familiar?</h2>
             
             <!-- Pain points grid - visual and minimal -->
             <div class="pain-grid reveal reveal-delay-1">
@@ -2629,7 +2581,7 @@
                             <path d="M12 9v4m0 4h.01M3 12a9 9 0 1 1 18 0 9 9 0 0 1-18 0z"/>
                         </svg>
                     </div>
-                    <span class="pain-text" data-i18n="intro.pain1">Decisions based on unreliable data</span>
+                    <span class="pain-text" data-i18n="intro.pain1">The same data copied between two systems</span>
                 </div>
                 <div class="pain-item">
                     <div class="pain-icon">
@@ -2637,7 +2589,7 @@
                             <path d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"/>
                         </svg>
                     </div>
-                    <span class="pain-text" data-i18n="intro.pain2">Revenue delayed by broken workflows</span>
+                    <span class="pain-text" data-i18n="intro.pain2">Approvals that take days instead of minutes</span>
                 </div>
                 <div class="pain-item">
                     <div class="pain-icon">
@@ -2645,7 +2597,7 @@
                             <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <span class="pain-text" data-i18n="intro.pain3">Systems that fail when you need them most</span>
+                    <span class="pain-text" data-i18n="intro.pain3">Repetitive tasks everyone knows should be automated</span>
                 </div>
                 <div class="pain-item">
                     <div class="pain-icon">
@@ -2653,50 +2605,52 @@
                             <path d="M9 17H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4m-6 4l3-3 3 3m-3-3v6"/>
                         </svg>
                     </div>
-                    <span class="pain-text" data-i18n="intro.pain4">Teams doing work that software should handle</span>
+                    <span class="pain-text" data-i18n="intro.pain4">Disconnected tools — email, Excel, CRM, ERP</span>
                 </div>
             </div>
-            
-            <!-- Quote - the main message -->
-            <blockquote class="intro-quote reveal reveal-delay-2">
-                <span data-i18n="intro.quote.line1">Without reliable data, no AI will save you.</span>
-                <span data-i18n="intro.quote.line2">First: clarity. Then: leverage.</span>
-            </blockquote>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <!-- How it works -->
+    <section class="how" id="how">
         <div class="container">
             <header class="section-header reveal">
-                <span class="section-number" data-i18n="services.number">001 — SERVICES</span>
-                <h2 class="section-title" data-i18n="services.title">How I Help</h2>
+                <span class="section-number" data-i18n="how.number">001 — HOW IT WORKS</span>
+                <h2 class="section-title" data-i18n="how.title">From problem to working automation</h2>
             </header>
             
-            <div class="services-grid">
-                <article class="service-card reveal reveal-delay-1">
-                    <span class="service-number">01</span>
-                    <h3 class="service-title" data-i18n="service1.title">Data You Can Trust Across Every System</h3>
-                    <p class="service-description" data-i18n="service1.description">
-                        I connect Salesforce, ERP and the systems around them into one reliable source of truth. So leadership sees accurate numbers, teams stop re-entering data, and decisions are based on facts — not spreadsheets.
-                    </p>
-                    <p class="service-outcome">
-                        <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service1.outcome">Reliable data. Confident decisions. Fewer fire drills.</span>
-                    </p>
-                    <a href="services/integration.html" class="service-link" data-i18n="service1.link">Learn more about integration →</a>
+            <div class="how-steps">
+                <article class="how-step reveal reveal-delay-1">
+                    <span class="how-step-number">01</span>
+                    <h3 class="how-step-title" data-i18n="how.step1.title">Free consultation</h3>
+                    <p class="how-step-description" data-i18n="how.step1.description">30 minutes: you describe the bottleneck, the tools involved, and how often it hurts.</p>
                 </article>
-                
-                <article class="service-card reveal reveal-delay-2">
-                    <span class="service-number">02</span>
-                    <h3 class="service-title" data-i18n="service2.title">Operations That Run Without Manual Intervention</h3>
-                    <p class="service-description" data-i18n="service2.description">
-                        I automate the workflows that slow your teams down: approvals, quoting, order handoffs, cross-system updates. Once data is reliable, AI can amplify the results — but the foundation comes first.
-                    </p>
-                    <p class="service-outcome">
-                        <strong data-i18n="common.outcome">Outcome:</strong> <span data-i18n="service2.outcome">Faster operations. Freed-up teams. Scalable growth.</span>
-                    </p>
-                    <a href="services/automation.html" class="service-link" data-i18n="service2.link">Learn more about automation →</a>
+                <article class="how-step reveal reveal-delay-2">
+                    <span class="how-step-number">02</span>
+                    <h3 class="how-step-title" data-i18n="how.step2.title">Proposed automation</h3>
+                    <p class="how-step-description" data-i18n="how.step2.description">You get a concrete proposal — what to automate, estimated time saved, and realistic scope.</p>
                 </article>
+                <article class="how-step reveal reveal-delay-3">
+                    <span class="how-step-number">03</span>
+                    <h3 class="how-step-title" data-i18n="how.step3.title">Implementation</h3>
+                    <p class="how-step-description" data-i18n="how.step3.description">I build the automation. You own the solution — no black boxes, no vendor lock-in.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free consultation offer -->
+    <section class="offer" id="offer">
+        <div class="container">
+            <div class="offer-banner reveal">
+                <span class="section-number offer-number" data-i18n="offer.number">002 — OFFER</span>
+                <h2 class="offer-title" data-i18n="offer.title">First consultation free</h2>
+                <ul class="offer-bullets">
+                    <li data-i18n="offer.bullet1">We analyze your specific problem</li>
+                    <li data-i18n="offer.bullet2">You leave with a possible automation sketched</li>
+                    <li data-i18n="offer.bullet3">No purchase commitment</li>
+                </ul>
+                <a href="#contact" class="btn btn-primary offer-cta" data-i18n="offer.cta">Claim your free consultation</a>
             </div>
         </div>
     </section>
@@ -2752,42 +2706,14 @@
         </div>
     </section>
 
-    <!-- Why Me Section -->
-    <section class="why-me" id="about">
+    <!-- LinkedIn -->
+    <section class="linkedin-cta" id="linkedin">
         <div class="container">
-            <header class="section-header reveal">
-                <span class="section-number" data-i18n="about.number">003 — ABOUT</span>
-                <h2 class="section-title" data-i18n="about.title">Why Work With Me</h2>
-            </header>
-            
-            <div class="why-grid">
-                <!-- Left: Image -->
-                <div class="why-image-wrapper reveal reveal-delay-1">
-                    <div class="why-image-container">
-                        <span class="why-image-marker" data-i18n="about.marker">At Work</span>
-                        <img 
-                            src="osmel-2.png" 
-                            alt="Osmel Prieto Teran working at his desk" 
-                            class="why-image"
-                            loading="lazy"
-                        >
-                    </div>
-                </div>
-                
-                <!-- Right: Content -->
-                <div class="why-content">
-                    <p class="why-lead reveal reveal-delay-1" data-i18n="about.lead">
-                        I'm a senior advisor who understands <strong>both the technology and the business behind it</strong>.
-                    </p>
-                    
-                    <p class="why-text reveal reveal-delay-2" data-i18n="about.text">
-                        I've worked inside B2B companies where decisions had to be fast, data had to be right, and systems had to hold under pressure. I bring that same discipline to every engagement — calm, structured, and results-focused.
-                    </p>
-                    
-                    <p class="why-approach reveal reveal-delay-3" data-i18n="about.approach">
-                        Clarity. Control. Confidence in your systems — so you can focus on growing the business.
-                    </p>
-                </div>
+            <div class="linkedin-cta-inner reveal">
+                <span class="section-number" data-i18n="linkedin.number">004 — CONNECT</span>
+                <h2 class="section-title linkedin-title" data-i18n="linkedin.title">More about me on LinkedIn</h2>
+                <p class="linkedin-text" data-i18n="linkedin.text">Background, projects, and how I work with Swiss B2B teams — all on my profile.</p>
+                <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener noreferrer" class="btn btn-primary linkedin-btn" data-i18n="linkedin.cta">Visit my LinkedIn profile →</a>
             </div>
         </div>
     </section>
@@ -2835,8 +2761,8 @@
     <section class="contact" id="contact">
         <div class="container">
             <header class="section-header reveal">
-                <span class="section-number">004 — <span data-i18n="nav.contact">CONTACT</span></span>
-                <h2 class="section-title" data-i18n="form.title">Let's Talk</h2>
+                <span class="section-number">005 — <span data-i18n="nav.contact">CONTACT</span></span>
+                <h2 class="section-title" data-i18n="form.title">Claim your free consultation</h2>
             </header>
             
             <div class="contact-grid">
@@ -2916,8 +2842,8 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" data-i18n="form.problem">What's the current pain? (2–3 sentences)</label>
-                        <textarea id="message" name="message" required rows="5" placeholder="Example: &quot;Salesforce quotes don't match ERP prices and approvals are manual. We need a reliable integration + workflow.&quot;"></textarea>
+                        <label for="message" data-i18n="form.problem">What's wasting your team's time? (2–3 sentences)</label>
+                        <textarea id="message" name="message" required rows="5" data-i18n-placeholder="form.problem.placeholder" placeholder="Example: &quot;Every order is copied manually from our CRM into the ERP. It takes 20 minutes each and we process 15 orders a day.&quot;"></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-submit">
@@ -2926,6 +2852,7 @@
                     </button>
                     
                     <div class="form-status" id="formStatus"></div>
+                    <p class="form-trust-note" data-i18n="form.trust">First consultation free. No spam. No obligation.</p>
                 </form>
             </div>
         </div>
@@ -3090,6 +3017,9 @@
                     formStatus.className = 'form-status success';
                     formStatus.textContent = result.message;
                     contactForm.reset();
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'contact_form_submit', { method: 'contact_form' });
+                    }
                 } else {
                     formStatus.className = 'form-status error';
                     formStatus.textContent = result.message || 'Something went wrong. Please try again.';

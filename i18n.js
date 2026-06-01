@@ -81,6 +81,18 @@ const translations = {
         "blog.post6.title": "Why Sales Reps Don't Log Data (And Why That's Not Their Fault)",
         "blog.post6.excerpt": "Your CRM is empty because it was built for management, not for the rep. AI agents fix that by flipping the relationship.",
         
+        "blog.post7.title": "What I Heard at the Salesforce Data & AI Summit Zürich",
+        "blog.post7.excerpt": "The demos were impressive. The honest conversations happened between sessions — about slow rollouts, adoption failures, and the gap between what Salesforce promises and what companies actually ship.",
+        
+        "blog.post8.title": "Why Companies That Invested in Tableau Years Ago Are Winning with AI Today",
+        "blog.post8.excerpt": "The companies winning with AI aren't the ones who adopted it first. They're the ones who built a clean data foundation years ago.",
+        
+        "blog.post9.title": "Salesforce Without Salesforce: What \"Headless\" Means for Your Business",
+        "blog.post9.excerpt": "Headless Salesforce lets you keep the business logic while replacing the interface with whatever fits your team. Here's what that means in practice.",
+        
+        "blog.post10.title": "Your CRM Is About to Become an AI Agent. Is Your Team Ready?",
+        "blog.post10.excerpt": "Salesforce MCP Skills let AI tools operate directly inside your CRM. This isn't a developer update — it's a question about whether your data is ready.",
+        
         // Blog Article Elements
         "blog.cta.button": "Book consultation",
         "blog.continueReading": "Continue",
@@ -454,6 +466,18 @@ const translations = {
         
         "blog.post6.title": "Warum Sales Reps keine Daten erfassen (und warum das nicht ihre Schuld ist)",
         "blog.post6.excerpt": "Ihr CRM ist leer, weil es für das Management gebaut wurde — nicht für den Rep. KI-Agenten kehren diese Dynamik um.",
+        
+        "blog.post7.title": "Was ich beim Salesforce Data & AI Summit Zürich gehört habe",
+        "blog.post7.excerpt": "Die Demos waren beeindruckend. Die ehrlichsten Gespräche fanden zwischen den Sessions statt — über langsame Einführungen und die Lücke zwischen Versprechen und Realität.",
+        
+        "blog.post8.title": "Warum Unternehmen mit früher Tableau-Investition heute mit KI gewinnen",
+        "blog.post8.excerpt": "Die Unternehmen, die heute mit KI gewinnen, haben vor Jahren ein sauberes Datenfundament aufgebaut. Das ist der Vorsprung, den man nicht abkürzen kann.",
+        
+        "blog.post9.title": "Salesforce ohne Salesforce: Was \"Headless\" für Ihr Unternehmen bedeutet",
+        "blog.post9.excerpt": "Headless Salesforce lässt Sie die Business-Logik behalten und die Oberfläche durch etwas ersetzen, das wirklich passt. Was das in der Praxis bedeutet.",
+        
+        "blog.post10.title": "Ihr CRM wird zum KI-Agenten. Ist Ihr Team bereit?",
+        "blog.post10.excerpt": "Salesforce MCP Skills ermöglichen KI-Tools, direkt in Ihrem CRM zu operieren. Das ist kein Entwickler-Update — es ist eine Frage über Ihre Daten.",
         
         // Blog Article Elements
         "blog.cta.button": "Beratung buchen",

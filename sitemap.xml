@@ -159,4 +159,80 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-sales-reps-keine-daten-erfassen.html" />
     </url>
     
+    <!-- Blog Post 7: Salesforce Data & AI Summit Zürich -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/salesforce-data-ai-summit-zurich-2026.html</loc>
+        <lastmod>2026-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-data-ai-summit-zurich-2026.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-data-ai-summit-zurich-2026.html" />
+    </url>
+    
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/salesforce-data-ai-summit-zurich-2026.html</loc>
+        <lastmod>2026-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-data-ai-summit-zurich-2026.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-data-ai-summit-zurich-2026.html" />
+    </url>
+    
+    <!-- Blog Post 8: Tableau Data Foundation AI Advantage -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/tableau-data-foundation-ai-advantage.html</loc>
+        <lastmod>2026-06-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/tableau-data-foundation-ai-advantage.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/tableau-datenfundament-ki-vorteil.html" />
+    </url>
+    
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/tableau-datenfundament-ki-vorteil.html</loc>
+        <lastmod>2026-06-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/tableau-data-foundation-ai-advantage.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/tableau-datenfundament-ki-vorteil.html" />
+    </url>
+    
+    <!-- Blog Post 9: Salesforce Headless -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html</loc>
+        <lastmod>2026-06-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html" />
+    </url>
+    
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html</loc>
+        <lastmod>2026-06-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html" />
+    </url>
+    
+    <!-- Blog Post 10: Salesforce MCP Skills AI Agent CRM -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/salesforce-mcp-skills-ai-agent-crm.html</loc>
+        <lastmod>2026-06-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-mcp-skills-ai-agent-crm.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-mcp-skills-ki-agent-crm.html" />
+    </url>
+    
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/salesforce-mcp-skills-ki-agent-crm.html</loc>
+        <lastmod>2026-06-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-mcp-skills-ai-agent-crm.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-mcp-skills-ki-agent-crm.html" />
+    </url>
+    
 </urlset>

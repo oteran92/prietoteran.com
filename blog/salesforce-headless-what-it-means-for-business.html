@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMG4SZNQ3L');
+    </script>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Salesforce Without Salesforce: What "Headless" Means for Your Business — Osmel Prieto Teran</title>
+    <meta name="description" content="Headless Salesforce lets you keep the business logic — automations, workflows, CRM intelligence — while replacing the interface with whatever works best for your team. Here's what that means in practice.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Salesforce headless architecture, Salesforce API business case, Salesforce composable CRM, Salesforce flexibility Switzerland, CRM without interface">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html">
+    
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html">
+    <meta property="og:title" content="Salesforce Without Salesforce: What 'Headless' Means for Your Business">
+    <meta property="og:description" content="Headless Salesforce lets you keep the business logic while replacing the interface with whatever works best for your team. Here's what that means in practice.">
+    <meta property="og:image" content="https://www.prietoteran.com/blog/images/salesforce-headless-what-it-means-for-business.png">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Salesforce Without Salesforce: What 'Headless' Means for Your Business">
+    <meta name="twitter:description" content="Headless Salesforce lets you keep the business logic while replacing the interface. Here's what that means in practice.">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Salesforce Without Salesforce: What 'Headless' Means for Your Business",
+      "description": "Headless Salesforce lets you keep the business logic — automations, workflows, CRM intelligence — while replacing the interface with whatever works best for your team. Here's what that means in practice.",
+      "image": "https://www.prietoteran.com/blog/images/salesforce-headless-what-it-means-for-business.png",
+      "author": {
+        "@type": "Person",
+        "name": "Osmel Prieto Teran",
+        "url": "https://www.prietoteran.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Osmel Prieto Teran",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.prietoteran.com/favicon.svg"
+        }
+      },
+      "datePublished": "2026-06-08",
+      "dateModified": "2026-06-08",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html"
+      }
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../styles.css?v=11">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#how" data-i18n="nav.how">Services</a></li>
+                        <li><a href="../#blog" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">EN</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </button>
+                            <button class="lang-option" data-lang="de">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <article class="article">
+        <div class="container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-category">Architecture</span>
+                    <span class="article-divider">·</span>
+                    <time datetime="2026-06-08">June 8, 2026</time>
+                    <span class="article-divider">·</span>
+                    <span class="article-reading-time">5 min read</span>
+                </div>
+                <h1 class="article-title">Salesforce Without Salesforce: What "Headless" Means for Your Business</h1>
+                <p class="article-intro">What if you could keep all of Salesforce's business logic — the automations, the workflow rules, the CRM intelligence — and replace the interface with something that actually fits how your team works? That's what headless Salesforce makes possible.</p>
+            </header>
+        </div>
+        
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="images/salesforce-headless-what-it-means-for-business.png" alt="Abstract diagram showing Salesforce business logic layer connected to multiple custom interfaces — illustrating headless architecture">
+        </div>
+        
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <p class="article-lead">Most companies think of Salesforce as a package deal: you buy the platform, you get the interface, you use it the way Salesforce built it. When something doesn't fit, you customise within the constraints they allow. When that isn't enough, you work around them.</p>
+
+                <p>But Salesforce has been quietly building something different — an approach that separates what Salesforce knows about your business from the screen your team sees. This is what "headless" means. And for certain companies and use cases, it changes the conversation entirely.</p>
+
+                <h2>What "Headless" Actually Means</h2>
+
+                <p>In traditional software, the frontend (what you see) and the backend (the logic and data) are tightly bound together. When you open a Salesforce record, Salesforce decides what that screen looks like, what fields appear, in what order, with what controls.</p>
+
+                <p>A headless architecture separates these two layers. The backend — Salesforce's data model, its workflow automation, its business rules, its security model — stays in place and continues to do what it does well. But the frontend is detached. Instead of Salesforce's own interface rendering the screen, a different application pulls the data via API and presents it however it chooses.</p>
+
+                <p>Your team could be looking at a completely custom interface built for their specific workflow — and every action they take is still writing back to Salesforce, still triggering Salesforce's automations, still governed by Salesforce's permissions model. The intelligence of the platform is fully preserved. The limitation of its interface is removed.</p>
+
+                <h2>Three Business Problems This Actually Solves</h2>
+
+                <p>Headless Salesforce isn't the right answer for everything. But there are specific situations where it changes the calculus in a meaningful way.</p>
+
+                <p><strong>Field teams that won't use Salesforce.</strong> I've worked with companies where field technicians, installation crews, and logistics teams are supposed to log work orders, update job status, and capture site information in Salesforce. They don't. The interface isn't built for someone working from a phone in a factory or a warehouse. It's built for a desk-based sales team. Headless allows you to build a purpose-fit mobile interface for that field team — simple, fast, offline-capable — while every update they make still lands in Salesforce.</p>
+
+                <p><strong>Customer-facing experiences powered by CRM data.</strong> If you have a customer portal, a self-service checkout flow, or a partner extranet, you probably don't want to expose Salesforce's interface to external users. But you do want the logic and data from Salesforce to power what they see. Headless makes this clean: the external experience is yours to design, and Salesforce handles everything behind it.</p>
+
+                <p><strong>Legacy systems that can't be replaced yet.</strong> Some companies have internal tools — built years ago, deeply embedded — that their teams know and depend on. Replacing them is a multi-year project. Headless allows you to start moving data and business logic into Salesforce while the old interface stays in place for now. The migration becomes incremental, not a big bang.</p>
+
+                <div class="article-highlight">
+                    <p><strong>The core insight:</strong> The value of Salesforce is in its data model and business logic — not in its interface. Headless lets you leverage the investment you've made in the platform without being constrained by the parts that don't fit your specific context.</p>
+                </div>
+
+                <h2>What It Doesn't Solve</h2>
+
+                <p>Headless architecture adds complexity. You are now building and maintaining a custom frontend. That means design, development, and ongoing maintenance that wouldn't exist with a standard Salesforce deployment.</p>
+
+                <p>This trade-off is worth it in specific circumstances. It isn't worth it as a default strategy for companies whose main problem is adoption or data quality. If your team isn't using Salesforce because the process isn't designed correctly or because the data model doesn't reflect how you actually sell, building a prettier interface won't fix that. You'll have a custom frontend sitting on top of the same broken foundation.</p>
+
+                <p>The question to ask is: is the interface the actual constraint? Or is it process, adoption, or data? Headless solves the first problem. The other three need a different approach.</p>
+
+                <h2>How to Know If This Is Relevant for You</h2>
+
+                <p>A few questions worth asking before going down this path:</p>
+
+                <ol>
+                    <li><strong>Do you have a specific user group whose workflow genuinely can't fit in Salesforce's standard interface?</strong> Field teams, warehouse workers, customer-facing portals — these are legitimate cases. "The sales team finds it a bit annoying" is not.</li>
+                    <li><strong>Do you have the technical capacity to build and maintain a custom frontend?</strong> This is a real ongoing cost. If you don't have developers in-house or a reliable technical partner, the operational overhead of a headless setup may outweigh the benefit.</li>
+                    <li><strong>Is your Salesforce backend actually clean enough to build on?</strong> Headless exposes the backend more directly. If the data model is messy, the custom frontend will inherit that mess in a way that's harder to hide than it is in standard Salesforce.</li>
+                </ol>
+
+                <p>If the answers are yes, yes, and yes — headless is worth a serious conversation. If any of those is uncertain, that's where to focus first.</p>
+
+                <h2>The Bigger Picture</h2>
+
+                <p>Headless Salesforce is part of a broader shift in enterprise software: away from monolithic platforms where you take the whole package or nothing, toward composable architectures where you assemble the pieces that fit your business.</p>
+
+                <p>For companies with the right context and maturity, that shift creates real competitive advantage. The organisations that are most effective with Salesforce five years from now won't necessarily be the ones who implemented it most completely. They'll be the ones who integrated it most intelligently — using the parts that add value, replacing the parts that don't, and building around the platform in ways their competitors can't easily copy.</p>
+
+                <p>Headless is one of the tools that makes that possible.</p>
+            </div>
+            
+            <!-- Simple CTA -->
+            <div class="article-cta-simple">
+                <a href="../#contact" class="article-cta-button" data-i18n="blog.cta.button">Get in touch</a>
+            </div>
+            
+            <!-- Related Content -->
+            <div class="article-related">
+                <h4 data-i18n="blog.continueReading">Continue Reading</h4>
+                <div class="article-related-links">
+                    <a href="salesforce-mcp-skills-ai-agent-crm.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.article">Article</span>
+                        <span class="article-related-title" data-i18n="blog.post10.title">Your CRM Is About to Become an AI Agent. Is Your Team Ready?</span>
+                    </a>
+                    <a href="why-salesforce-erp-integrations-break.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.article">Article</span>
+                        <span class="article-related-title" data-i18n="blog.post1.title">Why Integrations Break</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js?v=2"></script>
+    
+    <!-- Global JavaScript -->
+    <script src="../app.js?v=2"></script>
+</body>
+</html>

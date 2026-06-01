@@ -13,23 +13,24 @@ const translations = {
         "nav.home": "Home",
         
         // Hero Section
-        "hero.label": "AI Automation",
+        "hero.label": "Business · Technology · Automation",
         "hero.title.line1": "Automate",
         "hero.title.line2": "manual",
         "hero.title.line3": "work",
         "hero.title.companies": "",
-        "hero.badge": "Free consultation",
-        "hero.subtitle": "Save time with practical AI automation. Swiss B2B.",
-        "hero.cta.primary": "Book consultation",
-        "hero.cta.explore": "Process",
-        "hero.cta.work": "Book consultation",
+        "hero.badge": "Free consultation · No obligation",
+        "hero.subtitle": "Describe what's slow or manual. I'll show you what can be automated and how.",
+        "hero.positioning": "Problem-solver. From boardroom requirement to working code.",
+        "hero.cta.primary": "Book free consultation",
+        "hero.cta.explore": "See how it works",
+        "hero.cta.work": "Book free consultation",
         "hero.scroll": "Scroll",
         "hero.marker.portrait": "Portrait",
         "hero.marker.location": "Bern",
-        "hero.availability": "Available",
+        "hero.availability": "Available for new projects",
         
         // Intro Section — operational pains
-        "intro.title": "Problems",
+        "intro.title": "Does this sound familiar?",
         "intro.pain1": "Duplicate data entry",
         "intro.pain2": "Slow approvals",
         "intro.pain3": "Repetitive tasks",
@@ -102,16 +103,16 @@ const translations = {
         // LinkedIn Section (replaces About)
         "linkedin.number": "04 CONNECT",
         "linkedin.title": "LinkedIn",
-        "linkedin.text": "Background and projects.",
+        "linkedin.text": "I'm the bridge between business and technology. Problem-solver by mindset, engineer by practice. See my full background on LinkedIn.",
         "linkedin.cta": "Visit profile",
         
         // Trust Signals
-        "trust.title1": "Practical",
-        "trust.desc1": "Workflows that run.",
-        "trust.title2": "Ownership",
-        "trust.desc2": "You own the code.",
+        "trust.title1": "Bridge Builder",
+        "trust.desc1": "I connect business strategy with technical delivery so neither side gets lost in translation.",
+        "trust.title2": "Full Ownership",
+        "trust.desc2": "You own every decision, every document, every line of code. No vendor lock-in.",
         "trust.title3": "Swiss B2B",
-        "trust.desc3": "Based in Bern.",
+        "trust.desc3": "Based in Bern. Working with companies that need practical solutions, not pilots.",
         
         // CTA Section
         "cta.text": "Book consultation.",
@@ -378,13 +379,14 @@ const translations = {
         "nav.home": "← Startseite",
         
         // Hero Section
-        "hero.label": "KI-Automatisierung & Beratung · Schweiz",
-        "hero.title.line1": "Automatisieren Sie die Arbeit,",
-        "hero.title.line2": "die Ihrem Team",
-        "hero.title.line3": "Zeit kostet",
+        "hero.label": "Geschäft · Technologie · Automatisierung",
+        "hero.title.line1": "Automatisieren Sie",
+        "hero.title.line2": "manuelle",
+        "hero.title.line3": "Arbeit",
         "hero.title.companies": "",
         "hero.badge": "Erstberatung gratis · Unverbindlich",
-        "hero.subtitle": "Beschreiben Sie, was langsam, manuell oder fehleranfällig ist. In der kostenlosen Erstberatung analysieren wir das Problem — und ich skizziere eine konkrete Automatisierung (oft mit KI), die echte Stunden pro Woche spart.",
+        "hero.subtitle": "Beschreiben Sie, was Zeit kostet. Ich zeige Ihnen, was automatisiert werden kann und wie.",
+        "hero.positioning": "Problemlöser. Von der Anforderung im Boardroom zum funktionierenden Code.",
         "hero.cta.primary": "Kostenlose Erstberatung buchen",
         "hero.cta.explore": "So funktioniert's",
         "hero.cta.work": "Kostenlose Erstberatung buchen",
@@ -488,16 +490,16 @@ const translations = {
         // LinkedIn Section
         "linkedin.number": "04 VERNETZEN",
         "linkedin.title": "LinkedIn",
-        "linkedin.text": "Hintergrund und Projekte.",
+        "linkedin.text": "Ich bin die Brücke zwischen Geschäft und Technologie. Problemlöser als Denkweise, Ingenieur als Praxis. Meinen vollständigen Werdegang finden Sie auf LinkedIn.",
         "linkedin.cta": "Profil besuchen",
         
         // Trust Signals
-        "trust.title1": "Praktisch",
-        "trust.desc1": "Workflows, die laufen.",
-        "trust.title2": "Eigentum",
-        "trust.desc2": "Der Code gehört Ihnen.",
+        "trust.title1": "Brückenbauer",
+        "trust.desc1": "Ich verbinde Geschäftsstrategie mit technischer Umsetzung, damit keine Seite verloren geht.",
+        "trust.title2": "Volles Eigentum",
+        "trust.desc2": "Jede Entscheidung, jedes Dokument, jede Codezeile gehört Ihnen. Kein Vendor Lock-in.",
         "trust.title3": "Schweizer B2B",
-        "trust.desc3": "Standort Bern.",
+        "trust.desc3": "Standort Bern. Für Unternehmen, die praktische Lösungen brauchen, keine Pilotprojekte.",
         
         // CTA Section
         "cta.text": "Beratung buchen.",

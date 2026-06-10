@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/services/automation.html",        "destination": "/",           "permanent": true },
+    { "source": "/services/integration.html",       "destination": "/",           "permanent": true },
+    { "source": "/services/architecture.html",      "destination": "/",           "permanent": true },
+    { "source": "/services/consulting.html",        "destination": "/",           "permanent": true },
+    { "source": "/de/services/automation.html",     "destination": "/?lang=de",   "permanent": true },
+    { "source": "/de/services/integration.html",    "destination": "/?lang=de",   "permanent": true },
+    { "source": "/de/",                             "destination": "/?lang=de",   "permanent": true },
+    { "source": "/es/services/automation.html",     "destination": "/",           "permanent": true },
+    { "source": "/es/services/integration.html",    "destination": "/",           "permanent": true },
+    { "source": "/es/",                             "destination": "/",           "permanent": true }
+  ]
+}

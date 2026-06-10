@@ -13,17 +13,6 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/" />
     </url>
     
-    <!-- Automation Service (single service landing) -->
-    <url>
-        <loc>https://www.prietoteran.com/services/automation.html</loc>
-        <lastmod>2026-05-26</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/services/automation.html" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/services/automation.html" />
-    </url>
-    
     <!-- Blog Index - English -->
     <url>
         <loc>https://www.prietoteran.com/blog/</loc>

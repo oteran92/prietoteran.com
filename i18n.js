@@ -18,12 +18,12 @@ const translations = {
         "hero.title.line2": "manual",
         "hero.title.line3": "work",
         "hero.title.companies": "",
-        "hero.badge": "Free consultation · No obligation",
-        "hero.subtitle": "Describe what's slow or manual. I'll show you what can be automated and how.",
+        "hero.badge": "Paid 90-minute audit · 450 EUR · Written one-pager",
+        "hero.subtitle": "Describe what's slow or manual. In a paid 90-minute audit I name the bottleneck and tell you what to automate first.",
         "hero.positioning": "Problem-solver. From boardroom requirement to working code.",
-        "hero.cta.primary": "Book free consultation",
+        "hero.cta.primary": "Request the paid audit",
         "hero.cta.explore": "See how it works",
-        "hero.cta.work": "Book free consultation",
+        "hero.cta.work": "Request the paid audit",
         "hero.scroll": "Scroll",
         "hero.marker.portrait": "Portrait",
         "hero.marker.location": "Bern",
@@ -39,22 +39,23 @@ const translations = {
         // How it works (single service)
         "how.number": "01 PROCESS",
         "how.title": "How it works",
-        "how.step1.title": "1. Consultation",
-        "how.step1.description": "Map the bottleneck.",
-        "how.step2.title": "2. Proposal",
-        "how.step2.description": "Concrete automation plan.",
-        "how.step3.title": "3. Implementation",
-        "how.step3.description": "Build and handover.",
+        "how.step1.title": "1. Paid audit, 90 min",
+        "how.step1.description": "450 EUR. Process, systems, volume.",
+        "how.step2.title": "2. Written one-pager",
+        "how.step2.description": "Bottleneck and what to automate first.",
+        "how.step3.title": "3. Optional 4-day sprint",
+        "how.step3.description": "2,800 EUR fixed. Build and handover.",
         "how.examples.title": "Examples",
         "how.examples.list": "Quote-to-order · Email routing · CRM-ERP sync",
         
-        // Irresistible offer banner
+        // Paid audit offer banner
         "offer.number": "02 OFFER",
-        "offer.title": "Free consultation",
-        "offer.bullet1": "Analyze problem",
-        "offer.bullet2": "Automation sketch",
-        "offer.bullet3": "No commitment",
-        "offer.cta": "Book now",
+        "offer.title": "90-minute automation audit, 450 EUR",
+        "offer.bullet1": "90 minutes with the engineer who would build it",
+        "offer.bullet2": "A written one-pager: your bottleneck and what to automate first",
+        "offer.bullet3": "Fixed price, no free discovery call",
+        "offer.note": "After the audit, optional: a 4-day fixed sprint at 2,800 EUR, or 700 EUR per day for longer freelance work. Remote from Switzerland, CET.",
+        "offer.cta": "Request the paid audit",
         
         // Blog Section
         "nav.blog": "Blog",
@@ -115,7 +116,7 @@ const translations = {
         "trust.desc3": "Based in Bern. Working with companies that need practical solutions, not pilots.",
         
         // CTA Section
-        "cta.text": "Book consultation.",
+        "cta.text": "Tell me what's slow or manual and which systems are involved. I reply with audit slots and an invoice for the 450 EUR.",
         "cta.link": "Email",
         
         // Footer
@@ -177,8 +178,8 @@ const translations = {
         // Service Pages - Automation (single service landing)
         "auto.label": "AI Automation & Consulting",
         "auto.title": "Automations that<br>save your team time",
-        "auto.subtitle": "Free first consultation: we map your bottleneck and I'll propose a practical automation — often with AI. Then I build it. You own it.",
-        "auto.cta": "→ Book free consultation",
+        "auto.subtitle": "Paid 90-minute audit, 450 EUR: I name your bottleneck and what to automate first, in writing. Then I build it. You own it.",
+        "auto.cta": "→ Request the paid audit",
         
         "auto.problem.label": "The Problem",
         "auto.problem.title": "Manual work is eating your time",
@@ -228,8 +229,8 @@ const translations = {
         "auto.fit2": "Errors are becoming a pattern",
         "auto.fit3": "You need to scale without hiring",
         
-        "auto.cta2.text": "First consultation free — describe what's slow or manual.",
-        "auto.cta2.button": "→ Claim free consultation",
+        "auto.cta2.text": "Describe what's slow or manual and start with the paid audit.",
+        "auto.cta2.button": "→ Request the paid audit",
         
         // Service Pages - AI
         "ai.label": "Service",
@@ -351,12 +352,12 @@ const translations = {
         "consult.cta2.button": "→ Start a conversation",
         
         // Process steps
-        "process.step1": "Free consultation",
-        "process.step2": "Problem mapped",
-        "process.step3": "Automation proposed",
+        "process.step1": "Paid 90-min audit",
+        "process.step2": "Written one-pager",
+        "process.step3": "Optional 4-day sprint",
         
         // Form
-        "form.title": "Claim your free consultation",
+        "form.title": "Request the 90-minute audit",
         "form.name": "Name",
         "form.company": "Company",
         "form.role": "Role",
@@ -366,8 +367,8 @@ const translations = {
         "form.process": "What process is causing the most pain?",
         "form.usecase": "What problem are you trying to solve with AI?",
         "form.situation": "What's your current situation?",
-        "form.submit": "→ Claim free consultation",
-        "form.trust": "First consultation free. No spam. No obligation."
+        "form.submit": "→ Request the paid audit",
+        "form.trust": "The audit is 450 EUR. I reply with available slots and an invoice. No spam."
     },
     
     de: {
@@ -384,12 +385,12 @@ const translations = {
         "hero.title.line2": "manuelle",
         "hero.title.line3": "Arbeit",
         "hero.title.companies": "",
-        "hero.badge": "Erstberatung gratis · Unverbindlich",
-        "hero.subtitle": "Beschreiben Sie, was Zeit kostet. Ich zeige Ihnen, was automatisiert werden kann und wie.",
+        "hero.badge": "Bezahltes 90-Minuten-Audit · 450 EUR · Schriftlicher One-Pager",
+        "hero.subtitle": "Beschreiben Sie, was langsam oder manuell läuft. Im bezahlten 90-Minuten-Audit benenne ich den Engpass und sage Ihnen, was zuerst automatisiert wird.",
         "hero.positioning": "Problemlöser. Von der Anforderung im Boardroom zum funktionierenden Code.",
-        "hero.cta.primary": "Kostenlose Erstberatung buchen",
+        "hero.cta.primary": "Bezahltes Audit anfragen",
         "hero.cta.explore": "So funktioniert's",
-        "hero.cta.work": "Kostenlose Erstberatung buchen",
+        "hero.cta.work": "Bezahltes Audit anfragen",
         "hero.scroll": "Scrollen",
         "hero.marker.portrait": "Portrait",
         "hero.marker.location": "Bern, CH",
@@ -405,22 +406,23 @@ const translations = {
         // How it works
         "how.number": "01 ABLAUF",
         "how.title": "Ablauf",
-        "how.step1.title": "1. Beratung",
-        "how.step1.description": "Engpass analysieren.",
-        "how.step2.title": "2. Vorschlag",
-        "how.step2.description": "Konkreter Plan.",
-        "how.step3.title": "3. Umsetzung",
-        "how.step3.description": "Bauen und übergeben.",
+        "how.step1.title": "1. Bezahltes Audit, 90 Min.",
+        "how.step1.description": "450 EUR. Prozess, Systeme, Mengen.",
+        "how.step2.title": "2. Schriftlicher One-Pager",
+        "how.step2.description": "Engpass und was zuerst automatisiert wird.",
+        "how.step3.title": "3. Optionaler 4-Tage-Sprint",
+        "how.step3.description": "2'800 EUR fix. Bauen und übergeben.",
         "how.examples.title": "Beispiele",
         "how.examples.list": "Angebot-zu-Auftrag · E-Mail-Triage · CRM-ERP Sync",
         
-        // Offer banner
+        // Paid audit offer banner
         "offer.number": "02 ANGEBOT",
-        "offer.title": "Gratis Erstberatung",
-        "offer.bullet1": "Problem analysieren",
-        "offer.bullet2": "Automatisierungsskizze",
-        "offer.bullet3": "Keine Verpflichtung",
-        "offer.cta": "Jetzt buchen",
+        "offer.title": "90-Minuten-Automatisierungs-Audit, 450 EUR",
+        "offer.bullet1": "90 Minuten mit dem Ingenieur, der es baut",
+        "offer.bullet2": "Ein schriftlicher One-Pager: Ihr Engpass und was zuerst automatisiert wird",
+        "offer.bullet3": "Fixpreis, kein kostenloses Erstgespräch",
+        "offer.note": "Nach dem Audit optional: ein 4-Tage-Sprint zum Fixpreis von 2'800 EUR oder 700 EUR pro Tag für längere Freelance-Einsätze. Remote aus der Schweiz, CET.",
+        "offer.cta": "Bezahltes Audit anfragen",
         
         // Legacy service keys (automation landing pages)
         "service1.title": "Daten, denen Sie über alle Systeme vertrauen können",
@@ -502,7 +504,7 @@ const translations = {
         "trust.desc3": "Standort Bern. Für Unternehmen, die praktische Lösungen brauchen, keine Pilotprojekte.",
         
         // CTA Section
-        "cta.text": "Beratung buchen.",
+        "cta.text": "Beschreiben Sie, was langsam oder manuell läuft und welche Systeme beteiligt sind. Ich antworte mit Terminen für das Audit und der Rechnung über 450 EUR.",
         "cta.link": "E-Mail",
         
         // Footer
@@ -564,8 +566,8 @@ const translations = {
         // Service Pages - Automation
         "auto.label": "KI-Automatisierung & Beratung",
         "auto.title": "Automatisierungen, die<br>Ihrem Team Zeit sparen",
-        "auto.subtitle": "Kostenlose Erstberatung: Wir analysieren den Engpass — ich skizziere eine konkrete Automatisierung (oft mit KI). Dann baue ich sie. Sie besitzen sie.",
-        "auto.cta": "→ Gratis Erstberatung buchen",
+        "auto.subtitle": "Bezahltes 90-Minuten-Audit, 450 EUR: Ich benenne den Engpass und was zuerst automatisiert wird, schriftlich. Dann baue ich es. Sie besitzen es.",
+        "auto.cta": "→ Bezahltes Audit anfragen",
         
         "auto.problem.label": "Das Problem",
         "auto.problem.title": "Manuelle Arbeit frisst Ihre Zeit",
@@ -615,8 +617,8 @@ const translations = {
         "auto.fit2": "Fehler zu einem Muster werden",
         "auto.fit3": "Sie skalieren müssen, ohne einzustellen",
         
-        "auto.cta2.text": "Erstberatung gratis — beschreiben Sie, was Zeit kostet.",
-        "auto.cta2.button": "→ Gratis Erstberatung sichern",
+        "auto.cta2.text": "Beschreiben Sie, was Zeit kostet, und starten Sie mit dem bezahlten Audit.",
+        "auto.cta2.button": "→ Bezahltes Audit anfragen",
         
         // Service Pages - AI
         "ai.label": "Leistung",
@@ -738,12 +740,12 @@ const translations = {
         "consult.cta2.button": "→ Gespräch starten",
         
         // Process steps
-        "process.step1": "Kostenlose Erstberatung",
-        "process.step2": "Problem analysiert",
-        "process.step3": "Automatisierung vorgeschlagen",
+        "process.step1": "Bezahltes 90-Min-Audit",
+        "process.step2": "Schriftlicher One-Pager",
+        "process.step3": "Optionaler 4-Tage-Sprint",
         
         // Form
-        "form.title": "Gratis Erstberatung sichern",
+        "form.title": "90-Minuten-Audit anfragen",
         "form.name": "Name",
         "form.company": "Unternehmen",
         "form.role": "Position",
@@ -753,8 +755,8 @@ const translations = {
         "form.process": "Welcher Prozess verursacht die meisten Schmerzen?",
         "form.usecase": "Welches Problem versuchen Sie mit KI zu lösen?",
         "form.situation": "Wie ist Ihre aktuelle Situation?",
-        "form.submit": "→ Gratis Erstberatung sichern",
-        "form.trust": "Erstberatung gratis. Kein Spam. Unverbindlich."
+        "form.submit": "→ Bezahltes Audit anfragen",
+        "form.trust": "Das Audit kostet 450 EUR. Ich antworte mit freien Terminen und der Rechnung. Kein Spam."
     },
     
     es: {
@@ -770,9 +772,11 @@ const translations = {
         "hero.title.line2": "claridad y control en",
         "hero.title.line3": "sistemas B2B",
         "hero.title.companies": "complejos",
+        "hero.badge": "Auditoría de pago de 90 minutos · 450 EUR · Informe escrito",
         "hero.subtitle": "Cuando tus sistemas no se comunican entre sí, los líderes pierden visibilidad y los equipos pierden tiempo. Ayudo a empresas B2B en Suiza a reconstruir la confianza en sus datos, operaciones y tecnología.",
         "hero.cta.explore": "Cómo ayudo",
-        "hero.cta.work": "Reservar llamada de 20-min",
+        "hero.cta.primary": "Solicitar la auditoría de pago",
+        "hero.cta.work": "Solicitar la auditoría de pago",
         "hero.scroll": "Desplazar",
         "hero.marker.portrait": "Retrato",
         "hero.marker.location": "Berna, CH",
@@ -786,6 +790,23 @@ const translations = {
         "intro.pain4": "Equipos haciendo trabajo que el software debería manejar",
         "intro.quote.line1": "Sin datos confiables, ninguna IA te salvará.",
         "intro.quote.line2": "Primero: claridad. Después: apalancamiento.",
+        
+        // How it works
+        "how.step1.title": "1. Auditoría de pago, 90 min",
+        "how.step1.description": "450 EUR. Proceso, sistemas, volumen.",
+        "how.step2.title": "2. Informe escrito de una página",
+        "how.step2.description": "El cuello de botella y qué automatizar primero.",
+        "how.step3.title": "3. Sprint opcional de 4 días",
+        "how.step3.description": "2.800 EUR fijo. Construir y entregar.",
+        
+        // Paid audit offer banner
+        "offer.number": "02 OFERTA",
+        "offer.title": "Auditoría de automatización de 90 minutos, 450 EUR",
+        "offer.bullet1": "90 minutos con el ingeniero que lo construiría",
+        "offer.bullet2": "Un informe escrito de una página: tu cuello de botella y qué automatizar primero",
+        "offer.bullet3": "Precio fijo, sin llamada de descubrimiento gratuita",
+        "offer.note": "Después de la auditoría, opcional: un sprint de 4 días a precio fijo de 2.800 EUR, o 700 EUR por día para trabajo freelance más largo. Remoto desde Suiza, CET.",
+        "offer.cta": "Solicitar la auditoría de pago",
         
         // Services Section
         "services.number": "001 — SERVICIOS",
@@ -857,7 +878,7 @@ const translations = {
         "trust.desc3": "Control de acceso, auditabilidad y flujos de datos seguros",
         
         // CTA Section
-        "cta.text": "Si las decisiones en tu empresa dependen de datos en los que no estás seguro de poder confiar — hablemos. Responderé con 2–3 pasos concretos para recuperar la claridad.",
+        "cta.text": "Cuéntame qué va lento o manual y qué sistemas están involucrados. Respondo con horarios para la auditoría y la factura de 450 EUR.",
         "cta.link": "Iniciar una conversación",
         
         // Footer
@@ -1093,12 +1114,12 @@ const translations = {
         "consult.cta2.button": "→ Iniciar una conversación",
         
         // Process steps
-        "process.step1": "Llamada 20-min",
-        "process.step2": "Confirmar fit",
-        "process.step3": "Propuesta",
+        "process.step1": "Auditoría de pago 90 min",
+        "process.step2": "Informe escrito",
+        "process.step3": "Sprint opcional de 4 días",
         
         // Form
-        "form.title": "Hablemos",
+        "form.title": "Solicitar la auditoría de 90 minutos",
         "form.name": "Nombre",
         "form.company": "Empresa",
         "form.role": "Cargo",
@@ -1107,8 +1128,8 @@ const translations = {
         "form.process": "¿Qué proceso está causando más dolor?",
         "form.usecase": "¿Qué problema estás tratando de resolver con IA?",
         "form.situation": "¿Cuál es tu situación actual?",
-        "form.submit": "→ Iniciar la conversación",
-        "form.trust": "Tu información se mantiene privada. Sin spam."
+        "form.submit": "→ Solicitar la auditoría de pago",
+        "form.trust": "La auditoría cuesta 450 EUR. Respondo con horarios disponibles y la factura. Sin spam."
     }
 };
 

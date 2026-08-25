@@ -70,13 +70,13 @@ Parameters:
    ```
    Before: "Learn about Salesforce ERP integration services in Switzerland."
    After: "Most integrations break in 2-4 weeks. Learn the 3 architecture principles 
-           that prevent failures—based on 14+ Swiss B2B projects. Free consultation."
+           that prevent failures. Paid 90-minute audit, 450 EUR."
    
    Improvements:
    - Specific stat (2-4 weeks)
    - Concrete promise (3 principles)
-   - Credibility (14+ projects)
-   - CTA (Free consultation)
+   - CTA matching the live offer (paid audit, not a free consultation)
+   - No invented client or project counts
    ```
 
 3. **Schema Markup (if applicable)**

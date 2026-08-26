@@ -11,6 +11,7 @@ const translations = {
         "nav.about": "LinkedIn",
         "nav.contact": "Contact",
         "nav.home": "Home",
+        "nav.tools": "Tools",
         
         // Hero Section
         "hero.label": "Independent integration engineer",
@@ -378,6 +379,7 @@ const translations = {
         "nav.about": "LinkedIn",
         "nav.contact": "Kontakt",
         "nav.home": "← Startseite",
+        "nav.tools": "Tools",
         
         // Hero Section
         "hero.label": "Unabhängiger Integrationsingenieur",
@@ -765,6 +767,7 @@ const translations = {
         "nav.about": "Sobre mí",
         "nav.contact": "Contacto",
         "nav.home": "← Inicio",
+        "nav.tools": "Herramientas",
         
         // Hero Section
         "hero.label": "Ingeniero de integración independiente",
@@ -1248,6 +1251,13 @@ class I18nManager {
         document.querySelectorAll('[data-i18n-title]').forEach(element => {
             const key = element.getAttribute('data-i18n-title');
             element.title = this.t(key);
+        });
+
+        // Keep the Tools navigation link aligned with the active language.
+        document.querySelectorAll('[data-tools-link]').forEach(link => {
+            link.href = this.currentLanguage === 'de'
+                ? '/de/tools/erp-crm-roi-rechner.html'
+                : '/tools/erp-crm-roi-calculator.html';
         });
     }
     

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-WMG4SZNQ3L');
+    </script>
+
+    <!-- Search and social metadata -->
+    <title>ERP–CRM ROI-Rechner & Integrations-Risikocheck — Osmel Prieto Teran</title>
+    <meta name="description" content="Berechnen Sie die jährlichen Kosten manueller ERP–CRM-Arbeit, das realistisch rückgewinnbare Potenzial und Ihr Integrationsrisiko in drei Minuten.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.prietoteran.com/de/tools/erp-crm-roi-rechner.html">
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/tools/erp-crm-roi-calculator.html">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/tools/erp-crm-roi-rechner.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/tools/erp-crm-roi-calculator.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prietoteran.com/de/tools/erp-crm-roi-rechner.html">
+    <meta property="og:title" content="ERP–CRM ROI-Rechner & Integrations-Risikocheck">
+    <meta property="og:description" content="Finden Sie die versteckten Kosten manueller Arbeit und das Risiko zwischen CRM und ERP.">
+    <meta property="og:image" content="https://www.prietoteran.com/blog/images/the-real-cost-of-manual-data-entry.png">
+    <meta property="og:locale" content="de_CH">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ERP–CRM ROI-Rechner & Integrations-Risikocheck">
+    <meta name="twitter:description" content="Jährlichen operativen Aufwand und Integrationsrisiko in drei Minuten berechnen.">
+
+    <!-- Structured data describes the free utility without making outcome claims -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "ERP–CRM ROI-Rechner",
+      "url": "https://www.prietoteran.com/de/tools/erp-crm-roi-rechner.html",
+      "description": "Ein kostenloser Rechner für manuelle ERP–CRM-Prozesskosten und Integrationsrisiken.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "de",
+      "author": {
+        "@type": "Person",
+        "name": "Osmel Prieto Teran",
+        "url": "https://www.prietoteran.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CHF"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css?v=12">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../../?lang=de" class="nav-logo"><span>O</span>PT<span>.</span></a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Menü umschalten">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../blog/">Blog</a></li>
+                        <li><a href="/de/tools/erp-crm-roi-rechner.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
+                        <li><a href="#diagnosticLead">Kontakt</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle" aria-label="Sprache wählen">
+                            <span class="lang-code" id="currentLangCode">DE</span>
+                            <span class="lang-arrow" aria-hidden="true">⌄</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <a href="../../tools/erp-crm-roi-calculator.html" class="lang-option" data-lang="en">
+                                <span class="lang-code">EN</span><span class="lang-name">English</span>
+                            </a>
+                            <a href="erp-crm-roi-rechner.html" class="lang-option active" data-lang="de">
+                                <span class="lang-code">DE</span><span class="lang-name">Deutsch</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Darstellung umschalten">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="calculator-page">
+        <section class="calculator-hero">
+            <div class="container calculator-container">
+                <span class="calculator-eyebrow">Kostenloser 2-Minuten-Rechner</span>
+                <h1>Finden Sie die versteckten Kosten zwischen ERP und CRM.</h1>
+                <p class="calculator-hero-copy">Vier einfache Fragen beantworten. Jährliche Kosten, Risiko und Automatisierungschance sofort sehen.</p>
+                <ul class="calculator-trust-list" aria-label="Vorteile des Rechners">
+                    <li>Keine Anmeldung</li>
+                    <li>Keine Speicherung</li>
+                    <li>Sofortiges Ergebnis</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="calculator-workspace" aria-labelledby="calculatorTitle">
+            <div class="container calculator-container">
+                <div class="calculator-simple-shell">
+                    <div>
+                        <div class="calculator-section-heading">
+                            <span class="calculator-step">Ihre Schätzung</span>
+                            <h2 id="calculatorTitle">Vier Antworten. Eine klare Zahl.</h2>
+                            <p>Wählen Sie einen wiederkehrenden Prozess, etwa Auftragserfassung, Kundenanlage oder Rechnungsabgleich.</p>
+                        </div>
+
+                        <form id="diagnosticForm" class="diagnostic-form">
+                            <div class="diagnostic-field-grid">
+                                <div class="form-group">
+                                    <label for="monthlyTransactions">1. Wie viele Transaktionen pro Monat?</label>
+                                    <input id="monthlyTransactions" name="monthlyTransactions" type="number" min="1" max="1000000" step="1" value="500" required>
+                                    <small>Zum Beispiel Aufträge, Kunden oder Rechnungen.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="minutesPerTransaction">2. Wie viele manuelle Minuten je Vorgang?</label>
+                                    <input id="minutesPerTransaction" name="minutesPerTransaction" type="number" min="0.1" max="1440" step="0.1" value="12" required>
+                                    <small>Suche, Kopieren, Prüfen und Upload einschliessen.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="hourlyRate">3. Wie hoch sind die Stundenkosten (CHF)?</label>
+                                    <input id="hourlyRate" name="hourlyRate" type="number" min="1" max="1000" step="1" value="65" required>
+                                    <small>Lohn inklusive Arbeitgeberkosten verwenden.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="errorRatePercent">4. Wie häufig treten Fehler auf?</label>
+                                    <select id="errorRatePercent" name="errorRatePercent" required>
+                                        <option value="0.5">Selten — etwa 0,5%</option>
+                                        <option value="2" selected>Manchmal — etwa 2%</option>
+                                        <option value="5">Häufig — etwa 5%</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <details class="calculator-advanced">
+                                <summary>Erweiterte Annahmen anpassen</summary>
+                                <p>Optional. Die Standardwerte entsprechen einem typischen ERP–CRM-Prozess.</p>
+                                <div class="diagnostic-field-grid">
+                                    <div class="form-group">
+                                        <label for="costPerError">Kosten je Fehler (CHF)</label>
+                                        <input id="costPerError" name="costPerError" type="number" min="0" max="1000000" step="1" value="180" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="systemsCount">Verbundene Systeme</label>
+                                        <input id="systemsCount" name="systemsCount" type="number" min="2" max="50" step="1" value="3" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="manualHandoffs">Manuelle Übergaben</label>
+                                        <input id="manualHandoffs" name="manualHandoffs" type="number" min="0" max="20" step="1" value="2" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="syncFrequency">Datensynchronisation</label>
+                                        <select id="syncFrequency" name="syncFrequency" required>
+                                            <option value="realtime">Echtzeit</option>
+                                            <option value="hourly">Stündlich</option>
+                                            <option value="daily" selected>Täglich</option>
+                                            <option value="weekly">Wöchentlich</option>
+                                            <option value="manual">Manuell / bei Bedarf</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group diagnostic-field-wide">
+                                        <label for="monitoring">Überwachung</label>
+                                        <select id="monitoring" name="monitoring" required>
+                                            <option value="automated">Automatische Warnungen und Wiederholungen</option>
+                                            <option value="partial" selected>Einige Warnungen oder Logs</option>
+                                            <option value="manual">Manuelle Kontrollen</option>
+                                            <option value="none">Keine Überwachung</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </details>
+
+                            <button type="submit" class="calculator-primary-button">Meine Schätzung anzeigen</button>
+                            <p id="diagnosticError" class="calculator-error" role="alert" tabindex="-1" hidden></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnosticResults" class="diagnostic-results" aria-live="polite" tabindex="-1" hidden>
+            <div class="container calculator-container">
+                <div class="calculator-section-heading">
+                    <span class="calculator-step">02 / Ergebnis</span>
+                    <h2>Ihre ERP–CRM-Chance</h2>
+                </div>
+                <div class="result-hero">
+                    <div>
+                        <span class="result-label">Geschätzter jährlicher operativer Aufwand</span>
+                        <strong id="annualWaste" class="result-main-value">CHF 0</strong>
+                    </div>
+                    <div class="risk-summary">
+                        <span class="result-label">Integrationsrisiko</span>
+                        <div><strong id="riskScore">0/100</strong> <span id="riskLevel" class="risk-badge" data-risk="low">Niedrig</span></div>
+                    </div>
+                </div>
+                <div class="result-grid">
+                    <div class="result-card"><span>Manuelle Stunden / Jahr</span><strong id="manualHours">0 h</strong></div>
+                    <div class="result-card"><span>Jährliche Arbeitskosten</span><strong id="laborCost">CHF 0</strong></div>
+                    <div class="result-card"><span>Jährliche Fehlerkosten</span><strong id="errorCost">CHF 0</strong></div>
+                    <div class="result-card result-card-accent"><span>Potenziell rückgewinnbarer Bereich</span><strong id="recoverableRange">CHF 0–CHF 0</strong></div>
+                </div>
+                <div class="result-next-step">
+                    <div>
+                        <h3>Aus der Schätzung einen Umsetzungsfall machen</h3>
+                        <p>Eine Prüfung für CHF 390 validiert die Annahmen, bildet einen Prozess ab und identifiziert den risikoärmsten Automatisierungspiloten. Die Gebühr wird bei einer Umsetzung angerechnet.</p>
+                    </div>
+                    <a id="auditCta" href="#diagnosticLead" class="calculator-primary-button">Diagnoseprüfung anfragen</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnosticLead" class="diagnostic-lead" aria-labelledby="leadTitle">
+            <div class="container calculator-container">
+                <div class="lead-grid">
+                    <div>
+                        <span class="calculator-step">03 / Optionale Prüfung</span>
+                        <h2 id="leadTitle">Validieren Sie den Business Case vor der Umsetzung</h2>
+                        <p>Teilen Sie Ihr Ergebnis und ich melde mich zur Terminvereinbarung für die CHF-390-Diagnoseprüfung. Ihre Rechnerangaben werden nur in der von Ihnen angeforderten E-Mail übermittelt.</p>
+                    </div>
+                    <form id="diagnosticLeadForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="leadName">Name</label>
+                            <input id="leadName" name="name" type="text" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="leadEmail">Geschäftliche E-Mail</label>
+                            <input id="leadEmail" name="email" type="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="leadCompany">Unternehmen</label>
+                            <input id="leadCompany" name="company" type="text" autocomplete="organization">
+                        </div>
+                        <button type="submit" class="calculator-primary-button">CHF-390-Prüfung anfragen</button>
+                        <p class="lead-privacy">Kein Newsletter. Auf dieser Website werden keine Rechnerdaten gespeichert.</p>
+                        <p id="leadStatus" class="form-status" role="status" aria-live="polite" hidden></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:osmel@prietoteran.com">E-Mail</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../app.js?v=2"></script>
+    <script type="module" src="../../tools/calculator.mjs?v=1"></script>
+</body>
+</html>

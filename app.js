@@ -190,6 +190,17 @@ function initLanguageSelector() {
                 return `/${targetLang}/blog/`;
             }
         }
+
+        // Detect the bilingual ERP–CRM calculator
+        const calculatorMatch = currentPath.match(/(?:\/de)?\/tools\/erp-crm-roi-(?:calculator|rechner)\.html$/);
+        if (calculatorMatch) {
+            if (targetLang === 'en') {
+                return '/tools/erp-crm-roi-calculator.html';
+            }
+            if (targetLang === 'de') {
+                return '/de/tools/erp-crm-roi-rechner.html';
+            }
+        }
         
         // Detect if current page is a service page
         const serviceMatch = currentPath.match(/(?:\/(de|es))?\/services\/(automation|integration)\.html$/);

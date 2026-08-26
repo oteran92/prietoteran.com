@@ -5,21 +5,27 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "test": "node --test tests/*.test.mjs",
+    "test:calculator": "node --test tests/calculator-core.test.mjs"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "dotenv": "^16.3.1",
-    "helmet": "^7.1.0",
-    "express-rate-limit": "^7.1.5",
     "@azure/msal-node": "^2.6.0",
     "@microsoft/microsoft-graph-client": "^3.0.7",
-    "isomorphic-fetch": "^3.0.0"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "isomorphic-fetch": "^3.0.0",
+    "stripe": "^22.5.0"
   },
-  "keywords": ["portfolio", "contact-form"],
+  "keywords": [
+    "portfolio",
+    "contact-form"
+  ],
   "author": "Osmel Prieto Teran",
   "license": "MIT"
 }

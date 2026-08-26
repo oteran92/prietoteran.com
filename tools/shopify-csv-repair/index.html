@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify CSV Repair — Find Import Errors Before They Break Your Catalog</title>
+    <meta name="description" content="Check a Shopify product CSV for broken variants, invalid handles, prices, images and overwrite risks. Your catalog stays in your browser.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.prietoteran.com/tools/shopify-csv-repair/">
+    <meta property="og:title" content="Shopify CSV Repair">
+    <meta property="og:description" content="See what will break before you import. Diagnose for free and download a safely repaired CSV for $7.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prietoteran.com/tools/shopify-csv-repair/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/tools/shopify-csv-repair/tool.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Shopify CSV Repair",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "7.00",
+            "priceCurrency": "USD"
+        },
+        "description": "Browser-based Shopify product CSV diagnostics and conservative repair."
+    }
+    </script>
+</head>
+<body class="csv-tool-page">
+    <nav class="nav scrolled" id="nav" aria-label="Primary navigation">
+        <div class="container nav-inner">
+            <a href="/" class="nav-logo">PRIETO<span>TERAN</span></a>
+            <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/tools/erp-crm-roi-calculator.html">ROI calculator</a></li>
+                <li><a href="/#contact">Get help</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+                    <span class="icon-sun" aria-hidden="true">☼</span>
+                    <span class="icon-moon" aria-hidden="true">◐</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="csv-hero">
+            <div class="container csv-container">
+                <span class="csv-eyebrow">Private Shopify data tool</span>
+                <h1>See what your CSV will break before you import it.</h1>
+                <p class="csv-hero-copy">Find malformed rows, duplicate variants, invalid values and risky catalog changes. No Shopify login. Your files stay in this browser.</p>
+                <ul class="csv-trust-list" aria-label="Privacy and product guarantees">
+                    <li>No store access</li>
+                    <li>No file uploads</li>
+                    <li>Free diagnosis</li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="csv-workspace" aria-labelledby="upload-heading">
+            <div class="container csv-container">
+                <div class="csv-section-heading">
+                    <span class="csv-step">01 / Diagnose</span>
+                    <h2 id="upload-heading">Choose the file you plan to import</h2>
+                    <p>The analysis runs locally. Adding a current Shopify export unlocks a safer before-and-after comparison.</p>
+                </div>
+
+                <div class="csv-upload-grid">
+                    <label class="csv-upload-card" for="proposedCsv">
+                        <span class="csv-upload-label">Required</span>
+                        <strong>Proposed import CSV</strong>
+                        <span id="proposedFileName">Choose a Shopify product CSV</span>
+                        <input type="file" id="proposedCsv" accept=".csv,text/csv" required>
+                    </label>
+
+                    <label class="csv-upload-card csv-upload-optional" for="currentCsv">
+                        <span class="csv-upload-label">Optional safety check</span>
+                        <strong>Current store export</strong>
+                        <span id="currentFileName">Compare existing products and variants</span>
+                        <input type="file" id="currentCsv" accept=".csv,text/csv">
+                    </label>
+                </div>
+
+                <button class="csv-primary-button" id="analyzeButton" type="button" disabled>
+                    Analyze CSV for free
+                </button>
+                <p class="csv-file-note">Maximum 15 MB per file. Files are read by your browser and are not sent to prietoteran.com.</p>
+                <div class="csv-message" id="pageMessage" role="alert" hidden></div>
+            </div>
+        </section>
+
+        <section class="csv-results" id="results" aria-labelledby="results-heading" tabindex="-1" hidden>
+            <div class="container csv-container">
+                <div class="csv-section-heading">
+                    <span class="csv-step">02 / Results</span>
+                    <h2 id="results-heading">Import risk report</h2>
+                </div>
+
+                <div class="csv-summary-grid">
+                    <div class="csv-summary-item">
+                        <span>Products</span>
+                        <strong id="productCount">0</strong>
+                    </div>
+                    <div class="csv-summary-item">
+                        <span>Rows</span>
+                        <strong id="rowCount">0</strong>
+                    </div>
+                    <div class="csv-summary-item csv-summary-error">
+                        <span>Blocking errors</span>
+                        <strong id="errorCount">0</strong>
+                    </div>
+                    <div class="csv-summary-item">
+                        <span>Safe fixes</span>
+                        <strong id="fixableCount">0</strong>
+                    </div>
+                </div>
+
+                <div class="csv-comparison" id="comparisonPanel" hidden>
+                    <h3>Compared with your current export</h3>
+                    <div class="csv-comparison-grid">
+                        <p><strong id="existingTouched">0</strong><span>existing products touched</span></p>
+                        <p><strong id="newProducts">0</strong><span>new products</span></p>
+                        <p><strong id="missingVariants">0</strong><span>existing variants missing from proposed file</span></p>
+                    </div>
+                    <p class="csv-warning" id="comparisonWarning" hidden></p>
+                </div>
+
+                <div class="csv-findings">
+                    <div class="csv-findings-header">
+                        <h3>Findings</h3>
+                        <span id="riskLabel">Review required</span>
+                    </div>
+                    <ol id="issueList" class="csv-issue-list"></ol>
+                </div>
+
+                <div class="csv-purchase-grid">
+                    <div>
+                        <span class="csv-step">03 / Repair</span>
+                        <h2>Download the safely repaired CSV</h2>
+                        <p id="repairDescription">Only deterministic formatting fixes are applied. Product meaning, prices and catalog data are never guessed.</p>
+                        <ul class="csv-delivery-list">
+                            <li>Corrected Shopify CSV</li>
+                            <li>Before-and-after change report</li>
+                            <li>Original file remains untouched</li>
+                        </ul>
+                    </div>
+                    <div class="csv-price-panel">
+                        <span>One file</span>
+                        <strong>$7</strong>
+                        <button class="csv-primary-button" id="checkoutButton" type="button" disabled>
+                            Repair and download
+                        </button>
+                        <button class="csv-secondary-button" id="downloadButton" type="button" hidden>
+                            Download repaired CSV
+                        </button>
+                        <button class="csv-secondary-button csv-report-button" id="reportButton" type="button" hidden>
+                            Download change report
+                        </button>
+                        <p id="checkoutNote">Secure payment through Stripe. Pay only when all blocking errors can be resolved safely.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="csv-consulting" aria-labelledby="help-heading">
+            <div class="container csv-container csv-consulting-grid">
+                <div>
+                    <span class="csv-step">Complex migration?</span>
+                    <h2 id="help-heading">Some catalog problems need store context, not another AI guess.</h2>
+                </div>
+                <div>
+                    <p>I help teams map supplier files, preserve variants and recover failed Shopify imports. You keep control of credentials and approve every change.</p>
+                    <a class="csv-primary-button csv-link-button" href="/#contact">Request human review</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/#contact">Contact</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js"></script>
+    <script type="module" src="/tools/shopify-csv-repair/tool.mjs"></script>
+</body>
+</html>

@@ -12,10 +12,31 @@ const rateLimit = require('express-rate-limit');
 const path = require('path');
 const { ConfidentialClientApplication } = require('@azure/msal-node');
 const { Client } = require('@microsoft/microsoft-graph-client');
+const Stripe = require('stripe');
 require('isomorphic-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
+app.set('trust proxy', 1);
+
+/**
+ * Normalize public form fields before validation and email rendering.
+ */
+function normalizeText(value, maxLength) {
+    return typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
+}
+
+/**
+ * Escape user-provided values before placing them in an HTML email.
+ */
+function escapeHtml(value) {
+    return value
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+}
 
 // Microsoft Graph API configuration
 const msalConfig = {
@@ -82,6 +103,33 @@ const contactLimiter = rateLimit({
     legacyHeaders: false,
 });
 
+// Checkout creation and verification use a stricter independent limit.
+const checkoutLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000,
+    max: 20,
+    message: {
+        success: false,
+        message: 'Too many checkout requests. Please try again later.',
+    },
+    standardHeaders: true,
+    legacyHeaders: false,
+});
+
+let stripeClient = null;
+const getStripeClient = () => {
+    if (!stripeClient && process.env.STRIPE_SECRET_KEY) {
+        stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY);
+    }
+    return stripeClient;
+};
+
+/**
+ * Build a stable public origin for Stripe return URLs.
+ */
+function getPublicBaseUrl(req) {
+    return (process.env.PUBLIC_BASE_URL || `${req.protocol}://${req.get('host')}`).replace(/\/+$/, '');
+}
+
 // SEO redirects — legacy URLs and retired service pages
 const redirect301 = (from, to) => {
     app.get(from, (req, res) => res.redirect(301, to));
@@ -104,13 +152,106 @@ app.use(express.static(path.join(__dirname), {
 }));
 
 /**
+ * Expose payment availability without revealing Stripe credentials.
+ */
+app.get('/api/shopify-csv-config', (req, res) => {
+    res.json({ paymentsEnabled: Boolean(process.env.STRIPE_SECRET_KEY) });
+});
+
+/**
+ * Create a fixed-price Stripe Checkout session without receiving CSV content.
+ */
+app.post('/api/shopify-csv-checkout', checkoutLimiter, async (req, res) => {
+    try {
+        const stripe = getStripeClient();
+        if (!stripe) {
+            return res.status(503).json({
+                success: false,
+                message: 'Stripe Checkout is not configured yet.',
+            });
+        }
+
+        const sourceFileName = normalizeText(req.body.fileName, 180).replace(/[\r\n]/g, ' ');
+        const baseUrl = getPublicBaseUrl(req);
+        const session = await stripe.checkout.sessions.create({
+            mode: 'payment',
+            line_items: [
+                {
+                    price_data: {
+                        currency: 'usd',
+                        unit_amount: 700,
+                        product_data: {
+                            name: 'Shopify CSV Repair',
+                            description: 'One repaired CSV and deterministic change report',
+                        },
+                    },
+                    quantity: 1,
+                },
+            ],
+            metadata: {
+                product: 'shopify_csv_repair',
+                source_file: sourceFileName || 'shopify-products.csv',
+            },
+            success_url: `${baseUrl}/tools/shopify-csv-repair/?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${baseUrl}/tools/shopify-csv-repair/?checkout=cancelled`,
+        });
+
+        return res.json({ success: true, url: session.url });
+    } catch (error) {
+        console.error('Shopify CSV checkout error:', error);
+        return res.status(500).json({
+            success: false,
+            message: 'Checkout could not be created. Please try again.',
+        });
+    }
+});
+
+/**
+ * Verify that a returned Checkout session paid for this exact tool.
+ */
+app.get('/api/shopify-csv-checkout/:sessionId', checkoutLimiter, async (req, res) => {
+    try {
+        const stripe = getStripeClient();
+        if (!stripe) {
+            return res.status(503).json({
+                success: false,
+                message: 'Stripe Checkout is not configured yet.',
+            });
+        }
+
+        const sessionId = normalizeText(req.params.sessionId, 255);
+        if (!/^cs_(test|live)_[A-Za-z0-9]+$/.test(sessionId)) {
+            return res.status(400).json({ success: false, message: 'Invalid checkout session.' });
+        }
+
+        const session = await stripe.checkout.sessions.retrieve(sessionId);
+        const paid =
+            session.payment_status === 'paid' &&
+            session.metadata?.product === 'shopify_csv_repair' &&
+            session.amount_total === 700 &&
+            session.currency === 'usd';
+
+        return res.json({ success: true, paid });
+    } catch (error) {
+        console.error('Shopify CSV payment verification error:', error);
+        return res.status(400).json({
+            success: false,
+            message: 'Payment could not be verified.',
+        });
+    }
+});
+
+/**
  * Contact form endpoint
  * POST /api/contact
  * Uses Microsoft Graph API to send emails via osmel@prietoteran.com
  */
 app.post('/api/contact', contactLimiter, async (req, res) => {
     try {
-        const { name, email, company, message } = req.body;
+        const name = normalizeText(req.body.name, 120);
+        const email = normalizeText(req.body.email, 254).toLowerCase();
+        const company = normalizeText(req.body.company, 160);
+        const message = normalizeText(req.body.message, 8000);
 
         // Validate required fields
         if (!name || !email || !message) {
@@ -129,6 +270,12 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             });
         }
 
+        // Escape public values used in the HTML email body
+        const safeName = escapeHtml(name);
+        const safeEmail = escapeHtml(email);
+        const safeCompany = escapeHtml(company);
+        const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
+
         // Get Microsoft Graph client
         const graphClient = await getGraphClient();
         if (!graphClient) {
@@ -142,17 +289,17 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
         // Prepare email message for Microsoft Graph API
         const sendMailBody = {
             message: {
-                subject: `New Contact: ${name}${company ? ` from ${company}` : ''}`,
+                subject: `New Contact: ${name.replace(/[\r\n]/g, ' ')}${company ? ` from ${company.replace(/[\r\n]/g, ' ')}` : ''}`,
                 body: {
                     contentType: 'HTML',
                     content: `
                         <h2>New Contact Form Submission</h2>
-                        <p><strong>Name:</strong> ${name}</p>
-                        <p><strong>Email:</strong> ${email}</p>
-                        ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
+                        <p><strong>Name:</strong> ${safeName}</p>
+                        <p><strong>Email:</strong> ${safeEmail}</p>
+                        ${safeCompany ? `<p><strong>Company:</strong> ${safeCompany}</p>` : ''}
                         <hr>
                         <p><strong>Message:</strong></p>
-                        <p>${message.replace(/\n/g, '<br>')}</p>
+                        <p>${safeMessage}</p>
                         <hr>
                         <p style="color: #888; font-size: 12px;">
                             Sent from prietoteran.com contact form

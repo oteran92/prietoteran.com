@@ -1,0 +1,118 @@
+/* Shared dropdown that inherits the existing navbar design tokens. */
+.tools-menu {
+    position: relative;
+}
+
+.tools-menu-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s var(--ease-out);
+}
+
+.tools-menu-trigger:hover,
+.tools-menu-trigger:focus-visible {
+    color: var(--text-primary);
+    outline: none;
+}
+
+.tools-menu-trigger::before {
+    content: '⌄';
+    order: 2;
+    font-size: 0.8rem;
+    line-height: 1;
+    transition: transform 0.2s var(--ease-out);
+}
+
+.tools-menu.open .tools-menu-trigger::before {
+    transform: rotate(180deg);
+}
+
+.tools-dropdown {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 50%;
+    z-index: 250;
+    display: none;
+    width: max-content;
+    min-width: 260px;
+    padding: var(--space-xs);
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    list-style: none;
+    transform: translateX(-50%);
+}
+
+.tools-menu:hover .tools-dropdown,
+.tools-menu:focus-within .tools-dropdown,
+.tools-menu.open .tools-dropdown {
+    display: block;
+}
+
+.nav-links .tools-dropdown a {
+    display: block;
+    padding: 0.8rem var(--space-md);
+    color: var(--text-secondary);
+    font-size: 0.76rem;
+    line-height: 1.35;
+    white-space: nowrap;
+}
+
+.nav-links .tools-dropdown a::after {
+    display: none;
+}
+
+.nav-links .tools-dropdown a:hover,
+.nav-links .tools-dropdown a:focus-visible {
+    background: var(--accent);
+    color: #FFFFFF;
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .tools-menu-trigger {
+        display: flex !important;
+        justify-content: center;
+        width: 100%;
+        padding: var(--space-sm) 0;
+        font-size: 1rem;
+    }
+
+    .tools-dropdown {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        margin-top: var(--space-sm);
+        padding: var(--space-xs);
+        border-color: var(--border);
+        transform: none;
+    }
+
+    .tools-menu:hover .tools-dropdown,
+    .tools-menu:focus-within .tools-dropdown {
+        display: none;
+    }
+
+    .tools-menu.open .tools-dropdown {
+        display: block;
+    }
+
+    .nav-links .tools-dropdown a {
+        padding: 0.75rem var(--space-sm);
+        font-size: 0.85rem;
+    }
+
+    .tools-dropdown-open .lang-selector.mobile-visible {
+        top: calc(100% + 270px);
+    }
+}

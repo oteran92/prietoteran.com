@@ -9,7 +9,22 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavigation();
     initThemeToggle();
     initLanguageSelector();
+    loadToolsMenu();
 });
+
+/**
+ * Load the shared Tools dropdown only on pages that expose a Tools link.
+ */
+function loadToolsMenu() {
+    if (!document.querySelector('[data-tools-link]') || document.querySelector('script[data-tools-menu-script]')) {
+        return;
+    }
+
+    const script = document.createElement('script');
+    script.src = '/tools-menu.js';
+    script.dataset.toolsMenuScript = 'true';
+    document.head.append(script);
+}
 
 /**
  * Initialize Navigation functionality

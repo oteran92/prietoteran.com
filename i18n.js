@@ -13,49 +13,49 @@ const translations = {
         "nav.home": "Home",
         
         // Hero Section
-        "hero.label": "Business · Technology · Automation",
+        "hero.label": "Independent integration engineer",
         "hero.title.line1": "Automate",
         "hero.title.line2": "manual",
         "hero.title.line3": "work",
         "hero.title.companies": "",
-        "hero.badge": "Paid 90-minute audit · 450 EUR · Written one-pager",
-        "hero.subtitle": "Describe what's slow or manual. In a paid 90-minute audit I name the bottleneck and tell you what to automate first.",
-        "hero.positioning": "Problem-solver. From boardroom requirement to working code.",
-        "hero.cta.primary": "Request the paid audit",
+        "hero.badge": "Bern · Salesforce · ERP",
+        "hero.subtitle": "Your team re-enters the same order in two systems, approvals sit in an inbox for days, and nobody can say where the time goes. I find the bottleneck and build the fix.",
+        "hero.positioning": "From the requirement in the meeting to the code that runs it.",
+        "hero.cta.primary": "Tell me what's stuck",
         "hero.cta.explore": "See how it works",
-        "hero.cta.work": "Request the paid audit",
+        "hero.cta.work": "Tell me what's stuck",
         "hero.scroll": "Scroll",
         "hero.marker.portrait": "Portrait",
         "hero.marker.location": "Bern",
         "hero.availability": "Available for new projects",
         
-        // Intro Section — operational pains
+        // Intro Section — the reader's own week, in their nouns
         "intro.title": "Does this sound familiar?",
-        "intro.pain1": "Duplicate data entry",
-        "intro.pain2": "Slow approvals",
-        "intro.pain3": "Repetitive tasks",
-        "intro.pain4": "Disconnected tools",
+        "intro.pain1": "The same order typed into Salesforce and the ERP",
+        "intro.pain2": "Approvals waiting days in an inbox",
+        "intro.pain3": "Month-end numbers that only balance in Excel",
+        "intro.pain4": "Excel filling the gap between two systems",
         
-        // How it works (single service)
+        // How it works (the path, no prices)
         "how.number": "01 PROCESS",
         "how.title": "How it works",
-        "how.step1.title": "1. Paid audit, 90 min",
-        "how.step1.description": "450 EUR. Process, systems, volume.",
+        "how.step1.title": "1. Conversation, 90 minutes",
+        "how.step1.description": "The process, the systems, the volume behind it.",
         "how.step2.title": "2. Written one-pager",
-        "how.step2.description": "Bottleneck and what to automate first.",
-        "how.step3.title": "3. Optional 4-day sprint",
-        "how.step3.description": "2,800 EUR fixed. Build and handover.",
+        "how.step2.description": "Where the bottleneck is and what to automate first. Yours to keep.",
+        "how.step3.title": "3. Optional build",
+        "how.step3.description": "A four-day sprint or longer freelance work, if it makes sense.",
         "how.examples.title": "Examples",
         "how.examples.list": "Quote-to-order · Email routing · CRM-ERP sync",
         
-        // Paid audit offer banner
+        // Offer block — the only place on the page where prices appear
         "offer.number": "02 OFFER",
-        "offer.title": "90-minute automation audit, 450 EUR",
-        "offer.bullet1": "90 minutes with the engineer who would build it",
-        "offer.bullet2": "A written one-pager: your bottleneck and what to automate first",
-        "offer.bullet3": "Fixed price, no free discovery call",
-        "offer.note": "After the audit, optional: a 4-day fixed sprint at 2,800 EUR, or 700 EUR per day for longer freelance work. Remote from Switzerland, CET.",
-        "offer.cta": "Request the paid audit",
+        "offer.title": "The 90-minute audit",
+        "offer.bullet1": "90 minutes with the engineer who would do the work",
+        "offer.bullet2": "A written one-pager: where the bottleneck is and what to automate first",
+        "offer.bullet3": "450 EUR, fixed",
+        "offer.note": "If it makes sense to build afterwards: a four-day sprint at 2,800 EUR fixed, or 700 EUR per day for longer work. Remote from Switzerland, CET.",
+        "offer.cta": "Start a conversation",
         
         // Blog Section
         "nav.blog": "Blog",
@@ -96,7 +96,7 @@ const translations = {
         "blog.post10.excerpt": "Salesforce MCP Skills let AI tools operate directly inside your CRM. This isn't a developer update — it's a question about whether your data is ready.",
         
         // Blog Article Elements
-        "blog.cta.button": "Book consultation",
+        "blog.cta.button": "Get in touch",
         "blog.continueReading": "Continue",
         "blog.article": "Article",
         "blog.service": "Service",
@@ -104,20 +104,20 @@ const translations = {
         // LinkedIn Section (replaces About)
         "linkedin.number": "04 CONNECT",
         "linkedin.title": "LinkedIn",
-        "linkedin.text": "I'm the bridge between business and technology. Problem-solver by mindset, engineer by practice. See my full background on LinkedIn.",
+        "linkedin.text": "I work between the business side that sets the requirement and the systems that have to carry it. Full background on LinkedIn.",
         "linkedin.cta": "Visit profile",
         
         // Trust Signals
-        "trust.title1": "Bridge Builder",
-        "trust.desc1": "I connect business strategy with technical delivery so neither side gets lost in translation.",
-        "trust.title2": "Full Ownership",
-        "trust.desc2": "You own every decision, every document, every line of code. No vendor lock-in.",
-        "trust.title3": "Swiss B2B",
-        "trust.desc3": "Based in Bern. Working with companies that need practical solutions, not pilots.",
+        "trust.title1": "Systems experience",
+        "trust.desc1": "Salesforce, ERP and the APIs between them. Architecture built to stay reliable.",
+        "trust.title2": "You keep the code",
+        "trust.desc2": "Decisions, documentation and code stay with you. Nothing is locked to me.",
+        "trust.title3": "Secure by design",
+        "trust.desc3": "Access control, auditability and data flows you can inspect.",
         
         // CTA Section
-        "cta.text": "Tell me what's slow or manual and which systems are involved. I reply with audit slots and an invoice for the 450 EUR.",
-        "cta.link": "Email",
+        "cta.text": "Tell me what's slow or manual and which systems are involved. I read it and reply with a few times that could work.",
+        "cta.link": "Or reach me directly",
         
         // Footer
         "footer.copyright": "© 2026 Osmel Prieto Teran",
@@ -178,8 +178,8 @@ const translations = {
         // Service Pages - Automation (single service landing)
         "auto.label": "AI Automation & Consulting",
         "auto.title": "Automations that<br>save your team time",
-        "auto.subtitle": "Paid 90-minute audit, 450 EUR: I name your bottleneck and what to automate first, in writing. Then I build it. You own it.",
-        "auto.cta": "→ Request the paid audit",
+        "auto.subtitle": "We start with a 90-minute conversation. You get the bottleneck and what to automate first, in writing. Then I build it. You own it.",
+        "auto.cta": "→ Tell me what's stuck",
         
         "auto.problem.label": "The Problem",
         "auto.problem.title": "Manual work is eating your time",
@@ -229,8 +229,8 @@ const translations = {
         "auto.fit2": "Errors are becoming a pattern",
         "auto.fit3": "You need to scale without hiring",
         
-        "auto.cta2.text": "Describe what's slow or manual and start with the paid audit.",
-        "auto.cta2.button": "→ Request the paid audit",
+        "auto.cta2.text": "Describe what's slow or manual and we'll start there.",
+        "auto.cta2.button": "→ Start a conversation",
         
         // Service Pages - AI
         "ai.label": "Service",
@@ -352,12 +352,12 @@ const translations = {
         "consult.cta2.button": "→ Start a conversation",
         
         // Process steps
-        "process.step1": "Paid 90-min audit",
+        "process.step1": "Conversation",
         "process.step2": "Written one-pager",
-        "process.step3": "Optional 4-day sprint",
+        "process.step3": "Optional build",
         
         // Form
-        "form.title": "Request the 90-minute audit",
+        "form.title": "Start the conversation",
         "form.name": "Name",
         "form.company": "Company",
         "form.role": "Role",
@@ -367,8 +367,8 @@ const translations = {
         "form.process": "What process is causing the most pain?",
         "form.usecase": "What problem are you trying to solve with AI?",
         "form.situation": "What's your current situation?",
-        "form.submit": "→ Request the paid audit",
-        "form.trust": "The audit is 450 EUR. I reply with available slots and an invoice. No spam."
+        "form.submit": "Send message",
+        "form.trust": "I read every message myself. No newsletter, no spam."
     },
     
     de: {
@@ -380,49 +380,49 @@ const translations = {
         "nav.home": "← Startseite",
         
         // Hero Section
-        "hero.label": "Geschäft · Technologie · Automatisierung",
+        "hero.label": "Unabhängiger Integrationsingenieur",
         "hero.title.line1": "Automatisieren Sie",
         "hero.title.line2": "manuelle",
         "hero.title.line3": "Arbeit",
         "hero.title.companies": "",
-        "hero.badge": "Bezahltes 90-Minuten-Audit · 450 EUR · Schriftlicher One-Pager",
-        "hero.subtitle": "Beschreiben Sie, was langsam oder manuell läuft. Im bezahlten 90-Minuten-Audit benenne ich den Engpass und sage Ihnen, was zuerst automatisiert wird.",
-        "hero.positioning": "Problemlöser. Von der Anforderung im Boardroom zum funktionierenden Code.",
-        "hero.cta.primary": "Bezahltes Audit anfragen",
+        "hero.badge": "Bern · Salesforce · ERP",
+        "hero.subtitle": "Ihr Team erfasst denselben Auftrag in zwei Systemen, Freigaben liegen tagelang im Postfach, und niemand kann sagen, wo die Zeit bleibt. Ich finde den Engpass und baue die Lösung.",
+        "hero.positioning": "Von der Anforderung im Meeting bis zum Code, der sie ausführt.",
+        "hero.cta.primary": "Sagen Sie mir, wo es klemmt",
         "hero.cta.explore": "So funktioniert's",
-        "hero.cta.work": "Bezahltes Audit anfragen",
+        "hero.cta.work": "Sagen Sie mir, wo es klemmt",
         "hero.scroll": "Scrollen",
         "hero.marker.portrait": "Portrait",
         "hero.marker.location": "Bern, CH",
         "hero.availability": "Verfügbar für neue Projekte",
         
-        // Intro Section
+        // Intro Section — die Woche des Lesers, in seinen Begriffen
         "intro.title": "Kommt Ihnen das bekannt vor?",
-        "intro.pain1": "Doppelte Dateneingabe",
-        "intro.pain2": "Langsame Freigaben",
-        "intro.pain3": "Repetitive Aufgaben",
-        "intro.pain4": "Getrennte Tools",
+        "intro.pain1": "Derselbe Auftrag in Salesforce und im ERP",
+        "intro.pain2": "Freigaben, die tagelang im Postfach liegen",
+        "intro.pain3": "Monatszahlen, die erst in Excel stimmen",
+        "intro.pain4": "Excel als Brücke zwischen zwei Systemen",
         
-        // How it works
+        // How it works (der Ablauf, ohne Preise)
         "how.number": "01 ABLAUF",
         "how.title": "Ablauf",
-        "how.step1.title": "1. Bezahltes Audit, 90 Min.",
-        "how.step1.description": "450 EUR. Prozess, Systeme, Mengen.",
+        "how.step1.title": "1. Gespräch, 90 Minuten",
+        "how.step1.description": "Der Prozess, die Systeme, die Mengen dahinter.",
         "how.step2.title": "2. Schriftlicher One-Pager",
-        "how.step2.description": "Engpass und was zuerst automatisiert wird.",
-        "how.step3.title": "3. Optionaler 4-Tage-Sprint",
-        "how.step3.description": "2'800 EUR fix. Bauen und übergeben.",
+        "how.step2.description": "Wo der Engpass liegt und was zuerst automatisiert wird. Bleibt bei Ihnen.",
+        "how.step3.title": "3. Optionale Umsetzung",
+        "how.step3.description": "Ein Sprint über vier Tage oder längere Freelance-Arbeit, wenn es passt.",
         "how.examples.title": "Beispiele",
         "how.examples.list": "Angebot-zu-Auftrag · E-Mail-Triage · CRM-ERP Sync",
         
-        // Paid audit offer banner
+        // Angebotsblock — die einzige Stelle auf der Seite mit Preisen
         "offer.number": "02 ANGEBOT",
-        "offer.title": "90-Minuten-Automatisierungs-Audit, 450 EUR",
-        "offer.bullet1": "90 Minuten mit dem Ingenieur, der es baut",
-        "offer.bullet2": "Ein schriftlicher One-Pager: Ihr Engpass und was zuerst automatisiert wird",
-        "offer.bullet3": "Fixpreis, kein kostenloses Erstgespräch",
-        "offer.note": "Nach dem Audit optional: ein 4-Tage-Sprint zum Fixpreis von 2'800 EUR oder 700 EUR pro Tag für längere Freelance-Einsätze. Remote aus der Schweiz, CET.",
-        "offer.cta": "Bezahltes Audit anfragen",
+        "offer.title": "Das 90-Minuten-Audit",
+        "offer.bullet1": "90 Minuten mit dem Ingenieur, der die Arbeit macht",
+        "offer.bullet2": "Ein schriftlicher One-Pager: wo der Engpass liegt und was zuerst automatisiert wird",
+        "offer.bullet3": "450 EUR, fix",
+        "offer.note": "Wenn eine Umsetzung danach sinnvoll ist: ein Sprint über vier Tage zu 2'800 EUR fix, oder 700 EUR pro Tag für längere Arbeit. Remote aus der Schweiz, CET.",
+        "offer.cta": "Gespräch starten",
         
         // Legacy service keys (automation landing pages)
         "service1.title": "Daten, denen Sie über alle Systeme vertrauen können",
@@ -484,7 +484,7 @@ const translations = {
         "blog.post10.excerpt": "Salesforce MCP Skills ermöglichen KI-Tools, direkt in Ihrem CRM zu operieren. Das ist kein Entwickler-Update — es ist eine Frage über Ihre Daten.",
         
         // Blog Article Elements
-        "blog.cta.button": "Beratung buchen",
+        "blog.cta.button": "Kontakt aufnehmen",
         "blog.continueReading": "Weiterlesen",
         "blog.article": "Artikel",
         "blog.service": "Service",
@@ -492,20 +492,20 @@ const translations = {
         // LinkedIn Section
         "linkedin.number": "04 VERNETZEN",
         "linkedin.title": "LinkedIn",
-        "linkedin.text": "Ich bin die Brücke zwischen Geschäft und Technologie. Problemlöser als Denkweise, Ingenieur als Praxis. Meinen vollständigen Werdegang finden Sie auf LinkedIn.",
+        "linkedin.text": "Ich arbeite zwischen der Geschäftsseite, die die Anforderung setzt, und den Systemen, die sie tragen müssen. Vollständiger Werdegang auf LinkedIn.",
         "linkedin.cta": "Profil besuchen",
         
         // Trust Signals
-        "trust.title1": "Brückenbauer",
-        "trust.desc1": "Ich verbinde Geschäftsstrategie mit technischer Umsetzung, damit keine Seite verloren geht.",
-        "trust.title2": "Volles Eigentum",
-        "trust.desc2": "Jede Entscheidung, jedes Dokument, jede Codezeile gehört Ihnen. Kein Vendor Lock-in.",
-        "trust.title3": "Schweizer B2B",
-        "trust.desc3": "Standort Bern. Für Unternehmen, die praktische Lösungen brauchen, keine Pilotprojekte.",
+        "trust.title1": "Systemerfahrung",
+        "trust.desc1": "Salesforce, ERP und die APIs dazwischen. Architektur, die zuverlässig bleibt.",
+        "trust.title2": "Der Code bleibt bei Ihnen",
+        "trust.desc2": "Entscheidungen, Dokumentation und Code bleiben bei Ihnen. Keine Abhängigkeit von mir.",
+        "trust.title3": "Sicher gebaut",
+        "trust.desc3": "Zugriffskontrolle, Nachvollziehbarkeit und Datenflüsse, die Sie prüfen können.",
         
         // CTA Section
-        "cta.text": "Beschreiben Sie, was langsam oder manuell läuft und welche Systeme beteiligt sind. Ich antworte mit Terminen für das Audit und der Rechnung über 450 EUR.",
-        "cta.link": "E-Mail",
+        "cta.text": "Beschreiben Sie, was langsam oder manuell läuft und welche Systeme beteiligt sind. Ich lese es und antworte mit ein paar möglichen Terminen.",
+        "cta.link": "Oder direkt erreichen",
         
         // Footer
         "footer.copyright": "© 2026 Osmel Prieto Teran",
@@ -566,8 +566,8 @@ const translations = {
         // Service Pages - Automation
         "auto.label": "KI-Automatisierung & Beratung",
         "auto.title": "Automatisierungen, die<br>Ihrem Team Zeit sparen",
-        "auto.subtitle": "Bezahltes 90-Minuten-Audit, 450 EUR: Ich benenne den Engpass und was zuerst automatisiert wird, schriftlich. Dann baue ich es. Sie besitzen es.",
-        "auto.cta": "→ Bezahltes Audit anfragen",
+        "auto.subtitle": "Wir starten mit einem Gespräch über 90 Minuten. Sie erhalten den Engpass und was zuerst automatisiert wird, schriftlich. Dann baue ich es. Sie besitzen es.",
+        "auto.cta": "→ Sagen Sie mir, wo es klemmt",
         
         "auto.problem.label": "Das Problem",
         "auto.problem.title": "Manuelle Arbeit frisst Ihre Zeit",
@@ -617,8 +617,8 @@ const translations = {
         "auto.fit2": "Fehler zu einem Muster werden",
         "auto.fit3": "Sie skalieren müssen, ohne einzustellen",
         
-        "auto.cta2.text": "Beschreiben Sie, was Zeit kostet, und starten Sie mit dem bezahlten Audit.",
-        "auto.cta2.button": "→ Bezahltes Audit anfragen",
+        "auto.cta2.text": "Beschreiben Sie, was Zeit kostet. Dort fangen wir an.",
+        "auto.cta2.button": "→ Gespräch starten",
         
         // Service Pages - AI
         "ai.label": "Leistung",
@@ -740,12 +740,12 @@ const translations = {
         "consult.cta2.button": "→ Gespräch starten",
         
         // Process steps
-        "process.step1": "Bezahltes 90-Min-Audit",
+        "process.step1": "Gespräch",
         "process.step2": "Schriftlicher One-Pager",
-        "process.step3": "Optionaler 4-Tage-Sprint",
+        "process.step3": "Optionale Umsetzung",
         
         // Form
-        "form.title": "90-Minuten-Audit anfragen",
+        "form.title": "Beginnen wir das Gespräch",
         "form.name": "Name",
         "form.company": "Unternehmen",
         "form.role": "Position",
@@ -755,8 +755,8 @@ const translations = {
         "form.process": "Welcher Prozess verursacht die meisten Schmerzen?",
         "form.usecase": "Welches Problem versuchen Sie mit KI zu lösen?",
         "form.situation": "Wie ist Ihre aktuelle Situation?",
-        "form.submit": "→ Bezahltes Audit anfragen",
-        "form.trust": "Das Audit kostet 450 EUR. Ich antworte mit freien Terminen und der Rechnung. Kein Spam."
+        "form.submit": "Nachricht senden",
+        "form.trust": "Ich lese jede Nachricht selbst. Kein Newsletter, kein Spam."
     },
     
     es: {
@@ -767,46 +767,49 @@ const translations = {
         "nav.home": "← Inicio",
         
         // Hero Section
-        "hero.label": "Sistemas B2B y Asesoría en Integración",
-        "hero.title.line1": "Restaurando",
-        "hero.title.line2": "claridad y control en",
-        "hero.title.line3": "sistemas B2B",
-        "hero.title.companies": "complejos",
-        "hero.badge": "Auditoría de pago de 90 minutos · 450 EUR · Informe escrito",
-        "hero.subtitle": "Cuando tus sistemas no se comunican entre sí, los líderes pierden visibilidad y los equipos pierden tiempo. Ayudo a empresas B2B en Suiza a reconstruir la confianza en sus datos, operaciones y tecnología.",
-        "hero.cta.explore": "Cómo ayudo",
-        "hero.cta.primary": "Solicitar la auditoría de pago",
-        "hero.cta.work": "Solicitar la auditoría de pago",
+        "hero.label": "Ingeniero de integración independiente",
+        "hero.title.line1": "Automatiza",
+        "hero.title.line2": "el trabajo",
+        "hero.title.line3": "manual",
+        "hero.title.companies": "",
+        "hero.badge": "Berna · Salesforce · ERP",
+        "hero.subtitle": "Tu equipo introduce el mismo pedido en dos sistemas, las aprobaciones se quedan días en el correo y nadie sabe dónde se va el tiempo. Encuentro el cuello de botella y construyo la solución.",
+        "hero.positioning": "De la decisión en la reunión al código que la ejecuta.",
+        "hero.cta.explore": "Cómo funciona",
+        "hero.cta.primary": "Cuéntame dónde se atasca",
+        "hero.cta.work": "Cuéntame dónde se atasca",
         "hero.scroll": "Desplazar",
         "hero.marker.portrait": "Retrato",
         "hero.marker.location": "Berna, CH",
         "hero.availability": "Disponible para nuevos proyectos",
         
-        // Intro Section
-        "intro.title": "Los líderes me llaman cuando ya no pueden confiar en sus propios datos.",
-        "intro.pain1": "Decisiones basadas en datos no confiables",
-        "intro.pain2": "Ingresos retrasados por workflows rotos",
-        "intro.pain3": "Sistemas que fallan cuando más los necesitas",
-        "intro.pain4": "Equipos haciendo trabajo que el software debería manejar",
+        // Intro Section — la semana del lector, en sus palabras
+        "intro.title": "¿Te resulta familiar?",
+        "intro.pain1": "El mismo pedido escrito en Salesforce y en el ERP",
+        "intro.pain2": "Aprobaciones que esperan días en el correo",
+        "intro.pain3": "Cifras de fin de mes que solo cuadran en Excel",
+        "intro.pain4": "Excel tapando el hueco entre dos sistemas",
         "intro.quote.line1": "Sin datos confiables, ninguna IA te salvará.",
         "intro.quote.line2": "Primero: claridad. Después: apalancamiento.",
         
-        // How it works
-        "how.step1.title": "1. Auditoría de pago, 90 min",
-        "how.step1.description": "450 EUR. Proceso, sistemas, volumen.",
+        // How it works (el camino, sin precios)
+        "how.number": "01 PROCESO",
+        "how.title": "Cómo funciona",
+        "how.step1.title": "1. Conversación, 90 minutos",
+        "how.step1.description": "El proceso, los sistemas y el volumen detrás.",
         "how.step2.title": "2. Informe escrito de una página",
-        "how.step2.description": "El cuello de botella y qué automatizar primero.",
-        "how.step3.title": "3. Sprint opcional de 4 días",
-        "how.step3.description": "2.800 EUR fijo. Construir y entregar.",
+        "how.step2.description": "Dónde está el cuello de botella y qué automatizar primero. Es tuyo.",
+        "how.step3.title": "3. Construcción opcional",
+        "how.step3.description": "Un sprint de cuatro días o trabajo freelance más largo, si tiene sentido.",
         
-        // Paid audit offer banner
+        // Bloque de oferta — el único lugar de la página con precios
         "offer.number": "02 OFERTA",
-        "offer.title": "Auditoría de automatización de 90 minutos, 450 EUR",
-        "offer.bullet1": "90 minutos con el ingeniero que lo construiría",
-        "offer.bullet2": "Un informe escrito de una página: tu cuello de botella y qué automatizar primero",
-        "offer.bullet3": "Precio fijo, sin llamada de descubrimiento gratuita",
-        "offer.note": "Después de la auditoría, opcional: un sprint de 4 días a precio fijo de 2.800 EUR, o 700 EUR por día para trabajo freelance más largo. Remoto desde Suiza, CET.",
-        "offer.cta": "Solicitar la auditoría de pago",
+        "offer.title": "La auditoría de 90 minutos",
+        "offer.bullet1": "90 minutos con el ingeniero que hará el trabajo",
+        "offer.bullet2": "Un informe escrito de una página: dónde está el cuello de botella y qué automatizar primero",
+        "offer.bullet3": "450 EUR, precio fijo",
+        "offer.note": "Si después tiene sentido construir: un sprint de cuatro días a 2.800 EUR fijos, o 700 EUR por día para trabajo más largo. Remoto desde Suiza, CET.",
+        "offer.cta": "Iniciar una conversación",
         
         // Services Section
         "services.number": "001 — SERVICIOS",
@@ -858,6 +861,12 @@ const translations = {
         "blog.article": "Artículo",
         "blog.service": "Servicio",
         
+        // LinkedIn Section
+        "linkedin.number": "04 CONECTAR",
+        "linkedin.title": "LinkedIn",
+        "linkedin.text": "Trabajo entre el lado del negocio que define el requisito y los sistemas que tienen que sostenerlo. Trayectoria completa en LinkedIn.",
+        "linkedin.cta": "Ver perfil",
+        
         // About Section
         "about.number": "003 — SOBRE MÍ",
         "about.title": "Por qué trabajar conmigo",
@@ -870,16 +879,16 @@ const translations = {
         "trust.item1": "Salesforce, ERP, APIs — arquitectura diseñada para claridad y confiabilidad a largo plazo",
         "trust.item2": "Cada decisión, cada documento, cada línea de código es tuya",
         "trust.item3": "Control de acceso, auditabilidad y flujos de datos seguros",
-        "trust.title1": "Experiencia Profunda en Sistemas",
-        "trust.desc1": "Salesforce, ERP, APIs — arquitectura diseñada para claridad y confiabilidad a largo plazo",
-        "trust.title2": "Propiedad Total",
-        "trust.desc2": "Cada decisión, cada documento, cada línea de código es tuya",
-        "trust.title3": "Seguridad por Diseño",
-        "trust.desc3": "Control de acceso, auditabilidad y flujos de datos seguros",
+        "trust.title1": "Experiencia en sistemas",
+        "trust.desc1": "Salesforce, ERP y las APIs entre ellos. Arquitectura que sigue siendo fiable.",
+        "trust.title2": "El código se queda contigo",
+        "trust.desc2": "Decisiones, documentación y código se quedan contigo. Sin dependencia de mí.",
+        "trust.title3": "Seguro por diseño",
+        "trust.desc3": "Control de acceso, trazabilidad y flujos de datos que puedes revisar.",
         
         // CTA Section
-        "cta.text": "Cuéntame qué va lento o manual y qué sistemas están involucrados. Respondo con horarios para la auditoría y la factura de 450 EUR.",
-        "cta.link": "Iniciar una conversación",
+        "cta.text": "Cuéntame qué va lento o manual y qué sistemas están involucrados. Lo leo y respondo con algunas horas posibles.",
+        "cta.link": "O contáctame directamente",
         
         // Footer
         "footer.copyright": "© 2026 Osmel Prieto Teran",
@@ -1114,22 +1123,23 @@ const translations = {
         "consult.cta2.button": "→ Iniciar una conversación",
         
         // Process steps
-        "process.step1": "Auditoría de pago 90 min",
+        "process.step1": "Conversación",
         "process.step2": "Informe escrito",
-        "process.step3": "Sprint opcional de 4 días",
+        "process.step3": "Construcción opcional",
         
         // Form
-        "form.title": "Solicitar la auditoría de 90 minutos",
+        "form.title": "Empecemos la conversación",
         "form.name": "Nombre",
         "form.company": "Empresa",
         "form.role": "Cargo",
         "form.email": "Correo electrónico",
-        "form.problem": "¿Cuál es el problema principal?",
+        "form.problem": "¿Qué le está quitando tiempo a tu equipo? (2–3 frases)",
+        "form.problem.placeholder": "Ejemplo: \"Cada pedido se copia a mano del CRM al ERP. Son 20 minutos por pedido y procesamos 15 al día.\"",
         "form.process": "¿Qué proceso está causando más dolor?",
         "form.usecase": "¿Qué problema estás tratando de resolver con IA?",
         "form.situation": "¿Cuál es tu situación actual?",
-        "form.submit": "→ Solicitar la auditoría de pago",
-        "form.trust": "La auditoría cuesta 450 EUR. Respondo con horarios disponibles y la factura. Sin spam."
+        "form.submit": "Enviar mensaje",
+        "form.trust": "Leo cada mensaje personalmente. Sin newsletter, sin spam."
     }
 };
 

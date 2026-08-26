@@ -12,6 +12,7 @@ const translations = {
         "nav.contact": "Contact",
         "nav.home": "Home",
         "nav.tools": "Tools",
+        "nav.projects": "Projects",
         
         // Hero Section
         "hero.label": "Independent integration engineer",
@@ -95,6 +96,20 @@ const translations = {
         
         "blog.post10.title": "Your CRM Is About to Become an AI Agent. Is Your Team Ready?",
         "blog.post10.excerpt": "Salesforce MCP Skills let AI tools operate directly inside your CRM. This isn't a developer update — it's a question about whether your data is ready.",
+
+        // Projects Section
+        "projects.number": "04 PROJECTS",
+        "projects.title": "Products I am building",
+        "projects.subtitle": "Independent products built around real operational problems.",
+        "projects.eroica.description": "Digital governance for associations: auditable decisions, transparent project execution, and a permanent record of results.",
+        "projects.visit": "Visit project →",
+
+        // Clients Section
+        "clients.number": "05 CLIENT",
+        "clients.title": "Selected client",
+        "clients.subtitle": "Digital systems and automation for growing businesses.",
+        "clients.victory.description": "Swiss B2B wholesale platform connecting retailers with curated European suppliers through a streamlined digital ordering experience.",
+        "clients.visit": "Visit client →",
         
         // Blog Article Elements
         "blog.cta.button": "Get in touch",
@@ -103,7 +118,7 @@ const translations = {
         "blog.service": "Service",
         
         // LinkedIn Section (replaces About)
-        "linkedin.number": "04 CONNECT",
+        "linkedin.number": "06 CONNECT",
         "linkedin.title": "LinkedIn",
         "linkedin.text": "I work between the business side that sets the requirement and the systems that have to carry it. Full background on LinkedIn.",
         "linkedin.cta": "Visit profile",
@@ -380,6 +395,7 @@ const translations = {
         "nav.contact": "Kontakt",
         "nav.home": "← Startseite",
         "nav.tools": "Tools",
+        "nav.projects": "Projekte",
         
         // Hero Section
         "hero.label": "Unabhängiger Integrationsingenieur",
@@ -484,6 +500,20 @@ const translations = {
         
         "blog.post10.title": "Ihr CRM wird zum KI-Agenten. Ist Ihr Team bereit?",
         "blog.post10.excerpt": "Salesforce MCP Skills ermöglichen KI-Tools, direkt in Ihrem CRM zu operieren. Das ist kein Entwickler-Update — es ist eine Frage über Ihre Daten.",
+
+        // Projects Section
+        "projects.number": "04 PROJEKTE",
+        "projects.title": "Produkte, die ich entwickle",
+        "projects.subtitle": "Unabhängige Produkte für reale operative Probleme.",
+        "projects.eroica.description": "Digitale Governance für Verbände: prüfbare Entscheidungen, transparente Projektumsetzung und ein dauerhaftes Ergebnisprotokoll.",
+        "projects.visit": "Projekt ansehen →",
+
+        // Clients Section
+        "clients.number": "05 KUNDE",
+        "clients.title": "Ausgewählter Kunde",
+        "clients.subtitle": "Digitale Systeme und Automatisierung für wachsende Unternehmen.",
+        "clients.victory.description": "Schweizer B2B-Grosshandelsplattform, die Händler über einen effizienten digitalen Bestellprozess mit ausgewählten europäischen Lieferanten verbindet.",
+        "clients.visit": "Kunde besuchen →",
         
         // Blog Article Elements
         "blog.cta.button": "Kontakt aufnehmen",
@@ -492,7 +522,7 @@ const translations = {
         "blog.service": "Service",
         
         // LinkedIn Section
-        "linkedin.number": "04 VERNETZEN",
+        "linkedin.number": "06 VERNETZEN",
         "linkedin.title": "LinkedIn",
         "linkedin.text": "Ich arbeite zwischen der Geschäftsseite, die die Anforderung setzt, und den Systemen, die sie tragen müssen. Vollständiger Werdegang auf LinkedIn.",
         "linkedin.cta": "Profil besuchen",
@@ -768,6 +798,7 @@ const translations = {
         "nav.contact": "Contacto",
         "nav.home": "← Inicio",
         "nav.tools": "Herramientas",
+        "nav.projects": "Proyectos",
         
         // Hero Section
         "hero.label": "Ingeniero de integración independiente",
@@ -840,7 +871,7 @@ const translations = {
         
         // Blog Section
         "nav.blog": "Blog",
-        "blog.number": "002 — BLOG",
+        "blog.number": "03 BLOG",
         "blog.title": "Últimas Perspectivas",
         "blog.subtitle": "Perspectivas prácticas sobre confiabilidad de datos, integración de sistemas y claridad operativa para líderes B2B.",
         "blog.readMore": "Leer artículo",
@@ -857,6 +888,20 @@ const translations = {
         
         "blog.post4.title": "Por qué los líderes no confían en sus datos",
         "blog.post4.excerpt": "Cuando cada sistema muestra números diferentes, las decisiones se ralentizan. Así se restaura la fiabilidad de los datos.",
+
+        // Projects Section
+        "projects.number": "04 PROYECTOS",
+        "projects.title": "Productos que estoy construyendo",
+        "projects.subtitle": "Productos independientes creados para problemas operativos reales.",
+        "projects.eroica.description": "Gobernanza digital para asociaciones: decisiones auditables, ejecución transparente de proyectos y un registro permanente de resultados.",
+        "projects.visit": "Ver proyecto →",
+
+        // Clients Section
+        "clients.number": "05 CLIENTE",
+        "clients.title": "Cliente destacado",
+        "clients.subtitle": "Sistemas digitales y automatización para empresas en crecimiento.",
+        "clients.victory.description": "Plataforma mayorista B2B suiza que conecta comercios con proveedores europeos seleccionados mediante una experiencia digital de pedidos eficiente.",
+        "clients.visit": "Visitar cliente →",
         
         // Blog Article Elements
         "blog.cta.button": "Contactar",
@@ -865,7 +910,7 @@ const translations = {
         "blog.service": "Servicio",
         
         // LinkedIn Section
-        "linkedin.number": "04 CONECTAR",
+        "linkedin.number": "06 CONECTAR",
         "linkedin.title": "LinkedIn",
         "linkedin.text": "Trabajo entre el lado del negocio que define el requisito y los sistemas que tienen que sostenerlo. Trayectoria completa en LinkedIn.",
         "linkedin.cta": "Ver perfil",
@@ -1258,6 +1303,14 @@ class I18nManager {
             link.href = this.currentLanguage === 'de'
                 ? '/de/tools/erp-crm-roi-rechner.html'
                 : '/tools/erp-crm-roi-calculator.html';
+        });
+
+        // Route Projects links back to the localized homepage section.
+        document.querySelectorAll('[data-projects-link]').forEach(link => {
+            const languageQuery = this.currentLanguage === 'en'
+                ? ''
+                : `?lang=${this.currentLanguage}`;
+            link.href = `/${languageQuery}#projects`;
         });
     }
     

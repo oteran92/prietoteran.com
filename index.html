@@ -2424,6 +2424,71 @@
             color: white;
             transform: translateY(-2px);
         }
+
+        /* Projects are presented as focused product case studies. */
+        .projects,
+        .clients {
+            padding: var(--space-3xl) 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+
+        .clients {
+            background: var(--bg-primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 720px);
+        }
+
+        .project-card {
+            display: block;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project-card-index {
+            display: block;
+            margin-bottom: var(--space-xl);
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+        }
+
+        .project-card h3 {
+            margin-bottom: var(--space-md);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: -0.04em;
+        }
+
+        .project-card p {
+            max-width: 620px;
+            margin-bottom: var(--space-xl);
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .project-card-link {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
     </style>
     
     <!-- Structured Data (JSON-LD) for SEO -->
@@ -2562,6 +2627,7 @@
                     <ul class="nav-links" id="navLinks">
                         <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
                         <li><a href="/tools/erp-crm-roi-calculator.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
+                        <li><a href="/#projects" data-projects-link data-i18n="nav.projects">Projects</a></li>
                         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                     <div class="lang-selector" id="langSelector">
@@ -2887,11 +2953,51 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <header class="section-header reveal">
+                <span class="section-number" data-i18n="projects.number">04 PROJECTS</span>
+                <h2 class="section-title" data-i18n="projects.title">Products I am building</h2>
+                <p class="section-subtitle" data-i18n="projects.subtitle">Independent products built around real operational problems.</p>
+            </header>
+
+            <div class="projects-grid">
+                <a href="https://eroica.io" target="_blank" rel="noopener noreferrer" class="project-card reveal">
+                    <span class="project-card-index">01 — EROICA</span>
+                    <h3>eroica.io</h3>
+                    <p data-i18n="projects.eroica.description">Digital governance for associations: auditable decisions, transparent project execution, and a permanent record of results.</p>
+                    <span class="project-card-link" data-i18n="projects.visit">Visit project →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients" id="clients">
+        <div class="container">
+            <header class="section-header reveal">
+                <span class="section-number" data-i18n="clients.number">05 CLIENT</span>
+                <h2 class="section-title" data-i18n="clients.title">Selected client</h2>
+                <p class="section-subtitle" data-i18n="clients.subtitle">Digital systems and automation for growing businesses.</p>
+            </header>
+
+            <div class="projects-grid">
+                <a href="https://www.victoryshop.ch/" target="_blank" rel="noopener noreferrer" class="project-card reveal">
+                    <span class="project-card-index">01 — CLIENT</span>
+                    <h3>victoryshop.ch</h3>
+                    <p data-i18n="clients.victory.description">Swiss B2B wholesale platform connecting retailers with curated European suppliers through a streamlined digital ordering experience.</p>
+                    <span class="project-card-link" data-i18n="clients.visit">Visit client →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- LinkedIn -->
     <section class="linkedin-cta" id="linkedin">
         <div class="container">
             <div class="linkedin-cta-inner reveal">
-                <span class="section-number" data-i18n="linkedin.number">004 — CONNECT</span>
+                <span class="section-number" data-i18n="linkedin.number">06 CONNECT</span>
                 <h2 class="section-title linkedin-title" data-i18n="linkedin.title">More about me on LinkedIn</h2>
                 <p class="linkedin-text" data-i18n="linkedin.text">I work between the business side that sets the requirement and the systems that have to carry it. Full background on LinkedIn.</p>
                 <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener noreferrer" class="btn btn-primary linkedin-btn" data-i18n="linkedin.cta">Visit my LinkedIn profile →</a>
@@ -2942,7 +3048,7 @@
     <section class="contact" id="contact">
         <div class="container">
             <header class="section-header reveal">
-                <span class="section-number">005 — <span data-i18n="nav.contact">CONTACT</span></span>
+                <span class="section-number">007 — <span data-i18n="nav.contact">CONTACT</span></span>
                 <h2 class="section-title" data-i18n="form.title">Start the conversation</h2>
             </header>
             

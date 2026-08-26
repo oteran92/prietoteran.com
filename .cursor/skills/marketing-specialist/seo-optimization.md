@@ -1,5 +1,7 @@
 # SEO Optimization Guide
 
+> Before editing any title tag, meta description or CTA, read [../communication/SKILL.md](../communication/SKILL.md) first. It is the source of truth for voice and price placement, and it overrides anything in this guide. In particular: no prices in title tags, meta descriptions or CTAs.
+
 ## Overview
 
 This guide provides data-driven SEO optimization strategies using Google Search Console and Google Analytics data. Focus on actionable improvements that drive qualified traffic to prietoteran.com.
@@ -69,14 +71,14 @@ Parameters:
 2. **Meta Description Optimization**
    ```
    Before: "Learn about Salesforce ERP integration services in Switzerland."
-   After: "Most integrations break in 2-4 weeks. Learn the 3 architecture principles 
-           that prevent failures. Paid 90-minute audit, 450 EUR."
+   After: "Most integrations break in 2-4 weeks. The 3 architecture principles 
+           that prevent it, for Swiss B2B teams on Salesforce and an ERP."
    
    Improvements:
    - Specific stat (2-4 weeks)
    - Concrete promise (3 principles)
-   - CTA matching the live offer (paid audit, not a free consultation)
-   - No invented client or project counts
+   - Names the reader's stack instead of an offer
+   - No price, no invented client or project counts
    ```
 
 3. **Schema Markup (if applicable)**
@@ -131,16 +133,16 @@ Parameters:
 
 ### Title Tag (< 60 characters)
 - [ ] Primary keyword near the beginning
-- [ ] Includes emotional trigger or number
+- [ ] Describes the work, not an offer or a price
 - [ ] Unique across all pages
 - [ ] Matches search intent
 - [ ] Includes brand (if space allows)
 
 ### Meta Description (< 155 characters)
 - [ ] Includes primary keyword naturally
-- [ ] Has clear value proposition
-- [ ] Includes a CTA
-- [ ] Unique and compelling
+- [ ] Names the reader's situation in their own nouns
+- [ ] Ends with a conversation invitation, never a price
+- [ ] Unique and specific
 - [ ] Matches page content
 
 ### H1 Tag

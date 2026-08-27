@@ -15,7 +15,7 @@
 
     <!-- Search and social metadata -->
     <title>ERP–CRM ROI-Rechner & Integrations-Risikocheck — Osmel Prieto Teran</title>
-    <meta name="description" content="Berechnen Sie die jährlichen Kosten manueller ERP–CRM-Arbeit, das realistisch rückgewinnbare Potenzial und Ihr Integrationsrisiko in drei Minuten.">
+    <meta name="description" content="Schätzen Sie die jährlichen Kosten manueller ERP–CRM-Arbeit, den rückgewinnbaren Bereich und Ihr Integrationsrisiko. Vier Fragen, zwei Minuten.">
     <meta name="author" content="Osmel Prieto Teran">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.prietoteran.com/de/tools/erp-crm-roi-rechner.html">
@@ -60,7 +60,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../styles.css?v=12">
+    <link rel="stylesheet" href="../../styles.css?v=13">
 </head>
 <body>
     <!-- Navigation -->
@@ -76,7 +76,7 @@
                         <li><a href="../blog/">Blog</a></li>
                         <li><a href="/de/tools/erp-crm-roi-rechner.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
                         <li><a href="/?lang=de#projects" data-projects-link data-i18n="nav.projects">Projekte</a></li>
-                        <li><a href="#diagnosticLead">Kontakt</a></li>
+                        <li><a href="/?lang=de#contact">Kontakt</a></li>
                     </ul>
                     <div class="lang-selector" id="langSelector">
                         <button class="lang-current" id="langToggle" aria-label="Sprache wählen">
@@ -104,13 +104,13 @@
     <main class="calculator-page">
         <section class="calculator-hero">
             <div class="container calculator-container">
-                <span class="calculator-eyebrow">Kostenloser 2-Minuten-Rechner</span>
+                <span class="calculator-eyebrow">2-Minuten-Rechner</span>
                 <h1>Finden Sie die versteckten Kosten zwischen ERP und CRM.</h1>
-                <p class="calculator-hero-copy">Vier einfache Fragen beantworten. Jährliche Kosten, Risiko und Automatisierungschance sofort sehen.</p>
-                <ul class="calculator-trust-list" aria-label="Vorteile des Rechners">
-                    <li>Keine Anmeldung</li>
+                <p class="calculator-hero-copy">Beantworten Sie vier Fragen zu einem wiederkehrenden Prozess. Sie erhalten die jährlichen Kosten, den rückgewinnbaren Bereich und ein Integrationsrisiko.</p>
+                <ul class="calculator-trust-list" aria-label="So funktioniert der Rechner">
+                    <li>Vier Fragen</li>
                     <li>Keine Speicherung</li>
-                    <li>Sofortiges Ergebnis</li>
+                    <li>Zwei Minuten</li>
                 </ul>
             </div>
         </section>
@@ -190,7 +190,7 @@
                                 </div>
                             </details>
 
-                            <button type="submit" class="calculator-primary-button">Meine Schätzung anzeigen</button>
+                            <button type="submit" class="calculator-primary-button">Schätzung berechnen</button>
                             <p id="diagnosticError" class="calculator-error" role="alert" tabindex="-1" hidden></p>
                         </form>
                     </div>
@@ -198,61 +198,63 @@
             </div>
         </section>
 
-        <section id="diagnosticResults" class="diagnostic-results" aria-live="polite" tabindex="-1" hidden>
+        <section id="diagnosticResults" class="diagnostic-results is-locked" aria-live="polite" tabindex="-1" hidden>
             <div class="container calculator-container">
                 <div class="calculator-section-heading">
                     <span class="calculator-step">02 / Ergebnis</span>
                     <h2>Ihre ERP–CRM-Chance</h2>
+                    <p id="resultLockNote">Die Zahlen sind berechnet. Tragen Sie unten Ihre E-Mail ein, dann erscheinen sie hier.</p>
                 </div>
                 <div class="result-hero">
                     <div>
                         <span class="result-label">Geschätzter jährlicher operativer Aufwand</span>
-                        <strong id="annualWaste" class="result-main-value">CHF 0</strong>
+                        <strong id="annualWaste" class="result-main-value">CHF ••••</strong>
                     </div>
                     <div class="risk-summary">
                         <span class="result-label">Integrationsrisiko</span>
-                        <div><strong id="riskScore">0/100</strong> <span id="riskLevel" class="risk-badge" data-risk="low">Niedrig</span></div>
+                        <div><strong id="riskScore">••/100</strong> <span id="riskLevel" class="risk-badge" data-risk="low" hidden></span></div>
                     </div>
                 </div>
                 <div class="result-grid">
-                    <div class="result-card"><span>Manuelle Stunden / Jahr</span><strong id="manualHours">0 h</strong></div>
-                    <div class="result-card"><span>Jährliche Arbeitskosten</span><strong id="laborCost">CHF 0</strong></div>
-                    <div class="result-card"><span>Jährliche Fehlerkosten</span><strong id="errorCost">CHF 0</strong></div>
-                    <div class="result-card result-card-accent"><span>Potenziell rückgewinnbarer Bereich</span><strong id="recoverableRange">CHF 0–CHF 0</strong></div>
+                    <div class="result-card"><span>Manuelle Stunden / Jahr</span><strong id="manualHours">•••• h</strong></div>
+                    <div class="result-card"><span>Jährliche Arbeitskosten</span><strong id="laborCost">CHF ••••</strong></div>
+                    <div class="result-card"><span>Jährliche Fehlerkosten</span><strong id="errorCost">CHF ••••</strong></div>
+                    <div class="result-card result-card-accent"><span>Potenziell rückgewinnbarer Bereich</span><strong id="recoverableRange">CHF ••••</strong></div>
                 </div>
-                <div class="result-next-step">
+                <div id="resultOffer" class="result-next-step" hidden>
                     <div>
-                        <h3>Aus der Schätzung einen Umsetzungsfall machen</h3>
-                        <p>Eine Prüfung für CHF 390 validiert die Annahmen, bildet einen Prozess ab und identifiziert den risikoärmsten Automatisierungspiloten. Die Gebühr wird bei einer Umsetzung angerechnet.</p>
+                        <h3>Das 90-Minuten-Audit</h3>
+                        <p>Ich gehe diese Zahlen mit Ihnen an Ihrem realen Prozess durch und schreibe danach einen One-Pager: wo der Engpass liegt und was zuerst automatisiert wird. 450 EUR, fix. Bei einer Umsetzung wird die Gebühr angerechnet.</p>
                     </div>
-                    <a id="auditCta" href="#diagnosticLead" class="calculator-primary-button">Diagnoseprüfung anfragen</a>
+                    <a id="auditCta" href="/?lang=de#contact" class="calculator-primary-button">Gespräch starten</a>
                 </div>
             </div>
         </section>
 
-        <section id="diagnosticLead" class="diagnostic-lead" aria-labelledby="leadTitle">
+        <section id="diagnosticLead" class="diagnostic-lead" aria-labelledby="leadTitle" tabindex="-1">
             <div class="container calculator-container">
                 <div class="lead-grid">
                     <div>
-                        <span class="calculator-step">03 / Optionale Prüfung</span>
-                        <h2 id="leadTitle">Validieren Sie den Business Case vor der Umsetzung</h2>
-                        <p>Teilen Sie Ihr Ergebnis und ich melde mich zur Terminvereinbarung für die CHF-390-Diagnoseprüfung. Ihre Rechnerangaben werden nur in der von Ihnen angeforderten E-Mail übermittelt.</p>
+                        <span class="calculator-step">03 / Ihre E-Mail</span>
+                        <h2 id="leadTitle">Wohin soll das Ergebnis?</h2>
+                        <p>Ihre Angaben bleiben in diesem Browser. Sie gehen nur mit der E-Mail an mich, damit ich dieselben Zahlen lese wie Sie.</p>
                     </div>
                     <form id="diagnosticLeadForm" class="contact-form">
                         <div class="form-group">
-                            <label for="leadName">Name</label>
-                            <input id="leadName" name="name" type="text" autocomplete="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="leadEmail">Geschäftliche E-Mail</label>
+                            <label for="leadEmail">E-Mail</label>
                             <input id="leadEmail" name="email" type="email" autocomplete="email" required>
+                            <small>Ich sende das Ergebnis an diese Adresse. Kein Newsletter.</small>
                         </div>
                         <div class="form-group">
-                            <label for="leadCompany">Unternehmen</label>
+                            <label for="leadName">Name (optional)</label>
+                            <input id="leadName" name="name" type="text" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="leadCompany">Unternehmen (optional)</label>
                             <input id="leadCompany" name="company" type="text" autocomplete="organization">
                         </div>
-                        <button type="submit" class="calculator-primary-button">CHF-390-Prüfung anfragen</button>
-                        <p class="lead-privacy">Kein Newsletter. Auf dieser Website werden keine Rechnerdaten gespeichert.</p>
+                        <button type="submit" class="calculator-primary-button">Schicken Sie mir das Ergebnis</button>
+                        <p class="lead-privacy">Auf dieser Website werden keine Rechnerdaten gespeichert.</p>
                         <p id="leadStatus" class="form-status" role="status" aria-live="polite" hidden></p>
                     </form>
                 </div>
@@ -274,6 +276,6 @@
     </footer>
 
     <script src="../../app.js?v=2"></script>
-    <script type="module" src="../../tools/calculator.mjs?v=1"></script>
+    <script type="module" src="../../tools/calculator.mjs?v=2"></script>
 </body>
 </html>

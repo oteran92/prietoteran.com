@@ -2812,8 +2812,28 @@ footer {
     background: var(--bg-tertiary);
 }
 
-.diagnostic-results:focus {
+.diagnostic-results:focus,
+.diagnostic-lead:focus {
     outline: none;
+}
+
+/* Locked state: the layout is visible, the numbers are not. */
+.diagnostic-results.is-locked .result-main-value,
+.diagnostic-results.is-locked .result-card strong,
+.diagnostic-results.is-locked .risk-summary strong {
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+}
+
+.diagnostic-results.is-locked .result-card-accent strong {
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+#resultLockNote {
+    margin-top: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
 }
 
 .result-hero {
@@ -2936,6 +2956,13 @@ footer {
 
 .diagnostic-lead .contact-form .calculator-primary-button {
     width: 100%;
+}
+
+.diagnostic-lead .form-group small {
+    display: block;
+    margin-top: var(--space-xs);
+    color: var(--text-muted);
+    font-size: 0.82rem;
 }
 
 .lead-privacy {

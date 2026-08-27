@@ -13,30 +13,12 @@ const path = require('path');
 const { ConfidentialClientApplication } = require('@azure/msal-node');
 const { Client } = require('@microsoft/microsoft-graph-client');
 const Stripe = require('stripe');
+const { buildContactSubmission, escapeHtml, normalizeText } = require('./lib/contact-submission');
 require('isomorphic-fetch');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 app.set('trust proxy', 1);
-
-/**
- * Normalize public form fields before validation and email rendering.
- */
-function normalizeText(value, maxLength) {
-    return typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
-}
-
-/**
- * Escape user-provided values before placing them in an HTML email.
- */
-function escapeHtml(value) {
-    return value
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#039;');
-}
 
 // Microsoft Graph API configuration
 const msalConfig = {
@@ -244,36 +226,23 @@ app.get('/api/shopify-csv-checkout/:sessionId', checkoutLimiter, async (req, res
 /**
  * Contact form endpoint
  * POST /api/contact
+ * Serves the site contact form and the tool leads, which send an email only.
  * Uses Microsoft Graph API to send emails via osmel@prietoteran.com
  */
 app.post('/api/contact', contactLimiter, async (req, res) => {
     try {
-        const name = normalizeText(req.body.name, 120);
-        const email = normalizeText(req.body.email, 254).toLowerCase();
-        const company = normalizeText(req.body.company, 160);
-        const message = normalizeText(req.body.message, 8000);
-
-        // Validate required fields
-        if (!name || !email || !message) {
-            return res.status(400).json({
-                success: false,
-                message: 'Name, email, and message are required.',
-            });
+        const result = buildContactSubmission(req.body);
+        if (!result.ok) {
+            return res.status(400).json({ success: false, message: result.error });
         }
 
-        // Basic email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return res.status(400).json({
-                success: false,
-                message: 'Please provide a valid email address.',
-            });
-        }
+        const { name, email, company, message, source, subject } = result.submission;
 
         // Escape public values used in the HTML email body
         const safeName = escapeHtml(name);
         const safeEmail = escapeHtml(email);
         const safeCompany = escapeHtml(company);
+        const safeSource = escapeHtml(source);
         const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
 
         // Get Microsoft Graph client
@@ -289,7 +258,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
         // Prepare email message for Microsoft Graph API
         const sendMailBody = {
             message: {
-                subject: `New Contact: ${name.replace(/[\r\n]/g, ' ')}${company ? ` from ${company.replace(/[\r\n]/g, ' ')}` : ''}`,
+                subject,
                 body: {
                     contentType: 'HTML',
                     content: `
@@ -297,6 +266,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
                         <p><strong>Name:</strong> ${safeName}</p>
                         <p><strong>Email:</strong> ${safeEmail}</p>
                         ${safeCompany ? `<p><strong>Company:</strong> ${safeCompany}</p>` : ''}
+                        ${safeSource ? `<p><strong>Source:</strong> ${safeSource}</p>` : ''}
                         <hr>
                         <p><strong>Message:</strong></p>
                         <p>${safeMessage}</p>

@@ -1,8 +1,20 @@
 /**
- * Browser controller for the ERP–CRM ROI diagnostic and lead form.
+ * Browser controller for the ERP–CRM ROI calculator.
+ * The four questions are free. The numbers appear once a valid email is given,
+ * and the same submission is sent to osmel@prietoteran.com as a lead.
  */
 
 import { calculateDiagnostic } from './calculator-core.mjs';
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const LEAD_SOURCE = 'roi-calculator';
+
+// Shown in place of every value while the result is still locked.
+const placeholder = {
+    currency: 'CHF ••••',
+    hours: '•••• h',
+    score: '••/100',
+};
 
 const pageLanguage = document.documentElement.lang === 'de' ? 'de' : 'en';
 const locale = pageLanguage === 'de' ? 'de-CH' : 'en-CH';
@@ -15,10 +27,11 @@ const copy = {
             critical: 'Critical',
         },
         calculationError: 'Please review the highlighted values and try again.',
-        sending: 'Sending your request…',
-        sent: 'Request sent. I will contact you shortly.',
-        sendError: 'The request could not be sent. Please email osmel@prietoteran.com.',
-        summaryTitle: 'ERP–CRM diagnostic request',
+        invalidEmail: 'Please enter a valid email address.',
+        sending: 'Sending your result…',
+        sent: 'Sent. Your result is above and I have a copy.',
+        sendError: 'Your result is above. The email did not go through: please write to osmel@prietoteran.com.',
+        summaryTitle: 'ERP–CRM ROI calculator result',
     },
     de: {
         risk: {
@@ -28,19 +41,25 @@ const copy = {
             critical: 'Kritisch',
         },
         calculationError: 'Bitte prüfen Sie die markierten Werte und versuchen Sie es erneut.',
-        sending: 'Anfrage wird gesendet…',
-        sent: 'Anfrage gesendet. Ich melde mich in Kürze.',
-        sendError: 'Die Anfrage konnte nicht gesendet werden. Bitte schreiben Sie an osmel@prietoteran.com.',
-        summaryTitle: 'ERP–CRM-Diagnoseanfrage',
+        invalidEmail: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+        sending: 'Ergebnis wird gesendet…',
+        sent: 'Gesendet. Ihr Ergebnis steht oben, ich habe eine Kopie.',
+        sendError: 'Ihr Ergebnis steht oben. Die E-Mail ging nicht durch: bitte schreiben Sie an osmel@prietoteran.com.',
+        summaryTitle: 'Ergebnis ERP–CRM-ROI-Rechner',
     },
 }[pageLanguage];
 
 const diagnosticForm = document.getElementById('diagnosticForm');
 const results = document.getElementById('diagnosticResults');
 const resultError = document.getElementById('diagnosticError');
+const resultLockNote = document.getElementById('resultLockNote');
+const resultOffer = document.getElementById('resultOffer');
+const leadSection = document.getElementById('diagnosticLead');
 const leadForm = document.getElementById('diagnosticLeadForm');
 const leadStatus = document.getElementById('leadStatus');
+const riskBadge = document.getElementById('riskLevel');
 let calculatorStarted = false;
+let resultRevealed = false;
 let latestDiagnostic = null;
 let latestInput = null;
 
@@ -91,31 +110,63 @@ function readDiagnosticInput() {
 }
 
 /**
- * Render all result values using textContent to avoid HTML injection.
+ * Write a value into a result field using textContent to avoid HTML injection.
  */
-function renderDiagnostic(diagnostic) {
-    document.getElementById('annualWaste').textContent = formatCurrency(diagnostic.annualWaste);
-    document.getElementById('manualHours').textContent =
-        `${formatNumber(diagnostic.annualManualHours)} h`;
-    document.getElementById('laborCost').textContent =
-        formatCurrency(diagnostic.annualLaborCost);
-    document.getElementById('errorCost').textContent =
-        formatCurrency(diagnostic.annualErrorCost);
-    document.getElementById('recoverableRange').textContent =
-        `${formatCurrency(diagnostic.recoverableLow)}–${formatCurrency(diagnostic.recoverableHigh)}`;
-    document.getElementById('riskScore').textContent = `${diagnostic.riskScore}/100`;
-
-    const riskBadge = document.getElementById('riskLevel');
-    riskBadge.textContent = copy.risk[diagnostic.riskLevel];
-    riskBadge.dataset.risk = diagnostic.riskLevel;
-
-    results.hidden = false;
-    results.focus();
-    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function setValue(id, value) {
+    document.getElementById(id).textContent = value;
 }
 
 /**
- * Build the plain-text diagnostic summary delivered through the existing API.
+ * Keep the result visible but without its numbers until an email is given.
+ */
+function renderLockedResult() {
+    setValue('annualWaste', placeholder.currency);
+    setValue('manualHours', placeholder.hours);
+    setValue('laborCost', placeholder.currency);
+    setValue('errorCost', placeholder.currency);
+    setValue('recoverableRange', placeholder.currency);
+    setValue('riskScore', placeholder.score);
+    riskBadge.hidden = true;
+    results.classList.add('is-locked');
+    resultLockNote.hidden = false;
+    resultOffer.hidden = true;
+    results.hidden = false;
+}
+
+/**
+ * Render the calculated values in place, once the email has been submitted.
+ */
+function renderDiagnostic(diagnostic) {
+    setValue('annualWaste', formatCurrency(diagnostic.annualWaste));
+    setValue('manualHours', `${formatNumber(diagnostic.annualManualHours)} h`);
+    setValue('laborCost', formatCurrency(diagnostic.annualLaborCost));
+    setValue('errorCost', formatCurrency(diagnostic.annualErrorCost));
+    setValue(
+        'recoverableRange',
+        `${formatCurrency(diagnostic.recoverableLow)}–${formatCurrency(diagnostic.recoverableHigh)}`,
+    );
+    setValue('riskScore', `${diagnostic.riskScore}/100`);
+
+    riskBadge.textContent = copy.risk[diagnostic.riskLevel];
+    riskBadge.dataset.risk = diagnostic.riskLevel;
+    riskBadge.hidden = false;
+
+    results.classList.remove('is-locked');
+    resultLockNote.hidden = true;
+    resultOffer.hidden = false;
+    results.hidden = false;
+}
+
+/**
+ * Move the reader to the section that now needs their attention.
+ */
+function focusSection(section) {
+    section.focus({ preventScroll: true });
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/**
+ * Build the plain-text summary delivered through the existing contact API.
  */
 function buildLeadMessage() {
     return [
@@ -125,16 +176,19 @@ function buildLeadMessage() {
         `Recoverable range: ${formatCurrency(latestDiagnostic.recoverableLow)}–${formatCurrency(latestDiagnostic.recoverableHigh)}`,
         `Risk: ${copy.risk[latestDiagnostic.riskLevel]} (${latestDiagnostic.riskScore}/100)`,
         `Manual hours/year: ${formatNumber(latestDiagnostic.annualManualHours)}`,
+        `Annual labor cost: ${formatCurrency(latestDiagnostic.annualLaborCost)}`,
+        `Annual error cost: ${formatCurrency(latestDiagnostic.annualErrorCost)}`,
         '',
         `Monthly transactions: ${latestInput.monthlyTransactions}`,
         `Minutes per transaction: ${latestInput.minutesPerTransaction}`,
+        `Hourly rate: ${latestInput.hourlyRate}`,
         `Error rate: ${latestInput.errorRatePercent}%`,
+        `Cost per error: ${latestInput.costPerError}`,
         `Connected systems: ${latestInput.systemsCount}`,
         `Manual handoffs: ${latestInput.manualHandoffs}`,
         `Sync frequency: ${latestInput.syncFrequency}`,
         `Monitoring: ${latestInput.monitoring}`,
-        '',
-        'The prospect requested the CHF 390 ERP–CRM diagnostic review.',
+        `Page language: ${pageLanguage}`,
     ].join('\n');
 }
 
@@ -154,7 +208,15 @@ diagnosticForm.addEventListener('submit', (event) => {
     try {
         latestInput = readDiagnosticInput();
         latestDiagnostic = calculateDiagnostic(latestInput);
-        renderDiagnostic(latestDiagnostic);
+
+        if (resultRevealed) {
+            renderDiagnostic(latestDiagnostic);
+            focusSection(results);
+        } else {
+            renderLockedResult();
+            focusSection(leadSection);
+        }
+
         trackEvent('calculator_complete', {
             calculator_name: 'erp_crm_roi',
             risk_level: latestDiagnostic.riskLevel,
@@ -178,18 +240,30 @@ leadForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     if (!latestDiagnostic) {
-        diagnosticForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        focusSection(diagnosticForm);
         return;
     }
 
     if (!leadForm.reportValidity()) return;
 
-    const submitButton = leadForm.querySelector('button[type="submit"]');
     const data = new FormData(leadForm);
+    const email = String(data.get('email') || '').trim();
+    leadStatus.hidden = false;
+
+    if (!EMAIL_PATTERN.test(email)) {
+        leadStatus.className = 'form-status error';
+        leadStatus.textContent = copy.invalidEmail;
+        return;
+    }
+
+    // The email is valid, so the result is owed either way: show it before sending.
+    resultRevealed = true;
+    renderDiagnostic(latestDiagnostic);
+
+    const submitButton = leadForm.querySelector('button[type="submit"]');
     submitButton.disabled = true;
     leadStatus.className = 'form-status';
     leadStatus.textContent = copy.sending;
-    leadStatus.hidden = false;
 
     try {
         const response = await fetch('/api/contact', {
@@ -197,9 +271,10 @@ leadForm.addEventListener('submit', async (event) => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 name: data.get('name'),
-                email: data.get('email'),
+                email,
                 company: data.get('company'),
                 message: buildLeadMessage(),
+                source: LEAD_SOURCE,
             }),
         });
         const responseBody = await response.json();
@@ -210,13 +285,13 @@ leadForm.addEventListener('submit', async (event) => {
 
         leadStatus.className = 'form-status success';
         leadStatus.textContent = copy.sent;
-        leadForm.reset();
         trackEvent('calculator_lead_submit', {
             calculator_name: 'erp_crm_roi',
             risk_level: latestDiagnostic.riskLevel,
         });
+        focusSection(results);
     } catch (error) {
-        console.error('Diagnostic lead submission failed:', error);
+        console.error('Calculator lead submission failed:', error);
         leadStatus.className = 'form-status error';
         leadStatus.textContent = copy.sendError;
     } finally {

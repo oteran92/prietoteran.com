@@ -178,7 +178,8 @@
 }
 
 .csv-file-note,
-.csv-price-panel p {
+.csv-repair-panel p,
+.csv-repair-form small {
     margin-top: var(--space-md);
     font-family: var(--font-mono);
     font-size: 0.76rem;
@@ -345,34 +346,55 @@
     margin-bottom: var(--space-sm);
 }
 
-.csv-price-panel {
+.csv-repair-panel {
     padding: var(--space-lg);
     border: 2px solid var(--accent);
 }
 
-.csv-price-panel > span,
-.csv-price-panel > strong {
+.csv-repair-panel > span {
     display: block;
-}
-
-.csv-price-panel > span {
+    margin-bottom: var(--space-lg);
     font-family: var(--font-mono);
     font-size: 0.75rem;
     text-transform: uppercase;
 }
 
-.csv-price-panel > strong {
-    margin: var(--space-sm) 0 var(--space-lg);
-    font-size: 4rem;
-    line-height: 1;
-}
-
-.csv-price-panel button {
+.csv-repair-panel button {
     width: 100%;
 }
 
-.csv-price-panel .csv-report-button {
+.csv-repair-panel .csv-report-button,
+.csv-repair-panel .csv-secondary-button + .csv-secondary-button {
     margin-top: var(--space-sm);
+}
+
+.csv-repair-form label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.csv-repair-form input {
+    width: 100%;
+    min-height: 52px;
+    padding: 0.75rem var(--space-md);
+    border: 1px solid var(--border-strong);
+    border-radius: 0;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font: inherit;
+}
+
+.csv-repair-form input:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.csv-repair-form small {
+    display: block;
+    margin-bottom: var(--space-lg);
 }
 
 .csv-consulting {

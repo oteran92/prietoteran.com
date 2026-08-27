@@ -8,14 +8,14 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.prietoteran.com/tools/shopify-csv-repair/">
     <meta property="og:title" content="Shopify CSV Repair">
-    <meta property="og:description" content="See what will break before you import. Diagnose for free and download a safely repaired CSV for $7.">
+    <meta property="og:description" content="See what will break before you import. The analysis runs in your browser and the repaired file is yours.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.prietoteran.com/tools/shopify-csv-repair/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="/tools/shopify-csv-repair/tool.css">
+    <link rel="stylesheet" href="/styles.css?v=13">
+    <link rel="stylesheet" href="/tools/shopify-csv-repair/tool.css?v=2">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -23,11 +23,6 @@
         "name": "Shopify CSV Repair",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "offers": {
-            "@type": "Offer",
-            "price": "7.00",
-            "priceCurrency": "USD"
-        },
         "description": "Browser-based Shopify product CSV diagnostics and conservative repair."
     }
     </script>
@@ -65,7 +60,7 @@
                 <ul class="csv-trust-list" aria-label="Privacy and product guarantees">
                     <li>No store access</li>
                     <li>No file uploads</li>
-                    <li>Free diagnosis</li>
+                    <li>No account</li>
                 </ul>
             </div>
         </header>
@@ -75,7 +70,7 @@
                 <div class="csv-section-heading">
                     <span class="csv-step">01 / Diagnose</span>
                     <h2 id="upload-heading">Choose the file you plan to import</h2>
-                    <p>The analysis runs locally. Adding a current Shopify export unlocks a safer before-and-after comparison.</p>
+                    <p>The analysis runs locally. Adding a current Shopify export adds a before-and-after comparison.</p>
                 </div>
 
                 <div class="csv-upload-grid">
@@ -95,7 +90,7 @@
                 </div>
 
                 <button class="csv-primary-button" id="analyzeButton" type="button" disabled>
-                    Analyze CSV for free
+                    Analyze the file
                 </button>
                 <p class="csv-file-note">Maximum 15 MB per file. Files are read by your browser and are not sent to prietoteran.com.</p>
                 <div class="csv-message" id="pageMessage" role="alert" hidden></div>
@@ -157,19 +152,23 @@
                             <li>Original file remains untouched</li>
                         </ul>
                     </div>
-                    <div class="csv-price-panel">
-                        <span>One file</span>
-                        <strong>$7</strong>
-                        <button class="csv-primary-button" id="checkoutButton" type="button" disabled>
-                            Repair and download
-                        </button>
+                    <div class="csv-repair-panel">
+                        <span>Where the file goes</span>
+                        <form id="repairForm" class="csv-repair-form">
+                            <label for="repairEmail">Email</label>
+                            <input id="repairEmail" name="email" type="email" autocomplete="email" required>
+                            <small>I send the result to this address. No newsletter.</small>
+                            <button class="csv-primary-button" id="repairSubmit" type="submit" disabled>
+                                Get the repaired file
+                            </button>
+                        </form>
                         <button class="csv-secondary-button" id="downloadButton" type="button" hidden>
                             Download repaired CSV
                         </button>
                         <button class="csv-secondary-button csv-report-button" id="reportButton" type="button" hidden>
                             Download change report
                         </button>
-                        <p id="checkoutNote">Secure payment through Stripe. Pay only when all blocking errors can be resolved safely.</p>
+                        <p id="repairNote">Run the analysis first. The repaired file is built in your browser.</p>
                     </div>
                 </div>
             </div>
@@ -183,7 +182,7 @@
                 </div>
                 <div>
                     <p>I help teams map supplier files, preserve variants and recover failed Shopify imports. You keep control of credentials and approve every change.</p>
-                    <a class="csv-primary-button csv-link-button" href="/#contact">Request human review</a>
+                    <a class="csv-primary-button csv-link-button" href="/#contact">Tell me what's stuck</a>
                 </div>
             </div>
         </section>

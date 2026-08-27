@@ -345,7 +345,7 @@ async function analyzeFiles() {
         track('shopify_csv_analysis_error');
     } finally {
         elements.analyzeButton.disabled = !elements.proposedCsv.files[0];
-        elements.analyzeButton.textContent = 'Analyze CSV for free';
+        elements.analyzeButton.textContent = 'Analyze the file';
     }
 }
 

@@ -107,20 +107,56 @@ function validateImage(post) {
   }
 }
 
+function validateLinkedInImage(post, draft) {
+  const imagePath = draft.image?.path;
+  assert(Boolean(imagePath), `${post.id} ${draft.day} LinkedIn draft missing image path`);
+  assert(Boolean(draft.image?.alt), `${post.id} ${draft.day} LinkedIn draft missing image alt text`);
+  if (!imagePath) {
+    return;
+  }
+
+  const absolutePath = path.join(rootDir, imagePath);
+  assert(fs.existsSync(absolutePath), `${post.id} ${draft.day} LinkedIn image missing: ${imagePath}`);
+  assert(/\.(png|jpe?g|webp)$/i.test(imagePath), `${post.id} ${draft.day} LinkedIn image must be PNG, JPEG, or WebP`);
+  assert(imagePath !== post.image.path, `${post.id} ${draft.day} must not reuse the blog cover image`);
+  if (fs.existsSync(absolutePath)) {
+    const size = fs.statSync(absolutePath).size;
+    assert(size < 500_000, `${post.id} ${draft.day} LinkedIn image should be under 500KB, got ${size} bytes`);
+    if (/\.(jpe?g)$/i.test(imagePath)) {
+      const dimensions = readJpegDimensions(absolutePath);
+      assert(dimensions.width === 1200 && dimensions.height === 630, `${post.id} ${draft.day} LinkedIn image should be 1200x630, got ${dimensions.width}x${dimensions.height}`);
+    }
+  }
+}
+
 function validateLinkedInDrafts(post) {
   assert(Array.isArray(post.linkedinDrafts), `${post.id} missing LinkedIn drafts`);
   assert(post.linkedinDrafts.length === 5, `${post.id} should have 5 LinkedIn drafts`);
   const canonicalUrl = absoluteUrl(post.slugs.en);
+  const blogShares = post.linkedinDrafts.filter((draft) => draft.type === 'blogShare');
+  const standalonePosts = post.linkedinDrafts.filter((draft) => draft.type === 'standalone');
+  assert(blogShares.length === 1, `${post.id} should have exactly 1 LinkedIn blog-share draft`);
+  assert(standalonePosts.length === 4, `${post.id} should have exactly 4 standalone LinkedIn drafts`);
+
+  const imagePaths = post.linkedinDrafts.map((draft) => draft.image?.path).filter(Boolean);
+  assert(new Set(imagePaths).size === 5, `${post.id} LinkedIn drafts must use 5 distinct images`);
 
   for (const draft of post.linkedinDrafts) {
     assert(draft.status === 'Draft', `${post.id} ${draft.day} LinkedIn draft must have Draft status`);
+    assert(['blogShare', 'standalone'].includes(draft.type), `${post.id} ${draft.day} LinkedIn draft has invalid type`);
     assert(!draft.text.includes('—'), `${post.id} ${draft.day} LinkedIn draft contains an em dash`);
     const lines = draft.text.trim().split('\n');
     assert(lines.length >= 3 && lines.length <= 6, `${post.id} ${draft.day} LinkedIn draft must be 3-6 lines`);
     const lastLine = lines.at(-1);
-    assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} LinkedIn draft must end with canonical English URL`);
+    if (draft.type === 'blogShare') {
+      assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} blog-share draft must end with the canonical English URL`);
+    } else {
+      assert(!draft.text.includes('http://') && !draft.text.includes('https://'), `${post.id} ${draft.day} standalone draft must not link to the weekly blog`);
+      assert(lastLine.startsWith('#'), `${post.id} ${draft.day} standalone draft must end with hashtags`);
+    }
     const hashtagCount = (lastLine.match(/#[A-Za-z0-9]+/g) || []).length;
     assert(hashtagCount >= 3 && hashtagCount <= 5, `${post.id} ${draft.day} LinkedIn draft needs 3-5 hashtags`);
+    validateLinkedInImage(post, draft);
   }
 }
 

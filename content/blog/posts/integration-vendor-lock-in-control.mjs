@@ -49,42 +49,67 @@ export default {
     {
       day: 'Monday',
       status: 'Draft',
-      text: `The uncomfortable truth: many integration projects only reveal who owns them after something breaks.
-The demo did not show that part.
-Neither did the proposal.
+      type: 'blogShare',
+      image: {
+        path: 'blog/images/linkedin-integration-ownership.jpg',
+        alt: 'Abstract enterprise systems connected by a documented handover path and open exit route',
+      },
+      text: `An integration handover should make the original vendor less necessary.
+That is not a threat to the relationship. It is proof the company owns what it paid for.
+Five ownership questions to ask before the next integration:
 https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #B2BIntegration #ERP #Salesforce #VendorLockIn`,
     },
     {
       day: 'Tuesday',
       status: 'Draft',
-      text: `A black box integration feels clean until the business changes a field.
-Then a small rule becomes a ticket, a queue, and a week of waiting.
-That is not architecture. It is dependency.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #SystemIntegration #B2BOperations #ERP #Salesforce`,
+      type: 'standalone',
+      image: {
+        path: 'blog/images/linkedin-pipeline-trust.jpg',
+        alt: 'Abstract sales pipeline with a disconnected handoff between precise stages',
+      },
+      text: `Your pipeline dashboard can be precise and still be wrong.
+The number is only as trustworthy as the handoffs feeding it.
+A clean screen does not repair missing ownership.
+#Salesforce #PipelineManagement #DataReliability #B2B`,
     },
     {
       day: 'Wednesday',
       status: 'Draft',
-      text: `The riskiest integration question is often the quietest one.
-Where do we test this before it touches live orders?
-If nobody has a clear answer, users become the test environment.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #OperationalControl #DataReliability #B2B #Integration`,
+      type: 'standalone',
+      image: {
+        path: 'blog/images/linkedin-data-leadership.jpg',
+        alt: 'Two data streams converging at one trusted executive decision point',
+      },
+      text: `Data quality becomes a leadership problem when two reports drive two different decisions.
+The cleanup may sit with IT.
+The cost of uncertainty does not.
+#Leadership #DataQuality #B2BOperations #DecisionMaking`,
     },
     {
       day: 'Thursday',
       status: 'Draft',
-      text: `One uncomfortable detail decides a lot: who owns the service account?
-If the key that moves your orders belongs to a vendor account, your control is thinner than it looks.
-Access ownership is not admin work. It is business continuity.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #BusinessContinuity #ERPIntegration #Salesforce #B2B`,
+      type: 'standalone',
+      image: {
+        path: 'blog/images/linkedin-ai-crm-governance.jpg',
+        alt: 'Abstract automation agent moving CRM records through visible validation gates',
+      },
+      text: `An AI agent can fill every CRM field and still make the process worse.
+Automation scales the rules you give it, including the weak ones.
+Fix ownership and validation before adding speed.
+#AI #CRM #Salesforce #DataGovernance`,
     },
     {
       day: 'Friday',
       status: 'Draft',
-      text: `Good vendors should make themselves replaceable.
-Not because you plan to replace them.
-Because a system your company depends on should not depend on one inbox.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #VendorManagement #IntegrationArchitecture #B2BLeaders #OperationalClarity`,
+      type: 'standalone',
+      image: {
+        path: 'blog/images/linkedin-one-process-automation.jpg',
+        alt: 'One manual process becoming a clear automated path between business systems',
+      },
+      text: `The best first automation is rarely the most impressive one.
+Choose the handoff that delays orders every week.
+Make it visible, measurable, and boring.
+#ProcessAutomation #ERP #Operations #B2B`,
     },
   ],
   locales: {

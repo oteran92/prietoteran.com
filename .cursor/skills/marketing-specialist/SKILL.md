@@ -71,6 +71,13 @@ When creating social media posts:
 - The link and hashtags go at the very end, after the insight lands.
 - 3-5 hashtags maximum.
 
+**Weekly content package:**
+- Create exactly five English LinkedIn drafts.
+- Exactly one draft shares the weekly blog and ends with its canonical English URL.
+- The other four drafts are standalone insights and must not link to the weekly blog.
+- Assign a distinct image to the blog and to each LinkedIn draft. Do not reuse the blog cover or another draft's image.
+- Keep every LinkedIn draft in `Draft` status. Never publish or schedule it automatically.
+
 **The formula that works:**
 1. One sentence that stops the scroll (a truth that stings or surprises)
 2. One or two lines that deepen it — but don't explain it fully

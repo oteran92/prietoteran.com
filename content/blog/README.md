@@ -21,10 +21,14 @@ pillar, buyer roles, business objective, and next step.
 
 1. Add a new source module under `content/blog/posts/`.
 2. Include localized slugs, metadata, body HTML, image briefing, related links,
-   and five LinkedIn drafts.
-3. Run the generator.
-4. Update the blog indexes, homepage card, `i18n.js`, and `sitemap.xml`.
-5. Run the content validator, funnel validator, and repository tests.
+   and five English LinkedIn drafts.
+3. Mark exactly one LinkedIn draft as the weekly blog share and keep the other
+   four standalone, without a blog URL.
+4. Assign one distinct image to the blog and one distinct image to each
+   LinkedIn draft.
+5. Run the generator.
+6. Update the blog indexes, homepage card, `i18n.js`, and `sitemap.xml`.
+7. Run the content validator, funnel validator, and repository tests.
 
 This keeps the copy and SEO metadata in one place while the site remains static.
 

@@ -52,48 +52,48 @@ Alternate between these content pillars:
 | Day | Channel | Content | Status | Image |
 |-----|---------|---------|--------|-------|
 | Tue Sep 1 | Blog | Prepared: The Vendor Lock-In Question Behind Integrations | Draft | integration-vendor-lock-in-control.jpg |
-| Mon Sep 7 | LinkedIn | Draft: Ownership question | Draft | integration-vendor-lock-in-control.jpg |
-| Tue Sep 8 | LinkedIn | Draft: Black box integration | Draft | integration-vendor-lock-in-control.jpg |
-| Wed Sep 9 | LinkedIn | Draft: Testing path | Draft | integration-vendor-lock-in-control.jpg |
-| Thu Sep 10 | LinkedIn | Draft: Service account ownership | Draft | integration-vendor-lock-in-control.jpg |
-| Fri Sep 11 | LinkedIn | Draft: Vendor as partner | Draft | integration-vendor-lock-in-control.jpg |
+| Mon Sep 7 | LinkedIn | Blog share: Integration ownership | Draft | linkedin-integration-ownership.jpg |
+| Tue Sep 8 | LinkedIn | Standalone: Pipeline trust | Draft | linkedin-pipeline-trust.jpg |
+| Wed Sep 9 | LinkedIn | Standalone: Data as a leadership problem | Draft | linkedin-data-leadership.jpg |
+| Thu Sep 10 | LinkedIn | Standalone: AI agents and CRM rules | Draft | linkedin-ai-crm-governance.jpg |
+| Fri Sep 11 | LinkedIn | Standalone: Choose one process | Draft | linkedin-one-process-automation.jpg |
 
 ### LinkedIn Drafts
 
-**Monday - Draft**
+**Monday - Blog share - Draft**
 
-The uncomfortable truth: many integration projects only reveal who owns them after something breaks.
-The demo did not show that part.
-Neither did the proposal.
+An integration handover should make the original vendor less necessary.
+That is not a threat to the relationship. It is proof the company owns what it paid for.
+Five ownership questions to ask before the next integration:
 https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #B2BIntegration #ERP #Salesforce #VendorLockIn
 
-**Tuesday - Draft**
+**Tuesday - Standalone - Draft**
 
-A black box integration feels clean until the business changes a field.
-Then a small rule becomes a ticket, a queue, and a week of waiting.
-That is not architecture. It is dependency.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #SystemIntegration #B2BOperations #ERP #Salesforce
+Your pipeline dashboard can be precise and still be wrong.
+The number is only as trustworthy as the handoffs feeding it.
+A clean screen does not repair missing ownership.
+#Salesforce #PipelineManagement #DataReliability #B2B
 
-**Wednesday - Draft**
+**Wednesday - Standalone - Draft**
 
-The riskiest integration question is often the quietest one.
-Where do we test this before it touches live orders?
-If nobody has a clear answer, users become the test environment.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #OperationalControl #DataReliability #B2B #Integration
+Data quality becomes a leadership problem when two reports drive two different decisions.
+The cleanup may sit with IT.
+The cost of uncertainty does not.
+#Leadership #DataQuality #B2BOperations #DecisionMaking
 
-**Thursday - Draft**
+**Thursday - Standalone - Draft**
 
-One uncomfortable detail decides a lot: who owns the service account?
-If the key that moves your orders belongs to a vendor account, your control is thinner than it looks.
-Access ownership is not admin work. It is business continuity.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #BusinessContinuity #ERPIntegration #Salesforce #B2B
+An AI agent can fill every CRM field and still make the process worse.
+Automation scales the rules you give it, including the weak ones.
+Fix ownership and validation before adding speed.
+#AI #CRM #Salesforce #DataGovernance
 
-**Friday - Draft**
+**Friday - Standalone - Draft**
 
-Good vendors should make themselves replaceable.
-Not because you plan to replace them.
-Because a system your company depends on should not depend on one inbox.
-https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #VendorManagement #IntegrationArchitecture #B2BLeaders #OperationalClarity
+The best first automation is rarely the most impressive one.
+Choose the handoff that delays orders every week.
+Make it visible, measurable, and boring.
+#ProcessAutomation #ERP #Operations #B2B
 
 ---
 

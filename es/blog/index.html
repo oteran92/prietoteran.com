@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary SEO Meta Tags -->
     <title>Blog — Perspectivas de Integración y Automatización | Osmel Prieto Teran</title>
     <meta name="description" content="Consejos prácticos sobre integraciones Salesforce-ERP, automatización de negocios y construcción de sistemas B2B confiables. Perspectivas del mundo real de proyectos B2B suizos.">
     <meta name="author" content="Osmel Prieto Teran">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="blog integración Salesforce, integración ERP Suiza, automatización B2B, arquitectura de integración">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.prietoteran.com/es/blog/">
-    
+
     <!-- Alternate Language Links -->
     <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/">
     <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/">
     <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/">
     <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.prietoteran.com/es/blog/">
@@ -27,26 +27,26 @@
     <meta property="og:description" content="Consejos prácticos sobre integraciones Salesforce-ERP, automatización de negocios y construcción de sistemas B2B confiables.">
     <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
     <meta property="og:locale" content="es_ES">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog — Perspectivas de Integración y Automatización">
     <meta name="twitter:description" content="Consejos prácticos sobre integraciones Salesforce-ERP, automatización de negocios y construcción de sistemas B2B confiables.">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Global Styles -->
     <link rel="stylesheet" href="../../styles.css?v=11">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: var(--font-display);
             background: var(--bg-primary);
@@ -54,38 +54,38 @@
             line-height: 1.7;
             padding-top: 80px;
         }
-        
+
         @media (max-width: 768px) {
             body { padding-top: 70px; }
         }
-        
+
         main {
             max-width: 1200px;
             margin: 0 auto;
             padding: calc(var(--space-xl) + 50px) 2rem 4rem;
         }
-        
+
         header.page-header { margin-bottom: 4rem; }
-        
+
         h1 {
             font-size: 2.5rem;
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 1rem;
         }
-        
+
         .page-subtitle {
             font-size: 1.125rem;
             color: var(--text-secondary);
             max-width: 600px;
         }
-        
+
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
-        
+
         .blog-card {
             background: var(--bg-elevated);
             border: 1px solid var(--border);
@@ -95,18 +95,18 @@
             flex-direction: column;
             gap: 1rem;
         }
-        
+
         .blog-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
         }
-        
+
         .blog-card.coming-soon {
             opacity: 0.6;
             pointer-events: none;
         }
-        
+
         .blog-meta {
             font-family: var(--font-mono);
             font-size: 0.75rem;
@@ -114,7 +114,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        
+
         .blog-card h2 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -122,14 +122,14 @@
             color: var(--text-primary);
             margin: 0;
         }
-        
+
         .blog-excerpt {
             font-size: 1rem;
             line-height: 1.6;
             color: var(--text-secondary);
             flex: 1;
         }
-        
+
         .blog-link {
             font-family: var(--font-mono);
             font-size: 0.85rem;
@@ -141,10 +141,10 @@
             gap: 0.5rem;
             transition: gap 0.2s ease;
         }
-        
+
         .blog-link:hover { gap: 0.75rem; }
         .blog-link::after { content: '→'; }
-        
+
         .badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -156,7 +156,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        
+
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             main { padding: 2rem 1.5rem; }
@@ -223,58 +223,68 @@
         <header class="page-header">
             <h1>Blog</h1>
             <p class="page-subtitle">
-                Perspectivas prácticas sobre integraciones, automatización y construcción de sistemas B2B confiables. 
+                Perspectivas prácticas sobre integraciones, automatización y construcción de sistemas B2B confiables.
                 Basado en proyectos reales con empresas suizas.
             </p>
         </header>
-        
+
         <div class="blog-grid">
             <article class="blog-card">
                 <div class="blog-meta">4 de febrero de 2026 · 5 min de lectura</div>
                 <h2>Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)</h2>
                 <p class="blog-excerpt">
-                    La mayoría de las integraciones funcionan 2-4 semanas y luego fallan. Aprende los 3 principios de arquitectura 
+                    La mayoría de las integraciones funcionan 2-4 semanas y luego fallan. Aprende los 3 principios de arquitectura
                     que previenen fallos en empresas B2B suizas.
                 </p>
                 <a href="por-que-fallan-las-integraciones-salesforce-erp.html" class="blog-link">Leer artículo</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">4 de febrero de 2026 · 6 min de lectura</div>
                 <h2>El costo real de la entrada manual de datos entre sistemas</h2>
                 <p class="blog-excerpt">
-                    La entrada manual de datos entre Salesforce y ERP cuesta a las empresas B2B suizas 15-25 horas semanales. 
+                    La entrada manual de datos entre Salesforce y ERP cuesta a las empresas B2B suizas 15-25 horas semanales.
                     Aprende a calcular los costos ocultos y cuándo la automatización se paga sola.
                 </p>
                 <a href="el-costo-real-de-la-entrada-manual-de-datos.html" class="blog-link">Leer artículo</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">4 de febrero de 2026 · 7 min de lectura</div>
                 <h2>De cotización a pedido en 4 horas en lugar de 3 días</h2>
                 <p class="blog-excerpt">
-                    Cómo un fabricante suizo redujo el tiempo de cotización a pedido en un 85% — un caso de estudio sobre 
+                    Cómo un fabricante suizo redujo el tiempo de cotización a pedido en un 85% — un caso de estudio sobre
                     automatización Salesforce-ERP sin desarrollo personalizado.
                 </p>
                 <a href="de-cotizacion-a-pedido-en-4-horas.html" class="blog-link">Leer artículo</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">11 de febrero de 2026 · 5 min de lectura</div>
                 <h2>Por qué los líderes no confían en sus propios datos (y qué hacer al respecto)</h2>
                 <p class="blog-excerpt">
-                    Cuando cada sistema muestra números diferentes, las decisiones se ralentizan y la confianza se erosiona. 
+                    Cuando cada sistema muestra números diferentes, las decisiones se ralentizan y la confianza se erosiona.
                     Así es como los líderes B2B restauran la fiabilidad de sus datos.
                 </p>
                 <a href="por-que-los-lideres-no-confian-en-sus-datos.html" class="blog-link">Leer artículo</a>
             </article>
-            
+
             <article class="blog-card coming-soon">
                 <div class="blog-meta"><span class="badge">Próximamente</span></div>
                 <h2>IA en operaciones B2B: qué funciona realmente (y qué no)</h2>
                 <p class="blog-excerpt">
                     La mayoría de las inversiones en IA en B2B fracasan — no por la tecnología, sino porque la base de datos no está lista.
                 </p>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-meta">1 de septiembre de 2026 · 6 min de lectura</div>
+                <h2>La pregunta de lock-in en integraciones</h2>
+                <p class="blog-excerpt">
+                    El lock-in suele aparecer después del go-live, cuando una integración solo puede cambiarla un proveedor.
+                    Estas preguntas de propiedad pertenecen al inicio del proyecto.
+                </p>
+                <a href="vendor-lock-in-integraciones-control.html" class="blog-link">Leer artículo</a>
             </article>
         </div>
     </main>

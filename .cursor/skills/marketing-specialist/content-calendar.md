@@ -47,6 +47,56 @@ Alternate between these content pillars:
 
 ---
 
+## September 2026 - Week of September 1
+
+| Day | Channel | Content | Status | Image |
+|-----|---------|---------|--------|-------|
+| Tue Sep 1 | Blog | Prepared: The Vendor Lock-In Question Behind Integrations | Draft | integration-vendor-lock-in-control.jpg |
+| Mon Sep 7 | LinkedIn | Draft: Ownership question | Draft | integration-vendor-lock-in-control.jpg |
+| Tue Sep 8 | LinkedIn | Draft: Black box integration | Draft | integration-vendor-lock-in-control.jpg |
+| Wed Sep 9 | LinkedIn | Draft: Testing path | Draft | integration-vendor-lock-in-control.jpg |
+| Thu Sep 10 | LinkedIn | Draft: Service account ownership | Draft | integration-vendor-lock-in-control.jpg |
+| Fri Sep 11 | LinkedIn | Draft: Vendor as partner | Draft | integration-vendor-lock-in-control.jpg |
+
+### LinkedIn Drafts
+
+**Monday - Draft**
+
+The uncomfortable truth: many integration projects only reveal who owns them after something breaks.
+The demo did not show that part.
+Neither did the proposal.
+https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #B2BIntegration #ERP #Salesforce #VendorLockIn
+
+**Tuesday - Draft**
+
+A black box integration feels clean until the business changes a field.
+Then a small rule becomes a ticket, a queue, and a week of waiting.
+That is not architecture. It is dependency.
+https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #SystemIntegration #B2BOperations #ERP #Salesforce
+
+**Wednesday - Draft**
+
+The riskiest integration question is often the quietest one.
+Where do we test this before it touches live orders?
+If nobody has a clear answer, users become the test environment.
+https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #OperationalControl #DataReliability #B2B #Integration
+
+**Thursday - Draft**
+
+One uncomfortable detail decides a lot: who owns the service account?
+If the key that moves your orders belongs to a vendor account, your control is thinner than it looks.
+Access ownership is not admin work. It is business continuity.
+https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #BusinessContinuity #ERPIntegration #Salesforce #B2B
+
+**Friday - Draft**
+
+Good vendors should make themselves replaceable.
+Not because you plan to replace them.
+Because a system your company depends on should not depend on one inbox.
+https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #VendorManagement #IntegrationArchitecture #B2BLeaders #OperationalClarity
+
+---
+
 ## May 2026 — Week of May 26
 
 | Day | Channel | Content | Status | Image |

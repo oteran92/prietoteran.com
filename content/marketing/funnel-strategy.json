@@ -16,7 +16,7 @@
         "Consistent weekly content shipped for review",
         "Every post mapped to one funnel stage",
         "Every post published in English, German, and Spanish",
-        "Every post has one reusable LinkedIn image and five draft posts"
+        "Every weekly package has one blog cover and five distinct LinkedIn images"
       ]
     },
     "mediumTerm": {
@@ -84,9 +84,39 @@
       "themes": ["vendor evaluation", "roadmap clarity", "build versus buy", "operational risk"]
     }
   },
+  "weeklyContentPackage": {
+    "blog": {
+      "count": 1,
+      "locales": ["en", "de", "es"],
+      "rule": "One logical article translated into all supported languages and mapped to one funnel stage and one content pillar."
+    },
+    "linkedin": {
+      "count": 5,
+      "language": "en",
+      "distribution": {
+        "blogShare": 1,
+        "awareness": 2,
+        "diagnosis": 1,
+        "consideration": 1
+      },
+      "rule": "Only the blog-share draft links to the weekly article. The other four drafts are standalone insights."
+    },
+    "images": {
+      "blogCovers": 1,
+      "linkedinImages": 5,
+      "rule": "Every entry has its own production-ready image. Images are not reused within the weekly package."
+    }
+  },
+  "measurement": {
+    "awareness": ["Organic impressions", "LinkedIn impressions", "Profile visits"],
+    "diagnosis": ["Engaged reading", "Content interactions", "Diagnostic tool visits"],
+    "consideration": ["Service page visits", "Related article journeys", "Returning visitors"],
+    "conversion": ["Contact form submissions", "Qualified conversations"]
+  },
   "rotationRules": [
     "Do not publish two consecutive weekly posts in the same pillar unless Search Console data supports it.",
     "Alternate problem recognition with diagnostic or consideration content.",
+    "Use the weekly LinkedIn distribution: two awareness posts, one diagnosis post, one consideration post, and one blog share.",
     "Avoid invented client evidence, statistics, testimonials, or results.",
     "Prefer concrete operating nouns: order, quote, approval, month-end, Excel, ERP, inbox.",
     "Each post must point to one clear next step rather than multiple competing CTAs."

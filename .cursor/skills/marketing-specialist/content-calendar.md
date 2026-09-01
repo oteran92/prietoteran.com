@@ -49,46 +49,46 @@ Alternate between these content pillars:
 
 ## September 2026 - Week of September 1
 
-| Day | Channel | Content | Status | Image |
-|-----|---------|---------|--------|-------|
-| Tue Sep 1 | Blog | Prepared: The Vendor Lock-In Question Behind Integrations | Draft | integration-vendor-lock-in-control.jpg |
-| Mon Sep 7 | LinkedIn | Blog share: Integration ownership | Draft | linkedin-integration-ownership.jpg |
-| Tue Sep 8 | LinkedIn | Standalone: Pipeline trust | Draft | linkedin-pipeline-trust.jpg |
-| Wed Sep 9 | LinkedIn | Standalone: Data as a leadership problem | Draft | linkedin-data-leadership.jpg |
-| Thu Sep 10 | LinkedIn | Standalone: AI agents and CRM rules | Draft | linkedin-ai-crm-governance.jpg |
-| Fri Sep 11 | LinkedIn | Standalone: Choose one process | Draft | linkedin-one-process-automation.jpg |
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Tue Sep 1 | Blog | Consideration | Prepared: The Vendor Lock-In Question Behind Integrations | Draft | integration-vendor-lock-in-control.jpg |
+| Mon Sep 7 | LinkedIn | Consideration | Blog share: Integration ownership | Draft | linkedin-integration-ownership.jpg |
+| Tue Sep 8 | LinkedIn | Awareness | Standalone: Pipeline trust | Draft | linkedin-pipeline-trust.jpg |
+| Wed Sep 9 | LinkedIn | Diagnosis | Standalone: Data as a leadership problem | Draft | linkedin-data-leadership.jpg |
+| Thu Sep 10 | LinkedIn | Consideration | Standalone: AI agents and CRM rules | Draft | linkedin-ai-crm-governance.jpg |
+| Fri Sep 11 | LinkedIn | Awareness | Standalone: Choose one process | Draft | linkedin-one-process-automation.jpg |
 
 ### LinkedIn Drafts
 
-**Monday - Blog share - Draft**
+**Monday - Blog share - Consideration - Draft**
 
 An integration handover should make the original vendor less necessary.
 That is not a threat to the relationship. It is proof the company owns what it paid for.
 Five ownership questions to ask before the next integration:
 https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #B2BIntegration #ERP #Salesforce #VendorLockIn
 
-**Tuesday - Standalone - Draft**
+**Tuesday - Standalone - Awareness - Draft**
 
 Your pipeline dashboard can be precise and still be wrong.
 The number is only as trustworthy as the handoffs feeding it.
 A clean screen does not repair missing ownership.
 #Salesforce #PipelineManagement #DataReliability #B2B
 
-**Wednesday - Standalone - Draft**
+**Wednesday - Standalone - Diagnosis - Draft**
 
 Data quality becomes a leadership problem when two reports drive two different decisions.
 The cleanup may sit with IT.
 The cost of uncertainty does not.
 #Leadership #DataQuality #B2BOperations #DecisionMaking
 
-**Thursday - Standalone - Draft**
+**Thursday - Standalone - Consideration - Draft**
 
 An AI agent can fill every CRM field and still make the process worse.
 Automation scales the rules you give it, including the weak ones.
 Fix ownership and validation before adding speed.
 #AI #CRM #Salesforce #DataGovernance
 
-**Friday - Standalone - Draft**
+**Friday - Standalone - Awareness - Draft**
 
 The best first automation is rarely the most impressive one.
 Choose the handoff that delays orders every week.

@@ -75,6 +75,8 @@ When creating social media posts:
 - Create exactly five English LinkedIn drafts.
 - Exactly one draft shares the weekly blog and ends with its canonical English URL.
 - The other four drafts are standalone insights and must not link to the weekly blog.
+- Map the standalone drafts to two awareness posts, one diagnosis post, and one consideration post.
+- Give every draft one content pillar and one specific commercial objective.
 - Assign a distinct image to the blog and to each LinkedIn draft. Do not reuse the blog cover or another draft's image.
 - Keep every LinkedIn draft in `Draft` status. Never publish or schedule it automatically.
 

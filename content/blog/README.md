@@ -24,11 +24,14 @@ pillar, buyer roles, business objective, and next step.
    and five English LinkedIn drafts.
 3. Mark exactly one LinkedIn draft as the weekly blog share and keep the other
    four standalone, without a blog URL.
-4. Assign one distinct image to the blog and one distinct image to each
+4. Map each LinkedIn draft to a funnel stage, content pillar, and commercial
+   objective. Use two awareness, one diagnosis, and one consideration draft;
+   the blog share inherits the article's stage and pillar.
+5. Assign one distinct image to the blog and one distinct image to each
    LinkedIn draft.
-5. Run the generator.
-6. Update the blog indexes, homepage card, `i18n.js`, and `sitemap.xml`.
-7. Run the content validator, funnel validator, and repository tests.
+6. Run the generator.
+7. Update the blog indexes, homepage card, `i18n.js`, and `sitemap.xml`.
+8. Run the content validator, funnel validator, and repository tests.
 
 This keeps the copy and SEO metadata in one place while the site remains static.
 

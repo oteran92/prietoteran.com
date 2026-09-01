@@ -50,6 +50,11 @@ export default {
       day: 'Monday',
       status: 'Draft',
       type: 'blogShare',
+      funnel: {
+        stage: 'consideration',
+        pillar: 'integrationControl',
+        objective: 'Show leaders which ownership questions reduce integration dependency before procurement.',
+      },
       image: {
         path: 'blog/images/linkedin-integration-ownership.jpg',
         alt: 'Abstract enterprise systems connected by a documented handover path and open exit route',
@@ -63,6 +68,11 @@ https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html #B2BInt
       day: 'Tuesday',
       status: 'Draft',
       type: 'standalone',
+      funnel: {
+        stage: 'awareness',
+        pillar: 'dataReliability',
+        objective: 'Help leaders recognize that a polished pipeline can still depend on unreliable handoffs.',
+      },
       image: {
         path: 'blog/images/linkedin-pipeline-trust.jpg',
         alt: 'Abstract sales pipeline with a disconnected handoff between precise stages',
@@ -76,6 +86,11 @@ A clean screen does not repair missing ownership.
       day: 'Wednesday',
       status: 'Draft',
       type: 'standalone',
+      funnel: {
+        stage: 'diagnosis',
+        pillar: 'dataReliability',
+        objective: 'Prompt leaders to compare conflicting reports and identify where decision trust breaks.',
+      },
       image: {
         path: 'blog/images/linkedin-data-leadership.jpg',
         alt: 'Two data streams converging at one trusted executive decision point',
@@ -89,6 +104,11 @@ The cost of uncertainty does not.
       day: 'Thursday',
       status: 'Draft',
       type: 'standalone',
+      funnel: {
+        stage: 'consideration',
+        pillar: 'dataReliability',
+        objective: 'Give leaders a governance criterion to apply before adding AI automation to CRM work.',
+      },
       image: {
         path: 'blog/images/linkedin-ai-crm-governance.jpg',
         alt: 'Abstract automation agent moving CRM records through visible validation gates',
@@ -102,6 +122,11 @@ Fix ownership and validation before adding speed.
       day: 'Friday',
       status: 'Draft',
       type: 'standalone',
+      funnel: {
+        stage: 'awareness',
+        pillar: 'processAutomation',
+        objective: 'Help operations leaders recognize one recurring handoff as a practical automation starting point.',
+      },
       image: {
         path: 'blog/images/linkedin-one-process-automation.jpg',
         alt: 'One manual process becoming a clear automated path between business systems',

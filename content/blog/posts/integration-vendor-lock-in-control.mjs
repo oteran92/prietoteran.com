@@ -3,6 +3,15 @@ export default {
   id: 'integration-vendor-lock-in-control',
   datePublished: '2026-09-01',
   dateModified: '2026-09-01',
+  funnel: {
+    stage: 'consideration',
+    pillar: 'integrationControl',
+    businessObjective: 'Help leaders ask ownership questions before buying or changing an integration.',
+    serviceFit: 'System architecture and integration',
+    nextStep: 'Contact form conversation about the integration or process that is hard to control.',
+    timeHorizon: 'mediumTerm',
+    buyerRoles: ['CEO', 'COO', 'CTO', 'Head of Operations', 'Head of IT'],
+  },
   image: {
     path: 'blog/images/integration-vendor-lock-in-control.jpg',
     alt: {

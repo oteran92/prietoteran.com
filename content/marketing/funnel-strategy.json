@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-01",
+  "positioning": {
+    "audience": "Swiss and DACH B2B leaders at companies with 50 to 500 people.",
+    "buyerRoles": ["CEO", "COO", "CTO", "Head of Operations", "Head of IT"],
+    "coreProblem": "Salesforce, ERP, inboxes, and Excel carry the same operational work without one reliable view.",
+    "commercialMotion": "Recognition first, trust second, conversation third.",
+    "primaryConversion": "Contact form conversation about the stuck process."
+  },
+  "timeHorizons": {
+    "shortTerm": {
+      "period": "0-3 months",
+      "objective": "Build topical authority and recognition around integration, manual work, data reliability, and operational control.",
+      "successSignals": [
+        "Consistent weekly content shipped for review",
+        "Every post mapped to one funnel stage",
+        "Every post published in English, German, and Spanish",
+        "Every post has one reusable LinkedIn image and five draft posts"
+      ]
+    },
+    "mediumTerm": {
+      "period": "3-6 months",
+      "objective": "Create content paths that help leaders diagnose their own systems before contacting Osmel.",
+      "successSignals": [
+        "At least one cluster for integration risk",
+        "At least one cluster for process automation",
+        "At least one cluster for data reliability and AI readiness",
+        "Internal links connect posts to related services and tools"
+      ]
+    },
+    "longTerm": {
+      "period": "6-12 months",
+      "objective": "Turn the site into a quiet sales funnel where readers move from recognition to a concrete conversation.",
+      "successSignals": [
+        "Service pages supported by diagnostic articles",
+        "Content linked to one clear next step",
+        "Search Console insights used to prioritize future topics",
+        "Spanish and German content parity maintained"
+      ]
+    }
+  },
+  "funnelStages": {
+    "awareness": {
+      "purpose": "Help the reader recognize a painful operating pattern.",
+      "readerQuestion": "Why does this keep happening in my company?",
+      "contentTypes": ["problem essays", "warning signs", "operational observations"]
+    },
+    "diagnosis": {
+      "purpose": "Give the reader a practical way to inspect the problem.",
+      "readerQuestion": "How do I know whether this applies to us?",
+      "contentTypes": ["checklists", "questions for leadership", "risk frameworks"]
+    },
+    "consideration": {
+      "purpose": "Show what a controlled, maintainable solution should look like.",
+      "readerQuestion": "What should we ask for before we buy or build?",
+      "contentTypes": ["architecture principles", "vendor evaluation", "ownership models"]
+    },
+    "conversion": {
+      "purpose": "Make a direct conversation feel like the natural next step.",
+      "readerQuestion": "Who can help us understand the bottleneck and decide what to fix first?",
+      "contentTypes": ["service pages", "tools", "audit CTAs"]
+    }
+  },
+  "contentPillars": {
+    "integrationControl": {
+      "label": "Integration control",
+      "serviceFit": "System architecture and integration",
+      "themes": ["vendor lock-in", "source of truth", "error visibility", "handover", "testing"]
+    },
+    "processAutomation": {
+      "label": "Process automation",
+      "serviceFit": "Workflow automation",
+      "themes": ["approval queues", "quote-to-order", "manual data entry", "email triage"]
+    },
+    "dataReliability": {
+      "label": "Data reliability",
+      "serviceFit": "Data foundation and reporting reliability",
+      "themes": ["conflicting numbers", "Excel fallback", "AI readiness", "CRM data quality"]
+    },
+    "technicalLeadership": {
+      "label": "Technical leadership",
+      "serviceFit": "Fractional technical leadership",
+      "themes": ["vendor evaluation", "roadmap clarity", "build versus buy", "operational risk"]
+    }
+  },
+  "rotationRules": [
+    "Do not publish two consecutive weekly posts in the same pillar unless Search Console data supports it.",
+    "Alternate problem recognition with diagnostic or consideration content.",
+    "Avoid invented client evidence, statistics, testimonials, or results.",
+    "Prefer concrete operating nouns: order, quote, approval, month-end, Excel, ERP, inbox.",
+    "Each post must point to one clear next step rather than multiple competing CTAs."
+  ]
+}

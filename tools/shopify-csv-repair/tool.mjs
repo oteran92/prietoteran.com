@@ -1,3 +1,10 @@
+/**
+ * Browser controller for the Shopify CSV repair tool.
+ * Analysis and the finding list are free. The repaired file and the change
+ * report are released once a valid email is given, which is also sent to
+ * osmel@prietoteran.com as a lead.
+ */
+
 import {
     analyzeShopifyCsv,
     compareCatalogs,
@@ -6,7 +13,8 @@ import {
 } from './shopify-csv-core.mjs';
 
 const MAX_FILE_BYTES = 15 * 1024 * 1024;
-const PENDING_REPAIR_KEY = 'shopifyCsvPendingRepair';
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const LEAD_SOURCE = 'shopify-csv-repair';
 
 const elements = {
     proposedCsv: document.getElementById('proposedCsv'),
@@ -14,7 +22,10 @@ const elements = {
     proposedFileName: document.getElementById('proposedFileName'),
     currentFileName: document.getElementById('currentFileName'),
     analyzeButton: document.getElementById('analyzeButton'),
-    checkoutButton: document.getElementById('checkoutButton'),
+    repairForm: document.getElementById('repairForm'),
+    repairEmail: document.getElementById('repairEmail'),
+    repairSubmit: document.getElementById('repairSubmit'),
+    repairNote: document.getElementById('repairNote'),
     downloadButton: document.getElementById('downloadButton'),
     reportButton: document.getElementById('reportButton'),
     pageMessage: document.getElementById('pageMessage'),
@@ -25,7 +36,7 @@ const elements = {
 };
 
 let activeRepair = null;
-let paymentsEnabled = false;
+let filesReleased = false;
 
 function track(eventName, parameters = {}) {
     if (typeof window.gtag === 'function') {
@@ -186,6 +197,98 @@ function downloadReport() {
     track('shopify_csv_repair_download', { file_type: 'report' });
 }
 
+/**
+ * Decide what the repair panel offers after an analysis.
+ * The email is asked for once per visit; afterwards the files stay available.
+ */
+function updateRepairAvailability(repairIsSafe, changeCount, hasUnresolvedErrors) {
+    elements.repairForm.hidden = filesReleased;
+    elements.repairSubmit.disabled = !repairIsSafe;
+    elements.downloadButton.hidden = !(filesReleased && repairIsSafe);
+    elements.reportButton.hidden = !(filesReleased && repairIsSafe);
+
+    if (repairIsSafe && filesReleased) {
+        elements.repairNote.textContent = `${changeCount} safe change(s) ready to download.`;
+    } else if (repairIsSafe) {
+        elements.repairNote.textContent =
+            `${changeCount} safe change(s) ready. Add your email to get the file.`;
+    } else if (hasUnresolvedErrors) {
+        elements.repairNote.textContent =
+            'Automatic repair is disabled because unresolved errors need human review.';
+    } else {
+        elements.repairNote.textContent =
+            'No safe automatic changes are needed. Keep your original file and review any warnings above.';
+    }
+}
+
+/**
+ * Summarize the analysis for the lead email, without sending catalog content.
+ */
+function buildLeadMessage() {
+    const lines = [
+        'Shopify CSV repair result',
+        '',
+        `File: ${activeRepair.fileName}`,
+        `Rows: ${activeRepair.analysis.rowCount}`,
+        `Products: ${activeRepair.analysis.productCount}`,
+        `Blocking errors: ${activeRepair.analysis.counts.error}`,
+        `Warnings: ${activeRepair.analysis.counts.warning}`,
+        `Safe fixes applied: ${activeRepair.repaired.changes.length}`,
+    ];
+
+    if (activeRepair.comparison) {
+        lines.push(
+            '',
+            `Existing products touched: ${activeRepair.comparison.existingProductsTouched}`,
+            `New products: ${activeRepair.comparison.newProducts}`,
+            `Existing variants missing from the proposed file: ${activeRepair.comparison.missingVariants.length}`,
+        );
+    }
+
+    return lines.join('\n');
+}
+
+/**
+ * Release the repaired file and send the lead. A failed email must not keep
+ * the file from the person who asked for it.
+ */
+async function releaseRepair(event) {
+    event.preventDefault();
+    if (!activeRepair || elements.repairSubmit.disabled) return;
+
+    const email = elements.repairEmail.value.trim();
+    if (!EMAIL_PATTERN.test(email)) {
+        elements.repairEmail.reportValidity();
+        return;
+    }
+
+    filesReleased = true;
+    elements.repairForm.hidden = true;
+    elements.downloadButton.hidden = false;
+    elements.reportButton.hidden = false;
+    elements.repairNote.textContent = 'Your download has started.';
+    downloadRepair();
+    track('shopify_csv_lead_submit', { safe_fixes: activeRepair.repaired.changes.length });
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email,
+                message: buildLeadMessage(),
+                source: LEAD_SOURCE,
+            }),
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) throw new Error(result.message || 'Contact request failed.');
+    } catch (error) {
+        console.error('Shopify CSV lead submission failed:', error);
+        elements.repairNote.textContent =
+            'The file is yours. The email did not go through: please write to osmel@prietoteran.com.';
+    }
+}
+
 async function analyzeFiles() {
     clearMessage();
     elements.analyzeButton.disabled = true;
@@ -223,22 +326,11 @@ async function analyzeFiles() {
         renderIssues(analysis);
         renderComparison(comparison);
 
-        const repairIsSafe = repaired.changes.length > 0 && repairedAnalysis.counts.error === 0;
-        elements.checkoutButton.disabled = !repairIsSafe || !paymentsEnabled;
-
-        if (repairIsSafe && paymentsEnabled) {
-            document.getElementById('checkoutNote').textContent =
-                `${repaired.changes.length} safe change(s) ready. Secure one-time payment through Stripe.`;
-        } else if (repairIsSafe) {
-            document.getElementById('checkoutNote').textContent =
-                `${repaired.changes.length} safe change(s) found. Online payment is not available yet; request human review below.`;
-        } else if (repairedAnalysis.counts.error > 0) {
-            document.getElementById('checkoutNote').textContent =
-                'Automatic download is disabled because unresolved errors require human review.';
-        } else {
-            document.getElementById('checkoutNote').textContent =
-                'No safe automatic changes are needed. Keep your original file and review any warnings above.';
-        }
+        updateRepairAvailability(
+            repaired.changes.length > 0 && repairedAnalysis.counts.error === 0,
+            repaired.changes.length,
+            repairedAnalysis.counts.error > 0,
+        );
 
         elements.results.hidden = false;
         elements.results.focus({ preventScroll: true });
@@ -253,77 +345,7 @@ async function analyzeFiles() {
         track('shopify_csv_analysis_error');
     } finally {
         elements.analyzeButton.disabled = !elements.proposedCsv.files[0];
-        elements.analyzeButton.textContent = 'Analyze CSV for free';
-    }
-}
-
-async function startCheckout() {
-    if (!activeRepair || elements.checkoutButton.disabled) return;
-    elements.checkoutButton.disabled = true;
-    elements.checkoutButton.textContent = 'Opening secure checkout…';
-
-    try {
-        sessionStorage.setItem(PENDING_REPAIR_KEY, JSON.stringify(activeRepair));
-        const response = await fetch('/api/shopify-csv-checkout', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ fileName: activeRepair.fileName }),
-        });
-        const result = await response.json();
-        if (!response.ok || !result.url) {
-            throw new Error(result.message || 'Stripe Checkout is not available.');
-        }
-        track('shopify_csv_checkout_started');
-        window.location.assign(result.url);
-    } catch (error) {
-        showMessage(error.message || 'Checkout could not be started.');
-        elements.checkoutButton.disabled = false;
-        elements.checkoutButton.textContent = 'Repair and download';
-    }
-}
-
-async function restorePaidRepair() {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('checkout') === 'cancelled') {
-        showMessage('Payment was cancelled. Your file was not charged.', false);
-        history.replaceState({}, '', window.location.pathname);
-        return;
-    }
-
-    const sessionId = params.get('session_id');
-    if (!sessionId) return;
-
-    try {
-        const response = await fetch(`/api/shopify-csv-checkout/${encodeURIComponent(sessionId)}`);
-        const result = await response.json();
-        if (!response.ok || !result.paid) throw new Error(result.message || 'Payment could not be verified.');
-
-        const savedRepair = sessionStorage.getItem(PENDING_REPAIR_KEY);
-        if (!savedRepair) {
-            throw new Error('Payment was verified, but this browser tab no longer has the repaired file. Contact support with your Stripe receipt.');
-        }
-
-        activeRepair = JSON.parse(savedRepair);
-        elements.checkoutButton.hidden = true;
-        elements.downloadButton.hidden = false;
-        if (elements.reportButton) elements.reportButton.hidden = false;
-        elements.results.hidden = false;
-        showMessage('Payment verified. Your repaired CSV and change report are ready.', false);
-        elements.results.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        track('purchase', { currency: 'USD', value: 7, transaction_id: sessionId });
-        history.replaceState({}, '', window.location.pathname);
-    } catch (error) {
-        showMessage(error.message || 'Payment verification failed.');
-    }
-}
-
-async function loadPaymentStatus() {
-    try {
-        const response = await fetch('/api/shopify-csv-config');
-        const result = await response.json();
-        paymentsEnabled = response.ok && result.paymentsEnabled === true;
-    } catch {
-        paymentsEnabled = false;
+        elements.analyzeButton.textContent = 'Analyze the file';
     }
 }
 
@@ -337,9 +359,6 @@ elements.currentCsv.addEventListener('change', () => {
 });
 
 elements.analyzeButton.addEventListener('click', analyzeFiles);
-elements.checkoutButton.addEventListener('click', startCheckout);
+elements.repairForm.addEventListener('submit', releaseRepair);
 elements.downloadButton.addEventListener('click', downloadRepair);
-if (elements.reportButton) elements.reportButton.addEventListener('click', downloadReport);
-
-await loadPaymentStatus();
-restorePaidRepair();
+elements.reportButton.addEventListener('click', downloadReport);

@@ -40,23 +40,28 @@
 
 .tools-dropdown {
     position: absolute;
-    top: calc(100% + 1rem);
+    top: calc(100% + 8px);
     left: 50%;
     z-index: 250;
-    display: none;
+    display: block;
     width: max-content;
     min-width: 260px;
     padding: var(--space-xs);
     border: 1px solid var(--border);
     background: var(--bg-elevated);
     list-style: none;
-    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -6px);
+    transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out), visibility 0.2s;
 }
 
-.tools-menu:hover .tools-dropdown,
-.tools-menu:focus-within .tools-dropdown,
 .tools-menu.open .tools-dropdown {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
 }
 
 .nav-links .tools-dropdown a {
@@ -90,21 +95,21 @@
 
     .tools-dropdown {
         position: static;
+        display: none;
         width: 100%;
         min-width: 0;
         margin-top: var(--space-sm);
         padding: var(--space-xs);
         border-color: var(--border);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
         transform: none;
-    }
-
-    .tools-menu:hover .tools-dropdown,
-    .tools-menu:focus-within .tools-dropdown {
-        display: none;
     }
 
     .tools-menu.open .tools-dropdown {
         display: block;
+        transform: none;
     }
 
     .nav-links .tools-dropdown a {

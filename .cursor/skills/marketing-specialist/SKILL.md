@@ -71,6 +71,20 @@ When creating social media posts:
 - The link and hashtags go at the very end, after the insight lands.
 - 3-5 hashtags maximum.
 
+Read [../blog-post-writer/narrative-retention.md](../blog-post-writer/narrative-retention.md)
+before drafting hooks. Apply the research in short form:
+
+- Open one specific information gap, not several vague teasers.
+- Present the apparently obvious explanation, then challenge it with one
+  credible detail.
+- Give the reader a useful resolution inside the post. The blog-share draft may
+  reserve the deeper mechanism for the article, but it must still deliver one
+  complete insight.
+- Prefer an informative statement with an implicit question. Use a literal
+  question only when it is concrete and self-relevant.
+- Earn attention through recognition, surprise, and utility. Never use
+  deceptive clickbait, manufactured fear, hidden caveats, or fabricated proof.
+
 **Weekly content package:**
 - Create exactly five English LinkedIn drafts.
 - Exactly one draft shares the weekly blog and ends with its canonical English URL.
@@ -81,11 +95,12 @@ When creating social media posts:
 - Keep every LinkedIn draft in `Draft` status. Never publish or schedule it automatically.
 
 **The formula that works:**
-1. One sentence that stops the scroll (a truth that stings or surprises)
-2. One or two lines that deepen it — but don't explain it fully
-3. Optional: one question that opens the debate
-4. Link
-5. Hashtags
+1. One concrete operating moment or apparently obvious answer
+2. One contradiction that creates a useful question
+3. One concise mechanism or solution that closes the loop
+4. Optional discussion question
+5. Blog link only for the weekly blog-share draft
+6. Hashtags
 
 **Strong examples:**
 > The scariest part of a bad AI project isn't the money you wasted.
@@ -104,6 +119,9 @@ When creating social media posts:
 - Corporate or AI-sounding phrasing
 - Em dashes anywhere
 - Starting with "Most", "Many", "A lot of companies" — too generic
+- Empty mystery phrases such as "You will not believe why"
+- Questions whose honest answer is simply "no"
+- Withholding the promised answer only to force a click
 
 **For X (Twitter):**
 - Concise, impactful (< 280 characters)
@@ -226,6 +244,10 @@ When new blog posts are created:
 ## Quality Standards
 
 ### Social Media Posts
+- [ ] Opens one specific curiosity gap and closes it with a useful insight
+- [ ] Apparent answer, contradiction, and resolution are clear
+- [ ] Headline or hook remains informative and credible
+- [ ] No deceptive withholding, manufactured fear, or fabricated proof
 - [ ] Clear value proposition
 - [ ] Professional tone (not salesy)
 - [ ] Includes relevant data/insight

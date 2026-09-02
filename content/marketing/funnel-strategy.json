@@ -1,0 +1,124 @@
+{
+  "version": "1.0",
+  "updated": "2026-09-01",
+  "positioning": {
+    "audience": "Swiss and DACH B2B leaders at companies with 50 to 500 people.",
+    "buyerRoles": ["CEO", "COO", "CTO", "Head of Operations", "Head of IT"],
+    "coreProblem": "Salesforce, ERP, inboxes, and Excel carry the same operational work without one reliable view.",
+    "commercialMotion": "Recognition first, trust second, conversation third.",
+    "primaryConversion": "Contact form conversation about the stuck process."
+  },
+  "timeHorizons": {
+    "shortTerm": {
+      "period": "0-3 months",
+      "objective": "Build topical authority and recognition around integration, manual work, data reliability, and operational control.",
+      "successSignals": [
+        "Consistent weekly content shipped for review",
+        "Every post mapped to one funnel stage",
+        "Every post published in English, German, and Spanish",
+        "Every weekly package has one blog cover and five distinct LinkedIn images"
+      ]
+    },
+    "mediumTerm": {
+      "period": "3-6 months",
+      "objective": "Create content paths that help leaders diagnose their own systems before contacting Osmel.",
+      "successSignals": [
+        "At least one cluster for integration risk",
+        "At least one cluster for process automation",
+        "At least one cluster for data reliability and AI readiness",
+        "Internal links connect posts to related services and tools"
+      ]
+    },
+    "longTerm": {
+      "period": "6-12 months",
+      "objective": "Turn the site into a quiet sales funnel where readers move from recognition to a concrete conversation.",
+      "successSignals": [
+        "Service pages supported by diagnostic articles",
+        "Content linked to one clear next step",
+        "Search Console insights used to prioritize future topics",
+        "Spanish and German content parity maintained"
+      ]
+    }
+  },
+  "funnelStages": {
+    "awareness": {
+      "purpose": "Help the reader recognize a painful operating pattern.",
+      "readerQuestion": "Why does this keep happening in my company?",
+      "contentTypes": ["problem essays", "warning signs", "operational observations"]
+    },
+    "diagnosis": {
+      "purpose": "Give the reader a practical way to inspect the problem.",
+      "readerQuestion": "How do I know whether this applies to us?",
+      "contentTypes": ["checklists", "questions for leadership", "risk frameworks"]
+    },
+    "consideration": {
+      "purpose": "Show what a controlled, maintainable solution should look like.",
+      "readerQuestion": "What should we ask for before we buy or build?",
+      "contentTypes": ["architecture principles", "vendor evaluation", "ownership models"]
+    },
+    "conversion": {
+      "purpose": "Make a direct conversation feel like the natural next step.",
+      "readerQuestion": "Who can help us understand the bottleneck and decide what to fix first?",
+      "contentTypes": ["service pages", "tools", "audit CTAs"]
+    }
+  },
+  "contentPillars": {
+    "integrationControl": {
+      "label": "Integration control",
+      "serviceFit": "System architecture and integration",
+      "themes": ["vendor lock-in", "source of truth", "error visibility", "handover", "testing"]
+    },
+    "processAutomation": {
+      "label": "Process automation",
+      "serviceFit": "Workflow automation",
+      "themes": ["approval queues", "quote-to-order", "manual data entry", "email triage"]
+    },
+    "dataReliability": {
+      "label": "Data reliability",
+      "serviceFit": "Data foundation and reporting reliability",
+      "themes": ["conflicting numbers", "Excel fallback", "AI readiness", "CRM data quality"]
+    },
+    "technicalLeadership": {
+      "label": "Technical leadership",
+      "serviceFit": "Fractional technical leadership",
+      "themes": ["vendor evaluation", "roadmap clarity", "build versus buy", "operational risk"]
+    }
+  },
+  "weeklyContentPackage": {
+    "blog": {
+      "count": 1,
+      "locales": ["en", "de", "es"],
+      "rule": "One logical article translated into all supported languages and mapped to one funnel stage and one content pillar."
+    },
+    "linkedin": {
+      "count": 5,
+      "language": "en",
+      "distribution": {
+        "blogShare": 1,
+        "awareness": 2,
+        "diagnosis": 1,
+        "consideration": 1
+      },
+      "rule": "Only the blog-share draft links to the weekly article. The other four drafts are standalone insights."
+    },
+    "images": {
+      "blogCovers": 1,
+      "linkedinImages": 5,
+      "rule": "Every entry has its own production-ready image. Images are not reused within the weekly package."
+    }
+  },
+  "measurement": {
+    "awareness": ["Organic impressions", "LinkedIn impressions", "Profile visits"],
+    "diagnosis": ["Engaged reading", "Content interactions", "Diagnostic tool visits"],
+    "consideration": ["Service page visits", "Related article journeys", "Returning visitors"],
+    "conversion": ["Contact form submissions", "Qualified conversations"]
+  },
+  "rotationRules": [
+    "Do not publish two consecutive weekly posts in the same pillar unless Search Console data supports it.",
+    "Alternate problem recognition with diagnostic or consideration content.",
+    "Use the weekly LinkedIn distribution: two awareness posts, one diagnosis post, one consideration post, and one blog share.",
+    "Avoid invented client evidence, statistics, testimonials, or results.",
+    "Prefer concrete operating nouns: order, quote, approval, month-end, Excel, ERP, inbox.",
+    "Each post must point to one clear next step rather than multiple competing CTAs."
+  ]
+}

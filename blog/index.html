@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L"></script>
     <script>
@@ -12,43 +12,43 @@
       gtag('js', new Date());
       gtag('config', 'G-WMG4SZNQ3L');
     </script>
-    
+
     <!-- Primary SEO Meta Tags -->
     <title>Blog — Integration & Automation Insights | Osmel Prieto Teran</title>
     <meta name="description" content="Practical advice on Salesforce-ERP integrations, business automation, and building reliable B2B systems. Real-world insights from Swiss B2B projects.">
     <meta name="author" content="Osmel Prieto Teran">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="Salesforce integration blog, ERP integration Switzerland, B2B automation, integration architecture">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.prietoteran.com/blog/">
-    
+
     <!-- Hreflang Tags -->
     <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/">
     <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/">
     <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/">
     <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.prietoteran.com/blog/">
     <meta property="og:title" content="Blog — Integration & Automation Insights">
     <meta property="og:description" content="Practical advice on Salesforce-ERP integrations, business automation, and building reliable B2B systems.">
     <meta property="og:image" content="https://www.prietoteran.com/og-image.png">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Blog — Integration & Automation Insights">
     <meta name="twitter:description" content="Practical advice on Salesforce-ERP integrations, business automation, and building reliable B2B systems.">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Global Styles -->
     <link rel="stylesheet" href="../styles.css?v=11">
 
@@ -57,25 +57,25 @@
             --bg-secondary: #F0F0F0;
             --bg-tertiary: #E8E8E8;
             --bg-elevated: #FFFFFF;
-            
+
             --text-primary: #1A1A1A;
             --text-secondary: #4A4A4A;
             --text-muted: #7A7A7A;
             --text-subtle: #B0B0B0;
-            
+
             --accent: #B8860B;
             --accent-dark: #8B6508;
             --accent-muted: rgba(184, 134, 11, 0.12);
             --accent-glow: rgba(184, 134, 11, 0.06);
-            
+
             --grid-line: rgba(0, 0, 0, 0.04);
             --border: rgba(0, 0, 0, 0.08);
             --border-strong: rgba(0, 0, 0, 0.12);
-            
+
             /* Typography */
             --font-display: 'Outfit', -apple-system, sans-serif;
             --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
-            
+
             /* Spacing Scale */
             --space-xs: 0.25rem;
             --space-sm: 0.5rem;
@@ -84,34 +84,34 @@
             --space-xl: 4rem;
             --space-2xl: 8rem;
             --space-3xl: 12rem;
-            
+
             /* Timing */
             --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
         }
-        
+
                 /* Dark Mode */
         [data-theme="dark"] {
             --bg-primary: #0D0D0D;
             --bg-secondary: #141414;
             --bg-tertiary: #1A1A1A;
             --bg-elevated: #222222;
-            
+
             --text-primary: #F5F5F0;
             --text-secondary: #A8A8A0;
             --text-muted: #5C5C58;
             --text-subtle: #3A3A38;
-            
+
             --accent: #C9A227;
             --accent-dark: #C9A227;
             --accent-muted: rgba(201, 162, 39, 0.15);
-            
+
             --border: rgba(255, 255, 255, 0.06);
             --border-strong: rgba(255, 255, 255, 0.1);
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: var(--font-display);
             background: var(--bg-primary);
@@ -119,13 +119,13 @@
             line-height: 1.7;
             padding-top: 80px;
         }
-        
+
         @media (max-width: 768px) {
             body {
                 padding-top: 70px;
             }
         }
-        
+
         /* ============================================
            NAVIGATION — MINIMAL & PRECISE
            ============================================ */
@@ -157,7 +157,7 @@
                 padding: var(--space-md) 0;
             }
         }
-        
+
         [data-theme="dark"] .nav.scrolled {
             background: rgba(13, 13, 13, 0.9);
         }
@@ -238,7 +238,7 @@
             gap: 5px;
             padding: 8px;
         }
-        
+
         .nav-hamburger span {
             display: block;
             width: 20px;
@@ -246,24 +246,24 @@
             background: var(--text-secondary);
             transition: all 0.3s var(--ease-out);
         }
-        
+
         .nav-hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
         }
-        
+
         .nav-hamburger.active span:nth-child(2) {
             opacity: 0;
         }
-        
+
         .nav-hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -5px);
         }
-        
+
         @media (max-width: 768px) {
             .nav-hamburger {
                 display: flex;
             }
-            
+
             .nav-links {
                 display: none;
                 position: absolute;
@@ -276,30 +276,30 @@
                 padding: var(--space-lg);
                 gap: var(--space-md);
             }
-            
+
             .nav.scrolled .nav-links {
                 background: var(--bg-elevated);
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
-            
+
             .nav-links li {
                 text-align: center;
             }
-            
+
             .nav-links a {
                 font-size: 1rem;
                 padding: var(--space-sm) 0;
                 display: block;
             }
-            
+
             .nav-right {
                 gap: var(--space-md);
             }
         }
-        
+
         /* Theme Toggle Button */
         .theme-toggle {
             background: none;
@@ -324,33 +324,33 @@
                 font-size: 1rem;
             }
         }
-        
+
         .theme-toggle:hover {
             border-color: var(--accent);
             color: var(--accent);
         }
-        
+
         .theme-toggle .icon-sun,
         .theme-toggle .icon-moon {
             position: absolute;
             transition: all 0.3s var(--ease-out);
         }
-        
+
         .theme-toggle .icon-moon {
             opacity: 0;
             transform: rotate(-90deg) scale(0.5);
         }
-        
+
         [data-theme="dark"] .theme-toggle .icon-sun {
             opacity: 0;
             transform: rotate(90deg) scale(0.5);
         }
-        
+
         [data-theme="dark"] .theme-toggle .icon-moon {
             opacity: 1;
             transform: rotate(0) scale(1);
         }
-        
+
         .nav-right {
             display: flex;
             align-items: center;
@@ -362,12 +362,12 @@
                 gap: var(--space-lg);
             }
         }
-        
+
         /* Language Selector - Minimal Dropdown */
         .lang-selector {
             position: relative;
         }
-        
+
         .lang-current {
             display: flex;
             align-items: center;
@@ -384,31 +384,31 @@
             cursor: pointer;
             transition: all 0.3s var(--ease-out);
         }
-        
+
         .lang-current:hover {
             color: var(--text-primary);
         }
-        
+
         .lang-current .lang-code {
             min-width: 20px;
         }
-        
+
         .lang-current .lang-arrow {
             display: flex;
             align-items: center;
             transition: transform 0.3s var(--ease-out);
             opacity: 0.5;
         }
-        
+
         .lang-current .lang-arrow svg {
             width: 10px;
             height: 6px;
         }
-        
+
         .lang-selector.open .lang-arrow {
             transform: rotate(180deg);
         }
-        
+
         .lang-dropdown {
             position: absolute;
             top: calc(100% + 8px);
@@ -424,17 +424,17 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             z-index: 200;
         }
-        
+
         [data-theme="dark"] .lang-dropdown {
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         .lang-selector.open .lang-dropdown {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-        
+
         .lang-option {
             display: flex;
             align-items: center;
@@ -452,39 +452,39 @@
             transition: all 0.15s var(--ease-out);
             text-align: left;
         }
-        
+
         .lang-option:hover {
             background: var(--bg-secondary);
             color: var(--text-primary);
         }
-        
+
         .lang-option.active {
             color: var(--accent);
         }
-        
+
         .lang-option .lang-code {
             text-transform: uppercase;
             font-weight: 600;
             min-width: 24px;
         }
-        
+
         .lang-option .lang-name {
             color: var(--text-muted);
             font-weight: 400;
             text-transform: none;
             letter-spacing: 0;
         }
-        
+
         .lang-option.active .lang-name {
             color: var(--accent);
             opacity: 0.8;
         }
-        
+
         @media (max-width: 768px) {
             .lang-selector {
                 display: none;
             }
-            
+
             .lang-selector.mobile-visible {
                 display: block;
                 position: absolute;
@@ -495,7 +495,7 @@
                 border-bottom: 1px solid var(--border);
                 padding: var(--space-md) var(--space-lg);
             }
-            
+
             .lang-selector.mobile-visible .lang-dropdown {
                 position: static;
                 opacity: 1;
@@ -509,22 +509,22 @@
                 justify-content: center;
                 gap: var(--space-md);
             }
-            
+
             .lang-selector.mobile-visible .lang-current {
                 display: none;
             }
-            
+
             .lang-selector.mobile-visible .lang-option {
                 padding: var(--space-sm) var(--space-md);
                 border: 1px solid var(--border);
             }
-            
+
             .lang-selector.mobile-visible .lang-option.active {
                 border-color: var(--accent);
                 background: var(--accent-muted);
             }
         }
-        
+
         /* ============================================
            FOOTER
            ============================================ */
@@ -602,7 +602,7 @@
         .footer-links a:hover {
             color: var(--accent);
         }
-        
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
@@ -614,36 +614,36 @@
                 padding: 0 var(--space-xl);
             }
         }
-        
+
         main {
             max-width: 1200px;
             margin: 0 auto;
             padding: calc(var(--space-xl) + 50px) 2rem 4rem;
         }
-        
+
         header.page-header {
             margin-bottom: 4rem;
         }
-        
+
         h1 {
             font-size: 2.5rem;
             font-weight: 600;
             line-height: 1.2;
             margin-bottom: 1rem;
         }
-        
+
         .page-subtitle {
             font-size: 1.125rem;
             color: var(--text-secondary);
             max-width: 600px;
         }
-        
+
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
-        
+
         .blog-card {
             background: var(--bg-elevated);
             border: 1px solid var(--border);
@@ -653,18 +653,18 @@
             flex-direction: column;
             gap: 1rem;
         }
-        
+
         .blog-card:hover {
             transform: translateY(-4px);
             border-color: var(--accent);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
         }
-        
+
         .blog-card.coming-soon {
             opacity: 0.6;
             pointer-events: none;
         }
-        
+
         .blog-meta {
             font-family: var(--font-mono);
             font-size: 0.75rem;
@@ -672,7 +672,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        
+
         .blog-card h2 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -680,14 +680,14 @@
             color: var(--text-primary);
             margin: 0;
         }
-        
+
         .blog-excerpt {
             font-size: 1rem;
             line-height: 1.6;
             color: var(--text-secondary);
             flex: 1;
         }
-        
+
         .blog-link {
             font-family: var(--font-mono);
             font-size: 0.85rem;
@@ -699,15 +699,15 @@
             gap: 0.5rem;
             transition: gap 0.2s ease;
         }
-        
+
         .blog-link:hover {
             gap: 0.75rem;
         }
-        
+
         .blog-link::after {
             content: '→';
         }
-        
+
         .badge {
             display: inline-block;
             padding: 0.25rem 0.75rem;
@@ -719,7 +719,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        
+
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             main { padding: 2rem 1.5rem; }
@@ -783,52 +783,52 @@
         <header class="page-header">
             <h1>Blog</h1>
             <p class="page-subtitle">
-                Practical insights on integrations, automation, and building reliable B2B systems. 
+                Practical insights on integrations, automation, and building reliable B2B systems.
                 Based on real projects with Swiss companies.
             </p>
         </header>
-        
+
         <div class="blog-grid">
             <article class="blog-card">
                 <div class="blog-meta">February 4, 2026 · 5 min read</div>
                 <h2>Why Salesforce-ERP Integrations Break (And How to Fix It)</h2>
                 <p class="blog-excerpt">
-                    Most integrations work for 2-4 weeks, then fail. Learn the 3 architecture principles 
+                    Most integrations work for 2-4 weeks, then fail. Learn the 3 architecture principles
                     that prevent failures in Swiss B2B companies.
                 </p>
                 <a href="why-salesforce-erp-integrations-break.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">February 4, 2026 · 6 min read</div>
                 <h2>The Real Cost of Manual Data Entry Between Systems</h2>
                 <p class="blog-excerpt">
-                    Manual data entry between Salesforce and ERP costs Swiss B2B companies 15-25 hours weekly. 
+                    Manual data entry between Salesforce and ERP costs Swiss B2B companies 15-25 hours weekly.
                     Learn to calculate the hidden costs and when automation pays for itself.
                 </p>
                 <a href="the-real-cost-of-manual-data-entry.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">February 4, 2026 · 7 min read</div>
                 <h2>From Quote to Order in 4 Hours Instead of 3 Days</h2>
                 <p class="blog-excerpt">
-                    How a Swiss manufacturer cut quote-to-order time by 85% — a case study in 
+                    How a Swiss manufacturer cut quote-to-order time by 85% — a case study in
                     Salesforce-ERP automation without custom development.
                 </p>
                 <a href="quote-to-order-in-4-hours.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">February 11, 2026 · 5 min read</div>
                 <h2>Why Leaders Can't Trust Their Own Data (And What to Do About It)</h2>
                 <p class="blog-excerpt">
-                    When every system shows different numbers, decisions slow down and confidence erodes. 
+                    When every system shows different numbers, decisions slow down and confidence erodes.
                     Here's how B2B leaders restore data reliability across Salesforce, ERP and operations.
                 </p>
                 <a href="why-leaders-cant-trust-their-data.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">May 26, 2026 · 6 min read</div>
                 <h2>AI in B2B Operations: What Actually Works (And What Doesn't)</h2>
@@ -838,7 +838,7 @@
                 </p>
                 <a href="ai-in-b2b-operations-what-actually-works.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">May 26, 2026 · 7 min read</div>
                 <h2>Why Sales Reps Don't Log Data (And Why That's Not Their Fault)</h2>
@@ -848,7 +848,7 @@
                 </p>
                 <a href="why-sales-reps-dont-log-data.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">June 3, 2026 · 6 min read</div>
                 <h2>What I Heard at the Salesforce Data & AI Summit Zürich</h2>
@@ -858,7 +858,7 @@
                 </p>
                 <a href="salesforce-data-ai-summit-zurich-2026.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">June 5, 2026 · 5 min read</div>
                 <h2>Why Companies That Invested in Tableau Years Ago Are Winning with AI Today</h2>
@@ -868,7 +868,7 @@
                 </p>
                 <a href="tableau-data-foundation-ai-advantage.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">June 8, 2026 · 5 min read</div>
                 <h2>Salesforce Without Salesforce: What "Headless" Means for Your Business</h2>
@@ -878,7 +878,7 @@
                 </p>
                 <a href="salesforce-headless-what-it-means-for-business.html" class="blog-link">Read article</a>
             </article>
-            
+
             <article class="blog-card">
                 <div class="blog-meta">June 10, 2026 · 6 min read</div>
                 <h2>Your CRM Is About to Become an AI Agent. Is Your Team Ready?</h2>
@@ -887,6 +887,16 @@
                     updating fields, drafting follow-ups. This isn't a developer update. It's a data readiness question.
                 </p>
                 <a href="salesforce-mcp-skills-ai-agent-crm.html" class="blog-link">Read article</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-meta">September 1, 2026 · 6 min read</div>
+                <h2>The Vendor Lock-In Question Behind Integrations</h2>
+                <p class="blog-excerpt">
+                    Lock-in often appears after go-live, when an integration can only be changed by one vendor.
+                    Here are the ownership questions to ask before the project starts.
+                </p>
+                <a href="integration-vendor-lock-in-control.html" class="blog-link">Read article</a>
             </article>
         </div>
     </main>
@@ -908,7 +918,7 @@
 
     <!-- i18n Internationalization -->
     <script src="../i18n.js?v=2"></script>
-    
+
     <!-- Global JavaScript -->
     <script src="../app.js?v=2"></script>
 

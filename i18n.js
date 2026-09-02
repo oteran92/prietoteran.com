@@ -799,6 +799,8 @@ const translations = {
 
     es: {
         // Navigation
+        "nav.how": "Servicios",
+        "nav.blog": "Blog",
         "nav.services": "Servicios",
         "nav.about": "Sobre mí",
         "nav.contact": "Contacto",

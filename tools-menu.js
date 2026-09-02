@@ -44,6 +44,69 @@
         }
     }
 
+    function closeLanguageMenu() {
+        const selector = document.getElementById('langSelector');
+        const trigger = document.getElementById('langToggle');
+        selector?.classList.remove('open');
+        trigger?.setAttribute('aria-expanded', 'false');
+    }
+
+    function enhanceLanguageMenu() {
+        const selector = document.getElementById('langSelector');
+        const trigger = document.getElementById('langToggle');
+        const dropdown = selector?.querySelector('.lang-dropdown');
+        if (!selector || !trigger || !dropdown) return;
+
+        dropdown.id ||= 'languageDropdown';
+        trigger.setAttribute('aria-haspopup', 'true');
+        trigger.setAttribute('aria-controls', dropdown.id);
+
+        const syncExpandedState = () => {
+            trigger.setAttribute('aria-expanded', String(selector.classList.contains('open')));
+        };
+
+        syncExpandedState();
+        new MutationObserver(syncExpandedState).observe(selector, {
+            attributes: true,
+            attributeFilter: ['class'],
+        });
+
+        trigger.addEventListener('click', () => {
+            if (!selector.classList.contains('open')) return;
+            document.querySelectorAll('.tools-menu.open').forEach((menu) => {
+                const toolsTrigger = menu.querySelector('.tools-menu-trigger');
+                if (toolsTrigger) closeMenu(menu, toolsTrigger);
+            });
+            document.getElementById('navLinks')?.classList.remove('active');
+            document.getElementById('navHamburger')?.classList.remove('active');
+        });
+    }
+
+    function enhanceMobileNavigation() {
+        const trigger = document.getElementById('navHamburger');
+        const links = document.getElementById('navLinks');
+        if (!trigger || !links) return;
+
+        trigger.setAttribute('aria-controls', links.id);
+        const syncExpandedState = () => {
+            trigger.setAttribute('aria-expanded', String(links.classList.contains('active')));
+        };
+
+        syncExpandedState();
+        new MutationObserver(syncExpandedState).observe(links, {
+            attributes: true,
+            attributeFilter: ['class'],
+        });
+
+        trigger.addEventListener('click', () => {
+            closeLanguageMenu();
+            document.querySelectorAll('.tools-menu.open').forEach((menu) => {
+                const toolsTrigger = menu.querySelector('.tools-menu-trigger');
+                if (toolsTrigger) closeMenu(menu, toolsTrigger);
+            });
+        });
+    }
+
     function enhanceToolsLink(originalTrigger) {
         const menu = originalTrigger.closest('li');
         if (!menu || menu.classList.contains('tools-menu')) return;
@@ -70,6 +133,7 @@
                 const openTrigger = openMenu.querySelector('.tools-menu-trigger');
                 if (openTrigger) closeMenu(openMenu, openTrigger);
             });
+            if (willOpen) closeLanguageMenu();
             menu.classList.toggle('open', willOpen);
             trigger.setAttribute('aria-expanded', String(willOpen));
             document.body.classList.toggle('tools-dropdown-open', willOpen);
@@ -110,6 +174,8 @@
         }
 
         document.querySelectorAll('[data-tools-link]').forEach(enhanceToolsLink);
+        enhanceLanguageMenu();
+        enhanceMobileNavigation();
 
         document.addEventListener('click', (event) => {
             document.querySelectorAll('.tools-menu.open').forEach((menu) => {
@@ -122,14 +188,33 @@
 
         document.addEventListener('keydown', (event) => {
             if (event.key !== 'Escape') return;
-            document.querySelectorAll('.tools-menu.open').forEach((menu) => {
-                const trigger = menu.querySelector('.tools-menu-trigger');
+
+            const toolsMenu = document.querySelector('.tools-menu.open');
+            if (toolsMenu) {
+                const trigger = toolsMenu.querySelector('.tools-menu-trigger');
                 if (trigger) {
-                    closeMenu(menu, trigger);
+                    closeMenu(toolsMenu, trigger);
                     trigger.focus();
                 }
-            });
-        });
+                return;
+            }
+
+            const languageSelector = document.getElementById('langSelector');
+            const languageTrigger = document.getElementById('langToggle');
+            if (languageSelector?.classList.contains('open')) {
+                closeLanguageMenu();
+                languageTrigger?.focus();
+                return;
+            }
+
+            const navLinks = document.getElementById('navLinks');
+            const navTrigger = document.getElementById('navHamburger');
+            if (navLinks?.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                navTrigger?.classList.remove('active');
+                navTrigger?.focus();
+            }
+        }, true);
     }
 
     if (document.readyState === 'loading') {

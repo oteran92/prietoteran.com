@@ -1,4 +1,49 @@
-/* Shared dropdown that inherits the existing navbar design tokens. */
+/* Shared navigation behavior that preserves a stable navbar geometry. */
+:root {
+    --nav-height: 72px;
+}
+
+.nav,
+.nav.scrolled {
+    height: var(--nav-height);
+    padding: 0;
+    border-bottom: 1px solid transparent;
+    transition:
+        background-color 0.2s var(--ease-out),
+        border-color 0.2s var(--ease-out),
+        backdrop-filter 0.2s var(--ease-out);
+}
+
+.nav.scrolled {
+    border-bottom-color: var(--border);
+}
+
+.nav > .container,
+.nav-inner,
+.nav-right {
+    height: 100%;
+}
+
+.nav-links,
+.nav-links > li {
+    align-items: center;
+}
+
+.nav-links > li {
+    display: flex;
+}
+
+.nav-links > li > a,
+.tools-menu-trigger {
+    min-height: 40px;
+    line-height: 1;
+    align-items: center;
+}
+
+.nav-links > li > a {
+    display: flex;
+}
+
 .tools-menu {
     position: relative;
 }
@@ -20,10 +65,42 @@
     transition: color 0.3s var(--ease-out);
 }
 
+.tools-menu-trigger,
+.lang-current {
+    min-height: 40px;
+}
+
+.nav-hamburger,
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    transition:
+        border-color 0.2s var(--ease-out),
+        color 0.2s var(--ease-out),
+        background-color 0.2s var(--ease-out);
+}
+
+.nav-hamburger:focus-visible,
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.nav-hamburger span {
+    transition:
+        transform 0.2s var(--ease-out),
+        opacity 0.2s var(--ease-out);
+}
+
 .tools-menu-trigger:hover,
 .tools-menu-trigger:focus-visible {
     color: var(--text-primary);
-    outline: none;
+}
+
+.tools-menu-trigger:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
 }
 
 .tools-menu-trigger::before {
@@ -34,6 +111,7 @@
     transition: transform 0.2s var(--ease-out);
 }
 
+.tools-menu:hover .tools-menu-trigger::before,
 .tools-menu.open .tools-menu-trigger::before {
     transform: rotate(180deg);
 }
@@ -43,20 +121,43 @@
     top: calc(100% + 1rem);
     left: 50%;
     z-index: 250;
-    display: none;
+    display: block;
     width: max-content;
     min-width: 260px;
     padding: var(--space-xs);
     border: 1px solid var(--border);
     background: var(--bg-elevated);
     list-style: none;
-    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-0.25rem);
+    transition:
+        opacity 0.16s var(--ease-out),
+        transform 0.16s var(--ease-out),
+        visibility 0s linear 0.16s;
 }
 
 .tools-menu:hover .tools-dropdown,
-.tools-menu:focus-within .tools-dropdown,
 .tools-menu.open .tools-dropdown {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+    transition-delay: 0s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tools-menu::after {
+        /* Keep hover continuous across the visual gap below the trigger. */
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: max(100%, 260px);
+        height: 1rem;
+        transform: translateX(-50%);
+    }
 }
 
 .nav-links .tools-dropdown a {
@@ -76,10 +177,112 @@
 .nav-links .tools-dropdown a:focus-visible {
     background: var(--accent);
     color: #FFFFFF;
-    outline: none;
+}
+
+.nav-links .tools-dropdown a:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: -3px;
+}
+
+.lang-selector {
+    position: relative;
+}
+
+.lang-current {
+    padding: 0 0.4rem;
+    transition: color 0.2s var(--ease-out);
+}
+
+.lang-current:focus-visible {
+    color: var(--text-primary);
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.lang-dropdown {
+    top: calc(100% + 1rem);
+    display: block;
+    min-width: 180px;
+    box-shadow: none;
+    pointer-events: none;
+    transform: translateY(-0.25rem);
+    transition:
+        opacity 0.16s var(--ease-out),
+        transform 0.16s var(--ease-out),
+        visibility 0s linear 0.16s;
+}
+
+.lang-selector:hover .lang-dropdown,
+.lang-selector.open .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.lang-selector:hover .lang-arrow,
+.lang-selector.open .lang-arrow {
+    transform: rotate(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .lang-selector::after {
+        /* Match the Tools menu by bridging the dropdown's visual gap. */
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 180px;
+        height: 1rem;
+    }
+}
+
+.lang-option:hover,
+.lang-option:focus-visible {
+    background: var(--accent);
+    color: #FFFFFF;
+}
+
+.lang-option:hover .lang-name,
+.lang-option:focus-visible .lang-name {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.lang-option:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: -3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tools-menu-trigger::before,
+    .tools-dropdown,
+    .lang-arrow,
+    .lang-dropdown {
+        transition: none;
+    }
 }
 
 @media (max-width: 768px) {
+    .nav,
+    .nav.scrolled {
+        height: var(--nav-height);
+        padding: 0;
+    }
+
+    .nav-links {
+        top: var(--nav-height);
+        max-height: calc(100dvh - var(--nav-height));
+        overflow-y: auto;
+        align-items: stretch;
+    }
+
+    .nav-links > li {
+        justify-content: center;
+        width: 100%;
+    }
+
     .tools-menu-trigger {
         display: flex !important;
         justify-content: center;
@@ -90,16 +293,20 @@
 
     .tools-dropdown {
         position: static;
+        display: none;
         width: 100%;
         min-width: 0;
         margin-top: var(--space-sm);
         padding: var(--space-xs);
         border-color: var(--border);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
         transform: none;
+        transition: none;
     }
 
-    .tools-menu:hover .tools-dropdown,
-    .tools-menu:focus-within .tools-dropdown {
+    .tools-menu:hover .tools-dropdown {
         display: none;
     }
 
@@ -112,7 +319,61 @@
         font-size: 0.85rem;
     }
 
-    .tools-dropdown-open .lang-selector.mobile-visible {
-        top: calc(100% + 270px);
+    .lang-selector,
+    .lang-selector.mobile-visible {
+        position: relative;
+        inset: auto;
+        display: block;
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+
+    .lang-selector.mobile-visible .lang-current {
+        display: flex;
+    }
+
+    .lang-selector .lang-dropdown,
+    .lang-selector.mobile-visible .lang-dropdown {
+        position: absolute;
+        top: calc(100% + 1rem);
+        right: 0;
+        left: auto;
+        display: block;
+        min-width: 180px;
+        padding: var(--space-xs);
+        border: 1px solid var(--border);
+        background: var(--bg-elevated);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-0.25rem);
+    }
+
+    .lang-selector:hover .lang-dropdown,
+    .lang-selector.mobile-visible:hover .lang-dropdown {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-0.25rem);
+    }
+
+    .lang-selector.open .lang-dropdown,
+    .lang-selector.mobile-visible.open .lang-dropdown {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .lang-selector.mobile-visible .lang-option {
+        display: flex;
+        padding: 0.65rem 0.75rem;
+        border: 0;
+    }
+
+    .lang-selector.mobile-visible .lang-option.active {
+        border: 0;
+        background: transparent;
     }
 }

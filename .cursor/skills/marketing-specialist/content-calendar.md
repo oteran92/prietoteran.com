@@ -58,6 +58,56 @@ Alternate between these content pillars:
 
 ---
 
+## September 2026 - Week of September 7
+
+| Day | Channel | Content | Status |
+|-----|---------|---------|--------|
+| Mon Sep 7 | Blog | Review draft: 5 Signs Your Data Foundation Will Fail When Volume Rises | Draft |
+| Mon Sep 7 | LinkedIn | Draft below: Monday operational volume post | Draft |
+| Tue Sep 8 | LinkedIn | Draft below: Tuesday field definition post | Draft |
+| Wed Sep 9 | LinkedIn | Draft below: Wednesday Excel reconciliation post | Draft |
+| Thu Sep 10 | LinkedIn | Draft below: Thursday handoff visibility post | Draft |
+| Fri Sep 11 | LinkedIn | Draft below: Friday automation sequence post | Draft |
+
+### LinkedIn drafts for review
+
+**Monday Sep 7, 2026 · Draft**
+
+Growth does not break your systems.
+It shows which parts were only working because someone remembered the workaround.
+That is not a process. It is a dependency with a calendar invite.
+https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html #DataReliability #B2BOperations #ERP #Salesforce
+
+**Tuesday Sep 8, 2026 · Draft**
+
+The same field name can hide three different business meanings.
+Sales reads customer status one way. Finance reads it another. Operations reads it a third way.
+Automation will not fix that. It will just move the confusion faster.
+https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html #CRM #DataQuality #B2B #Operations
+
+**Wednesday Sep 9, 2026 · Draft**
+
+The most trusted report in the company is often the one built outside the company systems.
+That should make leadership uncomfortable.
+If Excel is where Salesforce and the ERP finally agree, the source systems are not carrying the business.
+https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html #DataReliability #ERP #Salesforce #B2BOperations
+
+**Thursday Sep 10, 2026 · Draft**
+
+A failed handoff is not the real issue.
+The real issue is when the customer finds it before your team does.
+Every critical data flow needs a visible state, not another inbox thread.
+https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html #SystemIntegration #Operations #B2B #DataQuality
+
+**Friday Sep 11, 2026 · Draft**
+
+Automating before data ownership is clear is a quiet way to scale mistakes.
+First decide where the truth lives.
+Then move it from that system to the others, with visibility when it fails.
+https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html #Automation #DataGovernance #ERP #CRM
+
+---
+
 ## February 2026 Calendar (Example)
 
 ### Week 1 (Feb 3-7)

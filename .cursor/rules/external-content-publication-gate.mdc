@@ -1,0 +1,20 @@
+---
+description: Prevent social posts from linking to content that is not live
+alwaysApply: true
+---
+
+# External Content Publication Gate
+
+- Create drafts only. Never publish, schedule, or send social content without
+  explicit user approval after showing the final text, destination, link, and
+  attached image.
+- A pull request, branch preview, content date, or draft status is not proof
+  that an article is published.
+- Before presenting a social post as ready, confirm that the article is merged
+  into the default branch and deployed to production.
+- Verify the final public article URL returns HTTP `200` with an HTML content
+  type and displays the intended article, not a homepage or 404 fallback.
+- Verify the Open Graph image URL returns HTTP `200` with an image content type.
+- Attach the intended social image explicitly when the publishing surface
+  supports attachments. Do not depend only on link-preview scraping.
+- If any check fails, keep the post as a draft and report the exact blocker.

@@ -97,6 +97,9 @@ const translations = {
         "blog.post10.title": "Your CRM Is About to Become an AI Agent. Is Your Team Ready?",
         "blog.post10.excerpt": "Salesforce MCP Skills let AI tools operate directly inside your CRM. This isn't a developer update — it's a question about whether your data is ready.",
 
+        "blog.post11.title": "5 Signs Your Data Foundation Will Fail When Volume Rises",
+        "blog.post11.excerpt": "Growth does not create data problems. It exposes weak definitions, hidden exceptions, and handoffs that fail quietly.",
+
         // Projects Section
         "projects.number": "04 PROJECTS",
         "projects.title": "Products I am building",
@@ -501,6 +504,9 @@ const translations = {
         "blog.post10.title": "Ihr CRM wird zum KI-Agenten. Ist Ihr Team bereit?",
         "blog.post10.excerpt": "Salesforce MCP Skills ermöglichen KI-Tools, direkt in Ihrem CRM zu operieren. Das ist kein Entwickler-Update — es ist eine Frage über Ihre Daten.",
 
+        "blog.post11.title": "5 Anzeichen, dass Ihr Datenfundament bei mehr Volumen scheitert",
+        "blog.post11.excerpt": "Wachstum schafft Datenprobleme nicht. Es macht schwache Definitionen, versteckte Ausnahmen und leise scheiternde Übergaben sichtbar.",
+
         // Projects Section
         "projects.number": "04 PROJEKTE",
         "projects.title": "Produkte, die ich entwickle",
@@ -888,6 +894,9 @@ const translations = {
         
         "blog.post4.title": "Por qué los líderes no confían en sus datos",
         "blog.post4.excerpt": "Cuando cada sistema muestra números diferentes, las decisiones se ralentizan. Así se restaura la fiabilidad de los datos.",
+
+        "blog.post11.title": "5 señales de que tu base de datos fallará cuando suba el volumen",
+        "blog.post11.excerpt": "El crecimiento no crea los problemas de datos. Expone definiciones débiles, excepciones ocultas y traspasos que fallan en silencio.",
 
         // Projects Section
         "projects.number": "04 PROYECTOS",

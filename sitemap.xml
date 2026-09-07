@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    
+
     <!-- Homepage (EN/DE via i18n.js) -->
     <url>
         <loc>https://www.prietoteran.com/</loc>
@@ -44,28 +44,43 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/tools/shopify-csv-repair/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/tools/shopify-csv-repair/" />
     </url>
-    
+
     <!-- Blog Index - English -->
     <url>
         <loc>https://www.prietoteran.com/blog/</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-09-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/" />
     </url>
-    
+
     <!-- Blog Index - German -->
     <url>
         <loc>https://www.prietoteran.com/de/blog/</loc>
-        <lastmod>2026-05-26</lastmod>
+        <lastmod>2026-09-07</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/" />
     </url>
-    
+
+    <!-- Blog Index - Spanish -->
+    <url>
+        <loc>https://www.prietoteran.com/es/blog/</loc>
+        <lastmod>2026-09-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/" />
+    </url>
+
     <!-- Blog Post 1: Why Integrations Break -->
     <url>
         <loc>https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html</loc>
@@ -75,7 +90,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-salesforce-erp-integrationen-scheitern.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/warum-salesforce-erp-integrationen-scheitern.html</loc>
         <lastmod>2026-02-04</lastmod>
@@ -84,7 +99,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-salesforce-erp-integrations-break.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-salesforce-erp-integrationen-scheitern.html" />
     </url>
-    
+
     <!-- Blog Post 2: Manual Data Entry Costs -->
     <url>
         <loc>https://www.prietoteran.com/blog/the-real-cost-of-manual-data-entry.html</loc>
@@ -94,7 +109,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/the-real-cost-of-manual-data-entry.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/die-wahren-kosten-manueller-dateneingabe.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/die-wahren-kosten-manueller-dateneingabe.html</loc>
         <lastmod>2026-02-04</lastmod>
@@ -103,7 +118,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/the-real-cost-of-manual-data-entry.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/die-wahren-kosten-manueller-dateneingabe.html" />
     </url>
-    
+
     <!-- Blog Post 3: Quote to Order -->
     <url>
         <loc>https://www.prietoteran.com/blog/quote-to-order-in-4-hours.html</loc>
@@ -113,7 +128,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/quote-to-order-in-4-hours.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/von-angebot-zu-auftrag-in-4-stunden.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/von-angebot-zu-auftrag-in-4-stunden.html</loc>
         <lastmod>2026-02-04</lastmod>
@@ -122,7 +137,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/quote-to-order-in-4-hours.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/von-angebot-zu-auftrag-in-4-stunden.html" />
     </url>
-    
+
     <!-- Blog Post 4: Why Leaders Can't Trust Their Data -->
     <url>
         <loc>https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html</loc>
@@ -132,7 +147,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html</loc>
         <lastmod>2026-02-11</lastmod>
@@ -141,7 +156,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-leaders-cant-trust-their-data.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-fuehrungskraefte-ihren-daten-nicht-vertrauen.html" />
     </url>
-    
+
     <!-- Blog Post 5: AI in B2B Operations -->
     <url>
         <loc>https://www.prietoteran.com/blog/ai-in-b2b-operations-what-actually-works.html</loc>
@@ -151,7 +166,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/ai-in-b2b-operations-what-actually-works.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/ki-im-b2b-betrieb-was-wirklich-funktioniert.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/ki-im-b2b-betrieb-was-wirklich-funktioniert.html</loc>
         <lastmod>2026-05-26</lastmod>
@@ -160,7 +175,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/ai-in-b2b-operations-what-actually-works.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/ki-im-b2b-betrieb-was-wirklich-funktioniert.html" />
     </url>
-    
+
     <!-- Blog Post 6: Why Sales Reps Don't Log Data -->
     <url>
         <loc>https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html</loc>
@@ -170,7 +185,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-sales-reps-keine-daten-erfassen.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/warum-sales-reps-keine-daten-erfassen.html</loc>
         <lastmod>2026-05-26</lastmod>
@@ -179,7 +194,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/why-sales-reps-dont-log-data.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/warum-sales-reps-keine-daten-erfassen.html" />
     </url>
-    
+
     <!-- Blog Post 7: Salesforce Data & AI Summit Zürich -->
     <url>
         <loc>https://www.prietoteran.com/blog/salesforce-data-ai-summit-zurich-2026.html</loc>
@@ -189,7 +204,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-data-ai-summit-zurich-2026.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-data-ai-summit-zurich-2026.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/salesforce-data-ai-summit-zurich-2026.html</loc>
         <lastmod>2026-06-03</lastmod>
@@ -198,7 +213,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-data-ai-summit-zurich-2026.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-data-ai-summit-zurich-2026.html" />
     </url>
-    
+
     <!-- Blog Post 8: Tableau Data Foundation AI Advantage -->
     <url>
         <loc>https://www.prietoteran.com/blog/tableau-data-foundation-ai-advantage.html</loc>
@@ -208,7 +223,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/tableau-data-foundation-ai-advantage.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/tableau-datenfundament-ki-vorteil.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/tableau-datenfundament-ki-vorteil.html</loc>
         <lastmod>2026-06-05</lastmod>
@@ -217,7 +232,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/tableau-data-foundation-ai-advantage.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/tableau-datenfundament-ki-vorteil.html" />
     </url>
-    
+
     <!-- Blog Post 9: Salesforce Headless -->
     <url>
         <loc>https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html</loc>
@@ -227,7 +242,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html</loc>
         <lastmod>2026-06-08</lastmod>
@@ -236,7 +251,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-headless-what-it-means-for-business.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-headless-was-das-fuer-ihr-unternehmen-bedeutet.html" />
     </url>
-    
+
     <!-- Blog Post 10: Salesforce MCP Skills AI Agent CRM -->
     <url>
         <loc>https://www.prietoteran.com/blog/salesforce-mcp-skills-ai-agent-crm.html</loc>
@@ -246,7 +261,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-mcp-skills-ai-agent-crm.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-mcp-skills-ki-agent-crm.html" />
     </url>
-    
+
     <url>
         <loc>https://www.prietoteran.com/de/blog/salesforce-mcp-skills-ki-agent-crm.html</loc>
         <lastmod>2026-06-10</lastmod>
@@ -255,5 +270,39 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/salesforce-mcp-skills-ai-agent-crm.html" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/salesforce-mcp-skills-ki-agent-crm.html" />
     </url>
-    
+
+    <!-- Blog Post 11: Data Foundation Volume Risk -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html</loc>
+        <lastmod>2026-09-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/anzeichen-datenfundament-scheitert-wenn-volumen-steigt.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/senales-base-datos-falla-cuando-sube-volumen.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html" />
+    </url>
+
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/anzeichen-datenfundament-scheitert-wenn-volumen-steigt.html</loc>
+        <lastmod>2026-09-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/anzeichen-datenfundament-scheitert-wenn-volumen-steigt.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/senales-base-datos-falla-cuando-sube-volumen.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html" />
+    </url>
+
+    <url>
+        <loc>https://www.prietoteran.com/es/blog/senales-base-datos-falla-cuando-sube-volumen.html</loc>
+        <lastmod>2026-09-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/anzeichen-datenfundament-scheitert-wenn-volumen-steigt.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/senales-base-datos-falla-cuando-sube-volumen.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/signs-data-foundation-fails-when-volume-rises.html" />
+    </url>
+
 </urlset>

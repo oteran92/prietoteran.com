@@ -118,7 +118,7 @@
 
 .tools-dropdown {
     position: absolute;
-    top: calc(100% + 1rem);
+    top: calc(100% + 8px);
     left: 50%;
     z-index: 250;
     display: block;
@@ -312,6 +312,7 @@
 
     .tools-menu.open .tools-dropdown {
         display: block;
+        transform: none;
     }
 
     .nav-links .tools-dropdown a {

@@ -15,6 +15,21 @@ Every blog post must:
 3. **Build trust** - Demonstrate expertise without overselling
 4. **Drive action** - Make it natural for them to want to talk to you
 
+## Curiosity and Retention
+
+Read [narrative-retention.md](narrative-retention.md) before drafting titles or article copy.
+
+- Build one specific information gap around a real operating question.
+- Let the reader form the apparently obvious answer, then introduce a verified
+  contradiction and explain the mechanism.
+- Keep titles informative. Use an implicit question when a literal question
+  would hide the subject or value.
+- Open with a concrete scene, sustain one unresolved question, and explicitly
+  close it with a practical solution.
+- Earn attention through recognition, surprise, and usefulness. Never use
+  deceptive clickbait, invented stakes, fear, or withheld caveats.
+- The content must fully deliver the promise made by the title and opening.
+
 ## Content Strategy
 
 ### Target Audience Profile
@@ -229,6 +244,9 @@ Keep paragraphs 3-5 sentences max for web readability.
 Before publishing, verify:
 
 ### Content Quality
+- [ ] Title names the subject while leaving one meaningful mechanism unresolved
+- [ ] Opening establishes an apparent answer and a credible contradiction
+- [ ] Conclusion explicitly resolves the opening question
 - [ ] Opens with a specific, relatable scenario
 - [ ] Clearly identifies a real problem
 - [ ] Provides actionable insight (not just theory)

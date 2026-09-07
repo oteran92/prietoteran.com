@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WMG4SZNQ3L');
+    </script>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>The Vendor Lock-In Question Behind Integrations | Osmel Prieto Teran</title>
+    <meta name="description" content="Vendor lock-in in integration projects often appears after go-live. Swiss B2B leaders can keep control by clarifying ownership before work starts.">
+    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="vendor lock-in integration, B2B integration Switzerland, Salesforce ERP integration control, integration ownership, systems advisory B2B">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html">
+
+    <!-- Hreflang Tags -->
+    <link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html">
+    <link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/integration-vendor-lock-in-kontrolle.html">
+    <link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/vendor-lock-in-integraciones-control.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html">
+    <meta property="og:title" content="The Vendor Lock-In Question Behind Integrations">
+    <meta property="og:description" content="Lock-in often appears after go-live, when the process depends on a setup only one vendor can change. Ask the ownership questions first.">
+    <meta property="og:image" content="https://www.prietoteran.com/blog/images/integration-vendor-lock-in-control.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Vendor Lock-In Question Behind Integrations">
+    <meta name="twitter:description" content="Lock-in often appears after go-live, when the process depends on a setup only one vendor can change.">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "The Vendor Lock-In Question Behind Integrations",
+        "description": "Vendor lock-in in integration projects often appears after go-live. Swiss B2B leaders can keep control by clarifying ownership before work starts.",
+        "image": "https://www.prietoteran.com/blog/images/integration-vendor-lock-in-control.jpg",
+        "inLanguage": "en",
+        "author": {
+          "@type": "Person",
+          "name": "Osmel Prieto Teran",
+          "url": "https://www.prietoteran.com"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Osmel Prieto Teran",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.prietoteran.com/favicon.svg"
+          }
+        },
+        "datePublished": "2026-09-01",
+        "dateModified": "2026-09-01",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html"
+        }
+      }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="../styles.css?v=11">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="../" class="nav-logo">
+                    <span>O</span>PT<span>.</span>
+                </a>
+                <div class="nav-right">
+                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="../#how" data-i18n="nav.how">Services</a></li>
+                        <li><a href="../#blog" data-i18n="nav.blog">Blog</a></li>
+                        <li><a href="/tools/erp-crm-roi-calculator.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
+                        <li><a href="/#projects" data-projects-link data-i18n="nav.projects">Projects</a></li>
+                        <li><a href="../#contact" data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                    <div class="lang-selector" id="langSelector">
+                        <button class="lang-current" id="langToggle">
+                            <span class="lang-code" id="currentLangCode">EN</span>
+                            <span class="lang-arrow">
+                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
+                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <a href="integration-vendor-lock-in-control.html" class="lang-option active">
+                                <span class="lang-code">EN</span>
+                                <span class="lang-name">English</span>
+                            </a>
+                            <a href="../de/blog/integration-vendor-lock-in-kontrolle.html" class="lang-option">
+                                <span class="lang-code">DE</span>
+                                <span class="lang-name">Deutsch</span>
+                            </a>
+                            <a href="../es/blog/vendor-lock-in-integraciones-control.html" class="lang-option">
+                                <span class="lang-code">ES</span>
+                                <span class="lang-name">Español</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="icon-sun">☀</span>
+                        <span class="icon-moon">☾</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Container -->
+    <article class="article">
+        <div class="container">
+            <!-- Article Header -->
+            <header class="article-header">
+                <div class="article-meta">
+                    <span class="article-category">Integration</span>
+                    <span class="article-divider">·</span>
+                    <time datetime="2026-09-01">September 1, 2026</time>
+                    <span class="article-divider">·</span>
+                    <span class="article-reading-time">6 min read</span>
+                </div>
+                <h1 class="article-title">The Vendor Lock-In Question Behind Integrations</h1>
+                <p class="article-intro">An integration project can look successful on the day it goes live. The harder question is what happens six months later, when a field changes, an ERP upgrade lands, or the person who built it is no longer available.</p>
+            </header>
+        </div>
+
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="images/integration-vendor-lock-in-control.jpg" alt="Abstract integration layer between enterprise systems with a gold path showing documented ownership and a route out of vendor lock-in">
+        </div>
+
+        <!-- Article Content -->
+        <div class="container">
+            <div class="article-content">
+                <p class="article-lead">The uncomfortable moment usually comes after go-live. A sales field changes in Salesforce. Finance adjusts a product rule in the ERP. A customer record stops syncing. Someone asks a simple question: who can change the integration?</p>
+
+                <p>If the answer is only the original vendor, the company has learned something important. It did not buy a working connection between systems. It bought a dependency.</p>
+
+                <p>That dependency is not always visible during procurement. The demo works. The proposal is clear. The price is approved. But the operational control question is often left until later, when the system is already carrying orders, approvals, prices, or customer data.</p>
+
+                <h2>Lock-in is not only a contract problem</h2>
+
+                <p>When leaders hear vendor lock-in, they often think about licensing terms or cancellation clauses. Those matter. But in integration work, lock-in is usually more practical.</p>
+
+                <p>It shows up in small, operational questions:</p>
+
+                <ul>
+                    <li>Can your team see the mapping between Salesforce and the ERP?</li>
+                    <li>Can someone explain which system owns each field?</li>
+                    <li>Can changes be tested without touching production data?</li>
+                    <li>Can another engineer maintain the work without reverse engineering it first?</li>
+                    <li>Do you have the credentials, documentation, and source code needed to operate it?</li>
+                </ul>
+
+                <p>If the answer to those questions is unclear, the risk is not theoretical. Every later change becomes slower. Every incident depends on the vendor queue. Every internal discussion starts with the same sentence: we need to ask them.</p>
+
+                <h2>The warning sign: the integration is a black box</h2>
+
+                <p>A black box integration can be attractive because it removes complexity from the buyer. You describe what should happen. The vendor configures it. The business sees records move from one system to another.</p>
+
+                <p>That can be enough for a simple use case. But most B2B operations do not stay simple. Price logic changes. Customer hierarchies change. Approval rules change. New warehouses, currencies, legal entities, or sales channels appear. The integration has to change with the business.</p>
+
+                <p>When the integration is a black box, change becomes a request instead of a capability. The company cannot inspect the rule. It cannot compare the current behaviour with the intended behaviour. It cannot decide whether a change is small, risky, or urgent without outside help.</p>
+
+                <p>The issue is not that vendors are bad. Many do good work. The issue is that the buyer has no operational handle on work that has become part of the business.</p>
+
+                <div class="article-highlight">
+                    <p><strong>The practical test:</strong> If a critical field changes tomorrow, can your company understand the impact, approve the change, test it, and keep a record of what was changed? If not, the integration is controlling you more than you control it.</p>
+                </div>
+
+                <h2>What ownership should mean</h2>
+
+                <p>Ownership is more than having an admin login. It means the business can understand, maintain, and replace the integration if needed.</p>
+
+                <p>For a Salesforce to ERP connection, that usually means five concrete things.</p>
+
+                <h3>1. A documented data ownership model</h3>
+
+                <p>For each important object and field, the company should know which system is the source of truth. Customer address. Product price. Credit status. Order status. Opportunity stage. If two systems can overwrite each other, the integration will eventually create conflict.</p>
+
+                <h3>2. Visible mapping and transformation rules</h3>
+
+                <p>Mapping should not live only inside a consultant's head or an inaccessible platform screen. A future engineer should be able to see how fields move, which values are transformed, and which records are excluded.</p>
+
+                <h3>3. A safe test path</h3>
+
+                <p>Changes need a place to fail safely. That can be a sandbox, a test tenant, sample data, or a controlled staging flow. The specific tool matters less than the habit: never discover integration behaviour for the first time in production.</p>
+
+                <h3>4. Clear credentials and access ownership</h3>
+
+                <p>Service accounts, API keys, certificates, and connected apps must belong to the company, not to an individual vendor account. Access should be revocable and auditable. Nobody should need a former consultant to retrieve the key that keeps orders moving.</p>
+
+                <h3>5. Handover that another engineer can use</h3>
+
+                <p>A handover document should explain what runs, where it runs, how errors appear, how to deploy changes, and what to check when something fails. This is not bureaucracy. It is operational insurance.</p>
+
+                <h2>Questions to ask before you sign</h2>
+
+                <p>The best time to reduce lock-in is before the project starts. These questions are simple enough for a leadership meeting and specific enough to expose real risk.</p>
+
+                <ol>
+                    <li><strong>What exactly will we own at the end?</strong> Ask for code, configuration exports, diagrams, field mappings, credentials, and deployment notes.</li>
+                    <li><strong>What will only the vendor be able to change?</strong> This question matters because some platforms are intentionally closed. That may be acceptable, but it should be a conscious decision.</li>
+                    <li><strong>How will we test an ERP or Salesforce change before it affects live orders?</strong> A vague answer here usually means incidents will be found by users.</li>
+                    <li><strong>How does another engineer take over the work?</strong> If the answer is another paid onboarding project, you are buying a dependency.</li>
+                    <li><strong>How are failures surfaced to the business?</strong> Silent failure is where lock-in becomes operational pain. The business needs visibility, not only the vendor.</li>
+                </ol>
+
+                <h2>The trade-off is not vendor or no vendor</h2>
+
+                <p>This is not an argument against vendors or integration platforms. Many companies need both. The trade-off is whether the vendor remains a useful partner or becomes the only party that can keep the business moving.</p>
+
+                <p>A good integration partner should be comfortable leaving the company in control. That does not mean every internal team must be able to rewrite the code. It means the company can inspect the work, understand the risk, and bring in another qualified person without starting from zero.</p>
+
+                <p>For Swiss and DACH B2B companies, that control matters because operations tend to depend on long-lived systems. ERPs stay. Customer data stays. Order processes stay. The integration layer should be built with the same long-term discipline.</p>
+
+                <p>Before the next project, do not only ask whether the integration can be delivered. Ask whether you will still control it after it is delivered.</p>
+            </div>
+
+            <!-- Simple CTA -->
+            <div class="article-cta-simple">
+                <a href="../#contact" class="article-cta-button" data-i18n="blog.cta.button">Get in touch</a>
+            </div>
+
+            <!-- Related Content -->
+            <div class="article-related">
+                <h4 data-i18n="blog.continueReading">Continue Reading</h4>
+                <div class="article-related-links">
+                    <a href="why-salesforce-erp-integrations-break.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.article">Article</span>
+                        <span class="article-related-title" data-i18n="blog.post1.title">Why Salesforce-ERP Integrations Break</span>
+                    </a>
+                    <a href="why-leaders-cant-trust-their-data.html" class="article-related-link">
+                        <span class="article-related-label" data-i18n="blog.article">Article</span>
+                        <span class="article-related-title" data-i18n="blog.post4.title">Why Leaders Can't Trust Their Own Data</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text" data-i18n="footer.copyright">© 2026 Osmel Prieto Teran</span>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
+                    <a href="mailto:osmel@prietoteran.com">Email</a>
+                    <a href="tel:+41791048885">+41 79 104 88 85</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- i18n Internationalization -->
+    <script src="../i18n.js?v=2"></script>
+
+    <!-- Global JavaScript -->
+    <script src="../app.js?v=2"></script>
+</body>
+</html>

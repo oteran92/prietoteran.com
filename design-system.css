@@ -1,0 +1,254 @@
+/* Shared visual system. Load after page layout CSS on every public page.
+   Inter: headings, reading and UI. Mono: code, values and small metadata. */
+:root {
+  --font-display: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --bg-primary: #faf9f6;
+  --bg-secondary: #efeee9;
+  --bg-tertiary: #f1f0eb;
+  --bg-elevated: #fff;
+  --text-primary: #252923;
+  --text-secondary: #555b53;
+  --text-muted: #696e65;
+  --text-subtle: #74796f;
+  --accent: #926410;
+  --accent-dark: #704b09;
+  --accent-muted: #92641012;
+  --accent-glow: #92641009;
+  --border: #dcded5;
+  --border-strong: #b9bdb2;
+  --grid-line: #dcded5;
+  --space-xs: .25rem;
+  --space-sm: .5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+  --ease-out: cubic-bezier(.16,1,.3,1);
+  --radius-control: 5px;
+  --radius-panel: 10px;
+  color-scheme: light;
+}
+[data-theme='dark'] {
+  --bg-primary: #151813;
+  --bg-secondary: #22261f;
+  --bg-tertiary: #22261f;
+  --bg-elevated: #1b1f18;
+  --text-primary: #f3f4ed;
+  --text-secondary: #c1c7b8;
+  --text-muted: #b2baaa;
+  --text-subtle: #a3ad99;
+  --accent: #dfb75b;
+  --accent-dark: #f0ca77;
+  --accent-muted: #dfb75b18;
+  --accent-glow: #dfb75b09;
+  --border: #414839;
+  --border-strong: #66735a;
+  --grid-line: #414839;
+  color-scheme: dark;
+}
+html { font-size: 16px; scroll-padding-top: 96px; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font-display); font-size: 16px; font-weight: 400; line-height: 1.65; color: var(--text-primary); background: var(--bg-primary); }
+button, input, textarea, select { font-family: var(--font-display); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; letter-spacing: -.025em; text-wrap: balance; }
+a { text-underline-offset: 4px; }
+::selection { background: var(--accent); color: var(--bg-primary); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.site-container, .wrap, .container { width: 100%; max-width: 1160px; padding-left: 32px; padding-right: 32px; margin-left: auto; margin-right: auto; }
+
+/* One header, including on articles and tools. */
+.site-nav, .site-nav.scrolled, [data-theme='dark'] .site-nav.scrolled { position: sticky; top: 0; height: 72px; padding: 0; background: var(--bg-primary); border-bottom: 1px solid var(--border); backdrop-filter: none; z-index: 100; }
+.site-nav .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-nav .brand { font: 500 17px/1.2 var(--font-display); letter-spacing: -.035em; text-transform: none; white-space: nowrap; text-decoration: none; color: var(--text-primary); }
+.site-nav .brand span { color: var(--accent); }
+.site-nav .nav-right { display: flex; align-items: center; gap: 14px; }
+.site-nav .nav-links { display: flex; align-items: center; gap: 22px; margin: 0; padding: 0; list-style: none; }
+.site-nav .nav-links a, .site-nav .tools-menu-trigger { font: 400 13px/1.4 var(--font-display); letter-spacing: 0; text-transform: none; color: var(--text-primary); text-decoration: none; }
+.site-nav .nav-links a:after { display: none; }
+.site-nav .nav-links .nav-cta { border-bottom: 1px solid var(--accent); padding: 8px 0; }
+.site-nav .nav-links > li > a:hover { color: var(--accent); }
+.site-nav .lang-selector { display: block; position: relative; }
+.site-nav .lang-toggle, .site-nav .theme-toggle, .site-nav .nav-hamburger { min-width: 40px; height: 40px; border: 0; background: transparent; color: var(--text-primary); border-radius: var(--radius-control); padding: 8px; }
+.site-nav .lang-toggle { display: flex; gap: 4px; align-items: center; font: 400 12px/1 var(--font-display); }
+.site-nav .theme-toggle { display: flex; align-items: center; justify-content: center; font-size: 21px; }
+.site-nav .theme-toggle:hover { transform: none; background: var(--bg-secondary); }
+.site-nav .lang-dropdown { right: 0; left: auto; top: calc(100% + 8px); min-width: 160px; margin: 0; padding: 6px; border: 1px solid var(--border); border-radius: var(--radius-panel); background: var(--bg-elevated); box-shadow: 0 8px 24px #0001; opacity: 0; visibility: hidden; pointer-events: none; }
+.site-nav .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; pointer-events: auto; }
+.site-nav .lang-option { width: 100%; display: block; border: 0; padding: 10px 12px; background: transparent; color: var(--text-primary); font: 400 14px/1.4 var(--font-display); text-align: left; text-decoration: none; }
+.site-nav .lang-option:is(:hover, :focus-visible, .active) { color: var(--text-primary); background: var(--bg-secondary); }
+.site-nav .lang-option .lang-name { color: inherit; }
+.site-nav .lang-option .lang-code { display: none; }
+.site-nav .tools-dropdown { border-radius: var(--radius-panel); background: var(--bg-elevated); }
+/* Set foreground and background together; top-level hover must not recolour submenu text. */
+.site-nav .nav-links .tools-dropdown a:is(:hover, :focus-visible) { background: var(--bg-secondary); color: var(--text-primary); }
+.site-nav .nav-links .tools-dropdown a:focus-visible,
+.site-nav .lang-option:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
+.site-nav .nav-hamburger { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 4px; }
+.site-nav .nav-hamburger span { display: block; width: 18px; height: 1.5px; margin: 0; background: currentColor; transition: transform .15s; }
+.site-nav .nav-hamburger[aria-expanded=true] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.site-nav .nav-hamburger[aria-expanded=true] span:nth-child(2) { opacity: 0; }
+.site-nav .nav-hamburger[aria-expanded=true] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+/* Shared controls: the action should be recognisable in every context. */
+.button, .calculator-primary-button, .csv-primary-button, .article-cta-button {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 12px 20px;
+  border: 1px solid var(--text-primary); border-radius: var(--radius-control); background: var(--text-primary); color: var(--bg-primary);
+  font: 500 14px/1.5 var(--font-display); letter-spacing: 0; text-transform: none; text-decoration: none; box-shadow: none;
+}
+.button:hover, .calculator-primary-button:hover, .csv-primary-button:hover, .article-cta-button:hover {
+  background: var(--accent); border-color: var(--accent); color: var(--bg-primary); transform: none; box-shadow: none; text-decoration: none;
+}
+.csv-secondary-button { border-radius: var(--radius-control); font-family: var(--font-display); text-transform: none; letter-spacing: 0; }
+input:not([type=range]):not([type=checkbox]), textarea, select, .diagnostic-form select { border: 1px solid var(--border-strong); border-radius: var(--radius-control); background: var(--bg-elevated); color: var(--text-primary); font-size: 16px; }
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+.audit-card, .calculator-advanced, .result-next-step, .csv-upload-card, .csv-purchase-card { border-radius: var(--radius-panel); }
+.eyebrow, .article-meta, .blog-meta, .csv-eyebrow, .csv-step { font-weight: 400; letter-spacing: .06em; }
+
+/* Homepage: calmer typography without hiding the price below the fold. */
+.hero h1 { font-size: clamp(38px,4.4vw,56px); font-weight: 500; letter-spacing: -.035em; line-height: 1.09; }
+.hero-copy > p:not(.eyebrow) { font-size: 17px; line-height: 1.65; }
+.audit-card h2 { font-size: 28px; line-height: 1.2; }
+.price { font-size: 46px; letter-spacing: -.045em; font-variant-numeric: tabular-nums; }
+.about { grid-template-columns: 72px 1fr 250px; }
+.experience { border-left: 1px solid var(--border); padding-left: 28px; }
+.experience .eyebrow { font-size: 10px; }
+.employer-names { display: flex; flex-direction: column; gap: 4px; margin: 10px 0 6px; font-size: 16px; font-weight: 500; }
+.experience small { font-size: 12px; color: var(--text-secondary); }
+.about p, .steps p { line-height: 1.65; }
+.section-heading { font-size: 32px; line-height: 1.2; }
+.contact-copy h2 { font-size: 36px; line-height: 1.15; }
+
+/* Blog archive: shared cards, without duplicating the header styles inline. */
+.blog-index-page main { max-width: 1160px; padding: 64px 32px; margin: 0 auto; }
+.blog-index-page .page-header { margin: 0 0 40px; padding: 0; border: 0; }
+.blog-index-page .page-header h1 { font-size: 48px; line-height: 1.15; margin: 0 0 16px; }
+.blog-index-page .page-subtitle { max-width: 650px; font-size: 18px; color: var(--text-secondary); }
+.blog-index-page .blog-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.blog-index-page .blog-card { padding: 26px; display: flex; flex-direction: column; gap: 16px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-panel); transform: none; box-shadow: none; }
+.blog-index-page .blog-card h2 { font-size: 23px; line-height: 1.3; }
+.blog-index-page .blog-meta { font: 400 11px/1.6 var(--font-mono); color: var(--text-muted); text-transform: none; }
+.blog-index-page .blog-excerpt { font-size: 15px; line-height: 1.7; margin: 0; color: var(--text-secondary); }
+.blog-index-page .blog-link { margin-top: auto; font: 500 13px/1.5 var(--font-display); color: var(--accent); letter-spacing: 0; text-transform: none; }
+.blog-card h3 { font-weight: 500; letter-spacing: -.025em; }
+
+/* Reading layout: same type family, comfortable measure and restrained rhythm. */
+.article { margin: 0; padding-top: 0; }
+.article-header { max-width: 760px; padding: 64px 0 36px; }
+.article-meta { margin-bottom: 22px; font-size: 11px; }
+.article-title { font-size: clamp(34px,4.2vw,50px); line-height: 1.12; font-weight: 500; letter-spacing: -.03em; margin-bottom: 22px; }
+.article-intro { font-size: 19px; line-height: 1.7; color: var(--text-secondary); }
+.article-cover { max-width: 760px; padding: 0; margin-bottom: 40px; }
+.article-cover img { border: 1px solid var(--border); border-radius: var(--radius-panel); }
+.article-content { max-width: 720px; }
+.article-content p, .article-content li { font-size: 17px; line-height: 1.85; }
+.article-content h2 { font-size: 29px; font-weight: 500; line-height: 1.3; }
+.article-content h3 { font-size: 23px; font-weight: 500; line-height: 1.35; }
+.article-highlight, .article-content blockquote { background: var(--bg-secondary); border-left: 3px solid var(--accent); border-radius: 0 var(--radius-control) var(--radius-control) 0; box-shadow: none; }
+.article-related-link { border-color: var(--border); border-radius: var(--radius-control); }
+.article-cta-simple p { margin-bottom: 20px; font-size: 16px; line-height: 1.7; color: var(--text-secondary); }
+.calculator-hero, .csv-hero { padding-top: 64px; padding-bottom: 48px; }
+.calculator-hero h1, .csv-hero h1 { max-width: 870px; font-size: clamp(34px,4.2vw,50px); line-height: 1.12; font-weight: 500; letter-spacing: -.03em; }
+.calculator-hero-copy, .csv-hero-copy { font-size: 18px; line-height: 1.7; }
+.calculator-container, .csv-container { max-width: 1160px; }
+.csv-workspace, .csv-results, .csv-consulting { padding: 56px 0; }
+.csv-trust-list, .csv-upload-label, .calculator-advanced summary { font-family: var(--font-display); text-transform: none; letter-spacing: 0; }
+
+.site-footer { padding: 26px 0; margin: 0; border-top: 1px solid var(--border); background: var(--bg-primary); color: var(--text-secondary); }
+.site-footer .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font: 400 12px/1.7 var(--font-display); }
+.site-footer .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+.site-footer a { margin: 0; font: inherit; color: var(--text-secondary); text-transform: none; letter-spacing: 0; text-decoration: none; }
+.site-footer a:hover { color: var(--accent); text-decoration: underline; }
+
+@media (max-width: 980px) {
+  .site-nav .nav-links { gap: 14px; }
+  .site-nav .nav-right { gap: 8px; }
+  .site-nav .brand { font-size: 16px; }
+  .blog-index-page .blog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 850px) {
+  .site-container, .wrap, .container { padding-left: 22px; padding-right: 22px; }
+  .site-nav .nav-inner { gap: 8px; }
+  .site-nav .nav-right { gap: 0; }
+  .site-nav .nav-hamburger { display: flex; }
+  .site-nav .nav-links { display: none; position: absolute; left: 0; right: 0; top: 72px; margin: 0; padding: 20px 22px; background: var(--bg-elevated); border-bottom: 1px solid var(--border); max-height: calc(100dvh - 72px); overflow-y: auto; }
+  .site-nav .nav-links.active { display: flex; flex-direction: column; align-items: stretch; gap: 8px; }
+  .site-nav .nav-links a, .site-nav .tools-menu-trigger { padding: 10px 0; font-size: 15px; }
+  .site-nav .nav-links > li.tools-menu { flex-direction: column; align-items: stretch; }
+  .site-nav .lang-selector, .site-nav .lang-selector.mobile-visible { display: block; }
+  .site-nav .lang-selector .lang-dropdown { min-width: 160px; right: 0; left: auto; }
+  .site-nav .lang-selector.open .lang-dropdown { opacity: 1; visibility: visible; pointer-events: auto; }
+}
+@media (max-width: 768px) {
+  .hero h1 { font-size: 39px; letter-spacing: -.035em; }
+  .hero-copy > p:not(.eyebrow) { font-size: 16px; }
+  .hero .assurance { line-height: 1.6; }
+  .audit-card h2 { font-size: 26px; }
+  .about { grid-template-columns: 58px 1fr; }
+  .experience { grid-column: 2; padding: 0; border: 0; }
+  .employer-names { flex-direction: row; flex-wrap: wrap; gap: 8px 18px; font-size: 15px; }
+  .about h2 { font-size: 21px; }
+  .section-heading { font-size: 28px; }
+  .contact-copy h2 { font-size: 31px; }
+  .blog-index-page main { padding: 40px 22px; }
+  .blog-index-page .page-header h1 { font-size: 38px; }
+  .blog-index-page .blog-grid { grid-template-columns: 1fr; }
+  .blog-index-page .blog-card { padding: 22px; }
+  .article-header { padding: 40px 0 28px; }
+  .article-title { font-size: 34px; }
+  .article-intro { font-size: 17px; }
+  .article-cover { width: calc(100% - 44px); }
+  .article-content p, .article-content li { font-size: 16px; line-height: 1.8; }
+  .article-content h2 { font-size: 25px; }
+  .article-content h3 { font-size: 21px; }
+  .calculator-hero, .csv-hero { padding: 40px 0 32px; }
+  .csv-workspace, .csv-results, .csv-consulting { padding: 36px 0; }
+  .site-footer .footer-inner { align-items: flex-start; flex-direction: column; gap: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .site-nav *, .button { transition: none; }
+}
+
+/* Compact controls and semantic status colours remain legible in both themes. */
+.calculator-page label { font: 500 13px/1.6 var(--font-display); text-transform: none; letter-spacing: 0; }
+.calculator-eyebrow, .calculator-step { font-weight: 400; letter-spacing: .06em; }
+.csv-summary-error, .csv-summary-error span { background: #7b3028; color: #fff; }
+@media (max-width: 850px) {
+  .site-nav .tools-dropdown { position: static; display: none; min-width: 0; width: 100%; transform: none; margin: 4px 0; }
+  .site-nav .tools-menu.open .tools-dropdown { display: block; opacity: 1; visibility: visible; pointer-events: auto; }
+}
+@media (max-width: 360px) {
+  .site-nav .brand { font-size: 14px; }
+  .site-nav .nav-inner { gap: 4px; }
+  .site-nav .lang-toggle, .site-nav .theme-toggle, .site-nav .nav-hamburger { min-width: 36px; width: 36px; }
+}
+
+/* Employment evidence: concrete contributions, with optional detail. */
+.experience-link { display: block; margin-top: 10px; font-size: 12px; color: var(--accent); }
+.work-experience { padding-top: 48px; padding-bottom: 8px; }
+.experience-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.experience-card { padding: 28px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-panel); }
+.experience-card h3 { margin: 0 0 8px; font-size: 25px; line-height: 1.2; }
+.employment-label { margin-bottom: 18px; font-size: 12px; color: var(--text-muted); }
+.experience-summary { font-size: 16px; line-height: 1.7; color: var(--text-secondary); }
+.experience-card details { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 14px; }
+.experience-card summary { color: var(--text-primary); }
+.experience-card ul { padding-left: 20px; margin-top: 14px; }
+.experience-card li { margin-top: 10px; color: var(--text-secondary); line-height: 1.7; }
+@media (max-width: 768px) {
+  .work-experience { padding-top: 36px; }
+  .experience-grid { grid-template-columns: 1fr; gap: 18px; }
+  .experience-card { padding: 22px; }
+  .experience-card h3 { font-size: 23px; }
+  .experience-summary { font-size: 15px; }
+}
+
+/* Supplied employer logos retain their original colours and aspect ratios. */
+.experience-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.experience-heading h3 { margin: 0; }
+.employer-logo { display: flex; align-items: center; justify-content: center; flex: 0 0 136px; width: 136px; height: 56px; padding: 8px 10px; border: 1px solid #e5e5e0; border-radius: var(--radius-control); background: #fff; }
+.employer-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 768px) {
+  .employer-logo { flex-basis: 120px; width: 120px; }
+}

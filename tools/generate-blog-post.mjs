@@ -8,6 +8,7 @@
  * source module under content/blog/posts/.
  */
 import fs from 'node:fs/promises';
+import { renderNavigation, renderFooter } from '../lib/site-shell.mjs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
@@ -83,7 +84,7 @@ function renderLanguageOptions(post, currentLocale) {
   return supportedLocales.map((locale) => {
     const localized = post.locales[locale];
     const activeClass = locale === currentLocale ? ' active' : '';
-    return `                            <a href="${relativeLocaleHref(currentLocale, post.slugs[locale])}" class="lang-option${activeClass}">
+    return `                            <a href="${relativeLocaleHref(currentLocale, post.slugs[locale])}" class="lang-option${activeClass}" data-lang="${locale}">
                                 <span class="lang-code">${locale.toUpperCase()}</span>
                                 <span class="lang-name">${escapeHtml(localized.langName)}</span>
                             </a>`;
@@ -189,53 +190,16 @@ ${supportedLocales.map((targetLocale) => `    <link rel="alternate" hreflang="${
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 
     <!-- Global Styles -->
     <link rel="stylesheet" href="${prefix}styles.css?v=11">
+<link rel="stylesheet" href="/tools-menu.css" data-tools-menu-style>
+    <link rel="stylesheet" href="/design-system.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="${localized.nav.home}" class="nav-logo">
-                    <span>O</span>PT<span>.</span>
-                </a>
-                <div class="nav-right">
-                    <button class="nav-hamburger" id="navHamburger" aria-label="${escapeHtml(text.menuLabel)}">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <ul class="nav-links" id="navLinks">
-                        <li><a href="${localized.nav.how}" data-i18n="nav.how">${escapeHtml(text.navHow)}</a></li>
-                        <li><a href="${localized.nav.blog}" data-i18n="nav.blog">${escapeHtml(text.navBlog)}</a></li>
-                        <li><a href="${localized.nav.tools}" data-tools-link data-i18n="nav.tools">${escapeHtml(text.navTools)}</a></li>
-                        <li><a href="${localized.nav.projects}" data-projects-link data-i18n="nav.projects">${escapeHtml(text.navProjects)}</a></li>
-                        <li><a href="${localized.nav.contact}" data-i18n="nav.contact">${escapeHtml(text.navContact)}</a></li>
-                    </ul>
-                    <div class="lang-selector" id="langSelector">
-                        <button class="lang-current" id="langToggle">
-                            <span class="lang-code" id="currentLangCode">${text.currentLangCode}</span>
-                            <span class="lang-arrow">
-                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="lang-dropdown">
-${renderLanguageOptions(post, locale)}
-                        </div>
-                    </div>
-                    <button class="theme-toggle" id="themeToggle" aria-label="${escapeHtml(text.themeLabel)}">
-                        <span class="icon-sun">☀</span>
-                        <span class="icon-moon">☾</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    ${renderNavigation(locale, renderLanguageOptions(post, locale))}
 
     <!-- Article Container -->
     <article class="article">
@@ -280,19 +244,7 @@ ${renderRelatedLinks(post, locale)}
     </article>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-text" data-i18n="footer.copyright">${text.footerCopyright}</span>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/oteran92" target="_blank" rel="noopener">GitHub</a>
-                    <a href="mailto:osmel@prietoteran.com">Email</a>
-                    <a href="tel:+41791048885">+41 79 104 88 85</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    ${renderFooter(locale)}
 
     <!-- i18n Internationalization -->
     <script src="${prefix}i18n.js?v=2"></script>

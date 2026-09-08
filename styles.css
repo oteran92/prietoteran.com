@@ -1,66 +1,10 @@
 /* ============================================
    CSS VARIABLES — THE FOUNDATION
    ============================================ */
-:root {
-    /* Color System — Light Mode (Swiss Government Brutalist) */
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #FFFFFF;
-    --bg-tertiary: #F0F0F0;
-    --bg-elevated: #FFFFFF;
-    
-    --text-primary: #000000;
-    --text-secondary: #000000;
-    --text-muted: #555555;
-    --text-subtle: #999999;
-    
-    --accent: #E3000F; /* Swiss Red */
-    --accent-dark: #B3000C;
-    --accent-muted: rgba(227, 0, 15, 0.1);
-    --accent-glow: rgba(227, 0, 15, 0.05);
-    
-    --grid-line: #000000;
-    --border: #000000;
-    --border-strong: #000000;
-    
-    /* Typography */
-    --font-display: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
-    
-    /* Spacing Scale */
-    --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
-    --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 4rem;
-    --space-2xl: 8rem;
-    --space-3xl: 12rem;
-    
-    /* Timing */
-    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-}
+/* Shared tokens: design-system.css */
 
 /* Dark Mode */
-[data-theme="dark"] {
-    --bg-primary: #000000;
-    --bg-secondary: #000000;
-    --bg-tertiary: #111111;
-    --bg-elevated: #000000;
-    
-    --text-primary: #FFFFFF;
-    --text-secondary: #FFFFFF;
-    --text-muted: #AAAAAA;
-    --text-subtle: #666666;
-    
-    --accent: #E3000F;
-    --accent-dark: #FF1A27;
-    --accent-muted: rgba(227, 0, 15, 0.15);
-    --accent-glow: rgba(227, 0, 15, 0.08);
-    
-    --grid-line: #FFFFFF;
-    --border: #FFFFFF;
-    --border-strong: #FFFFFF;
-}
+
 
 /* ============================================
    RESET & BASE

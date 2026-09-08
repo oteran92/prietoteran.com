@@ -13,7 +13,7 @@ const path = require('path');
 const { ConfidentialClientApplication } = require('@azure/msal-node');
 const { Client } = require('@microsoft/microsoft-graph-client');
 const Stripe = require('stripe');
-const { buildContactSubmission, escapeHtml, normalizeText } = require('./lib/contact-submission');
+const { buildContactSubmission, escapeHtml, normalizeText, renderAttribution } = require('./lib/contact-submission');
 require('isomorphic-fetch');
 
 const app = express();
@@ -236,7 +236,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             return res.status(400).json({ success: false, message: result.error });
         }
 
-        const { name, email, company, message, source, subject } = result.submission;
+        const { name, email, company, message, source, subject, attribution } = result.submission;
 
         // Escape public values used in the HTML email body
         const safeName = escapeHtml(name);
@@ -270,6 +270,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
                         <hr>
                         <p><strong>Message:</strong></p>
                         <p>${safeMessage}</p>
+                        ${renderAttribution(attribution)}
                         <hr>
                         <p style="color: #888; font-size: 12px;">
                             Sent from prietoteran.com contact form

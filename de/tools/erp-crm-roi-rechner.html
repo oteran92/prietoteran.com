@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-WMG4SZNQ3L');
-    </script>
+// Preview traffic must not pollute production conversion reports.
+if (['prietoteran.com','www.prietoteran.com'].includes(location.hostname)) {
+ window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};
+ gtag('js',new Date());gtag('config','G-WMG4SZNQ3L');
+ const analytics=document.createElement('script');analytics.async=true;analytics.src='https://www.googletagmanager.com/gtag/js?id=G-WMG4SZNQ3L';document.head.appendChild(analytics);
+}
+</script>
 
     <!-- Search and social metadata -->
     <title>ERP–CRM ROI-Rechner & Integrations-Risikocheck — Osmel Prieto Teran</title>
@@ -59,47 +60,35 @@
     <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../../styles.css?v=13">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tools-menu.css" data-tools-menu-style>
+<link rel="stylesheet" href="/design-system.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="../../?lang=de" class="nav-logo"><span>O</span>PT<span>.</span></a>
-                <div class="nav-right">
-                    <button class="nav-hamburger" id="navHamburger" aria-label="Menü umschalten">
-                        <span></span><span></span><span></span>
-                    </button>
-                    <ul class="nav-links" id="navLinks">
-                        <li><a href="../blog/">Blog</a></li>
-                        <li><a href="/de/tools/erp-crm-roi-rechner.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
-                        <li><a href="/?lang=de#projects" data-projects-link data-i18n="nav.projects">Projekte</a></li>
-                        <li><a href="/?lang=de#contact">Kontakt</a></li>
-                    </ul>
-                    <div class="lang-selector" id="langSelector">
-                        <button class="lang-current" id="langToggle" aria-label="Sprache wählen">
-                            <span class="lang-code" id="currentLangCode">DE</span>
-                            <span class="lang-arrow" aria-hidden="true">⌄</span>
-                        </button>
-                        <div class="lang-dropdown">
-                            <a href="../../tools/erp-crm-roi-calculator.html" class="lang-option" data-lang="en">
-                                <span class="lang-code">EN</span><span class="lang-name">English</span>
-                            </a>
-                            <a href="erp-crm-roi-rechner.html" class="lang-option active" data-lang="de">
-                                <span class="lang-code">DE</span><span class="lang-name">Deutsch</span>
-                            </a>
-                        </div>
-                    </div>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Darstellung umschalten">
-                        <span class="icon-sun">☀</span>
-                        <span class="icon-moon">☾</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav class="nav site-nav" id="nav" aria-label="Menü">
+  <div class="site-container nav-inner">
+    <a class="brand nav-logo" href="/?lang=de">osmel<span> / </span>prieto teran</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/?lang=de#how" data-home-section="how" data-i18n="nav.how">Das Audit</a></li>
+        <li><a href="/?lang=de#about" data-home-section="about" data-i18n="nav.about">Über mich</a></li>
+        <li><a href="/de/blog/" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="/de/tools/erp-crm-roi-rechner.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
+        <li><a href="/?lang=de#contact" class="nav-cta" data-home-section="contact" data-contact-cta="audit" data-i18n="nav.contact">Audit anfragen</a></li>
+      </ul>
+      <div class="lang-selector" id="langSelector">
+        <button class="lang-toggle lang-current" id="langToggle" type="button" aria-expanded="false" aria-label="Sprache" data-i18n-aria="ui.language"><span id="currentLangCode">DE</span><span aria-hidden="true">⌄</span></button>
+        <div class="lang-dropdown"><a href="/tools/erp-crm-roi-calculator.html" class="lang-option" data-lang="en" lang="en">English</a>
+<a href="/de/tools/erp-crm-roi-rechner.html" class="lang-option active" data-lang="de" lang="de">Deutsch</a></div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Farbschema wechseln" data-i18n-aria="ui.theme"><span aria-hidden="true">◐</span></button>
+      <button class="nav-hamburger" id="navHamburger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menü" data-i18n-aria="ui.menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
 
     <main class="calculator-page">
         <section class="calculator-hero">
@@ -224,9 +213,9 @@
                 <div id="resultOffer" class="result-next-step" hidden>
                     <div>
                         <h3>Das 90-Minuten-Audit</h3>
-                        <p>Ich gehe diese Zahlen mit Ihnen an Ihrem realen Prozess durch und schreibe danach einen One-Pager: wo der Engpass liegt und was zuerst automatisiert wird. 450 EUR, fix. Bei einer Umsetzung wird die Gebühr angerechnet.</p>
+                        <p>Ich gehe diese Zahlen mit Ihnen an Ihrem realen Prozess durch und schreibe danach einen One-Pager: wo der Engpass liegt und was zuerst automatisiert wird. 450 EUR, fix. Die Umsetzung ist optional und wird separat angeboten.</p>
                     </div>
-                    <a id="auditCta" href="/?lang=de#contact" class="calculator-primary-button">Gespräch starten</a>
+                    <a id="auditCta" href="/?lang=de#contact" class="calculator-primary-button" data-contact-cta="calculator">Audit anfragen · 450 EUR</a>
                 </div>
             </div>
         </section>
@@ -262,20 +251,13 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-text">© 2026 Osmel Prieto Teran</span>
-                <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="mailto:osmel@prietoteran.com">E-Mail</a>
-                    <a href="tel:+41791048885">+41 79 104 88 85</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="site-footer" id="projects"><div class="site-container footer-inner">
+    <span>© 2026 Osmel Prieto Teran · Bern</span>
+    <div class="footer-links"><a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:osmel@prietoteran.com">Email</a><a href="https://eroica.io" target="_blank" rel="noopener noreferrer"><span data-i18n="footer.projects">Eigene Projekte</span>: eroica.io ↗</a></div>
+  </div></footer>
 
     <script src="../../app.js?v=2"></script>
     <script type="module" src="../../tools/calculator.mjs?v=2"></script>
+<script defer src="/lib/contact-attribution.js"></script>
 </body>
 </html>

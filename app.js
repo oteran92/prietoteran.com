@@ -90,7 +90,8 @@ function initThemeToggle() {
     if (!themeToggle) return;
     
     // Check for saved theme preference or default to light
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    let savedTheme = 'light';
+    try { savedTheme = localStorage.getItem('theme') || 'light'; } catch { /* Optional preference. */ }
     if (savedTheme === 'dark') {
         html.setAttribute('data-theme', 'dark');
     }
@@ -106,7 +107,7 @@ function initThemeToggle() {
             html.removeAttribute('data-theme');
         }
         
-        localStorage.setItem('theme', newTheme);
+        try { localStorage.setItem('theme', newTheme); } catch { /* Optional preference. */ }
     });
 }
 
@@ -274,13 +275,19 @@ function initLanguageSelector() {
     langOptions.forEach(opt => {
         opt.addEventListener('click', () => {
             const lang = opt.getAttribute('data-lang');
+            if (!['en', 'de', 'es'].includes(lang)) return;
+            // Explicit localized anchors are authoritative, including newer articles.
+            if (opt.tagName === 'A' && opt.getAttribute('href')) {
+                try { localStorage.setItem('language', lang); } catch { /* Optional preference. */ }
+                return;
+            }
             
             // Check if we need to redirect to a translated page
             const translatedUrl = getTranslatedUrl(lang);
             
             if (translatedUrl) {
                 // Save language preference before redirect
-                localStorage.setItem('language', lang);
+                try { localStorage.setItem('language', lang); } catch { /* Optional preference. */ }
                 window.location.href = translatedUrl;
                 return;
             }

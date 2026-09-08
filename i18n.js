@@ -6,25 +6,25 @@
 const translations = {
     en: {
         // Navigation
-        "nav.how": "Process",
+        "nav.how": "The audit",
         "nav.services": "Process",
-        "nav.about": "LinkedIn",
-        "nav.contact": "Contact",
+        "nav.about": "About",
+        "nav.contact": "Request audit",
         "nav.home": "Home",
         "nav.tools": "Tools",
         "nav.projects": "Projects",
 
         // Hero Section
-        "hero.label": "Independent integration engineer",
+        "hero.label": "Independent engineer · Bern, Switzerland",
         "hero.title.line1": "Automate",
         "hero.title.line2": "manual",
         "hero.title.line3": "work",
         "hero.title.companies": "",
         "hero.badge": "Bern · Salesforce · ERP",
-        "hero.subtitle": "Your team re-enters the same order in two systems, approvals sit in an inbox for days, and nobody can say where the time goes. I find the bottleneck and build the fix.",
+        "hero.subtitle": "Orders copied twice. Approvals stuck in inboxes. I find where your workflow breaks and build the integration that fixes it.",
         "hero.positioning": "From the requirement in the meeting to the code that runs it.",
-        "hero.cta.primary": "Tell me what's stuck",
-        "hero.cta.explore": "See how it works",
+        "hero.cta.primary": "Request an audit · 450 EUR",
+        "hero.cta.explore": "What’s included",
         "hero.cta.work": "Tell me what's stuck",
         "hero.scroll": "Scroll",
         "hero.marker.portrait": "Portrait",
@@ -38,40 +38,40 @@ const translations = {
         "intro.pain3": "Month-end numbers that only balance in Excel",
         "intro.pain4": "Excel filling the gap between two systems",
 
-        // How it works (the path, no prices)
+        // Audit process
         "how.number": "01 PROCESS",
-        "how.title": "How it works",
-        "how.step1.title": "1. Conversation, 90 minutes",
-        "how.step1.description": "The process, the systems, the volume behind it.",
-        "how.step2.title": "2. Written one-pager",
-        "how.step2.description": "Where the bottleneck is and what to automate first. Yours to keep.",
-        "how.step3.title": "3. Optional build",
-        "how.step3.description": "A four-day sprint or longer freelance work, if it makes sense.",
+        "how.title": "A clear first step. Then you decide.",
+        "how.step1.title": "Review the process",
+        "how.step1.description": "In the 90-minute audit, we walk through one workflow, the systems involved and the manual work between them.",
+        "how.step2.title": "Keep the recommendation",
+        "how.step2.description": "You receive a one-page recommendation: the bottleneck, what to automate first and why. Yours to use with any engineer.",
+        "how.step3.title": "Choose whether to build",
+        "how.step3.description": "If the next step makes sense, I can scope and build it. Implementation is a separate decision.",
         "how.examples.title": "Examples",
         "how.examples.list": "Quote-to-order · Email routing · CRM-ERP sync",
 
-        // Offer block — the only place on the page where prices appear
+        // Audit offer
         "offer.number": "02 OFFER",
-        "offer.title": "The 90-minute audit",
-        "offer.bullet1": "90 minutes with the engineer who would do the work",
-        "offer.bullet2": "A written one-pager: where the bottleneck is and what to automate first",
-        "offer.bullet3": "450 EUR, fixed",
+        "offer.title": "Decide what to automate first.",
+        "offer.bullet1": "Review one workflow",
+        "offer.bullet2": "Identify the bottleneck",
+        "offer.bullet3": "Get a one-page recommendation",
         "offer.note": "If it makes sense to build afterwards: a four-day sprint at 2,800 EUR fixed, or 700 EUR per day for longer work. Remote from Switzerland, CET.",
         "offer.cta": "Start a conversation",
 
         // Blog Section
         "nav.blog": "Blog",
         "blog.number": "03 BLOG",
-        "blog.title": "Insights",
+        "blog.title": "From the field",
         "blog.subtitle": "Data and automation.",
         "blog.readMore": "Read",
         "blog.comingSoon": "Soon",
 
         "blog.post1.title": "Why Integrations Break",
-        "blog.post1.excerpt": "3 architecture principles.",
+        "blog.post1.excerpt": "Common sync failures and how to investigate them.",
 
         "blog.post2.title": "Cost of Manual Data Entry",
-        "blog.post2.excerpt": "When automation pays off.",
+        "blog.post2.excerpt": "Estimate the cost before investing in automation.",
 
         "blog.post3.title": "Quote to Order in 4 Hours",
         "blog.post3.excerpt": "Cut time by 85%.",
@@ -108,11 +108,11 @@ const translations = {
         "projects.visit": "Visit project →",
 
         // Clients Section
-        "clients.number": "05 CLIENT",
-        "clients.title": "Selected client",
+        "clients.number": "05 EXPERIENCE",
+        "clients.title": "Professional experience",
         "clients.subtitle": "Digital systems and automation for growing businesses.",
         "clients.victory.description": "Swiss B2B wholesale platform connecting retailers with curated European suppliers through a streamlined digital ordering experience.",
-        "clients.visit": "Visit client →",
+        "clients.visit": "View company →",
 
         // Blog Article Elements
         "blog.cta.button": "Get in touch",
@@ -135,7 +135,7 @@ const translations = {
         "trust.desc3": "Access control, auditability and data flows you can inspect.",
 
         // CTA Section
-        "cta.text": "Tell me what's slow or manual and which systems are involved. I read it and reply with a few times that could work.",
+        "cta.text": "Tell me which process is slow or manual and which systems are involved. I’ll reply to confirm the scope and propose a time.",
         "cta.link": "Or reach me directly",
 
         // Footer
@@ -376,41 +376,81 @@ const translations = {
         "process.step3": "Optional build",
 
         // Form
-        "form.title": "Start the conversation",
+        "form.title": "Request your 450 EUR audit.",
         "form.name": "Name",
-        "form.company": "Company",
+        "form.company": "Company (optional)",
         "form.role": "Role",
         "form.email": "Email",
-        "form.problem": "What's wasting your team's time? (2–3 sentences)",
-        "form.problem.placeholder": "Example: \"Every order is copied manually from our CRM into the ERP. It takes 20 minutes each and we process 15 orders a day.\"",
+        "form.problem": "Which process needs attention?",
+        "form.problem.placeholder": "Example: We copy confirmed orders from Salesforce into our ERP manually.",
         "form.process": "What process is causing the most pain?",
         "form.usecase": "What problem are you trying to solve with AI?",
         "form.situation": "What's your current situation?",
-        "form.submit": "Send message",
-        "form.trust": "I read every message myself. No newsletter, no spam."
+        "form.submit": "Request audit · 450 EUR",
+        "form.trust": "No payment is taken here. Implementation is optional and quoted separately.",
+        // Compact homepage and contact form.
+        "hero.title": "Less manual work between Salesforce and your ERP.",
+        "hero.assurance": "90 minutes · Written recommendation · Fixed price",
+        "offer.eyebrow": "Before you invest in development",
+        "offer.duration": "A 90-minute audit with me",
+        "offer.details": "See what you receive",
+        "offer.detail1": "The workflow and systems reviewed.",
+        "offer.detail2": "Where manual work creates a bottleneck.",
+        "offer.detail3": "What to automate first and why.",
+        "offer.separate": "Implementation is optional and quoted separately.",
+        "about.title": "Work directly with the engineer.",
+        "about.text": "I’m Osmel Prieto Teran, an independent integration engineer in Bern. I review the workflow and can build the solution.",
+        "about.client": "Professional experience",
+        "about.client.note": "Experience as an employee",
+        "form.name.placeholder": "Your name",
+        "form.email.placeholder": "you@company.com",
+        "form.company.placeholder": "Your company",
+        "form.sending": "Sending…",
+        "form.success": "Your request has been sent. I’ll reply by email to confirm the scope and a time.",
+        "form.error": "The request could not be confirmed. Your text is still here. Please try again or email osmel@prietoteran.com.",
+        "form.timeout": "The server took too long to respond. Your request may have arrived. Please email osmel@prietoteran.com to confirm.",
+        "blog.all": "View all articles",
+        "footer.projects": "Independent projects",
+        "ui.menu": "Menu",
+        "ui.language": "Language",
+        "ui.theme": "Switch color theme",
+        "ui.skip": "Skip to content",
+        // Employment experience confirmed by Osmel.
+        "experience.eyebrow": "Professional experience",
+        "experience.title": "Integrations I have built.",
+        "experience.relationship": "Work carried out as an employee",
+        "experience.victory.summary": "I built ERP interfaces for the sales POS and Shopify, including order and inventory synchronization with Shopify.",
+        "experience.victory.more": "More about this work",
+        "experience.victory.edi": "An interface to send EDI documents to customers.",
+        "experience.silent.summary": "I built the interface to synchronize quotes, accounts and products between Salesforce and the ERP.",
+        "experience.silent.more": "PIM, invoicing and API work",
+        "experience.silent.pim": "An interface between the PIM and ERP to synchronize product information.",
+        "experience.silent.invoice": "ERP integration with Peppol and electronic invoicing.",
+        "experience.silent.api": "An API exposing ERP data with a five-minute delay.",
+        "experience.link": "See the integrations"
     },
 
     de: {
         // Navigation
-        "nav.how": "Ablauf",
+        "nav.how": "Das Audit",
         "nav.services": "Ablauf",
-        "nav.about": "LinkedIn",
-        "nav.contact": "Kontakt",
+        "nav.about": "Über mich",
+        "nav.contact": "Audit anfragen",
         "nav.home": "← Startseite",
         "nav.tools": "Tools",
         "nav.projects": "Projekte",
 
         // Hero Section
-        "hero.label": "Unabhängiger Integrationsingenieur",
+        "hero.label": "Unabhängiger Engineer · Bern, Schweiz",
         "hero.title.line1": "Automatisieren Sie",
         "hero.title.line2": "manuelle",
         "hero.title.line3": "Arbeit",
         "hero.title.companies": "",
         "hero.badge": "Bern · Salesforce · ERP",
-        "hero.subtitle": "Ihr Team erfasst denselben Auftrag in zwei Systemen, Freigaben liegen tagelang im Postfach, und niemand kann sagen, wo die Zeit bleibt. Ich finde den Engpass und baue die Lösung.",
+        "hero.subtitle": "Doppelt erfasste Aufträge. Freigaben, die im Postfach warten. Ich finde die Schwachstelle im Ablauf und entwickle die passende Integration.",
         "hero.positioning": "Von der Anforderung im Meeting bis zum Code, der sie ausführt.",
-        "hero.cta.primary": "Sagen Sie mir, wo es klemmt",
-        "hero.cta.explore": "So funktioniert's",
+        "hero.cta.primary": "Audit anfragen · 450 EUR",
+        "hero.cta.explore": "Was Sie erhalten",
         "hero.cta.work": "Sagen Sie mir, wo es klemmt",
         "hero.scroll": "Scrollen",
         "hero.marker.portrait": "Portrait",
@@ -426,22 +466,22 @@ const translations = {
 
         // How it works (der Ablauf, ohne Preise)
         "how.number": "01 ABLAUF",
-        "how.title": "Ablauf",
-        "how.step1.title": "1. Gespräch, 90 Minuten",
-        "how.step1.description": "Der Prozess, die Systeme, die Mengen dahinter.",
-        "how.step2.title": "2. Schriftlicher One-Pager",
-        "how.step2.description": "Wo der Engpass liegt und was zuerst automatisiert wird. Bleibt bei Ihnen.",
-        "how.step3.title": "3. Optionale Umsetzung",
-        "how.step3.description": "Ein Sprint über vier Tage oder längere Freelance-Arbeit, wenn es passt.",
+        "how.title": "Ein klarer erster Schritt. Danach entscheiden Sie.",
+        "how.step1.title": "Den Ablauf prüfen",
+        "how.step1.description": "Im 90-minütigen Audit prüfen wir einen Ablauf, die beteiligten Systeme und die manuellen Schritte dazwischen.",
+        "how.step2.title": "Die Empfehlung behalten",
+        "how.step2.description": "Sie erhalten eine Empfehlung auf einer Seite: der Engpass, was zuerst automatisiert werden sollte und warum. Frei nutzbar mit jedem Engineer.",
+        "how.step3.title": "Über die Umsetzung entscheiden",
+        "how.step3.description": "Wenn der nächste Schritt sinnvoll ist, kann ich Umfang und Umsetzung übernehmen. Darüber entscheiden Sie separat.",
         "how.examples.title": "Beispiele",
         "how.examples.list": "Angebot-zu-Auftrag · E-Mail-Triage · CRM-ERP Sync",
 
         // Angebotsblock — die einzige Stelle auf der Seite mit Preisen
         "offer.number": "02 ANGEBOT",
-        "offer.title": "Das 90-Minuten-Audit",
-        "offer.bullet1": "90 Minuten mit dem Ingenieur, der die Arbeit macht",
-        "offer.bullet2": "Ein schriftlicher One-Pager: wo der Engpass liegt und was zuerst automatisiert wird",
-        "offer.bullet3": "450 EUR, fix",
+        "offer.title": "Klarheit, was Sie zuerst automatisieren.",
+        "offer.bullet1": "Einen Arbeitsablauf prüfen",
+        "offer.bullet2": "Den Engpass identifizieren",
+        "offer.bullet3": "Eine Empfehlung auf einer Seite erhalten",
         "offer.note": "Wenn eine Umsetzung danach sinnvoll ist: ein Sprint über vier Tage zu 2'800 EUR fix, oder 700 EUR pro Tag für längere Arbeit. Remote aus der Schweiz, CET.",
         "offer.cta": "Gespräch starten",
 
@@ -469,16 +509,16 @@ const translations = {
         // Blog Section
         "nav.blog": "Blog",
         "blog.number": "03 BLOG",
-        "blog.title": "Einblicke",
+        "blog.title": "Aus der Praxis",
         "blog.subtitle": "Daten und Automatisierung.",
         "blog.readMore": "Lesen",
         "blog.comingSoon": "Demnächst",
 
         "blog.post1.title": "Warum Integrationen scheitern",
-        "blog.post1.excerpt": "3 Architekturprinzipien.",
+        "blog.post1.excerpt": "Häufige Sync-Probleme und wie Sie diese untersuchen.",
 
         "blog.post2.title": "Kosten manueller Dateneingabe",
-        "blog.post2.excerpt": "Wann sich Automatisierung lohnt.",
+        "blog.post2.excerpt": "Kosten abschätzen, bevor Sie in Automatisierung investieren.",
 
         "blog.post3.title": "Angebot zu Auftrag in 4 Stunden",
         "blog.post3.excerpt": "Zeit um 85% reduzieren.",
@@ -515,11 +555,11 @@ const translations = {
         "projects.visit": "Projekt ansehen →",
 
         // Clients Section
-        "clients.number": "05 KUNDE",
-        "clients.title": "Ausgewählter Kunde",
+        "clients.number": "05 ERFAHRUNG",
+        "clients.title": "Berufserfahrung",
         "clients.subtitle": "Digitale Systeme und Automatisierung für wachsende Unternehmen.",
         "clients.victory.description": "Schweizer B2B-Grosshandelsplattform, die Händler über einen effizienten digitalen Bestellprozess mit ausgewählten europäischen Lieferanten verbindet.",
-        "clients.visit": "Kunde besuchen →",
+        "clients.visit": "Unternehmen ansehen →",
 
         // Blog Article Elements
         "blog.cta.button": "Kontakt aufnehmen",
@@ -542,7 +582,7 @@ const translations = {
         "trust.desc3": "Zugriffskontrolle, Nachvollziehbarkeit und Datenflüsse, die Sie prüfen können.",
 
         // CTA Section
-        "cta.text": "Beschreiben Sie, was langsam oder manuell läuft und welche Systeme beteiligt sind. Ich lese es und antworte mit ein paar möglichen Terminen.",
+        "cta.text": "Beschreiben Sie den langsamen oder manuellen Ablauf und die beteiligten Systeme. Ich antworte, um den Umfang zu klären und einen Termin vorzuschlagen.",
         "cta.link": "Oder direkt erreichen",
 
         // Footer
@@ -783,42 +823,82 @@ const translations = {
         "process.step3": "Optionale Umsetzung",
 
         // Form
-        "form.title": "Beginnen wir das Gespräch",
+        "form.title": "Ihr Audit für 450 EUR anfragen.",
         "form.name": "Name",
-        "form.company": "Unternehmen",
+        "form.company": "Unternehmen (optional)",
         "form.role": "Position",
         "form.email": "E-Mail",
-        "form.problem": "Was kostet Ihrem Team Zeit? (2–3 Sätze)",
-        "form.problem.placeholder": "Beispiel: \"Jeder Auftrag wird manuell vom CRM ins ERP kopiert. Das dauert 20 Minuten — wir bearbeiten 15 Aufträge pro Tag.\"",
+        "form.problem": "Welchen Ablauf möchten Sie verbessern?",
+        "form.problem.placeholder": "Beispiel: Wir übertragen bestätigte Aufträge manuell von Salesforce ins ERP.",
         "form.process": "Welcher Prozess verursacht die meisten Schmerzen?",
         "form.usecase": "Welches Problem versuchen Sie mit KI zu lösen?",
         "form.situation": "Wie ist Ihre aktuelle Situation?",
-        "form.submit": "Nachricht senden",
-        "form.trust": "Ich lese jede Nachricht selbst. Kein Newsletter, kein Spam."
+        "form.submit": "Audit anfragen · 450 EUR",
+        "form.trust": "Hier erfolgt keine Zahlung. Die Umsetzung ist optional und wird separat angeboten.",
+        // Compact homepage and contact form.
+        "hero.title": "Weniger Handarbeit zwischen Salesforce und Ihrem ERP.",
+        "hero.assurance": "90 Minuten · Schriftliche Empfehlung · Festpreis",
+        "offer.eyebrow": "Bevor Sie in Entwicklung investieren",
+        "offer.duration": "Ein 90-minütiges Audit mit mir",
+        "offer.details": "Was Sie konkret erhalten",
+        "offer.detail1": "Der geprüfte Ablauf und die beteiligten Systeme.",
+        "offer.detail2": "Wo manuelle Arbeit einen Engpass verursacht.",
+        "offer.detail3": "Was zuerst automatisiert werden sollte und warum.",
+        "offer.separate": "Die Umsetzung ist optional und wird separat angeboten.",
+        "about.title": "Direkt mit dem Engineer arbeiten.",
+        "about.text": "Ich bin Osmel Prieto Teran, unabhängiger Integration Engineer in Bern. Ich prüfe den Ablauf und kann die Lösung entwickeln.",
+        "about.client": "Berufserfahrung",
+        "about.client.note": "Erfahrung als Mitarbeiter",
+        "form.name.placeholder": "Ihr Name",
+        "form.email.placeholder": "sie@firma.ch",
+        "form.company.placeholder": "Ihr Unternehmen",
+        "form.sending": "Wird gesendet…",
+        "form.success": "Ihre Anfrage wurde gesendet. Ich antworte per E-Mail, um Umfang und Termin abzustimmen.",
+        "form.error": "Die Anfrage konnte nicht bestätigt werden. Ihr Text bleibt erhalten. Bitte versuchen Sie es erneut oder schreiben Sie an osmel@prietoteran.com.",
+        "form.timeout": "Die Antwort dauert zu lange. Ihre Anfrage könnte angekommen sein. Bitte bestätigen Sie dies per E-Mail an osmel@prietoteran.com.",
+        "blog.all": "Alle Artikel ansehen",
+        "footer.projects": "Eigene Projekte",
+        "ui.menu": "Menü",
+        "ui.language": "Sprache",
+        "ui.theme": "Farbschema wechseln",
+        "ui.skip": "Zum Inhalt springen",
+        // Employment experience confirmed by Osmel.
+        "experience.eyebrow": "Berufserfahrung",
+        "experience.title": "Integrationen, die ich entwickelt habe.",
+        "experience.relationship": "Im Rahmen einer Anstellung entwickelt",
+        "experience.victory.summary": "Ich entwickelte ERP-Schnittstellen für das Verkaufs-POS und Shopify, einschliesslich der Synchronisierung von Bestellungen und Beständen mit Shopify.",
+        "experience.victory.more": "Mehr zu diesen Arbeiten",
+        "experience.victory.edi": "Eine Schnittstelle zum Versand von EDI-Dokumenten an Kunden.",
+        "experience.silent.summary": "Ich entwickelte die Schnittstelle zur Synchronisierung von Angeboten, Accounts und Produkten zwischen Salesforce und dem ERP.",
+        "experience.silent.more": "PIM, Rechnungen und API",
+        "experience.silent.pim": "Eine Schnittstelle zwischen PIM und ERP zur Synchronisierung von Produktinformationen.",
+        "experience.silent.invoice": "ERP-Anbindung an Peppol und die elektronische Rechnungsstellung.",
+        "experience.silent.api": "Eine API zur Bereitstellung von ERP-Daten mit fünf Minuten Verzögerung.",
+        "experience.link": "Integrationen ansehen"
     },
 
     es: {
         // Navigation
-        "nav.how": "Servicios",
+        "nav.how": "La auditoría",
         "nav.blog": "Blog",
         "nav.services": "Servicios",
         "nav.about": "Sobre mí",
-        "nav.contact": "Contacto",
+        "nav.contact": "Solicitar auditoría",
         "nav.home": "← Inicio",
         "nav.tools": "Herramientas",
         "nav.projects": "Proyectos",
 
         // Hero Section
-        "hero.label": "Ingeniero de integración independiente",
+        "hero.label": "Ingeniero independiente · Berna, Suiza",
         "hero.title.line1": "Automatiza",
         "hero.title.line2": "el trabajo",
         "hero.title.line3": "manual",
         "hero.title.companies": "",
         "hero.badge": "Berna · Salesforce · ERP",
-        "hero.subtitle": "Tu equipo introduce el mismo pedido en dos sistemas, las aprobaciones se quedan días en el correo y nadie sabe dónde se va el tiempo. Encuentro el cuello de botella y construyo la solución.",
+        "hero.subtitle": "Pedidos que se copian dos veces. Aprobaciones atascadas en el correo. Identifico dónde falla el proceso y desarrollo la integración para resolverlo.",
         "hero.positioning": "De la decisión en la reunión al código que la ejecuta.",
-        "hero.cta.explore": "Cómo funciona",
-        "hero.cta.primary": "Cuéntame dónde se atasca",
+        "hero.cta.explore": "Qué incluye",
+        "hero.cta.primary": "Solicitar auditoría · 450 EUR",
         "hero.cta.work": "Cuéntame dónde se atasca",
         "hero.scroll": "Desplazar",
         "hero.marker.portrait": "Retrato",
@@ -836,20 +916,20 @@ const translations = {
 
         // How it works (el camino, sin precios)
         "how.number": "01 PROCESO",
-        "how.title": "Cómo funciona",
-        "how.step1.title": "1. Conversación, 90 minutos",
-        "how.step1.description": "El proceso, los sistemas y el volumen detrás.",
-        "how.step2.title": "2. Informe escrito de una página",
-        "how.step2.description": "Dónde está el cuello de botella y qué automatizar primero. Es tuyo.",
-        "how.step3.title": "3. Construcción opcional",
-        "how.step3.description": "Un sprint de cuatro días o trabajo freelance más largo, si tiene sentido.",
+        "how.title": "Un primer paso claro. Después, tú decides.",
+        "how.step1.title": "Revisamos el proceso",
+        "how.step1.description": "En la auditoría de 90 minutos revisamos un proceso, los sistemas implicados y los pasos manuales entre ellos.",
+        "how.step2.title": "Te llevas la recomendación",
+        "how.step2.description": "Recibes una página con el cuello de botella, qué automatizar primero y por qué. Puedes usarla con cualquier ingeniero.",
+        "how.step3.title": "Decides si implementamos",
+        "how.step3.description": "Si el siguiente paso tiene sentido, puedo definir el alcance y desarrollarlo. La implementación se decide por separado.",
 
         // Bloque de oferta — el único lugar de la página con precios
         "offer.number": "02 OFERTA",
-        "offer.title": "La auditoría de 90 minutos",
-        "offer.bullet1": "90 minutos con el ingeniero que hará el trabajo",
-        "offer.bullet2": "Un informe escrito de una página: dónde está el cuello de botella y qué automatizar primero",
-        "offer.bullet3": "450 EUR, precio fijo",
+        "offer.title": "Decide qué automatizar primero.",
+        "offer.bullet1": "Revisar un proceso",
+        "offer.bullet2": "Identificar el cuello de botella",
+        "offer.bullet3": "Recibir una recomendación de una página",
         "offer.note": "Si después tiene sentido construir: un sprint de cuatro días a 2.800 EUR fijos, o 700 EUR por día para trabajo más largo. Remoto desde Suiza, CET.",
         "offer.cta": "Iniciar una conversación",
 
@@ -880,16 +960,16 @@ const translations = {
         // Blog Section
         "nav.blog": "Blog",
         "blog.number": "03 BLOG",
-        "blog.title": "Últimas Perspectivas",
+        "blog.title": "Ideas para tu operación",
         "blog.subtitle": "Perspectivas prácticas sobre confiabilidad de datos, integración de sistemas y claridad operativa para líderes B2B.",
         "blog.readMore": "Leer artículo",
         "blog.comingSoon": "Próximamente",
 
-        "blog.post1.title": "Por qué las integraciones Salesforce-ERP fallan (y cómo arreglarlo)",
-        "blog.post1.excerpt": "La mayoría de las integraciones funcionan 2-4 semanas y luego fallan. Aprende los 3 principios de arquitectura que previenen fallos en empresas B2B suizas.",
+        "blog.post1.title": "Por qué fallan las integraciones",
+        "blog.post1.excerpt": "Fallos habituales de sincronización y cómo investigarlos.",
 
-        "blog.post2.title": "El costo real de la entrada manual de datos entre sistemas",
-        "blog.post2.excerpt": "La entrada manual de datos cuesta a las empresas B2B suizas 15-25 horas semanales. Aprende cuándo la automatización se paga sola.",
+        "blog.post2.title": "El coste del trabajo manual",
+        "blog.post2.excerpt": "Estima el coste antes de invertir en automatización.",
 
         "blog.post3.title": "De presupuesto a orden en 4 horas en lugar de 3 días",
         "blog.post3.excerpt": "Cómo un fabricante suizo redujo el tiempo de cotización-a-orden en un 85% — sin desarrollo personalizado.",
@@ -915,7 +995,7 @@ const translations = {
         "blog.post10.title": "Tu CRM está a punto de convertirse en un agente de IA",
         "blog.post10.excerpt": "Salesforce MCP Skills permite que las herramientas de IA operen directamente dentro del CRM.",
 
-        "blog.post11.title": "La pregunta de lock-in en integraciones",
+        "blog.post11.title": "Quién controla tu integración",
         "blog.post11.excerpt": "El lock-in suele aparecer después del go-live, cuando solo un proveedor puede cambiar la integración.",
 
         // Projects Section
@@ -926,11 +1006,11 @@ const translations = {
         "projects.visit": "Ver proyecto →",
 
         // Clients Section
-        "clients.number": "05 CLIENTE",
-        "clients.title": "Cliente destacado",
+        "clients.number": "05 EXPERIENCIA",
+        "clients.title": "Experiencia profesional",
         "clients.subtitle": "Sistemas digitales y automatización para empresas en crecimiento.",
         "clients.victory.description": "Plataforma mayorista B2B suiza que conecta comercios con proveedores europeos seleccionados mediante una experiencia digital de pedidos eficiente.",
-        "clients.visit": "Visitar cliente →",
+        "clients.visit": "Ver empresa →",
 
         // Blog Article Elements
         "blog.cta.button": "Contactar",
@@ -946,10 +1026,10 @@ const translations = {
 
         // About Section
         "about.number": "003 — SOBRE MÍ",
-        "about.title": "Por qué trabajar conmigo",
+        "about.title": "Trabaja directamente con el ingeniero.",
         "about.marker": "Trabajando",
         "about.lead": "Soy un asesor senior que entiende <strong>tanto la tecnología como el negocio detrás de ella</strong>.",
-        "about.text": "He trabajado dentro de empresas B2B donde las decisiones tenían que ser rápidas, los datos tenían que ser correctos y los sistemas tenían que resistir bajo presión. Traigo esa misma disciplina a cada proyecto — calma, estructura y enfoque en resultados.",
+        "about.text": "Soy Osmel Prieto Teran, ingeniero de integraciones independiente en Berna. Reviso el proceso y puedo desarrollar la solución.",
         "about.approach": "Claridad. Control. Confianza en tus sistemas — para que puedas concentrarte en hacer crecer el negocio.",
 
         // Trust Signals
@@ -964,7 +1044,7 @@ const translations = {
         "trust.desc3": "Control de acceso, trazabilidad y flujos de datos que puedes revisar.",
 
         // CTA Section
-        "cta.text": "Cuéntame qué va lento o manual y qué sistemas están involucrados. Lo leo y respondo con algunas horas posibles.",
+        "cta.text": "Cuéntame qué proceso es lento o manual y qué sistemas usas. Te responderé para concretar el alcance y proponer una fecha.",
         "cta.link": "O contáctame directamente",
 
         // Footer
@@ -1205,18 +1285,56 @@ const translations = {
         "process.step3": "Construcción opcional",
 
         // Form
-        "form.title": "Empecemos la conversación",
+        "form.title": "Solicita tu auditoría de 450 EUR.",
         "form.name": "Nombre",
-        "form.company": "Empresa",
+        "form.company": "Empresa (opcional)",
         "form.role": "Cargo",
         "form.email": "Correo electrónico",
-        "form.problem": "¿Qué le está quitando tiempo a tu equipo? (2–3 frases)",
-        "form.problem.placeholder": "Ejemplo: \"Cada pedido se copia a mano del CRM al ERP. Son 20 minutos por pedido y procesamos 15 al día.\"",
+        "form.problem": "¿Qué proceso quieres mejorar?",
+        "form.problem.placeholder": "Ejemplo: Copiamos manualmente los pedidos confirmados de Salesforce al ERP.",
         "form.process": "¿Qué proceso está causando más dolor?",
         "form.usecase": "¿Qué problema estás tratando de resolver con IA?",
         "form.situation": "¿Cuál es tu situación actual?",
-        "form.submit": "Enviar mensaje",
-        "form.trust": "Leo cada mensaje personalmente. Sin newsletter, sin spam."
+        "form.submit": "Solicitar auditoría · 450 EUR",
+        "form.trust": "Aquí no se realiza ningún cobro. La implementación es opcional y se presupuesta por separado.",
+        // Compact homepage and contact form.
+        "hero.title": "Menos trabajo manual entre Salesforce y tu ERP.",
+        "hero.assurance": "90 minutos · Recomendación escrita · Precio fijo",
+        "offer.eyebrow": "Antes de invertir en desarrollo",
+        "offer.duration": "Una auditoría de 90 minutos conmigo",
+        "offer.details": "Ver los entregables",
+        "offer.detail1": "El proceso y los sistemas revisados.",
+        "offer.detail2": "Dónde el trabajo manual genera un cuello de botella.",
+        "offer.detail3": "Qué automatizar primero y por qué.",
+        "offer.separate": "La implementación es opcional y se presupuesta por separado.",
+        "about.client": "Experiencia profesional",
+        "about.client.note": "Experiencia como empleado",
+        "form.name.placeholder": "Tu nombre",
+        "form.email.placeholder": "tu@empresa.com",
+        "form.company.placeholder": "Tu empresa",
+        "form.sending": "Enviando…",
+        "form.success": "Tu solicitud se ha enviado. Te responderé por email para concretar el alcance y la fecha.",
+        "form.error": "No se pudo confirmar la solicitud. Conservamos lo que has escrito. Inténtalo de nuevo o escribe a osmel@prietoteran.com.",
+        "form.timeout": "El servidor tardó demasiado en responder. Tu solicitud podría haber llegado. Escribe a osmel@prietoteran.com para confirmarlo.",
+        "blog.all": "Ver todos los artículos",
+        "footer.projects": "Proyectos propios",
+        "ui.menu": "Menú",
+        "ui.language": "Idioma",
+        "ui.theme": "Cambiar tema",
+        "ui.skip": "Saltar al contenido",
+        // Employment experience confirmed by Osmel.
+        "experience.eyebrow": "Experiencia profesional",
+        "experience.title": "Integraciones que he desarrollado.",
+        "experience.relationship": "Trabajo realizado como empleado",
+        "experience.victory.summary": "Desarrollé interfaces del ERP con el POS de ventas y con Shopify, incluyendo la sincronización de pedidos e inventario con Shopify.",
+        "experience.victory.more": "Más sobre este trabajo",
+        "experience.victory.edi": "Una interfaz para enviar documentos EDI a clientes.",
+        "experience.silent.summary": "Desarrollé la interfaz para sincronizar ofertas, cuentas y productos entre Salesforce y el ERP.",
+        "experience.silent.more": "PIM, facturación y API",
+        "experience.silent.pim": "Una interfaz entre el PIM y el ERP para sincronizar información de productos.",
+        "experience.silent.invoice": "Integración del ERP con Peppol y facturación electrónica.",
+        "experience.silent.api": "Una API para exponer datos del ERP con un desfase de cinco minutos.",
+        "experience.link": "Ver las integraciones"
     }
 };
 
@@ -1227,7 +1345,8 @@ const translations = {
 class I18nManager {
     constructor() {
         // Get saved language or detect from browser
-        this.currentLanguage = this.getSavedLanguage() || this.detectLanguage();
+        const requested = new URLSearchParams(window.location.search).get('lang');
+        this.currentLanguage = Object.hasOwn(translations, requested) ? requested : (this.getSavedLanguage() || this.detectLanguage());
         this.init();
     }
 
@@ -1235,7 +1354,7 @@ class I18nManager {
      * Get saved language from localStorage
      */
     getSavedLanguage() {
-        return localStorage.getItem('language');
+        try { const saved = localStorage.getItem('language'); return Object.hasOwn(translations, saved) ? saved : null; } catch { return null; }
     }
 
     /**
@@ -1272,7 +1391,7 @@ class I18nManager {
         }
 
         this.currentLanguage = lang;
-        localStorage.setItem('language', lang);
+        try { localStorage.setItem('language', lang); } catch { /* Storage is optional. */ }
         document.documentElement.lang = lang;
         this.applyTranslations();
 
@@ -1334,6 +1453,12 @@ class I18nManager {
                 : '/tools/erp-crm-roi-calculator.html';
         });
 
+        // Shared navigation always points to the actual localized homepage anchors.
+        document.querySelectorAll('[data-home-section]').forEach(link => {
+            const query = this.currentLanguage === 'en' ? '' : '?lang=' + this.currentLanguage;
+            link.href = '/' + query + '#' + link.dataset.homeSection;
+        });
+
         // Route Projects links back to the localized homepage section.
         document.querySelectorAll('[data-projects-link]').forEach(link => {
             const languageQuery = this.currentLanguage === 'en'
@@ -1375,6 +1500,7 @@ class I18nManager {
 
 // Create global i18n instance
 const i18n = new I18nManager();
+window.i18n = i18n;
 
 // Export for use in other scripts
 if (typeof module !== 'undefined' && module.exports) {

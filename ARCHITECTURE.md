@@ -1,168 +1,49 @@
-# Estructura del Proyecto - prietoteran.com
+# prietoteran.com
 
-## 📁 Arquitectura
+Sitio estático con un servidor Express para formularios y herramientas. Las páginas HTML existentes se conservan; no hay un framework nuevo.
 
-El proyecto ha sido refactorizado para usar una arquitectura escalable con:
+## Diseño compartido
 
-### 🎨 Estilos Globales
-- **`styles.css`** - Todos los estilos compartidos entre páginas
-  - Variables CSS (`:root`)
-  - Tema claro y oscuro
-  - Navegación
-  - Footer
-  - Componentes del blog
-  - Estilos de artículos
+- `design-system.css`: fuente Inter, colores claros/oscuros, espaciado, radios y patrones compartidos de navegación, botones, formularios, tarjetas, artículos y pie.
+- `styles.css`: estructuras de artículos, calculadora y componentes existentes.
+- `home.css`: estructura específica de la portada.
+- `tools/shopify-csv-repair/tool.css`: estructura de la herramienta CSV.
+- `tools-menu.css`: comportamiento visual del desplegable de herramientas.
 
-### 💻 JavaScript Global
-- **`app.js`** - Funcionalidad compartida
-  - Navegación (mobile menu, scroll effects)
-  - Theme toggle (dark/light mode)
-  - Language selector
-  - Utilidades (smooth scroll, debounce)
+Cargar primero las hojas de estructura, después `tools-menu.css` con el atributo `data-tools-menu-style`, y al final `design-system.css`. Los tokens de marca tienen una sola fuente: `design-system.css`. Evitar estilos de navegación o paletas independientes dentro de las páginas.
 
-- **`i18n.js`** - Sistema de internacionalización
-  - Traducciones EN, DE, ES
-  - Gestión de idiomas
-  - Persistencia en localStorage
+Tipografía: Inter 400 para lectura, 500 para títulos y acciones, 600 para énfasis. JetBrains Mono queda para código y metadatos breves. El título principal usa un máximo de 56 px en la portada; los artículos y herramientas, 50 px. Contenedores generales: 1160 px; lectura: 720 px. Radios: 5 px en controles y 10 px en tarjetas.
 
-## 📂 Estructura de Archivos
+## Cabecera, idiomas y pie
 
-```
-prietoteran.com/
-├── styles.css              # Estilos globales compartidos
-├── app.js                  # JavaScript global compartido
-├── i18n.js                 # Sistema de internacionalización
-├── index.html              # Página principal
-├── components/             # Componentes reutilizables
-│   ├── nav.html
-│   └── footer.html
-├── blog/                   # Sección del blog
-│   ├── index.html          # Listado de artículos
-│   ├── why-salesforce-erp-integrations-break.html
-│   └── images/             # Imágenes de artículos
-└── services/               # Páginas de servicios
-    ├── automation.html
-    └── integration.html
-```
+`lib/site-shell.mjs` exporta `renderNavigation(locale, languageOptions)` y `renderFooter(locale)`. El generador de artículos usa estas funciones. Los HTML entregados al navegador ya contienen el resultado: no dependen de una petición adicional para mostrar la navegación.
 
-## 🔧 Cómo Usar los Archivos Globales
+`components/nav.html` y `components/footer.html` son referencias estáticas para páginas manuales. Mantener los IDs utilizados por los scripts (`nav`, `navLinks`, `navHamburger`, `langSelector`, `langToggle`, `themeToggle`). Los enlaces `data-home-section` apuntan a secciones reales de la portada y se actualizan con el idioma.
 
-### En páginas HTML:
+Los enlaces de idioma en artículos y herramientas usan las traducciones disponibles, mediante URLs explícitas. No anunciar una traducción inexistente. La portada cambia sus textos mediante `i18n.js` y prioriza el parámetro `?lang=`.
 
-```html
-<!-- En el <head> -->
-<link rel="stylesheet" href="../styles.css">
+## JavaScript
 
-<!-- Antes de cerrar </body> -->
-<script src="../i18n.js"></script>
-<script src="../app.js"></script>
+- `app.js`: navegación, tema e idiomas en artículos y herramientas.
+- `home.js`: comportamiento de la portada y sus metadatos/enlaces localizados.
+- `tools-menu.js`: desplegable compartido y estados accesibles.
+- `i18n.js`: textos EN/DE/ES y localización de enlaces.
+- `lib/contact-attribution.js`, `lib/contact-form.js`: atribución de sesión, envío y estados del formulario.
+- `lib/contact-submission.js`: validación del servidor y escape de los datos del correo.
+
+## Contenido
+
+`tools/generate-blog-post.mjs` genera artículos localizados desde `content/blog/posts/`. Los artículos anteriores que no tienen un módulo de origen se mantienen como HTML manual.
+
+Victory y Silent Gliss se presentan como experiencia laboral, con proyectos confirmados por Osmel. No son referencias de clientes independientes. No añadir ahorros, porcentajes ni resultados comerciales sin respaldo.
+
+## Comprobaciones
+
+```sh
+npm test
+npm run generate:blog -- integration-vendor-lock-in-control
+npm run validate:content -- integration-vendor-lock-in-control
+npm run validate:funnel -- integration-vendor-lock-in-control
 ```
 
-### JavaScript específico de página:
-
-Si necesitas JavaScript adicional para una página específica, agrégalo **después** de `app.js`:
-
-```html
-<script src="../app.js"></script>
-<script>
-    // Tu código específico de página aquí
-    document.addEventListener('DOMContentLoaded', function() {
-        // Código específico
-    });
-</script>
-```
-
-## 🎯 Ventajas de Esta Arquitectura
-
-### ✅ Mantenibilidad
-- **1 archivo CSS** en lugar de estilos duplicados en cada HTML
-- Cambios globales se hacen en un solo lugar
-- Reducción de ~700 líneas de código duplicado por página
-
-### ✅ Escalabilidad
-- Fácil agregar nuevas páginas
-- Consistencia automática en toda la aplicación
-- Preparado para traducciones profesionales
-
-### ✅ Performance
-- Los archivos CSS/JS se cachean en el navegador
-- Menor tamaño de descarga para páginas subsecuentes
-- Carga más rápida después de la primera visita
-
-### ✅ Consistencia
-- Todos los componentes se ven y funcionan igual
-- Mismos estilos de navegación y footer en todas las páginas
-- Experiencia de usuario coherente
-
-## 🚀 Próximos Pasos para Escalar
-
-### 1. Convertir a Build System (Opcional)
-Si el proyecto crece mucho más, considera:
-- **Vite/Parcel**: Para bundling y optimización
-- **Sass/PostCSS**: Para estilos más avanzados
-- **Components**: Usar Web Components o un framework
-
-### 2. Para Traducciones Profesionales
-El sistema i18n está listo para:
-- Exportar strings a JSON/CSV para traducción
-- Importar traducciones profesionales
-- Agregar más idiomas fácilmente
-
-### 3. Optimizaciones Futuras
-- Minificación de CSS/JS para producción
-- Code splitting por página
-- Lazy loading de imágenes
-- PWA capabilities
-
-## 📝 Notas Importantes
-
-### Estilos Específicos de Página
-Si una página necesita estilos únicos, agrégalos en un `<style>` tag **después** del link a `styles.css`:
-
-```html
-<link rel="stylesheet" href="../styles.css">
-<style>
-    /* Estilos específicos solo para esta página */
-    .mi-componente-unico {
-        /* ... */
-    }
-</style>
-```
-
-### JavaScript Específico de Página
-El mismo principio aplica para JavaScript - agrega tu código **después** de `app.js`.
-
-## 🐛 Debugging
-
-Si algo no funciona:
-
-1. **Verifica la ruta** a styles.css y app.js
-   - Desde `/blog/`: usa `../styles.css`
-   - Desde `/`: usa `./styles.css`
-
-2. **Verifica la consola** del navegador para errores JS
-
-3. **Limpia caché** si hiciste cambios y no se reflejan:
-   - Chrome/Firefox: `Cmd+Shift+R` (Mac) o `Ctrl+Shift+R` (Windows)
-
-## 🎨 Personalización del Tema
-
-Todos los colores y espaciados están definidos como variables CSS en `styles.css`:
-
-```css
-:root {
-    --bg-primary: #FAFAFA;
-    --text-primary: #1A1A1A;
-    --accent: #B8860B;
-    /* ... más variables */
-}
-```
-
-Para cambiar el esquema de colores, simplemente modifica estas variables.
-
-## 📞 Soporte
-
-Para preguntas o problemas relacionados con la estructura del código:
-- Revisa este README
-- Consulta los comentarios en `styles.css` y `app.js`
-- Los archivos están bien comentados en inglés
+Tras un cambio compartido, revisar portada, índice del blog, artículo, calculadora y herramienta CSV en escritorio y móvil, incluyendo un idioma traducido y el tema oscuro. Las pruebas de correo deben distinguir una respuesta local simulada de la entrega real en producción.

@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://www.prietoteran.com/tools/shopify-csv-repair/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/styles.css?v=13">
     <link rel="stylesheet" href="/tools/shopify-csv-repair/tool.css?v=2">
     <script type="application/ld+json">
@@ -26,54 +26,31 @@
         "description": "Browser-based Shopify product CSV diagnostics and conservative repair."
     }
     </script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/tools-menu.css" data-tools-menu-style>
+<link rel="stylesheet" href="/design-system.css">
 </head>
 <body class="csv-tool-page">
-    <nav class="nav" id="nav" aria-label="Primary navigation">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="/" class="nav-logo"><span>O</span>PT<span>.</span></a>
-                <div class="nav-right">
-                    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
-                        <span></span><span></span><span></span>
-                    </button>
-                    <ul class="nav-links" id="navLinks">
-                        <li><a href="/#blog">Blog</a></li>
-                        <li><a href="/tools/erp-crm-roi-calculator.html" data-tools-link>Tools</a></li>
-                        <li><a href="/#projects" data-projects-link data-i18n="nav.projects">Projects</a></li>
-                        <li><a href="/#contact">Contact</a></li>
-                    </ul>
-                    <div class="lang-selector" id="langSelector">
-                        <button class="lang-current" id="langToggle" type="button">
-                            <span class="lang-code" id="currentLangCode">EN</span>
-                            <span class="lang-arrow" aria-hidden="true">
-                                <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
-                        </button>
-                        <div class="lang-dropdown">
-                            <a href="/tools/shopify-csv-repair/" class="lang-option active" data-lang="en">
-                                <span class="lang-code">EN</span>
-                                <span class="lang-name">English</span>
-                            </a>
-                            <a href="/?lang=de" class="lang-option" data-lang="de">
-                                <span class="lang-code">DE</span>
-                                <span class="lang-name">Deutsch</span>
-                            </a>
-                            <a href="/?lang=es" class="lang-option" data-lang="es">
-                                <span class="lang-code">ES</span>
-                                <span class="lang-name">Español</span>
-                            </a>
-                        </div>
-                    </div>
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                        <span class="icon-sun" aria-hidden="true">☀</span>
-                        <span class="icon-moon" aria-hidden="true">☾</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <nav class="nav site-nav" id="nav" aria-label="Menu">
+  <div class="site-container nav-inner">
+    <a class="brand nav-logo" href="/">osmel<span> / </span>prieto teran</a>
+    <div class="nav-right">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#how" data-home-section="how" data-i18n="nav.how">The audit</a></li>
+        <li><a href="/#about" data-home-section="about" data-i18n="nav.about">About</a></li>
+        <li><a href="/blog/" data-i18n="nav.blog">Blog</a></li>
+        <li><a href="/tools/erp-crm-roi-calculator.html" data-tools-link data-i18n="nav.tools">Tools</a></li>
+        <li><a href="/#contact" class="nav-cta" data-home-section="contact" data-contact-cta="audit" data-i18n="nav.contact">Request audit</a></li>
+      </ul>
+      <div class="lang-selector" id="langSelector">
+        <button class="lang-toggle lang-current" id="langToggle" type="button" aria-expanded="false" aria-label="Language" data-i18n-aria="ui.language"><span id="currentLangCode">EN</span><span aria-hidden="true">⌄</span></button>
+        <div class="lang-dropdown"><a href="/tools/shopify-csv-repair/" class="lang-option active" data-lang="en" lang="en">English</a></div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme" data-i18n-aria="ui.theme"><span aria-hidden="true">◐</span></button>
+      <button class="nav-hamburger" id="navHamburger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu" data-i18n-aria="ui.menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
 
     <main>
         <header class="csv-hero">
@@ -212,18 +189,10 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-text">© 2026 Osmel Prieto Teran</span>
-                <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="/#contact">Contact</a>
-                    <a href="mailto:osmel@prietoteran.com">Email</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="site-footer" id="projects"><div class="site-container footer-inner">
+    <span>© 2026 Osmel Prieto Teran · Bern</span>
+    <div class="footer-links"><a href="https://www.linkedin.com/in/osmel-p-teran-884480111/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:osmel@prietoteran.com">Email</a><a href="https://eroica.io" target="_blank" rel="noopener noreferrer"><span data-i18n="footer.projects">Independent projects</span>: eroica.io ↗</a></div>
+  </div></footer>
 
     <script src="/app.js"></script>
     <script type="module" src="/tools/shopify-csv-repair/tool.mjs"></script>

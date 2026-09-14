@@ -47,6 +47,60 @@ Alternate between these content pillars:
 
 ---
 
+## September 2026 - Week of September 14
+
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Mon Sep 14 | Blog | Diagnosis | Prepared: The Approval Queue That Stops Orders | Draft | approval-workflows-hidden-queue.png |
+| Mon Sep 14 | LinkedIn | Diagnosis | Standalone: Approval inbox ownership | Draft | linkedin-approval-inbox-waiting.png |
+| Tue Sep 15 | LinkedIn | Awareness | Standalone: Quote waiting without disagreement | Draft | linkedin-approval-owner-gap.png |
+| Wed Sep 16 | LinkedIn | Diagnosis | Standalone: Waiting status outside systems | Draft | linkedin-approval-status-shadow.png |
+| Thu Sep 17 | LinkedIn | Consideration | Standalone: Approval rules before buttons | Draft | linkedin-approval-rules-map.png |
+| Fri Sep 18 | LinkedIn | Awareness | Standalone: One visible queue | Draft | linkedin-approval-one-queue.png |
+
+### LinkedIn Drafts
+
+**Monday - Standalone - Diagnosis - Draft**
+
+An approval stuck in an inbox is rarely just an inbox problem.
+The missing part is usually ownership: who can decide, who can delegate, and who can see the queue.
+Make that visible before you automate it.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queue.html #ProcessAutomation #B2BOperations #ERP #Workflow
+
+**Tuesday - Standalone - Awareness - Draft**
+
+A quote can wait three days without anyone disagreeing with it.
+That is the quiet failure of an approval workflow.
+No rejection, no decision, no owner.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queue.html #Salesforce #ERP #Operations #B2B
+
+**Wednesday - Standalone - Diagnosis - Draft**
+
+The most expensive approval status is not approved or rejected.
+It is waiting somewhere nobody checks.
+If the queue lives outside your systems, the process is already manual.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queue.html #WorkflowAutomation #Operations #DataReliability #B2B
+
+**Thursday - Standalone - Consideration - Draft**
+
+A faster approval button does not fix a weak approval rule.
+Automation needs thresholds, substitutes, exceptions, and escalation paths.
+Otherwise it only moves confusion faster.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queue.html #ProcessDesign #Automation #Salesforce #ERP
+
+**Friday - Standalone - Awareness - Draft**
+
+The approval queue tells you how your company really makes decisions.
+If nobody can see it, nobody can improve it.
+Start with one queue, one owner, and one escalation rule.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queue.html #Leadership #B2BOperations #ProcessAutomation #Systems
+
+### Cover Image Briefing
+
+Create or review a 1200x630 editorial Open Graph image for an article about hidden approval queues in B2B operations. Show an approval queue as a visible operating layer between CRM, inbox, and ERP. Use restrained Swiss design, clean geometric blocks, warm white and dark slate, and one gold accent (#B8860B) for the approved path. Avoid vendor logos, people, readable text, dramatic warning symbols, and crowded composition. Human review before publication should confirm dimensions, file size under 200KB, calm editorial tone, and a real asset at `blog/images/approval-workflows-hidden-queue.png`.
+
+---
+
 ## September 2026 - Week of September 1
 
 | Day | Channel | Funnel | Content | Status | Image |

@@ -100,6 +100,9 @@ const translations = {
         "blog.post11.title": "The Vendor Lock-In Question Behind Integrations",
         "blog.post11.excerpt": "Lock-in often appears after go-live, when one vendor is the only party that can change the integration.",
 
+        "blog.post12.title": "The Approval Queue That Stops Orders",
+        "blog.post12.excerpt": "Approval workflows often fail because the queue is invisible, not because people are slow.",
+
         // Projects Section
         "projects.number": "04 PROJECTS",
         "projects.title": "Products I am building",
@@ -546,6 +549,9 @@ const translations = {
 
         "blog.post11.title": "Die Lock-in-Frage bei Integrationen",
         "blog.post11.excerpt": "Lock-in zeigt sich oft nach dem Go-live, wenn nur ein Anbieter die Integration ändern kann.",
+
+        "blog.post12.title": "Die Freigabe-Warteschlange, die Aufträge stoppt",
+        "blog.post12.excerpt": "Freigabe-Workflows scheitern oft, weil die Warteschlange unsichtbar ist, nicht weil Menschen langsam sind.",
 
         // Projects Section
         "projects.number": "04 PROJEKTE",
@@ -997,6 +1003,9 @@ const translations = {
 
         "blog.post11.title": "Quién controla tu integración",
         "blog.post11.excerpt": "El lock-in suele aparecer después del go-live, cuando solo un proveedor puede cambiar la integración.",
+
+        "blog.post12.title": "La cola de aprobación que detiene pedidos",
+        "blog.post12.excerpt": "Los workflows de aprobación suelen fallar porque la cola es invisible, no porque las personas sean lentas.",
 
         // Projects Section
         "projects.number": "04 PROYECTOS",

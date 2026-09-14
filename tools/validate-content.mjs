@@ -133,6 +133,7 @@ function validateLinkedInDrafts(post) {
   assert(Array.isArray(post.linkedinDrafts), `${post.id} missing LinkedIn drafts`);
   assert(post.linkedinDrafts.length === 5, `${post.id} should have 5 LinkedIn drafts`);
   const canonicalUrl = absoluteUrl(post.slugs.en);
+  const allDraftsUseCanonicalUrl = post.linkedinDraftPolicy === 'allDraftsUseCanonicalUrl';
   const blogShares = post.linkedinDrafts.filter((draft) => draft.type === 'blogShare');
   const standalonePosts = post.linkedinDrafts.filter((draft) => draft.type === 'standalone');
   assert(blogShares.length === 1, `${post.id} should have exactly 1 LinkedIn blog-share draft`);
@@ -148,7 +149,7 @@ function validateLinkedInDrafts(post) {
     const lines = draft.text.trim().split('\n');
     assert(lines.length >= 3 && lines.length <= 6, `${post.id} ${draft.day} LinkedIn draft must be 3-6 lines`);
     const lastLine = lines.at(-1);
-    if (draft.type === 'blogShare') {
+    if (draft.type === 'blogShare' || allDraftsUseCanonicalUrl) {
       assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} blog-share draft must end with the canonical English URL`);
     } else {
       assert(!draft.text.includes('http://') && !draft.text.includes('https://'), `${post.id} ${draft.day} standalone draft must not link to the weekly blog`);

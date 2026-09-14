@@ -18,9 +18,9 @@
         try { localStorage.setItem('theme', theme); } catch { /* Optional preference. */ }
     });
     const slugs = {
-        en: ['why-salesforce-erp-integrations-break', 'the-real-cost-of-manual-data-entry', 'integration-vendor-lock-in-control'],
-        de: ['warum-salesforce-erp-integrationen-scheitern', 'die-wahren-kosten-manueller-dateneingabe', 'integration-vendor-lock-in-kontrolle'],
-        es: ['por-que-fallan-las-integraciones-salesforce-erp', 'el-costo-real-de-la-entrada-manual-de-datos', 'vendor-lock-in-integraciones-control']
+        en: ['why-salesforce-erp-integrations-break', 'the-real-cost-of-manual-data-entry', 'approval-workflows-hidden-queue'],
+        de: ['warum-salesforce-erp-integrationen-scheitern', 'die-wahren-kosten-manueller-dateneingabe', 'freigabe-workflows-versteckte-warteschlange'],
+        es: ['por-que-fallan-las-integraciones-salesforce-erp', 'el-costo-real-de-la-entrada-manual-de-datos', 'workflows-aprobacion-cola-oculta']
     };
     const meta = {
         en: ['Salesforce & ERP Integration | Osmel Prieto Teran', 'Reduce manual work between Salesforce and your ERP. Independent engineer in Bern. Start with a 90-minute audit and written recommendation for 450 EUR.'],

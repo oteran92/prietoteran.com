@@ -97,6 +97,56 @@ Make it visible, measurable, and boring.
 
 ---
 
+## September 2026 - Week of September 21
+
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Mon Sep 21 | Blog | Consideration | Prepared: Approval Workflows Stuck in Inboxes | Draft | Human cover image required from PR briefing |
+| Mon Sep 21 | LinkedIn | Awareness | Standalone: Approval ownership | Draft | Image brief: one waiting approval card beside an unowned queue |
+| Tue Sep 22 | LinkedIn | Awareness | Standalone: Shared mailbox ownership | Draft | Image brief: shared inbox abstracted as overlapping grey trays |
+| Wed Sep 23 | LinkedIn | Diagnosis | Standalone: Missing approval data | Draft | Image brief: form fields split between complete and missing states |
+| Thu Sep 24 | LinkedIn | Consideration | Standalone: Reminder versus workflow | Draft | Image brief: notification bell contrasted with visible workflow states |
+| Fri Sep 25 | LinkedIn | Consideration | Standalone: Queue before tool | Draft | Image brief: calm queue diagram leading into CRM and ERP blocks |
+
+### LinkedIn Drafts
+
+**Monday - Standalone - Awareness - Draft**
+
+An approval that waits in an inbox is not waiting for a decision.
+It is waiting for ownership.
+Before adding another reminder, ask who owns the queue and what data is missing.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inboxes.html #B2BOperations #ProcessAutomation #ERP #Salesforce
+
+**Tuesday - Standalone - Awareness - Draft**
+
+The shared mailbox is where process ownership goes to disappear.
+Everyone can see the request, so nobody quite owns it.
+A visible queue changes the question from who remembers to what is blocked.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inboxes.html #Operations #WorkflowAutomation #B2B #ProcessDesign
+
+**Wednesday - Standalone - Diagnosis - Draft**
+
+Slow approvals often hide bad input, not slow managers.
+If the request lacks customer, amount, reason and system record, the approver is doing investigation.
+Automation should reject incomplete requests before they become interruptions.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inboxes.html #OperationalControl #WorkflowAutomation #DataQuality #B2B
+
+**Thursday - Standalone - Consideration - Draft**
+
+A reminder is not a workflow.
+It only makes the missing owner louder.
+The useful signal is status: new, blocked, delegated, approved, applied.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inboxes.html #ProcessAutomation #ERP #Salesforce #Operations
+
+**Friday - Standalone - Consideration - Draft**
+
+The one-minute approval can still delay the order for two days.
+The time disappears around the decision, not inside it.
+Map the queue before choosing the tool.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inboxes.html #B2BOperations #Automation #OperationalControl #ERP
+
+---
+
 ## May 2026 — Week of May 26
 
 | Day | Channel | Content | Status | Image |

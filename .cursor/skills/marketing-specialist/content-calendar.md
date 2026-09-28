@@ -47,6 +47,56 @@ Alternate between these content pillars:
 
 ---
 
+## September 2026 - Week of September 28
+
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Mon Sep 28 | Blog | Diagnosis | Prepared: Why Month-End Still Depends on Excel | Draft | month-end-excel-system-of-record.png |
+| Mon Sep 28 | LinkedIn | Diagnosis | Blog share: Excel as a month-end ownership signal | Draft | linkedin-month-end-excel.png |
+| Tue Sep 29 | LinkedIn | Awareness | Standalone: Dashboard trust starts upstream | Draft | linkedin-reporting-tool-trust.png |
+| Wed Sep 30 | LinkedIn | Diagnosis | Standalone: Trace one number backward | Draft | linkedin-one-number-backwards.png |
+| Thu Oct 1 | LinkedIn | Consideration | Standalone: Corrections must return to the system | Draft | linkedin-spreadsheet-fix-back.png |
+| Fri Oct 2 | LinkedIn | Awareness | Standalone: Automate reconciliation after ownership | Draft | linkedin-automate-reconciliation.png |
+
+### LinkedIn Drafts
+
+**Monday - Blog share - Diagnosis - Draft**
+
+The uncomfortable truth is that Excel often tells the truth before the ERP does.
+Not because Excel is better.
+Because it shows where ownership between systems is missing.
+https://www.prietoteran.com/blog/why-month-end-still-depends-on-excel.html #DataReliability #ERP #FinanceOperations #B2B
+
+**Tuesday - Standalone - Awareness - Draft**
+
+A polished dashboard can hide a weak month-end process.
+The chart looks finished.
+The argument happened earlier, when two teams defined the same number differently.
+#DataQuality #Reporting #B2BOperations #Leadership
+
+**Wednesday - Standalone - Diagnosis - Draft**
+
+A recurring reconciliation is a map.
+Start with one number nobody trusts.
+Walk backward until you find the first place it can be changed without a record.
+#DataReliability #ERP #Operations #DecisionMaking
+
+**Thursday - Standalone - Consideration - Draft**
+
+The risky spreadsheet is not the one finance uses to check a number.
+It is the one that becomes the only place the correction exists.
+If the source system never learns, next month repeats the same meeting.
+#FinanceOperations #DataGovernance #ERP #B2B
+
+**Friday - Standalone - Awareness - Draft**
+
+Automating a reconciliation too early makes the disagreement faster.
+First decide which system owns the number.
+Then automate the handoff that keeps it true.
+#ProcessAutomation #DataReliability #ERP #B2B
+
+---
+
 ## September 2026 - Week of September 1
 
 | Day | Channel | Funnel | Content | Status | Image |

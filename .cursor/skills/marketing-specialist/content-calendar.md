@@ -345,3 +345,84 @@ For each piece of content, track:
 - Key dates: [list]
 - Campaigns: [list]
 ```
+
+---
+
+## October 2026 - Week of October 5
+
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Mon Oct 5 | Blog | Diagnosis | Prepared: When Not to Automate a B2B Workflow | Draft | Manual briefing below |
+| Mon Oct 5 | LinkedIn | Diagnosis | Blog share: Automation can hide missing control | Draft | Manual distinct image required |
+| Tue Oct 6 | LinkedIn | Awareness | Standalone: The manual step may be protection | Draft | Manual distinct image required |
+| Wed Oct 7 | LinkedIn | Diagnosis | Standalone: Ownership before automation | Draft | Manual distinct image required |
+| Thu Oct 8 | LinkedIn | Consideration | Standalone: Exceptions need a visible path | Draft | Manual distinct image required |
+| Fri Oct 9 | LinkedIn | Awareness | Standalone: First workflow choice | Draft | Manual distinct image required |
+
+### Cover Image Briefing
+
+Status: Manual image required before publication.
+
+Create a 1200x630 editorial Open Graph image for a B2B technology article about when not to automate a workflow.
+
+Visual direction:
+- Minimal Swiss editorial composition with a clean workflow diagram as the main motif.
+- Left side: one manual checkpoint shown as a clear human review gate, not as clutter.
+- Right side: automated flow waiting behind three labeled abstract gates: ownership, exceptions, data.
+- Use rich darks, warm white space and a gold accent (#B8860B).
+- No readable brand names, no vendor logos, no stock-photo people, no exaggerated robot imagery.
+- Leave safe margins for LinkedIn previews.
+
+Required human step: generate and optimize the final image under 200KB before publication, then add it to the article metadata and page markup. Do not publish or schedule social posts until the article URL and final Open Graph image URL are verified in production.
+
+### LinkedIn Drafts
+
+**Monday - Blog share - Diagnosis - Draft**
+
+The fastest automation project can still leave the company less in control.
+Speed helps only after ownership, exceptions and data are clear.
+Before you automate the manual step, ask whether it is waste or protection.
+https://www.prietoteran.com/blog/when-not-to-automate-b2b-workflow.html #ProcessAutomation #B2BOperations #ERP #DataReliability
+
+Pillar: Process automation
+Commercial objective: Encourage leaders to diagnose automation readiness before asking for implementation.
+
+**Tuesday - Standalone - Awareness - Draft**
+
+The manual step everyone wants to remove may be protecting the business.
+Someone checks a spreadsheet because two systems disagree.
+Automating the click does not resolve the disagreement.
+#WorkflowAutomation #DataQuality #Operations #B2B
+
+Pillar: Data reliability
+Commercial objective: Create recognition around manual work as a symptom of unclear data ownership.
+
+**Wednesday - Standalone - Diagnosis - Draft**
+
+A workflow without an owner should not be automated yet.
+The tool can move the record.
+It cannot decide what should happen when the normal path breaks.
+#OperationalControl #ERP #CRM #B2BOperations
+
+Pillar: Operational control
+Commercial objective: Position ownership mapping as the first advisory step before automation work.
+
+**Thursday - Standalone - Consideration - Draft**
+
+Exceptions hidden in inboxes do not disappear when the workflow is automated.
+They become invisible at higher speed.
+Map the exception path before choosing the trigger.
+#ProcessDesign #Automation #Salesforce #ERP
+
+Pillar: Process automation
+Commercial objective: Give buyers a practical criterion for evaluating automation scope.
+
+**Friday - Standalone - Awareness - Draft**
+
+The best first automation is rarely the largest workflow.
+Choose the one with a clear decision, known owner and trusted source of truth.
+Small and controlled beats impressive and unclear.
+#B2BSystems #ProcessAutomation #DataReliability #Operations
+
+Pillar: Systems clarity
+Commercial objective: Steer prospects toward scoped, low-risk first conversations.

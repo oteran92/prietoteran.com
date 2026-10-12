@@ -47,6 +47,60 @@ Alternate between these content pillars:
 
 ---
 
+## October 2026 - Week of October 12
+
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Mon Oct 12 | Blog | Diagnosis | Prepared: Why Approval Workflows Still Get Stuck | Draft | Manual production required: approval-workflows-stuck-in-inbox.jpg |
+| Mon Oct 12 | LinkedIn | Diagnosis | Standalone: approval workflow still controlled by inbox | Draft | Manual production required: linkedin-approval-inbox-trap.jpg |
+| Tue Oct 13 | LinkedIn | Awareness | Standalone: hidden approval queue | Draft | Manual production required: linkedin-hidden-approval-queue.jpg |
+| Wed Oct 14 | LinkedIn | Diagnosis | Standalone: unclear owner, threshold or next step | Draft | Manual production required: linkedin-approval-owner-map.jpg |
+| Thu Oct 15 | LinkedIn | Consideration | Standalone: visible approval state before automation | Draft | Manual production required: linkedin-visible-approval-state.jpg |
+| Fri Oct 16 | LinkedIn | Awareness | Standalone: one approval bottleneck | Draft | Manual production required: linkedin-one-approval-bottleneck.jpg |
+
+### Cover image briefing
+
+Create a 1200x630 editorial Open Graph image for a B2B technology article about approval workflows that still depend on inboxes. Show a precise workflow line leaving a clean ERP or CRM system, bending into a dark inbox tray, then returning to the process with a visible delay marker. Use Swiss editorial layout, black and warm white foundations, restrained gold accent `#B8860B`, sharp geometric forms and generous negative space. Avoid stock-photo people, vendor logos, readable interface text, random gradients and generic AI visuals. Save as `blog/images/approval-workflows-stuck-in-inbox.jpg`, 1200x630, under 200KB.
+
+### LinkedIn Drafts
+
+**Monday - Standalone - Diagnosis - Draft**
+
+An approval workflow that ends in email is not a workflow.
+It is a queue with a nicer name.
+The system may record the decision, but the inbox still controls the pace.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inbox.html #B2BOperations #WorkflowAutomation #ERP #Salesforce
+
+**Tuesday - Standalone - Awareness - Draft**
+
+The most expensive approval delay is often invisible.
+The report shows the order as waiting.
+The real decision is sitting in one person's inbox.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inbox.html #Operations #Approvals #B2B #ProcessAutomation
+
+**Wednesday - Standalone - Diagnosis - Draft**
+
+A slow approval is rarely just a slow person.
+It is usually an unclear owner, an unclear threshold, or an unclear next step.
+Fix the rule before you chase the reminder.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inbox.html #Workflow #Leadership #B2BOperations #ERP
+
+**Thursday - Standalone - Consideration - Draft**
+
+A reminder email is not control.
+Control means everyone can see who owns the decision, what blocks it, and what happens next.
+That is the part to design before automation.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inbox.html #WorkflowAutomation #Operations #Salesforce #ProcessDesign
+
+**Friday - Standalone - Awareness - Draft**
+
+The best approval project starts with one stuck handoff.
+Not the whole company.
+One decision that delays orders often enough that everyone works around it.
+https://www.prietoteran.com/blog/approval-workflows-stuck-in-inbox.html #B2B #Operations #ApprovalWorkflow #Automation
+
+---
+
 ## September 2026 - Week of September 1
 
 | Day | Channel | Funnel | Content | Status | Image |

@@ -94,6 +94,12 @@ function readJpegDimensions(imagePath) {
 }
 
 function validateImage(post) {
+  if (post.image?.pending) {
+    assert(Array.isArray(post.image.brief) && post.image.brief.length >= 3, `${post.id} pending image needs a production brief`);
+    assert(Boolean(post.image.path), `${post.id} pending image needs the intended future path`);
+    return;
+  }
+
   const imagePath = path.join(rootDir, post.image.path);
   assert(fs.existsSync(imagePath), `${post.id} missing image: ${post.image.path}`);
   if (!fs.existsSync(imagePath)) {
@@ -111,6 +117,10 @@ function validateLinkedInImage(post, draft) {
   const imagePath = draft.image?.path;
   assert(Boolean(imagePath), `${post.id} ${draft.day} LinkedIn draft missing image path`);
   assert(Boolean(draft.image?.alt), `${post.id} ${draft.day} LinkedIn draft missing image alt text`);
+  if (draft.image?.pending) {
+    assert(Array.isArray(draft.image.brief) && draft.image.brief.length >= 2, `${post.id} ${draft.day} LinkedIn image needs a production brief`);
+    return;
+  }
   if (!imagePath) {
     return;
   }
@@ -151,8 +161,12 @@ function validateLinkedInDrafts(post) {
     if (draft.type === 'blogShare') {
       assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} blog-share draft must end with the canonical English URL`);
     } else {
-      assert(!draft.text.includes('http://') && !draft.text.includes('https://'), `${post.id} ${draft.day} standalone draft must not link to the weekly blog`);
-      assert(lastLine.startsWith('#'), `${post.id} ${draft.day} standalone draft must end with hashtags`);
+      if (post.linkedinDraftsLinkCanonical) {
+        assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} standalone draft must end with the canonical English URL`);
+      } else {
+        assert(!draft.text.includes('http://') && !draft.text.includes('https://'), `${post.id} ${draft.day} standalone draft must not link to the weekly blog`);
+        assert(lastLine.startsWith('#'), `${post.id} ${draft.day} standalone draft must end with hashtags`);
+      }
     }
     const hashtagCount = (lastLine.match(/#[A-Za-z0-9]+/g) || []).length;
     assert(hashtagCount >= 3 && hashtagCount <= 5, `${post.id} ${draft.day} LinkedIn draft needs 3-5 hashtags`);

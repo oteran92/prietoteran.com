@@ -102,12 +102,11 @@ function renderRelatedLinks(post, locale) {
 function renderJsonLd(post, locale) {
   const localized = post.locales[locale];
   const canonical = absoluteUrl(post.slugs[locale]);
-  return JSON.stringify({
+  const data = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: localized.title,
     description: localized.description,
-    image: absoluteUrl(post.image.path),
     inLanguage: locale,
     author: {
       '@type': 'Person',
@@ -128,7 +127,32 @@ function renderJsonLd(post, locale) {
       '@type': 'WebPage',
       '@id': canonical,
     },
-  }, null, 2).replace(/^/gm, '      ').trimStart();
+  };
+
+  if (!post.image?.pending) {
+    data.image = absoluteUrl(post.image.path);
+  }
+
+  return JSON.stringify(data, null, 2).replace(/^/gm, '      ').trimStart();
+}
+
+function renderOgImage(post) {
+  if (post.image?.pending) {
+    return '';
+  }
+  return `    <meta property="og:image" content="${absoluteUrl(post.image.path)}">\n`;
+}
+
+function renderArticleCover(post, locale) {
+  if (post.image?.pending) {
+    return '';
+  }
+  return `
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="${relativeImagePath(locale, post.image.path)}" alt="${escapeHtml(post.image.alt[locale])}">
+        </div>
+`;
 }
 
 function renderArticlePage(post, locale) {
@@ -172,7 +196,7 @@ ${supportedLocales.map((targetLocale) => `    <link rel="alternate" hreflang="${
     <meta property="og:url" content="${canonical}">
     <meta property="og:title" content="${escapeHtml(localized.title)}">
     <meta property="og:description" content="${escapeHtml(localized.ogDescription)}">
-    <meta property="og:image" content="${absoluteUrl(post.image.path)}">${ogLocale}
+${renderOgImage(post).trimEnd()}${ogLocale}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -218,10 +242,7 @@ ${supportedLocales.map((targetLocale) => `    <link rel="alternate" hreflang="${
             </header>
         </div>
 
-        <!-- Cover Image - Full Width -->
-        <div class="article-cover">
-            <img src="${relativeImagePath(locale, post.image.path)}" alt="${escapeHtml(post.image.alt[locale])}">
-        </div>
+${renderArticleCover(post, locale)}
 
         <!-- Article Content -->
         <div class="container">

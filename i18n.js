@@ -100,6 +100,9 @@ const translations = {
         "blog.post11.title": "The Vendor Lock-In Question Behind Integrations",
         "blog.post11.excerpt": "Lock-in often appears after go-live, when one vendor is the only party that can change the integration.",
 
+        "blog.post12.title": "Why Approval Workflows Still Get Stuck",
+        "blog.post12.excerpt": "Approval workflows often look automated while the real decision still sits in an inbox.",
+
         // Projects Section
         "projects.number": "04 PROJECTS",
         "projects.title": "Products I am building",
@@ -546,6 +549,9 @@ const translations = {
 
         "blog.post11.title": "Die Lock-in-Frage bei Integrationen",
         "blog.post11.excerpt": "Lock-in zeigt sich oft nach dem Go-live, wenn nur ein Anbieter die Integration ändern kann.",
+
+        "blog.post12.title": "Warum Freigaben im Postfach stecken bleiben",
+        "blog.post12.excerpt": "Freigabe-Workflows wirken oft automatisiert, während die eigentliche Entscheidung im Postfach wartet.",
 
         // Projects Section
         "projects.number": "04 PROJEKTE",
@@ -997,6 +1003,9 @@ const translations = {
 
         "blog.post11.title": "Quién controla tu integración",
         "blog.post11.excerpt": "El lock-in suele aparecer después del go-live, cuando solo un proveedor puede cambiar la integración.",
+
+        "blog.post12.title": "Por qué las aprobaciones siguen atascadas",
+        "blog.post12.excerpt": "Los flujos de aprobación parecen automatizados mientras la decisión real espera en el correo.",
 
         // Projects Section
         "projects.number": "04 PROYECTOS",

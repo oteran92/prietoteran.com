@@ -14,6 +14,8 @@ const { ConfidentialClientApplication } = require('@azure/msal-node');
 const { Client } = require('@microsoft/microsoft-graph-client');
 const Stripe = require('stripe');
 const { buildContactSubmission, escapeHtml, normalizeText, renderAttribution } = require('./lib/contact-submission');
+const { buildResourceRequest, renderSubscriberEmail } = require('./lib/resource-request');
+const { isPrivatePath } = require('./lib/private-paths');
 require('isomorphic-fetch');
 
 const app = express();
@@ -126,11 +128,17 @@ redirect301('/es/services/automation.html', '/');
 redirect301('/services/architecture.html', '/');
 redirect301('/services/consulting.html', '/');
 redirect301('/de/', '/?lang=de');
-redirect301('/es/', '/');
+redirect301('/es/', '/?lang=es');
+redirect301('/resources', '/recursos/?lang=en');
+redirect301('/resources/', '/recursos/?lang=en');
+
+// Refuse internal files before the static handler can serve them.
+app.use((req, res, next) => (isPrivatePath(req.path) ? res.status(404).send('Not found') : next()));
 
 // Serve static files from root directory
 app.use(express.static(path.join(__dirname), {
     extensions: ['html'],
+    dotfiles: 'ignore',
 }));
 
 /**
@@ -236,7 +244,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             return res.status(400).json({ success: false, message: result.error });
         }
 
-        const { name, email, company, message, source, subject, attribution } = result.submission;
+        const { name, email, company, message, source, interest, subject, attribution } = result.submission;
 
         // Escape public values used in the HTML email body
         const safeName = escapeHtml(name);
@@ -267,6 +275,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
                         <p><strong>Email:</strong> ${safeEmail}</p>
                         ${safeCompany ? `<p><strong>Company:</strong> ${safeCompany}</p>` : ''}
                         ${safeSource ? `<p><strong>Source:</strong> ${safeSource}</p>` : ''}
+                        ${interest ? `<p><strong>Interest:</strong> ${interest}</p>` : ''}
                         <hr>
                         <p><strong>Message:</strong></p>
                         <p>${safeMessage}</p>
@@ -315,6 +324,41 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
             success: false,
             message: 'An error occurred. Please try again later.',
         });
+    }
+});
+
+/**
+ * Free resource endpoint
+ * POST /api/resource
+ * Emails the download link to the subscriber and notifies Osmel.
+ */
+app.post('/api/resource', contactLimiter, async (req, res) => {
+    const result = buildResourceRequest(req.body);
+    if (!result.ok) {
+        return res.status(400).json({ success: false, message: result.error });
+    }
+    const { email, resourceId, locale, downloadPath, attribution } = result.request;
+    const baseUrl = getPublicBaseUrl(req);
+    try {
+        const graphClient = await getGraphClient();
+        if (!graphClient) {
+            console.error('Microsoft Graph API is not configured');
+            return res.status(500).json({ success: false, message: 'Email service not configured.' });
+        }
+        const sender = process.env.M365_SENDER_EMAIL || 'osmel@prietoteran.com';
+        await graphClient.api(`/users/${sender}/sendMail`).post(renderSubscriberEmail(result.request, baseUrl));
+        await graphClient.api(`/users/${sender}/sendMail`).post({
+            message: {
+                subject: `Resource request (${resourceId}, ${locale}): ${email}`,
+                body: { contentType: 'HTML', content: `<p><strong>Email:</strong> ${escapeHtml(email)}</p>${renderAttribution(attribution)}` },
+                toRecipients: [{ emailAddress: { address: process.env.EMAIL_TO || 'osmel@prietoteran.com' } }],
+            },
+            saveToSentItems: false,
+        });
+        return res.json({ success: true, downloadUrl: downloadPath });
+    } catch (error) {
+        console.error('Resource request error:', error);
+        return res.status(500).json({ success: false, message: 'An error occurred. Please try again later.' });
     }
 });
 

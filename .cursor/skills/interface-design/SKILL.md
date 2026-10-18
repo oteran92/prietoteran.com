@@ -20,11 +20,13 @@ the site's Swiss editorial identity while improving usability and visual craft.
 
 ## Visual direction
 
-- Preserve the current identity: black and white foundations, Swiss red
-  `#E3000F`, Inter for display/body text, and JetBrains Mono for utility text.
+- Preserve the Teran Studio identity (see `DESIGN.md`): blue `#2457FF`,
+  off-white `#F6F6F2`, ink `#111C32`, muted `#5B6478`, Helvetica Neue in heavy
+  weights, JetBrains Mono for small utility text, and the progress line with a
+  check node as the signature.
 - Favor editorial grids, strong hierarchy, precise alignment, generous
   whitespace, and restrained asymmetry.
-- Use the red accent to communicate priority or action, not as background noise.
+- Use the blue accent to communicate priority or action, not as background noise.
 - Derive colors, spacing, typography, borders, and motion from existing CSS
   variables.
 - Avoid generic AI aesthetics: arbitrary gradients, glass effects, excessive

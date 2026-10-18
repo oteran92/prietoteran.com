@@ -13,9 +13,11 @@ Read this before you touch copy. If another skill tells you to do something that
 
 **Who:** Swiss and DACH B2B companies, roughly 50 to 500 people. Manufacturing, wholesale, distribution, industrial services.
 
-**Role:** CEO, COO, CTO. Sometimes a Head of Operations or IT. One person, deciding, with no time.
+**Role:** Operations or management: CEO, COO, Head of Operations or IT. One person, deciding, with no time.
 
-**Stack:** Salesforce and/or an ERP (Abacus, SAP, Business Central, Odoo), plus Excel filling the gaps between them.
+**Stack:** a CRM (often Salesforce), an ERP, Outlook and Excel filling the gaps between them. The pain sits in requests, quotes, orders and product information.
+
+**Second segment:** owners and leaders who want to implement AI in their business and do not know where it helps or how to keep it under control. Speak to both: the workflow first, AI as the means.
 
 **What they already feel, before we say anything:**
 
@@ -35,7 +37,7 @@ Three steps, in this order:
 2. **Trust.** They believe Osmel has actually done this work, on real systems.
 3. **Conversation.** They write, or they reply.
 
-That is the whole objective. The audit is what the conversation can become, not the reason for the page. A visitor who understands the problem and trusts the person will ask about price on their own.
+That is the whole objective. The review, workshop or build is what the conversation can become, not the reason for the page. A visitor who understands the problem and trusts the person will ask about price on their own.
 
 We are not building a checkout. Nothing on the page should make a reader feel they are mid-transaction.
 
@@ -64,7 +66,9 @@ If the first thing a reader learns is what we charge, we have skipped both recog
 
 ## 5. Price rule
 
-**One commercial block per page. Each price appears once, in that block, stated as a fact.**
+**Teran Studio pages (homepage, `/recursos/`) show no prices at all.** Offers are described, never priced. Price is discussed in the conversation.
+
+On older pages that still carry a price (tools, legacy articles): one commercial block per page, each price once, stated as a fact.
 
 Never put a price in:
 
@@ -86,7 +90,7 @@ Do not mention invoicing, billing or payment terms outside that block. A reader 
 
 CTAs use conversation verbs. The reader is starting a conversation, not completing a purchase.
 
-**Good shape:** "Tell me what's stuck." "Start a conversation." "Sagen Sie mir, wo es klemmt." "Cuéntame dónde se atasca." "See how it works." "Get in touch."
+**Good shape:** "Tell me about one task." "Cuéntame una tarea." "Tell me what's stuck." "Start a conversation." "Sagen Sie mir, wo es klemmt." "Cuéntame dónde se atasca." "See how it works." "Get in touch."
 
 **Forbidden:**
 
@@ -101,7 +105,7 @@ Helper text under a form says what happens next: I read it, I reply. Nothing els
 
 ## 7. Languages
 
-EN, DE and ES carry the same meaning and the same restraint. A translation is not a place to get louder.
+EN, DE and ES carry the same meaning and the same restraint. A translation is not a place to get louder. The Teran Studio homepage and `/recursos/` carry EN, DE and ES (copy in `studio-copy.js`). German uses Sie and Swiss "ss".
 
 - **German** must read like a Swiss specialist writing to a peer: `Sie`, plain nouns, no exclamation marks, no `Jetzt`, no `gratis`, no `nur`. It must not sound like a discount landing page. If a German string would fit on a retail banner, rewrite it.
 - **Spanish** stays in one register across the file. Currently informal (`tú`). Do not mix `tú` and `usted`.
@@ -116,8 +120,8 @@ EN, DE and ES carry the same meaning and the same restraint. A translation is no
 - Exclamation marks.
 - Claims that could sit unchanged on any consultant's site: "problem-solver", "full ownership", "bridge builder", "trusted partner", "end-to-end". If a competitor could paste the line onto their homepage without editing it, delete it.
 - Invented proof: testimonials, client logos, named customers, percentages, hours saved or project counts that Osmel does not have.
-- A free consultation. The first conversation is a paid audit. We simply do not shout about it.
-- Fake modesty about the price, and defensiveness about it. State it once and move on.
+- Promising a free consultation. Describe what the first step gives the reader, not what it costs.
+- Naming the employer, its products, customers or colleagues. Say "an industrial company in Switzerland", "the ERP", "the CRM".
 
 ## 9. Shipping check
 

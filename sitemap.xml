@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Homepage (EN/DE via i18n.js) -->
+    <!-- Homepage (EN/DE/ES via i18n.js) -->
     <url>
         <loc>https://www.prietoteran.com/</loc>
-        <lastmod>2026-09-01</lastmod>
+        <lastmod>2026-10-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/" />
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/?lang=de" />
         <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/?lang=es" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/" />
+    </url>
+
+    <!-- Free resource: AI agent rules (ES default, EN and DE via ?lang=) -->
+    <url>
+        <loc>https://www.prietoteran.com/recursos/</loc>
+        <lastmod>2026-10-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/recursos/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/recursos/?lang=en" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/recursos/?lang=de" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/recursos/" />
     </url>
 
     <!-- ERP–CRM ROI Calculator - English -->

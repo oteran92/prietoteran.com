@@ -141,7 +141,7 @@ Make it visible, measurable, and boring.
     en: {
       langName: 'English',
       title: 'The Vendor Lock-In Question Behind Integrations',
-      pageTitle: 'The Vendor Lock-In Question Behind Integrations | Osmel Prieto Teran',
+      pageTitle: 'The Vendor Lock-In Question Behind Integrations | Osmel P. Teran',
       description: 'Vendor lock-in in integration projects often appears after go-live. Swiss B2B leaders can keep control by clarifying ownership before work starts.',
       keywords: 'vendor lock-in integration, B2B integration Switzerland, Salesforce ERP integration control, integration ownership, systems advisory B2B',
       ogDescription: 'Lock-in often appears after go-live, when the process depends on a setup only one vendor can change. Ask the ownership questions first.',
@@ -243,7 +243,7 @@ Make it visible, measurable, and boring.
     de: {
       langName: 'Deutsch',
       title: 'Die Lock-in-Frage bei Integrationen',
-      pageTitle: 'Die Lock-in-Frage bei Integrationen | Osmel Prieto Teran',
+      pageTitle: 'Die Lock-in-Frage bei Integrationen | Osmel P. Teran',
       description: 'Vendor Lock-in bei Integrationen zeigt sich oft erst nach dem Go-live. Schweizer B2B-Führungskräfte behalten Kontrolle durch klare Eigentumsfragen.',
       keywords: 'Vendor Lock-in Integration, B2B Integration Schweiz, Salesforce ERP Integration Kontrolle, Integration Eigentum, Systemberatung B2B',
       ogDescription: 'Lock-in zeigt sich oft nach dem Go-live, wenn ein Prozess von einer Konfiguration abhängt, die nur ein Anbieter ändern kann.',
@@ -345,7 +345,7 @@ Make it visible, measurable, and boring.
     es: {
       langName: 'Español',
       title: 'La pregunta de lock-in en integraciones',
-      pageTitle: 'La pregunta de lock-in en integraciones | Osmel Prieto Teran',
+      pageTitle: 'La pregunta de lock-in en integraciones | Osmel P. Teran',
       description: 'El vendor lock-in en integraciones suele aparecer después del go-live. Los líderes B2B pueden mantener control aclarando la propiedad antes de empezar.',
       keywords: 'vendor lock-in integración, integración B2B Suiza, control integración Salesforce ERP, propiedad de integraciones, asesoría sistemas B2B',
       ogDescription: 'El lock-in suele aparecer después del go-live, cuando el proceso depende de una configuración que solo un proveedor puede cambiar.',

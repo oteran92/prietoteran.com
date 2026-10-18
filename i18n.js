@@ -6,10 +6,10 @@
 const translations = {
     en: {
         // Navigation
-        "nav.how": "The audit",
+        "nav.how": "How we work",
         "nav.services": "Process",
         "nav.about": "About",
-        "nav.contact": "Request audit",
+        "nav.contact": "Get in touch",
         "nav.home": "Home",
         "nav.tools": "Tools",
         "nav.projects": "Projects",
@@ -139,7 +139,7 @@ const translations = {
         "cta.link": "Or reach me directly",
 
         // Footer
-        "footer.copyright": "© 2026 Osmel Prieto Teran",
+        "footer.copyright": "© 2026 Osmel P. Teran",
 
         // Common
         "common.outcome": "Outcome:",
@@ -399,7 +399,7 @@ const translations = {
         "offer.detail3": "What to automate first and why.",
         "offer.separate": "Implementation is optional and quoted separately.",
         "about.title": "Work directly with the engineer.",
-        "about.text": "I’m Osmel Prieto Teran, an independent integration engineer in Bern. I review the workflow and can build the solution.",
+        "about.text": "I’m Osmel P. Teran, an independent integration engineer in Bern. I review the workflow and can build the solution.",
         "about.client": "Professional experience",
         "about.client.note": "Experience as an employee",
         "form.name.placeholder": "Your name",
@@ -432,10 +432,10 @@ const translations = {
 
     de: {
         // Navigation
-        "nav.how": "Das Audit",
+        "nav.how": "So arbeiten wir",
         "nav.services": "Ablauf",
         "nav.about": "Über mich",
-        "nav.contact": "Audit anfragen",
+        "nav.contact": "Kontakt",
         "nav.home": "← Startseite",
         "nav.tools": "Tools",
         "nav.projects": "Projekte",
@@ -586,7 +586,7 @@ const translations = {
         "cta.link": "Oder direkt erreichen",
 
         // Footer
-        "footer.copyright": "© 2026 Osmel Prieto Teran",
+        "footer.copyright": "© 2026 Osmel P. Teran",
 
         // Common
         "common.outcome": "Ergebnis:",
@@ -846,7 +846,7 @@ const translations = {
         "offer.detail3": "Was zuerst automatisiert werden sollte und warum.",
         "offer.separate": "Die Umsetzung ist optional und wird separat angeboten.",
         "about.title": "Direkt mit dem Engineer arbeiten.",
-        "about.text": "Ich bin Osmel Prieto Teran, unabhängiger Integration Engineer in Bern. Ich prüfe den Ablauf und kann die Lösung entwickeln.",
+        "about.text": "Ich bin Osmel P. Teran, unabhängiger Integration Engineer in Bern. Ich prüfe den Ablauf und kann die Lösung entwickeln.",
         "about.client": "Berufserfahrung",
         "about.client.note": "Erfahrung als Mitarbeiter",
         "form.name.placeholder": "Ihr Name",
@@ -879,11 +879,11 @@ const translations = {
 
     es: {
         // Navigation
-        "nav.how": "La auditoría",
+        "nav.how": "Cómo trabajamos",
         "nav.blog": "Blog",
         "nav.services": "Servicios",
         "nav.about": "Sobre mí",
-        "nav.contact": "Solicitar auditoría",
+        "nav.contact": "Hablemos",
         "nav.home": "← Inicio",
         "nav.tools": "Herramientas",
         "nav.projects": "Proyectos",
@@ -1029,7 +1029,7 @@ const translations = {
         "about.title": "Trabaja directamente con el ingeniero.",
         "about.marker": "Trabajando",
         "about.lead": "Soy un asesor senior que entiende <strong>tanto la tecnología como el negocio detrás de ella</strong>.",
-        "about.text": "Soy Osmel Prieto Teran, ingeniero de integraciones independiente en Berna. Reviso el proceso y puedo desarrollar la solución.",
+        "about.text": "Soy Osmel P. Teran, ingeniero de integraciones independiente en Berna. Reviso el proceso y puedo desarrollar la solución.",
         "about.approach": "Claridad. Control. Confianza en tus sistemas — para que puedas concentrarte en hacer crecer el negocio.",
 
         // Trust Signals
@@ -1048,7 +1048,7 @@ const translations = {
         "cta.link": "O contáctame directamente",
 
         // Footer
-        "footer.copyright": "© 2026 Osmel Prieto Teran",
+        "footer.copyright": "© 2026 Osmel P. Teran",
 
         // Common
         "common.outcome": "Resultado:",
@@ -1338,16 +1338,27 @@ const translations = {
     }
 };
 
+// Pages may register their own copy (window.pageTranslations) before this script loads.
+for (const [lang, entries] of Object.entries(window.pageTranslations || {})) {
+    Object.assign(translations[lang], entries);
+}
+
 /**
  * i18n Manager Class
  * Handles language switching and translation application
  */
 class I18nManager {
     constructor() {
-        // Get saved language or detect from browser
+        // Pages may limit their languages (window.pageLanguages); others fall back to English.
+        this.languages = (window.pageLanguages || Object.keys(translations)).filter(lang => Object.hasOwn(translations, lang));
         const requested = new URLSearchParams(window.location.search).get('lang');
-        this.currentLanguage = Object.hasOwn(translations, requested) ? requested : (this.getSavedLanguage() || this.detectLanguage());
+        const preferred = this.isAvailable(requested) ? requested : (this.getSavedLanguage() || this.detectLanguage());
+        this.currentLanguage = this.isAvailable(preferred) ? preferred : 'en';
         this.init();
+    }
+
+    isAvailable(lang) {
+        return this.languages.includes(lang);
     }
 
     /**
@@ -1385,7 +1396,7 @@ class I18nManager {
      * Change the current language
      */
     setLanguage(lang) {
-        if (!translations[lang]) {
+        if (!this.isAvailable(lang)) {
             console.error(`Language "${lang}" is not supported`);
             return;
         }
@@ -1404,7 +1415,8 @@ class I18nManager {
      */
     t(key) {
         const translation = translations[this.currentLanguage]?.[key];
-        if (!translation) {
+        // An empty string is a deliberate "show nothing" in that language.
+        if (typeof translation !== 'string') {
             console.warn(`Translation missing for key: "${key}" in language: "${this.currentLanguage}"`);
             return translations['en']?.[key] || key;
         }
@@ -1444,6 +1456,11 @@ class I18nManager {
         document.querySelectorAll('[data-i18n-title]').forEach(element => {
             const key = element.getAttribute('data-i18n-title');
             element.title = this.t(key);
+        });
+
+        // Translate image alt text
+        document.querySelectorAll('[data-i18n-alt]').forEach(element => {
+            element.alt = this.t(element.getAttribute('data-i18n-alt'));
         });
 
         // Keep the Tools navigation link aligned with the active language.
@@ -1494,7 +1511,7 @@ class I18nManager {
      * Get all available languages
      */
     getAvailableLanguages() {
-        return Object.keys(translations);
+        return this.languages;
     }
 }
 

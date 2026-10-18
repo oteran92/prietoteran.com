@@ -1,6 +1,6 @@
 /**
  * Global JavaScript for prietoteran.com
- * Author: Osmel Prieto Teran
+ * Author: Osmel P. Teran
  * Shared functionality across all pages
  */
 

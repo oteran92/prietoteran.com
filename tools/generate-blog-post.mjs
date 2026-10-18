@@ -27,7 +27,7 @@ const labels = {
     navContact: 'Contact',
     menuLabel: 'Toggle menu',
     themeLabel: 'Toggle theme',
-    footerCopyright: '© 2026 Osmel Prieto Teran',
+    footerCopyright: '© 2026 Osmel P. Teran',
   },
   de: {
     currentLangCode: 'DE',
@@ -38,7 +38,7 @@ const labels = {
     navContact: 'Kontakt',
     menuLabel: 'Menü öffnen',
     themeLabel: 'Design wechseln',
-    footerCopyright: '© 2026 Osmel Prieto Teran',
+    footerCopyright: '© 2026 Osmel P. Teran',
   },
   es: {
     currentLangCode: 'ES',
@@ -49,7 +49,7 @@ const labels = {
     navContact: 'Contacto',
     menuLabel: 'Alternar menú',
     themeLabel: 'Cambiar tema',
-    footerCopyright: '© 2026 Osmel Prieto Teran',
+    footerCopyright: '© 2026 Osmel P. Teran',
   },
 };
 
@@ -111,12 +111,12 @@ function renderJsonLd(post, locale) {
     inLanguage: locale,
     author: {
       '@type': 'Person',
-      name: 'Osmel Prieto Teran',
+      name: 'Osmel P. Teran',
       url: siteUrl,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Osmel Prieto Teran',
+      name: 'Osmel P. Teran',
       logo: {
         '@type': 'ImageObject',
         url: `${siteUrl}/favicon.svg`,
@@ -156,7 +156,7 @@ function renderArticlePage(post, locale) {
     <!-- Primary SEO Meta Tags -->
     <title>${escapeHtml(localized.pageTitle)}</title>
     <meta name="description" content="${escapeHtml(localized.description)}">
-    <meta name="author" content="Osmel Prieto Teran">
+    <meta name="author" content="Osmel P. Teran">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="${escapeHtml(localized.keywords)}">
 

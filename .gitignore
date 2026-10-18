@@ -22,3 +22,7 @@ npm-debug.log*
 prietoteran-*.json
 *.credentials.json
 apollo-contacts-export.csv
+
+# Lead data and private notes (never publish)
+.cursor/skills/shared/leads.json
+chat.txt

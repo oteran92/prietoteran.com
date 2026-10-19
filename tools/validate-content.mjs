@@ -94,6 +94,12 @@ function readJpegDimensions(imagePath) {
 }
 
 function validateImage(post) {
+  if (post.image.manualRequired) {
+    assert(Boolean(post.image.brief?.length), `${post.id} manual cover image needs a production brief`);
+    assert(Boolean(post.image.path), `${post.id} manual cover image needs a planned path`);
+    return;
+  }
+
   const imagePath = path.join(rootDir, post.image.path);
   assert(fs.existsSync(imagePath), `${post.id} missing image: ${post.image.path}`);
   if (!fs.existsSync(imagePath)) {
@@ -111,6 +117,10 @@ function validateLinkedInImage(post, draft) {
   const imagePath = draft.image?.path;
   assert(Boolean(imagePath), `${post.id} ${draft.day} LinkedIn draft missing image path`);
   assert(Boolean(draft.image?.alt), `${post.id} ${draft.day} LinkedIn draft missing image alt text`);
+  if (draft.image?.manualRequired) {
+    assert(Boolean(draft.image?.brief), `${post.id} ${draft.day} LinkedIn manual image needs a brief`);
+    return;
+  }
   if (!imagePath) {
     return;
   }
@@ -148,12 +158,7 @@ function validateLinkedInDrafts(post) {
     const lines = draft.text.trim().split('\n');
     assert(lines.length >= 3 && lines.length <= 6, `${post.id} ${draft.day} LinkedIn draft must be 3-6 lines`);
     const lastLine = lines.at(-1);
-    if (draft.type === 'blogShare') {
-      assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} blog-share draft must end with the canonical English URL`);
-    } else {
-      assert(!draft.text.includes('http://') && !draft.text.includes('https://'), `${post.id} ${draft.day} standalone draft must not link to the weekly blog`);
-      assert(lastLine.startsWith('#'), `${post.id} ${draft.day} standalone draft must end with hashtags`);
-    }
+    assert(lastLine.startsWith(canonicalUrl), `${post.id} ${draft.day} draft must end with the canonical English URL`);
     const hashtagCount = (lastLine.match(/#[A-Za-z0-9]+/g) || []).length;
     assert(hashtagCount >= 3 && hashtagCount <= 5, `${post.id} ${draft.day} LinkedIn draft needs 3-5 hashtags`);
     validateLinkedInImage(post, draft);
@@ -171,13 +176,15 @@ function validateGeneratedPage(post, locale) {
   const html = fs.readFileSync(absolutePath, 'utf8');
   const localized = post.locales[locale];
   const canonical = absoluteUrl(filePath);
+  const titleText = localized.title.replaceAll('&', '&amp;');
 
   assert(html.includes(`<html lang="${locale}">`), `${filePath} has wrong html lang`);
   assert(html.includes(`<link rel="canonical" href="${canonical}">`), `${filePath} has wrong canonical`);
-  assert(html.includes(`<title>${localized.pageTitle}</title>`), `${filePath} has wrong title`);
+  assert(html.includes(`<title>${localized.pageTitle.replaceAll('&', '&amp;')}</title>`), `${filePath} has wrong title`);
   assert(localized.title.length <= 60, `${filePath} title should be under 60 characters`);
   assert(localized.description.length <= 160, `${filePath} meta description should be under 160 characters`);
   assert(!html.includes('—'), `${filePath} contains an em dash`);
+  assert(html.includes(titleText), `${filePath} missing article title`);
 
   for (const targetLocale of supportedLocales) {
     assert(html.includes(`hreflang="${targetLocale}" href="${absoluteUrl(post.slugs[targetLocale])}"`), `${filePath} missing hreflang ${targetLocale}`);

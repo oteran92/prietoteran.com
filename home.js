@@ -32,9 +32,9 @@
 
     // Blog cards per language: [article slug, thumbnail]. Spanish has its own article set.
     const posts = {
-        en: [['ai-in-b2b-operations-what-actually-works', 'ai-in-b2b-operations-what-actually-works'], ['why-leaders-cant-trust-their-data', 'why-leaders-cant-trust-their-data'], ['integration-vendor-lock-in-control', 'integration-vendor-lock-in-control']],
-        de: [['ki-im-b2b-betrieb-was-wirklich-funktioniert', 'ai-in-b2b-operations-what-actually-works'], ['warum-fuehrungskraefte-ihren-daten-nicht-vertrauen', 'why-leaders-cant-trust-their-data'], ['integration-vendor-lock-in-kontrolle', 'integration-vendor-lock-in-control']],
-        es: [['por-que-los-lideres-no-confian-en-sus-datos', 'why-leaders-cant-trust-their-data'], ['por-que-fallan-las-integraciones-salesforce-erp', 'why-salesforce-erp-integrations-break'], ['vendor-lock-in-integraciones-control', 'integration-vendor-lock-in-control']]
+        en: [['approval-workflows-hidden-queues', 'integration-vendor-lock-in-control'], ['why-leaders-cant-trust-their-data', 'why-leaders-cant-trust-their-data'], ['integration-vendor-lock-in-control', 'integration-vendor-lock-in-control']],
+        de: [['freigabe-workflows-versteckte-warteschlangen', 'integration-vendor-lock-in-control'], ['warum-fuehrungskraefte-ihren-daten-nicht-vertrauen', 'why-leaders-cant-trust-their-data'], ['integration-vendor-lock-in-kontrolle', 'integration-vendor-lock-in-control']],
+        es: [['flujos-aprobacion-colas-ocultas', 'integration-vendor-lock-in-control'], ['por-que-los-lideres-no-confian-en-sus-datos', 'why-leaders-cant-trust-their-data'], ['vendor-lock-in-integraciones-control', 'integration-vendor-lock-in-control']]
     };
 
     // Hero headline as word spans for the entrance; the key word carries the progress underline.

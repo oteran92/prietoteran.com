@@ -100,6 +100,9 @@ const translations = {
         "blog.post11.title": "The Vendor Lock-In Question Behind Integrations",
         "blog.post11.excerpt": "Lock-in often appears after go-live, when one vendor is the only party that can change the integration.",
 
+        "blog.post12.title": "When Approval Workflows Become Hidden Queues",
+        "blog.post12.excerpt": "Approval workflows often stall because ownership is unclear. Make queues, owners and exceptions visible before automating.",
+
         // Projects Section
         "projects.number": "04 PROJECTS",
         "projects.title": "Products I am building",
@@ -546,6 +549,9 @@ const translations = {
 
         "blog.post11.title": "Die Lock-in-Frage bei Integrationen",
         "blog.post11.excerpt": "Lock-in zeigt sich oft nach dem Go-live, wenn nur ein Anbieter die Integration ändern kann.",
+
+        "blog.post12.title": "Wenn Freigaben zu versteckten Warteschlangen werden",
+        "blog.post12.excerpt": "Freigabe-Workflows stocken oft wegen unklarer Verantwortung. Machen Sie Queues, Besitzer und Ausnahmen sichtbar.",
 
         // Projects Section
         "projects.number": "04 PROJEKTE",
@@ -997,6 +1003,9 @@ const translations = {
 
         "blog.post11.title": "Quién controla tu integración",
         "blog.post11.excerpt": "El lock-in suele aparecer después del go-live, cuando solo un proveedor puede cambiar la integración.",
+
+        "blog.post12.title": "Cuando las aprobaciones se vuelven colas ocultas",
+        "blog.post12.excerpt": "Los flujos de aprobación se atascan cuando la responsabilidad no es clara. Haz visibles las colas y excepciones.",
 
         // Projects Section
         "projects.number": "04 PROYECTOS",

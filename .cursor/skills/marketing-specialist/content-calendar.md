@@ -47,6 +47,62 @@ Alternate between these content pillars:
 
 ---
 
+## October 2026 - Week of October 19
+
+| Day | Channel | Funnel | Content | Status | Image |
+|-----|---------|--------|---------|--------|-------|
+| Mon Oct 19 | Blog | Diagnosis | Prepared: When Approval Workflows Become Hidden Queues | Draft | approval-workflows-hidden-queues.png, human production required |
+| Mon Oct 19 | LinkedIn | Diagnosis | Draft: Approval pauses need ownership | Draft | linkedin-approval-hidden-queues-monday.png, human production required |
+| Tue Oct 20 | LinkedIn | Awareness | Draft: Inbox approvals hide operational control | Draft | linkedin-approval-inbox-control-tuesday.png, human production required |
+| Wed Oct 21 | LinkedIn | Diagnosis | Draft: Exceptions reveal the real workflow | Draft | linkedin-approval-exception-wednesday.png, human production required |
+| Thu Oct 22 | LinkedIn | Consideration | Draft: Missing approval timestamps become manual reconstruction | Draft | linkedin-approval-data-thursday.png, human production required |
+| Fri Oct 23 | LinkedIn | Awareness | Draft: Start with one weekly approval pause | Draft | linkedin-one-approval-friday.png, human production required |
+
+### LinkedIn Drafts
+
+**Monday - Blog share - Diagnosis - Draft**
+
+A slow approval is often not waiting for a decision.
+It is waiting for someone to admit who owns the pause.
+Digitizing the form does not fix that.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html #B2BOperations #ProcessAutomation #ERP #Leadership
+
+**Tuesday - Standalone - Awareness - Draft**
+
+The most expensive queue in the company is rarely on the dashboard.
+It is in the inbox of the person everyone is afraid to interrupt.
+That is not a people problem. It is a control problem.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html #Operations #WorkflowDesign #B2B #Management
+
+**Wednesday - Standalone - Diagnosis - Draft**
+
+An approval process looks complete until the first exception arrives.
+Then the real workflow appears.
+If nobody owns the exception, the system only records the delay.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html #ProcessImprovement #ERP #B2BOperations #Automation
+
+**Thursday - Standalone - Consideration - Draft**
+
+Every missing approval timestamp becomes a story someone has to reconstruct later.
+Finance asks why the order moved late.
+Operations searches messages instead of reading the system.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html #DataReliability #Approvals #Operations #B2B
+
+**Friday - Standalone - Awareness - Draft**
+
+Do not start with the approval workflow that looks impressive in a workshop.
+Start with the one that stops orders every week.
+Name the owner, the timeout, and the exception path.
+https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html #WorkflowAutomation #COO #ERP #B2B
+
+### Cover Image Brief
+
+Status: Draft, human production required before publication.
+
+Create a 1200x630 editorial Open Graph image for a B2B operations article about approval workflows becoming hidden queues. Show approval requests moving out of scattered inboxes into one visible queue with named ownership gates. Use minimal Swiss editorial design, precise geometry, warm white background, dark graphite lines, and gold accent #B8860B. The left side should show muted inbox cards and paused requests, the center should show one controlled queue, and the right side should show approved work moving into ERP or operations. Avoid vendor logos, stock-photo people, readable UI text, and dramatic alarm imagery. Save as `blog/images/approval-workflows-hidden-queues.png` under 200KB before publishing.
+
+---
+
 ## September 2026 - Week of September 1
 
 | Day | Channel | Funnel | Content | Status | Image |

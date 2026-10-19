@@ -61,7 +61,7 @@
     <!-- Blog Index - English -->
     <url>
         <loc>https://www.prietoteran.com/blog/</loc>
-        <lastmod>2026-09-01</lastmod>
+        <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
@@ -73,7 +73,7 @@
     <!-- Blog Index - German -->
     <url>
         <loc>https://www.prietoteran.com/de/blog/</loc>
-        <lastmod>2026-09-01</lastmod>
+        <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
@@ -85,7 +85,7 @@
     <!-- Blog Index - Spanish -->
     <url>
         <loc>https://www.prietoteran.com/es/blog/</loc>
-        <lastmod>2026-09-01</lastmod>
+        <lastmod>2026-10-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/" />
@@ -316,6 +316,40 @@
         <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/integration-vendor-lock-in-kontrolle.html" />
         <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/vendor-lock-in-integraciones-control.html" />
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/integration-vendor-lock-in-control.html" />
+    </url>
+
+    <!-- Blog Post 12: Approval Workflows Hidden Queues -->
+    <url>
+        <loc>https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/freigabe-workflows-versteckte-warteschlangen.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/flujos-aprobacion-colas-ocultas.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html" />
+    </url>
+
+    <url>
+        <loc>https://www.prietoteran.com/de/blog/freigabe-workflows-versteckte-warteschlangen.html</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/freigabe-workflows-versteckte-warteschlangen.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/flujos-aprobacion-colas-ocultas.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html" />
+    </url>
+
+    <url>
+        <loc>https://www.prietoteran.com/es/blog/flujos-aprobacion-colas-ocultas.html</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.prietoteran.com/de/blog/freigabe-workflows-versteckte-warteschlangen.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.prietoteran.com/es/blog/flujos-aprobacion-colas-ocultas.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.prietoteran.com/blog/approval-workflows-hidden-queues.html" />
     </url>
 
 </urlset>

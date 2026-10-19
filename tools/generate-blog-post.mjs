@@ -102,12 +102,11 @@ function renderRelatedLinks(post, locale) {
 function renderJsonLd(post, locale) {
   const localized = post.locales[locale];
   const canonical = absoluteUrl(post.slugs[locale]);
-  return JSON.stringify({
+  const data = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: localized.title,
     description: localized.description,
-    image: absoluteUrl(post.image.path),
     inLanguage: locale,
     author: {
       '@type': 'Person',
@@ -128,7 +127,13 @@ function renderJsonLd(post, locale) {
       '@type': 'WebPage',
       '@id': canonical,
     },
-  }, null, 2).replace(/^/gm, '      ').trimStart();
+  };
+
+  if (!post.image.manualRequired) {
+    data.image = absoluteUrl(post.image.path);
+  }
+
+  return JSON.stringify(data, null, 2).replace(/^/gm, '      ').trimStart();
 }
 
 function renderArticlePage(post, locale) {
@@ -137,6 +142,13 @@ function renderArticlePage(post, locale) {
   const canonical = absoluteUrl(post.slugs[locale]);
   const prefix = relativeAssetPrefix(locale);
   const ogLocale = locale === 'de' ? '\n    <meta property="og:locale" content="de_CH">' : locale === 'es' ? '\n    <meta property="og:locale" content="es_ES">' : '';
+  const ogImage = post.image.manualRequired ? '' : `\n    <meta property="og:image" content="${absoluteUrl(post.image.path)}">`;
+  const articleCover = post.image.manualRequired ? `\n        <!-- Cover image pending human production. See the source image brief and PR description. -->` : `
+
+        <!-- Cover Image - Full Width -->
+        <div class="article-cover">
+            <img src="${relativeImagePath(locale, post.image.path)}" alt="${escapeHtml(post.image.alt[locale])}">
+        </div>`;
 
   return `<!DOCTYPE html>
 <html lang="${locale}">
@@ -171,8 +183,7 @@ ${supportedLocales.map((targetLocale) => `    <link rel="alternate" hreflang="${
     <meta property="og:type" content="article">
     <meta property="og:url" content="${canonical}">
     <meta property="og:title" content="${escapeHtml(localized.title)}">
-    <meta property="og:description" content="${escapeHtml(localized.ogDescription)}">
-    <meta property="og:image" content="${absoluteUrl(post.image.path)}">${ogLocale}
+    <meta property="og:description" content="${escapeHtml(localized.ogDescription)}">${ogImage}${ogLocale}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -217,11 +228,7 @@ ${supportedLocales.map((targetLocale) => `    <link rel="alternate" hreflang="${
                 <p class="article-intro">${escapeHtml(localized.intro)}</p>
             </header>
         </div>
-
-        <!-- Cover Image - Full Width -->
-        <div class="article-cover">
-            <img src="${relativeImagePath(locale, post.image.path)}" alt="${escapeHtml(post.image.alt[locale])}">
-        </div>
+        ${articleCover}
 
         <!-- Article Content -->
         <div class="container">

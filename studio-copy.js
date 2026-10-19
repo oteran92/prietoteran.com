@@ -93,8 +93,8 @@ window.pageTranslations = {
 
         'ts.blog.title': 'Notes from the work',
         'ts.blog.all': 'All articles',
-        'ts.blog.b1.title': 'AI in B2B operations: what actually works',
-        'ts.blog.b1.text': 'Most AI projects stall on the data underneath, not on the model.',
+        'ts.blog.b1.title': 'When approval workflows become hidden queues',
+        'ts.blog.b1.text': 'The request is digital, but the pause still belongs to an inbox.',
         'ts.blog.b2.title': 'Why leaders can’t trust their data',
         'ts.blog.b2.text': 'When two systems disagree, people stop believing either of them.',
         'ts.blog.b3.title': 'The vendor lock-in question behind integrations',
@@ -222,8 +222,8 @@ window.pageTranslations = {
 
         'ts.blog.title': 'Notizen aus der Praxis',
         'ts.blog.all': 'Alle Artikel',
-        'ts.blog.b1.title': 'KI im B2B-Betrieb: was wirklich funktioniert',
-        'ts.blog.b1.text': 'Die meisten KI-Projekte scheitern an den Daten darunter, nicht am Modell.',
+        'ts.blog.b1.title': 'Wenn Freigaben zu versteckten Warteschlangen werden',
+        'ts.blog.b1.text': 'Der Antrag ist digital, aber die Pause liegt noch immer im Postfach.',
         'ts.blog.b2.title': 'Warum Führungskräfte ihren Daten nicht vertrauen',
         'ts.blog.b2.text': 'Wenn zwei Systeme sich widersprechen, glaubt man keinem von beiden.',
         'ts.blog.b3.title': 'Die Lock-in-Frage bei Integrationen',
@@ -351,8 +351,8 @@ window.pageTranslations = {
 
         'ts.blog.title': 'Notas del trabajo',
         'ts.blog.all': 'Todos los artículos',
-        'ts.blog.b1.title': 'Por qué los líderes no confían en sus datos',
-        'ts.blog.b1.text': 'Cuando dos sistemas no coinciden, la gente deja de creer en los dos.',
+        'ts.blog.b1.title': 'Cuando las aprobaciones se vuelven colas ocultas',
+        'ts.blog.b1.text': 'La solicitud es digital, pero la pausa sigue viviendo en el inbox.',
         'ts.blog.b2.title': 'Por qué fallan las integraciones',
         'ts.blog.b2.text': 'Fallos habituales de sincronización entre CRM y ERP, y cómo investigarlos.',
         'ts.blog.b3.title': 'La pregunta del lock-in en las integraciones',
